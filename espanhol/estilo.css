@@ -1,0 +1,85 @@
+.correct {
+    color:darkslategrey;
+    background-color:lightseagreen;
+}
+
+.wrong {
+    color:maroon;
+    background-color:salmon;
+}
+
+.quiz-message {
+    border:1px solid #333;
+    border-radius:5px;
+    margin: 10px 0;
+    padding: 0 15px;
+    position:relative;
+}
+.quiz-message-close {
+    position:absolute;
+    top:3px;
+    right: 10px;
+}
+main {
+ width: 80%;
+ margin: auto;
+ background-color: white;
+ padding: 25px 25px;
+ top: 30px;
+ border-style: inset;
+ border-width: 1px
+ border-color:#fffbf0;
+ text-align: center;
+   font-family: serif; 
+     font-size: 2em;
+
+ }
+
+body {
+
+background-color:  #ebf5fb ;
+}
+
+h1{
+
+    text-align: center;
+}
+.quiz-question{
+
+
+background-color: #f8c49c;
+border: 4px solid;
+border-color: rgb( 252, 200, 99 );
+box-sizing: border-box;
+margin-bottom: 100px;
+}
+
+.titulo{
+
+    background-image: url(./img/praia.webp);
+    color:transparent;
+    -webkit-background-clip: text;
+
+    font-size: 2em;
+
+}
+
+.quiz-button{
+
+border: none;
+
+
+
+text-align: center;
+font-size: 1.5em;
+
+
+}
+
+
+.quiz-item{
+
+    text-align: left;
+  
+
+}
