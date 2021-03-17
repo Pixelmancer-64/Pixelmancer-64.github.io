@@ -1,0 +1,123 @@
+.correct {
+    color:darkslategrey;
+    background-color:lightseagreen;
+}
+
+.wrong {
+    color:maroon;
+    background-color:salmon;
+}
+
+.quiz-message {
+    border:1px solid #333;
+    border-radius:5px;
+    margin: 10px 0;
+    padding: 0 15px;
+    position:relative;
+}
+.quiz-message-close {
+    position:absolute;
+    top:3px;
+    right: 10px;
+}
+main {
+ width: 80%;
+ margin: auto;
+ background-color: #f4fffc;
+ padding: 25px 25px;
+ top: 30px;
+ border-style: inset;
+ border-width: 1px
+ border-color:#fffbf0;
+ text-align: center;
+   font-family: serif; 
+     font-size: 1.5em;
+
+
+ }
+
+body {
+
+background-image: url(./img/biologia.webp); 
+
+
+
+}
+
+.titulo{
+background-image: url(./img/dna.jpg); 
+
+    color:transparent;
+    -webkit-background-clip: text;
+
+    text-align: center;
+     font-size: 2em;
+}
+.quiz-question{
+
+
+background-color: #126615;
+border: 7px solid;
+border-image: url(./img/madera.jpg) 50 repeat;
+box-sizing: border-box;
+margin-bottom: 80px;
+color: white;
+}
+
+
+.quiz-button{
+
+border: none;
+color: black;
+background-color: lightgrey;
+border: 2px solid;
+text-align: center;
+font-size: 1.5em;
+
+
+}
+
+
+.quiz-item{
+
+    text-align: left;
+  
+
+}
+.lista{
+
+    text-align: center;
+}
+.que{
+
+
+ padding: 20px 30px;
+
+
+
+  font-size: 1em;
+float: center;
+}
+li{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+ol{
+      list-style-type:upper-roman;
+      color: black;
+   background-color: #126615;
+border: 7px solid;
+border-image: url(./img/madera.jpg) 50 repeat;
+box-sizing: border-box;
+margin-bottom: 80px;
+color: white;
+}
+
+button{
+ padding: 20px 30px;
+  font-size: 1em;
+float: center;
+color: ;
+}
+
+}
