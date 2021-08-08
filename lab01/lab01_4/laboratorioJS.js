@@ -14,4 +14,4 @@ function fibonacci(t){
         console.log('Fibonacci n= ' + i + ' result= ' + result);
 }
 }
-fibonacci(30);
+fibonacci(100);
