@@ -1,6 +1,6 @@
 const romanNumList = {M:1000,CM:900, D:500,CD:400, C:100, XC:90,L:50, XL: 40, X:10, IX:9, V:5, IV:4, I:1};
 function romanEmpire(num){
-    let aux=0;
+    let a = 0;
     let romanConvert = "";
     for(chave in romanNumList){
         // a função verifica, a partir da chave M:1000, 
@@ -23,7 +23,6 @@ function romanEmpire(num){
 /*
 for(i=1; i<=10; i++){ 
 console.log('Resultado: ',romanEmpire(i));
-
 }
 */
 
@@ -36,4 +35,3 @@ console.log('Resultado: ',romanEmpire(48));
 console.log('Resultado: ',romanEmpire(59));
 console.log('Resultado: ',romanEmpire(93));
 console.log('Resultado: ',romanEmpire(575));
-
