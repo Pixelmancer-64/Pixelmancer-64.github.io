@@ -92,15 +92,15 @@ aside{
 .contact{
 	float: left;
 	border: 1px solid white;
-	border-radius: 6px;
+	border-radius: 6.28px;
 	margin-bottom: 2rem;
 }
 
 main{
 	flex: 1;
 	padding: 16px;
-	border: 1px solid red;
-	border-radius: 6.14px 0 0 0;
+	border: 2px solid #202024;
+	border-radius: 6.28px 0 0 0;
 }
 main ul{
 	list-style: decimal;
