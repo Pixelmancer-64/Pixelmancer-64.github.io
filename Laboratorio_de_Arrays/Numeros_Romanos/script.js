@@ -16,7 +16,7 @@ function romanEmpire(num){
             num %= romanNumList[chave];
         }
     }
-    return romanConvert;
+    return romanConvert
 } 
 
 //Policial, aqui está o problema
