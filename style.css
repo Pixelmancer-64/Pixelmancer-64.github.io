@@ -16,6 +16,7 @@ body{
 	background-color: #111113;
 	color: #e0e5e9;
 	font-size: 1rem;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 button{
 	display: flex;
@@ -47,13 +48,14 @@ aside, main{
 }
 
 aside{
+	padding-left: .3rem;
 	flex-basis: 25%;
 	background-color: #202024;
 	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
 	border-radius: 0 6.14px 0 0;
-	
+	gap: 1rem;
 }
 
 .myPhoto{
@@ -100,14 +102,12 @@ aside{
 
 }
 .contact{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	border: 1px solid white;
 	border-radius: 6px;
 }
 
 .contact ul{
+	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
@@ -127,6 +127,9 @@ main ul{
 
 }
 
+h2{
+	padding: .5rem .2rem;
+}
 .projects_1{
 	border: 1px solid white;
 	padding: 1rem;
@@ -160,13 +163,24 @@ main ul{
 .tooltip {
 	position: relative;
 	display: inline-block;
-	border-bottom: 1px dotted black;
+	border-bottom: 1px dotted #111113;
   }
   
+  .tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #111113 transparent transparent transparent;
+  }
+
   .tooltip .tooltiptext {
 	visibility: hidden;
 	width: 120px;
-	background-color: black;
+	background-color: #111113;
 	color: #fff;
 	text-align: center;
 	border-radius: 6px;

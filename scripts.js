@@ -13,10 +13,22 @@ let gmailText = document.getElementById("gmailText");
 gmail.onclick = function(){
     let address = 'hugobillemartins@gmail.com';
     navigator.clipboard.writeText(address);
-    gmailText.innerHTML = 'Copiado!';
+    gmailText.innerHTML = 'Copiado! ';
 }
+
+gmail.addEventListener('dblclick', function(){
+    let address = 'hugobillemartins@gmail.com';
+    navigator.clipboard.writeText(address);
+    gmailText.innerHTML = 'Copiado duas vezes! ';
+})
+
 outlook.onclick = function(){
     let address = "hugobillemartins@outlook.com";
     navigator.clipboard.writeText(address);
     outlookText.innerHTML = 'Copiado!';
 }
+outlook.addEventListener('dblclick', function(){
+    let address = 'hugobillemartins@gmail.com';
+    navigator.clipboard.writeText(address);
+    outlookText.innerHTML = 'Copiado duas vezes! ';
+})
