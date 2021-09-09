@@ -35,7 +35,6 @@ ul{
 .apart{
 	display: flex;
 	gap: 1rem;
-	
 }
 aside, main{
 	
@@ -54,12 +53,18 @@ aside{
 }
 
 .myPhoto{
+	display: flex;
+	display: wrap;
+	flex-direction: column;
 	text-align: center;
 	padding: 1rem;
 	border: 1px solid white;
 	margin-bottom: 2rem;
 }
 .myPhoto img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	height: 70%;
 	width: 70%;
 	border-radius: 50%;
@@ -67,19 +72,20 @@ aside{
 
 }
 .knowledge{ 
-	float: left;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	border: 1px solid white;
 	border-radius: 6px;
-	margin-bottom: 2rem;
 }
 .knowledge ul{
 	display: flex;
 	flex-wrap: wrap;
-	
+	gap: .2rem;
 }
 .knowledge img{
-	height: 100%;
-	width: 100%;
+	border: 1px solid white;
+	background-color: #5f8f72;
 }
 .work{
 	float: left;
@@ -90,10 +96,18 @@ aside{
 
 }
 .contact{
-	float: left;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	border: 1px solid white;
-	border-radius: 6.28px;
-	margin-bottom: 2rem;
+	border-radius: 6px;
+}
+
+.contact ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+
 }
 
 main{
@@ -108,12 +122,61 @@ main ul{
 	flex-direction: column;
 
 }
+
+.projects_1{
+	border: 1px solid white;
+	padding: 1rem;
+	margin: 1rem 0;
+	text-align: center;
+	background-image: linear-gradient(#986dbe, #60bb84);
+}
+
 .projects {
 	border: 1px solid white;
 	padding: 1rem;
 	margin: 1rem 0;
+	text-align: center;
+
 }
+.proLogo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1.5rem;
+}
+
 .aboutMe {
 	border: 1px solid white;
 	padding: 1rem;
 }
+
+.description{
+	font-size: 1.5rem;
+}
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+
+  }

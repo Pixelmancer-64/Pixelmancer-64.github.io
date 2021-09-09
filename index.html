@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Sotíris64</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,19 +13,15 @@
 			
 			<ul>
 				<li>
-					<button> 
-						Home 
-					</button>
+					<input type="image" src="./img/icons8-casa.svg">
+				
 				</li>
 				<li>
-					<button> 
-						About 
-					</button>
+					<input type="image" src="./img/icons8-sobre.svg">
 				</li>
 				<li>
-					<button> 
-						Contact 
-					</button>
+					<input type="image" src="./img/icons8-caixa-postal-fechada-bandeira-pra-baixo.svg">
+	
 				</li>
 			</ul>
 		</nav>
@@ -54,22 +50,38 @@
 		</div>
 		<div class="knowledge">
 
-			<h2>learning</h2>
+			<h2>Aprendendo</h2>
 			<ul> 
 				<li><img src="./img/icons8-javascript.svg"></li>
 				<li><img src="./img/icons8-nodejs.svg"></li>
+				<li><img src="./img/icons8-python.svg"></li>
 			</ul>
 		</div>
 		<div class="work">
-			<h2>Working at</h2>
-			<p>Cefet-Rj (student)</p>
+			<h2>Trabalhos</h2>
+			<ul>
+			<li>Cefet-Rj (student)</li>
+			<li>Me contrata ai rapaz</li>
+		</ul>
 		</div>
 		<div class="contact">
-			<h2>How to reach me</h2>
+			<h2>Como me contatar</h2>
 			<ul>
-				<li>Github</li>
-				<li>Email</li>
-				<li>Secundary Email</li>
+				<li><input type="image" id="github" src="./img/github.svg">
+				</li>
+
+				<div class="tooltip">
+					<span class="tooltiptext" id="gmailText"> Copiar Email</span>
+				<li><input type="image" value="hugobillemartins@gmail.com" id="gmail" src="./img/gmail.svg">
+				</li>
+				</div>
+
+			<div class="tooltip">
+				<span class="tooltiptext" id="outlookText">Copiar Email</span>
+				<li><input type="image" value="hugobillemartins@outlook.com" id="outlook" src="./img/outlook.svg">
+				</li>
+			</div>
+
 			</ul>
 		</div>
 	</aside>
@@ -78,20 +90,29 @@
 			<p>
 				Como a foto aí na esquerda sugere, meu nome é Hugo, também vou por Sotíris, use qual preferir. Sou um estudante do ensino médio técnico de informática e, infelizmente, terei que prover 450 horas de serviço não pago (estágio) a uma empresa; se você está interessado em minha falta de talentos ou só está interessado em 450 horas de trabalho não assalariado mesmo, entre em contato :p
 			</p>
+			<p>
+
+			</p>
 		</div>
+
+		<div class="projects_1">
+			<h2>Laboratórios</h2>
+			<input type="image" id="lab"class="proLogo" src="./img/lab.svg">
+			<p class="description">
+				Deveres relacionados à Design Web
+			</p>
+		</div>
+
 		<div class="projects">
-			<h2>Projects</h2>
-			<ul title="Projects">
-				<li><a href="#">Laboratórios</a></li>
-				<li><a href="#">Quiz de Biologia</a></li>
-				<li><a href="#">Site de Espanhol</a></li>
-				<li><a href="#">Futuro</a></li>
-			</ul>
-
+			<h2>Calculadora</h2>
+			<input type="image" id="lab"class="proLogo" src="./img/calc.svg">
+			<p class="description">
+				Calculadora que farei no futuro
+			</p>
 		</div>
-
 		<h1>Em Obras</h1>
 	</main> 
 </div>
 </body>
+<script src="/scripts.js"></script>
 </html>
