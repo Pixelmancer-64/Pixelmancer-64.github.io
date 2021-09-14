@@ -51,7 +51,6 @@ aside{
 	padding-left: .3rem;
 	flex-basis: 25%;
 	background-color: #202024;
-	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
 	border-radius: 0 6.14px 0 0;
@@ -68,6 +67,7 @@ aside{
 	margin-bottom: 2rem;
 }
 .myPhoto img{
+	padding-bottom: .5rem;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
