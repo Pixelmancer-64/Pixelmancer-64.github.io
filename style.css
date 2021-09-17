@@ -137,6 +137,13 @@ h2{
 	text-align: center;
 	background-image: linear-gradient(#986dbe, #60bb84);
 }
+.projects_2{
+	border: 1px solid white;
+	padding: 1rem;
+	margin: 1rem 0;
+	text-align: center;
+	background-image: url("./img/milky_way.jpg");
+}
 
 .projects {
 	border: 1px solid white;
