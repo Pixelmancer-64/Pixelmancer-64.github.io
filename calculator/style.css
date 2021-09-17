@@ -38,7 +38,19 @@ body{
     word-wrap: break-word;
     word-break: break-all;
 }
-
+#warning{
+    visibility:hidden;
+    font-size: 3.5rem;
+    grid-column: 1/-1;
+    background-color: #202024;
+    display: flex;
+    color: white;
+    padding: 0.3rem;
+    justify-content: center;
+    padding-right: .3rem;
+    word-wrap: break-word;
+    word-break:normal;
+}
 .previous{ 
     color: lightgrey;
 }

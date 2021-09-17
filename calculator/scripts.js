@@ -9,6 +9,9 @@ class brains{
         this.previous = ''
         this.operation=undefined
     }
+    partialCleaner(){
+        this.current=''
+    }
 
     deleting(){
         this.current = this.current.toString().slice(0,-1)
@@ -30,7 +33,9 @@ class brains{
         let result 
         const prev = parseFloat(this.previous)
         const cur =  parseFloat(this.current)
-        if(isNaN(this.previous) || isNaN(this.current)) return 
+        if(isNaN(this.previous) ||
+         isNaN(this.current)){
+             return 0} 
         switch(this.operation){
             case '/':
                 result = prev / cur
@@ -46,17 +51,40 @@ class brains{
                 break
             default: return 0
         }
+        if(isNaN(result)){
+            this.mathPolice()
+            return 
+
+        }
         this.current = result
         this.operation = undefined
         this.previous = ''
+    }
+    
+
+    mathPolice(){
+        document.getElementById('warning').style.visibility = "visible"
+      //  this.typeWriter('warning', 'testee', 10000)
+
     }
 
     update(){
         currentText.innerHTML = this.current
         if(this.operation != null){
             previousText.innerHTML = `${this.previous} ${this.operation}`
-        }
+        }else previousText.innerHTML = ''
     }
+    /*
+    typeWriter(dummy, txt, speed){
+        let i = 0
+        if (i < txt.length) {
+            console.log(i)
+          document.getElementById(dummy).innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(this.typeWriter(), speed);
+        }
+      }
+      */
 }
 
 const numbers = document.querySelectorAll(".number")
@@ -111,12 +139,16 @@ document.addEventListener('keydown', (event) => {
     })
 
     clear.addEventListener('click', () => {
-        calculator.cleaning()
+            calculator.cleaning()
+        document.getElementById('warning').style.visibility = "hidden"
         calculator.update()
+            
     })
 
     del.addEventListener('click', () => {
+        
         calculator.deleting()
+        document.getElementById('warning').style.visibility = "hidden"
         calculator.update()
     })
 
@@ -130,6 +162,7 @@ document.addEventListener('keydown', (event) => {
      }
      if(name === 'Backspace'){
         calculator.deleting()
+        document.getElementById('warning').style.visibility = "hidden"
         calculator.update()
      }
 })
