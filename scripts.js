@@ -13,6 +13,10 @@ document.getElementById("calc").onclick = function () {
     location.href = "/calculator/index.html";
 };
 
+document.getElementById("clock").onclick = function () {
+    location.href = "/clock/index.html";
+};
+
 let gmail = document.getElementById("gmail");
 let outlook = document.getElementById("outlook");
 let outlookText = document.getElementById("outlookText");

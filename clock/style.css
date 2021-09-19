@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: salmon;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 2rem;
+}
+.clock{
+    width: 30rem;
+    height: 30rem;
+    background-color: rgba(255, 255, 255, 80%);
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+}
+.mark{
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+#d0{--rotation: 0deg;}
+#d30{--rotation: 30deg;}
+#d60{--rotation: 60deg;}
+#d90{--rotation: 90deg;}
+#d120{--rotation: 120deg;}
+#d150{--rotation: 150deg;}
+#d180{--rotation: 180deg;}
+#d210{--rotation: 210deg;}
+#d240{--rotation: 240deg;}
+#d270{--rotation: 270deg;}
+#d300{--rotation: 300deg;}
+#d330{--rotation: 330deg;}
+
+.ponteiros{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    transform-origin: bottom;
+    transform: translateX(50%) rotate(calc(var(--rotation) * 1deg));
+}
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 2.2rem;
+    height: 2.2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+#hour{
+    background-color: black;
+    width: .7rem;
+    height: 30%;
+}
+#minute{
+    background-color: black;
+    width: 1rem;
+    height: 40%;
+}
+#second{
+    background-color: red;
+    width: .35rem;
+    height: 40%;
+}
+.digital{
+    text-align: center;
+    justify-content: center;
+    word-wrap: break-word;
+}
