@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
 }
 .labs{
     position: relative;
@@ -7,20 +8,19 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 10rem 20vw;
-}
+    font-size: 3rem;
+    font-family: 'Koh Santepheap', cursive;
 
-.blue{
-    background-color: lightblue;
 }
-.red{
-    background-color: red;
+ul{
+    list-style-type: none;
+    padding: 0;
 }
-.green{
-    background-color: lightgreen;
-}
-.yellow{
-    background-color: yellow;
-}
-.purple{
-    background-color: purple;
+.wave svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
