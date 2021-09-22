@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    background-color: #111113;
+}
+.selectors{
+    text-align: center;
+}
+.selectors button{
+    background-color: #202024;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    font-size: 1rem;
+    margin: 1rem;
+    min-width: 12rem;
+    cursor: pointer;
+}
+
+.teste-div{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+    font-size: 5rem;
+}
+
+#output{
+    font-size: 5rem;
+    display: flex;
+    color: white;
+    padding: 0.3rem;
+    justify-content: center;
+    padding-right: .3rem;
+    background-color: #202024;
+}
+#old{
+    visibility: collapse;
+}
+#new{
+    visibility: collapse;
+}
+
+ul li{
+    color:white;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

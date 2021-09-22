@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+.labs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 20vw;
+}
+
+.blue{
+    background-color: lightblue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: lightgreen;
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
