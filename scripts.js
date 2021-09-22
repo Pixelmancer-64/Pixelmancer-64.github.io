@@ -1,5 +1,5 @@
 document.getElementById("lab").onclick = function () {
-    location.href = "/atividades/index.html";
+    location.href = "/atividades";
 };
 document.getElementById("github").onclick = function () {
     location.href = "https://github.com/Sotiris64";
@@ -10,11 +10,11 @@ document.getElementById("solarSystem").onclick = function () {
 };
 
 document.getElementById("calc").onclick = function () {
-    location.href = "/calculator/index.html";
+    location.href = "/calculator";
 };
 
 document.getElementById("clock").onclick = function () {
-    location.href = "/clock/";
+    location.href = "/clock";
 };
 
 let gmail = document.getElementById("gmail");
