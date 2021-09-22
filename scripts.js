@@ -14,7 +14,7 @@ document.getElementById("calc").onclick = function () {
 };
 
 document.getElementById("clock").onclick = function () {
-    location.href = "/clock/index.html";
+    location.href = "/clock/";
 };
 
 let gmail = document.getElementById("gmail");

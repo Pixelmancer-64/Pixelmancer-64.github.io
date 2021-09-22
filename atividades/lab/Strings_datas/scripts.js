@@ -7,16 +7,12 @@ const option6 = document.getElementById("calculadora")
 const option7 = document.getElementById("data")
 const option8 = document.getElementById("distancia")
 const option9 = document.getElementById("forca")
-const option10 = document.getElementById("codificacao")
+const option10 = document.getElementById("condificacao")
 const old = document.getElementById("old")
 const newC = document.getElementById("new")
 const middle = document.getElementById("middle")
 const currentDate = new Date()
 const output = document.getElementById("output")
-
-function spliter(){
-
-}
 
 option1.addEventListener('click',() => {
     aux=middle.value
@@ -25,30 +21,32 @@ option1.addEventListener('click',() => {
 
 
 option2.addEventListener('click',() => {
+    let result = []
     aux = middle.value.split("")
     let i = 0;
     aux.forEach( () => {
         switch(aux[i]){
-            case 'a': aux[i] ="<b>a</b>"; break;
-            case 'e': aux[i] ="<b>e</b>"; break;
-            case 'i': aux[i] ="<b>i</b>"; break;
-            case 'o': aux[i] ="<b>o</b>"; break;
-            case 'u': aux[i] ="<b>u</b>"; break;
-            case 'A': aux[i] ="<b>A</b>"; break;
-            case 'E': aux[i] ="<b>E</b>"; break;
-            case 'I': aux[i] ="<b>I</b>"; break;
-            case 'O': aux[i] ="<b>O</b>"; break;
-            case 'U': aux[i] ="<b>U</b>"; break;
-            default: break;
+            case 'a': result[i] ="<b>a</b>"; break;
+            case 'e': result[i] ="<b>e</b>"; break;
+            case 'i': result[i] ="<b>i</b>"; break;
+            case 'o': result[i] ="<b>o</b>"; break;
+            case 'u': result[i] ="<b>u</b>"; break;
+            case 'A': result[i] ="<b>A</b>"; break;
+            case 'E': result[i] ="<b>E</b>"; break;
+            case 'I': result[i] ="<b>I</b>"; break;
+            case 'O': result[i] ="<b>O</b>"; break;
+            case 'U': result[i] ="<b>U</b>"; break;
+            default: result[i] = aux[i];
         }
        i++
     });
-    output.innerHTML= aux.join(" ")
+    console.log(result)
+    output.innerHTML= result.join('')
     });
 
 
 option3.addEventListener('click',() => {
-        aux = middle.value.split(" ")
+        aux = middle.value.split
         let hand = []
         let txt = []
         for (i=0;i<aux.length;i++) {
@@ -106,9 +104,13 @@ option4.addEventListener('click',() => {
             aux = new Date(old.value)
             aux1 = new Date(newC.value)
             diff = new Date(aux.getTime() - aux1.getTime());
-            days = Math.ceil(Math.abs(aux - aux1) / (1000 * 60 * 60 * 24));
+            day = Math.ceil(Math.abs(aux - aux1) / (1000 * 60 * 60 * 24));
 
-            output.innerHTML= 1970 - diff.getUTCFullYear() +` Anos, ` + diff.getUTCMonth() +` mes(es) e ` + diff.getUTCDate()+ ` dias  ou `+ days + ' dias no total' 
+            years =  aux1.getUTCFullYear() - aux.getUTCFullYear()
+            months = aux1.getUTCMonth() - aux.getUTCMonth()
+            days = aux1.getUTCDate() - aux.getUTCDate()
+
+            output.innerHTML= years +` Ano(s), ` + months +` mes(es) e ` + days+ ` dia(s)  ou `+ day + ' dias no total' 
         }
         camoRemoval()
         });
@@ -143,16 +145,48 @@ option4.addEventListener('click',() => {
     });
 
     option9.addEventListener('click',() => {
-        console.log('oi')
         old.type='password';
+        // const strong = 
+        const weak = /[a-z]|[A-Z]/
+        const medium = /[a-z][A-Z][0-9]/
+        const strong = /[a-z][A-Z][0-9][!@#\$%\^\&*\)\(+=._-]+$/
 
         if(old.type=='password' && old.style.visibility=="visible"){
             
             security = old.value
-            console.log(security)
-        }  
-
+            
+            if(weak.test(security)==true){
+                old.style.backgroundColor="red"
+            }
+            if(medium.test(security)==true){
+                old.style.backgroundColor="orange"
+            }
+            if(strong.test(security)==true){
+                old.style.backgroundColor="green"
+            }
+            
+        }
         partialCamoRemoval()
+
+    });
+
+    option10.addEventListener('click',() => {
+        old.type='text';
+        newC.type='text';
+        let i=0 
+        if(old.type=='text' && old.style.visibility=="visible"){
+    
+            let str = middle.value.split("")
+            let result = str
+            auxL = old.value.split("")
+            auxR = newC.value.split("")
+            for(i=0;i<old.value.length;i++){
+            result = enigma(auxL[i],auxR[i],result) 
+            }
+            output.innerHTML = result.join("")
+        }
+        camoRemoval()
+        
 
     });
 
@@ -178,4 +212,17 @@ txt = txt.replace(/\n /,"\n"); // exclude newline with a start spacing
          
      }
 
-     
+     function enigma(code1,code2,txt){
+
+        let res=[]
+        for(i=0;i<txt.length;i++){
+
+        switch(txt[i]){
+            case code1: res[i]=code2; break;
+            case code2: res[i]=code1; break;
+            default: res[i]=txt[i]; 
+        }
+    }
+    return(res)
+}
+    
