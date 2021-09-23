@@ -1,5 +1,5 @@
 document.getElementById("lab").onclick = function () {
-    location.href = "/atividades";
+    location.href = "/atividades/";
 };
 document.getElementById("github").onclick = function () {
     location.href = "https://github.com/Sotiris64";
