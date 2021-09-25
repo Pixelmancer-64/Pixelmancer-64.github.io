@@ -85,13 +85,10 @@ aside{
 	
 
 }
-.knowledge{ 
-	border: 1px solid white;
-	border-radius: 6px;
-}
+
 .icons{
 	display: flex;
-	flex-direction: row;
+
 	flex-wrap: wrap;
 }
 .knowledge ul{
@@ -99,19 +96,6 @@ aside{
 	display: flex;
 	flex-wrap: wrap;
 	gap: .2rem;
-}
-
-.work{
-	float: left;
-	border: 1px solid white;
-	border-radius: 6px;
-	margin-bottom: 2rem;
-	
-
-}
-.contact{
-	border: 1px solid white;
-	border-radius: 6px;
 }
 
 .contact ul{
@@ -163,7 +147,7 @@ h2{
 .proLogo{
 	margin-left: auto;
 	margin-right: auto;
-	padding: 1.5rem;
+	margin: 1.5rem;
 }
 
 .aboutMe {
