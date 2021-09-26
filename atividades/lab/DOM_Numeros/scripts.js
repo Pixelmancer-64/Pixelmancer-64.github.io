@@ -18,21 +18,18 @@ biggest.onclick = function () {
     hideM()
     aux = inputL.value
     aux1 = inputR.value
-    
-
-    if(aux >> aux1){
+    if(aux > aux1){
     output.innerHTML = aux+' é maior que '+aux1;
-    }
-    if(aux1 >> aux){
+    }else if(aux < aux1){
     output.innerHTML = aux1 +' é maior que '+aux;
-    } 
+    } else output.innerHTML = 'Ambos valores são iguais';  
 
 };
 prime.onclick = function () {
     hideBoth()
-    aux = inputM.value
-    if(isPrime(aux)) output.innerHTML = aux +' é primo ';
-    else output.innerHTML = aux +' NÃO é primo ';
+    aux = parseInt(inputM.value)
+    if(isPrime(aux)==true) output.innerHTML = aux +' é primo ';
+    else output.innerHTML = aux +' não é primo ';
 
 };
 
@@ -90,8 +87,9 @@ function showAll(){
 
 }
 function isPrime(result){
+    console.log(typeof(result))
     switch(result){
-        case 1: return false;
+        case 1: return false; 
         case 2: return true;
         case 3: return true;
         case 5: return true;
