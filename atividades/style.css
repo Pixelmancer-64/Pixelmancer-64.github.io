@@ -1,14 +1,22 @@
-body{
+*{
     margin: 0;
-    background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    padding: 0;
+    box-sizing: border-box;
+    overflow:hidden;
 }
+
+#canvas1{
+    position: absolute;
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+}
+
 .labs{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10rem 20vw;
-    font-size: 3rem;
+    text-align: center;
+    font-size: 2rem;
     font-family: 'Koh Santepheap', cursive;
 
 }
@@ -16,11 +24,10 @@ ul{
     list-style-type: none;
     padding: 0;
 }
-.wave svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+h1{
+    color: lime;
+
+}
+a{
+    color:lawngreen;
 }
