@@ -1,3 +1,5 @@
+let animationsFiles = ["/animations/CircularMotion","/animations/CthulhuEyes","/animations/Dots"];
+
 document.getElementById("lab").onclick = function () {
     location.href = "/atividades/";
 };
@@ -15,6 +17,10 @@ document.getElementById("calc").onclick = function () {
 
 document.getElementById("clock").onclick = function () {
     location.href = "/clock";
+};
+
+document.getElementById("animation").onclick = function () {
+    location.href = animationsFiles[Math.floor(Math.random() * 3)];
 };
 
 let gmail = document.getElementById("gmail");
@@ -44,3 +50,7 @@ outlook.addEventListener('dblclick', function(){
     navigator.clipboard.writeText(address);
     outlookText.innerHTML = 'Copiado duas vezes! ';
 })
+
+
+
+

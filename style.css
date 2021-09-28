@@ -135,14 +135,7 @@ h2{
 	margin-right: auto;
 	margin: 1.5rem;
 }
-footer{
-	border-top: 2px solid #111113;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 6vh;
-	background-color: #202024;
-}
+
 .aboutMe {
 	border: 1px solid white;
 	padding: 1rem;
