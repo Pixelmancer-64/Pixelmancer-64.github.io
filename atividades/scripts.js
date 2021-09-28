@@ -1,9 +1,11 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 let eyes;
 let theta;
+let scale = window.devicePixelRatio
+canvas.width = innerWidth *scale;
+canvas.height = innerHeight *scale;
+ctx.scale(scale, scale)
 
 let mouse ={
     x: undefined,
@@ -80,14 +82,14 @@ function init(){
     eyes = [];
     let nParticles = (canvas.height * canvas.width)/500;
     let overlapping = false;
-    let guardian = 1000;
+    let guardian = 10000;
     let guardian_counter = 0;
 
     while(eyes.length < nParticles && guardian_counter < guardian){
         let eye = {
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            radius: Math.floor(Math.random() * 100) + 10
+            radius: Math.floor(Math.random() * 100) + 7 
         };
         overlapping=false;
         for(i=0; i < eyes.length; i++){
@@ -109,8 +111,8 @@ function init(){
 
 function animate(){
     requestAnimationFrame(animate);
-   // ctx.fillStyle = 'rgba(0,0,0,0.05)';
-  //  ctx.fillRect(0,0,innerWidth,innerHeight);
+   //ctx.fillStyle = 'rgba(0,0,0,0.05)';
+    // ctx.fillRect(0,0,innerWidth,innerHeight);
     for(i=0; i<eyes.length; i++){
         eyes[i].update();
     }
