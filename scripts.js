@@ -20,7 +20,7 @@ document.getElementById("clock").onclick = function () {
 };
 
 document.getElementById("animation").onclick = function () {
-    location.href = animationsFiles[Math.floor(Math.random() * 3)];
+    location.href = animationsFiles[Math.floor(Math.random() * animationsFiles.length)];
 };
 
 let i =0
