@@ -46,11 +46,11 @@ option2.addEventListener('click',() => {
 
 
 option3.addEventListener('click',() => {
-        aux = middle.value.split
+        aux = middle.value.split(' ');
         let hand = []
         let txt = []
         for (i=0;i<aux.length;i++) {
-            hand[i] = countOcurences(middle.value,aux[i])
+            hand[i] = countOcurences(middle.value, aux[i])
             txt[i]='Para a palavra '+ aux[i]+ ' houveram '+ hand[i] + ' ocorrências' + "<br></br>"
             output.innerHTML=txt.join("")
         }
@@ -199,7 +199,7 @@ txt = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
 txt = txt.replace(/[ ]{2,}/gi," ");//2 or more space to 1
 txt = txt.replace(/\n /,"\n"); // exclude newline with a start spacing
 
-        return txt.match(re, "").length
+        return txt.match(re, '').length
      }
 
      function camoRemoval(){

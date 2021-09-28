@@ -23,6 +23,24 @@ document.getElementById("animation").onclick = function () {
     location.href = animationsFiles[Math.floor(Math.random() * 3)];
 };
 
+let i =0
+let aux = []
+document.addEventListener('keydown', (event) => {
+    
+    console.log(event.key);
+    aux[i] = event.key
+    i++
+    if(i==7){
+        i=0;
+        easterEgg = aux.join('');
+        console.log(easterEgg);
+        if(easterEgg == 'mariana'){
+            console.log('deu certo');
+        }
+    }
+    
+})
+
 let gmail = document.getElementById("gmail");
 let outlook = document.getElementById("outlook");
 let outlookText = document.getElementById("outlookText");
@@ -50,7 +68,6 @@ outlook.addEventListener('dblclick', function(){
     navigator.clipboard.writeText(address);
     outlookText.innerHTML = 'Copiado duas vezes! ';
 })
-
 
 
 
