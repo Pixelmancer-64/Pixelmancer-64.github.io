@@ -94,20 +94,18 @@ class Particle{
 // controller
 function init(){
     particlesArray = [];
-        let size = 2 
-        let color = gradient;
-        let mass = (Math.random()*100) + 1;
-
         for (let y = 0, y1 = pixelData.height; y < y1; y++){
             for (let x = 0, x1 = pixelData.width; x < x1; x++)
                 if (pixelData.data[(y * 4 * pixelData.width) + (x*4) + 3] > 110){
+                    let size = 2 
+                    let color = gradient;
+                    let mass = (Math.random()*100) + 1;
                     let posx = x * ofsetX
                     let posy = y * ofsetY
                     particlesArray.push(new Particle(posx * 20,posy * 20,mass,size,color));
                 }          
         }
 }
-console.log(particlesArray)
 
 function animate(){
     requestAnimationFrame(animate);
