@@ -17,7 +17,7 @@ let particlesArray = [];
 ctx.fillStyle= 'white';
 ctx.font = '2.5em Verdana';
 ctx.textAlign = 'center';
-ctx.fillText('❤', canvas.width/40,canvas.height/30); 
+ctx.fillText('❤', canvas.width/40,canvas.height/25); 
 
 
 
