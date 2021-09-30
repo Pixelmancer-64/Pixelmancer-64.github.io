@@ -1,5 +1,4 @@
-let animationsFiles = ["/animations/CircularMotion","/animations/CthulhuEyes","/animations/Dots","/animations/Text","/animations/Colorful","/animations/Fractal_Tree"];
-
+let animationsFiles = ["/animations/CircularMotion","/animations/CthulhuEyes","/animations/Dots","/animations/Text","/animations/Colorful","/animations/Fractal_Tree","/animations/Mouse_Effect"];
 document.getElementById("lab").onclick = function () {
     location.href = "/atividades/";
 };
