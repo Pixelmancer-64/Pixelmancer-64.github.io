@@ -55,7 +55,6 @@ function controller(){
     let color = 'hsl(' + hue + ',100%,40%)'
 
     myTree = new Tree(x, y, length, angle, width, color)
-    console.log(Tree)
     myTree.draw()
     
 }
