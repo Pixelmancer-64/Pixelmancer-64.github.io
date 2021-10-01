@@ -51,7 +51,7 @@ option3.addEventListener('click',() => {
         let txt = []
         for (i=0;i<aux.length;i++) {
             hand[i] = countOcurences(middle.value, aux[i])
-            txt[i]='Para a palavra '+ aux[i]+ ' houveram '+ hand[i] + ' ocorrências' + "<br></br>"
+            txt[i]='Para a palavra '+ aux[i]+ ' houve '+ hand[i] + ' ocorrências' + "<br></br>"
             output.innerHTML=txt.join("")
         }
     });
