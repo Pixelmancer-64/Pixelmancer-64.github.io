@@ -1,19 +1,18 @@
 const myImage = new Image();
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
-myImage.src = '/img/mando.jpg'
+myImage.src = '/img/saturno[1589].png'
 
 myImage.addEventListener('load', function(){
 canvas.width = 1280;
 canvas.height = 720;
 ctx.drawImage(myImage, 0,0, canvas.width, canvas.height)
-let particlesArray = [];
-const nParticles = 5000;
-ctx.drawImage(myImage, 0,0, canvas.width, canvas.height);
 const pixelData = ctx.getImageData(0,0, canvas.width, canvas.height)
 ctx.clearRect(0,0,canvas.width, canvas.height)
 
+let particlesArray = [];
 let imageMap = [];
+
 for (let y = 0; y < canvas.height; y++){
     let row = [];
     for (let x = 0; x < canvas.width; x++){
@@ -23,6 +22,7 @@ for (let y = 0; y < canvas.height; y++){
         const brightness = brightnessCalc(red, green, blue);
         const pixel = [
             pixelBrightness = brightness,
+            pixelColor = 'rgb('+red+','+ green +','+ blue+')'
         ];
         row.push(pixel);
     }
@@ -40,33 +40,40 @@ class Particle{
         this.x = Math.random() * canvas.width;
         this.y= 0;
         this.speed = 0;
-        this.velocity = Math.random() ;
+        this.velocity = Math.random() *4.5;
         this.size = Math.random() * 1.5 + 1;
-        this.position1 = Math.floor(this.y);
-        this.position2 = Math.floor(this.x);
+        this.positionX = Math.floor(this.x);
+        this.positionY = Math.floor(this.y);
     }
     draw(){
         ctx.beginPath();
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = imageMap[this.positionY][this.positionX][1];
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
         ctx.closePath();
         ctx.fill();
+        ctx.closePath();
     }
     update(){
-        this.position1 = Math.floor(this.y);
-        this.position2 = Math.floor(this.x);
-        this.speed = imageMap[this.position1][this.position2][0];
+        this.positionX = Math.floor(this.x);
+        this.positionY = Math.floor(this.y);
+        this.speed = imageMap[this.positionY][this.positionX][0];
         let movement = (2.5 - this.speed) + this.velocity;
 
         this.y+= movement;
+        this.x+= movement;
+
         if (this.y  >= canvas.height){
             this.y = 0;
             this.x = Math.random() * canvas.width;
+        } if (this.x  >= canvas.width){
+            this.x = 0;
+            this.y = Math.random() * canvas.height;
         }
             }
     }
 
     function init(){
+        const nParticles = 6000;
         particlesArray = [];
             for(i = 0; i < nParticles; i++){
                 particlesArray.push(new Particle);
@@ -74,15 +81,13 @@ class Particle{
     }
     init();
     function animate(){
-        //ctx.drawImage(myImage, 0,0, canvas.width, canvas.height);
         requestAnimationFrame(animate);
-        ctx.globalAlpha = 0.05;
+        ctx.globalAlpha = 0.04;
         ctx.fillStyle = 'rgb(0,0,0)';
         ctx.fillRect(0,0,canvas.width, canvas.height);
-        ctx.globalAlpha = 0.2;
         for(i=0; i<particlesArray.length; i++){
             particlesArray[i].update();
-            ctx.globalAlpha = particlesArray[i].speed *.5;
+            ctx.globalAlpha = particlesArray[i].speed *.6;
             particlesArray[i].draw();
         } 
     }
