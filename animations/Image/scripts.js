@@ -1,7 +1,7 @@
 const myImage = new Image();
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
-myImage.src = '/img/saturno[1589].png'
+myImage.src = '/img/mando.jpg'
 
 myImage.addEventListener('load', function(){
 canvas.width = 1280;
