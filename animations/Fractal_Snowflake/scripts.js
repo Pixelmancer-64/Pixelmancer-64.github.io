@@ -64,6 +64,12 @@ function controller(){
     
 }
 
+window.addEventListener('resize',function(){
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    controller();
+});
+
 refresh.onclick = function(){
     for( i=0; i<refreshTimes; i++){
         ctx.clearRect(0,0,innerWidth,innerHeight);

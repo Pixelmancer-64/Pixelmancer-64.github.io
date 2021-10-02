@@ -3,12 +3,14 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let particlesArray = []
+let hue =0
+
 let mouse ={
     x: undefined,
     y: undefined,
 }
 console.log(particlesArray.length)
-window.addEventListener('click', function(event){
+window.addEventListener('mousemove', function(event){
     mouse.x = event.x;
     mouse.y = event.y;
     init(mouse.x, mouse.y)
@@ -28,13 +30,13 @@ window.addEventListener('mouseout', function(){
 
 // particles
 class Particle{
-    constructor(x, y, directionX, directionY, size, color){
+    constructor(x, y, directionX, directionY, size){
         this.x = x;
         this.y=y;
         this.directionX = directionX;
         this.directionY = directionY;
         this.size = size;
-        this.color = color;
+        this.color = 'hsl(' + hue + ',100%,60%)';
     }
     draw(){
         ctx.beginPath();
@@ -54,25 +56,23 @@ class Particle{
         this.x += this.directionX;
         this.y += this.directionY;
         //
-        if(this.size > 0.2) this.size -= 0.1;
+        if(this.size > 0.9) this.size -= .3;
         this.draw();
     }
 }
 
 // controller
 function init(mx,my){
-    let nParticles = 100;
+    let nParticles = 5;
     for(i=0; i < nParticles; i++){
         let signal = Math.round(Math.random()) ? 1 : -1
-        let size = (Math.random()*50) + 5;
+        let size = (Math.random()*25) + 1;
         let x = mx;
         let y = my;
         //speed
         let directionX =(Math.random()*5) *signal;
         let directionY =(Math.random()*5) *signal;
-        let hue = (Math.random()*360);
-        let color = 'hsl(' + hue + ',100%,50%)';
-        particlesArray.push(new Particle(x,y,directionX,directionY,size,color));
+          particlesArray.push(new Particle(x,y,directionX,directionY,size));
     }
 }
 
@@ -82,10 +82,27 @@ function animate(){
 
     for(let i=0; i<particlesArray.length; i++){
         particlesArray[i].update();
-        if (particlesArray[i].size <= 0.3){
+        if (particlesArray[i].size <= 0.9){
             particlesArray.splice(i, 1);
             i--;
         }
     }
-    
+    hue++;
+    connect();
+}
+
+function connect(){
+    for(a=0; a<particlesArray.length; a++){
+        for(b = a; b<particlesArray.length;b++){
+            let distance = ((particlesArray[a].x - particlesArray[b].x)* (particlesArray[a].x-particlesArray[b].x))+((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y-particlesArray[b].y));
+            if(distance < (canvas.width/10) * (canvas.height/10)){
+                ctx.strokeStyle= particlesArray[a].color;
+                ctx.lineWidth = .5;
+                ctx.beginPath();
+                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                ctx.stroke();
+            }
+        }
+    }
 }

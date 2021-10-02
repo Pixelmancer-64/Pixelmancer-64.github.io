@@ -1,4 +1,4 @@
-let animationsFiles = ["/animations/CircularMotion","/animations/CthulhuEyes","/animations/Dots","/animations/Text","/animations/Colorful","/animations/Fractal_Tree","/animations/Mouse_Effect","/animations/Matrix","/animations/Rain","/animations/Fractal_Snowflake"];
+let animationsFiles = ["/animations/CircularMotion","/animations/CthulhuEyes","/animations/Dots","/animations/Text","/animations/Colorful","/animations/Fractal_Tree","/animations/Mouse_Effect","/animations/Matrix","/animations/Rain","/animations/Fractal_Snowflake","/animations/Mouse_Trail","/animations/Image" ];
 document.getElementById("lab").onclick = function () {
     location.href = "/atividades/";
 };

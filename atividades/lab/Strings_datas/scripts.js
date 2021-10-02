@@ -14,17 +14,18 @@ const middle = document.getElementById("middle")
 const currentDate = new Date()
 const output = document.getElementById("output")
 
+
 option1.addEventListener('click',() => {
     aux=middle.value
     output.innerHTML = aux.split("").reverse().join("")
 })
-
 
 option2.addEventListener('click',() => {
     let result = []
     aux = middle.value.split("")
     let i = 0;
     aux.forEach( () => {
+        console.log(aux)
         switch(aux[i]){
             case 'a': result[i] ="<b>a</b>"; break;
             case 'e': result[i] ="<b>e</b>"; break;
@@ -44,14 +45,13 @@ option2.addEventListener('click',() => {
     output.innerHTML= result.join('')
     });
 
-
 option3.addEventListener('click',() => {
         aux = middle.value.split(' ');
         let hand = []
         let txt = []
         for (i=0;i<aux.length;i++) {
             hand[i] = countOcurences(middle.value, aux[i])
-            txt[i]='Para a palavra '+ aux[i]+ ' houve '+ hand[i] + ' ocorrências' + "<br></br>"
+            txt[i]= aux[i]+ ': '+ hand[i] + "<br></br>"
             output.innerHTML=txt.join("")
         }
     });
@@ -68,7 +68,6 @@ option4.addEventListener('click',() => {
             hand[i] = countOcurences(middle.value,aux[i])
 
             if(hand[i] >= Math.max(...hand)){
-
                 max[j] = aux[i]
                 j++
             }
@@ -82,8 +81,7 @@ option4.addEventListener('click',() => {
 
     });
 
-
-    option5.addEventListener('click',() => {
+option5.addEventListener('click',() => {
         old.type='text';
         newC.type='text'; 
         if(old.type=='text' && old.style.visibility=="visible"){
@@ -96,7 +94,7 @@ option4.addEventListener('click',() => {
 
     });
 
-    option6.addEventListener('click',() => {
+option6.addEventListener('click',() => {
 
         old.type='date';
         newC.type='date';
@@ -116,7 +114,7 @@ option4.addEventListener('click',() => {
         });
 
     
-    option7.addEventListener('click',() => {
+option7.addEventListener('click',() => {
         old.type='date';
         
         if(old.type=='date' && old.style.visibility=="visible"){
@@ -130,7 +128,7 @@ option4.addEventListener('click',() => {
         partialCamoRemoval()
     });
 
-    option8.addEventListener('click',() => {
+option8.addEventListener('click',() => {
         old.type='date';
         newC.type='date';
         
@@ -144,9 +142,8 @@ option4.addEventListener('click',() => {
         camoRemoval()
     });
 
-    option9.addEventListener('click',() => {
+option9.addEventListener('click',() => {
         old.type='password';
-        // const strong = 
         const weak = /[a-z]|[A-Z]/
         const medium = /[a-z][A-Z][0-9]/
         const strong = /[a-z][A-Z][0-9][!@#\$%\^\&*\)\(+=._-]+$/
@@ -170,7 +167,7 @@ option4.addEventListener('click',() => {
 
     });
 
-    option10.addEventListener('click',() => {
+option10.addEventListener('click',() => {
         old.type='text';
         newC.type='text';
         let i=0 
