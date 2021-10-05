@@ -27,4 +27,4 @@ function isPrime(result){
 //O primeiro valor é o padrão para a quantidade de vezes
 //que o programa irá rodar, o segundo padrão define o valor
 //inicial da busca, sendo como padrão 0
-primeSelector(10,2);
+primeSelector(6);

@@ -8,6 +8,8 @@ const option7 = document.getElementById("data")
 const option8 = document.getElementById("distancia")
 const option9 = document.getElementById("forca")
 const option10 = document.getElementById("condificacao")
+const oldLabel = document.getElementById("oldLabel")
+const newLabel = document.getElementById("newLabel")
 const old = document.getElementById("old")
 const newC = document.getElementById("new")
 const middle = document.getElementById("middle")
@@ -16,11 +18,19 @@ const output = document.getElementById("output")
 
 
 option1.addEventListener('click',() => {
+    camo()
+    camoMiddleRemoval()
+    if (middle.value != ''){
     aux=middle.value
     output.innerHTML = aux.split("").reverse().join("")
+    }
+    
 })
 
 option2.addEventListener('click',() => {
+    camo()
+    camoMiddleRemoval()
+    if(middle.value != ''){
     let result = []
     aux = middle.value.split("")
     let i = 0;
@@ -43,9 +53,13 @@ option2.addEventListener('click',() => {
     });
     console.log(result)
     output.innerHTML= result.join('')
+    }
     });
 
 option3.addEventListener('click',() => {
+    camo()
+    camoMiddleRemoval()
+    if(middle.value != ''){
         aux = middle.value.split(' ');
         let hand = []
         let txt = []
@@ -54,10 +68,14 @@ option3.addEventListener('click',() => {
             txt[i]= aux[i]+ ': '+ hand[i] + "<br></br>"
             output.innerHTML=txt.join("")
         }
+    }
     });
 
 
 option4.addEventListener('click',() => {
+    camo()
+    camoMiddleRemoval()
+    if(middle.value != ''){
         aux = middle.value.split(" ")
         let hand = []
         let max = []
@@ -78,27 +96,34 @@ option4.addEventListener('click',() => {
            i = i+Math.max(...hand)
         }
         output.innerHTML='A(s) palavra(s) com maior ocorrência foi(ram): '+ maxHelper+ ' com '+ Math.max(...hand)+' ocorrências'
-
+    }
     });
 
 option5.addEventListener('click',() => {
         old.type='text';
         newC.type='text'; 
-        if(old.type=='text' && old.style.visibility=="visible"){
+        oldLabel.innerHTML = 'Palavra antiga:'
+        newLabel.innerHTML = 'Nova palavra'
+
+        if(old.type=='text' && old.style.visibility=="visible" && middle.value != '' ){
     
         let re = new RegExp(old.value,'g');
         let str = middle.value
         output.innerHTML=str.replace(re, newC.value)
         }
         camoRemoval()
+        camoMiddleRemoval()
+
 
     });
 
 option6.addEventListener('click',() => {
-
+        camoMiddle()
+        oldLabel.innerHTML = 'Data inicial:'
+        newLabel.innerHTML = 'Data final'
         old.type='date';
         newC.type='date';
-        if(old.type=='date' && old.style.visibility=="visible"){
+        if(old.type=='date' && old.style.visibility=="visible" && old.value != ''){
             aux = new Date(old.value)
             aux1 = new Date(newC.value)
             diff = new Date(aux.getTime() - aux1.getTime());
@@ -117,7 +142,7 @@ option6.addEventListener('click',() => {
 option7.addEventListener('click',() => {
         old.type='date';
         
-        if(old.type=='date' && old.style.visibility=="visible"){
+        if(old.type=='date' && old.style.visibility=="visible" && old.value != ''){
 
             const options = {year: 'numeric', month: 'long', day: 'numeric'}
             aux = new Date (old.value)
@@ -125,30 +150,36 @@ option7.addEventListener('click',() => {
             output.innerHTML= aux.toLocaleDateString('pt-br', options)
 
         }
+        camo();
+        camoMiddle();
         partialCamoRemoval()
     });
 
 option8.addEventListener('click',() => {
         old.type='date';
         newC.type='date';
+        oldLabel.innerHTML = 'Data inicial:'
+        newLabel.innerHTML = 'Data final'
         
-        if(old.type=='date' && old.style.visibility=="visible"){
+        if(old.type=='date' && old.style.visibility=="visible" && old.value != ''){
             aux = new Date(old.value)
             aux1 = new Date(newC.value)
             weeks = Math.ceil(Math.abs(aux - aux1) / (1000 * 60 * 60 * 24 * 7));
 
             output.innerHTML= 'A distância é de: '+weeks+' semanas'
         }  
+        camoMiddle();
         camoRemoval()
     });
 
 option9.addEventListener('click',() => {
         old.type='password';
+        oldLabel.innerHTML = 'Senha:'
         const weak = /[a-z]|[A-Z]/
         const medium = /[a-z][A-Z][0-9]/
         const strong = /[a-z][A-Z][0-9][!@#\$%\^\&*\)\(+=._-]+$/
 
-        if(old.type=='password' && old.style.visibility=="visible"){
+        if(old.type=='password' && old.style.visibility=="visible" && old.value != ''){
             
             security = old.value
             
@@ -163,6 +194,8 @@ option9.addEventListener('click',() => {
             }
             
         }
+        camo();
+        camoMiddle();
         partialCamoRemoval()
 
     });
@@ -170,8 +203,10 @@ option9.addEventListener('click',() => {
 option10.addEventListener('click',() => {
         old.type='text';
         newC.type='text';
+        oldLabel.innerHTML = 'Primeira palavra:'
+        newLabel.innerHTML = 'Segunda palavra'
         let i=0 
-        if(old.type=='text' && old.style.visibility=="visible"){
+        if(old.type=='text' && old.style.visibility=="visible" && old.value != ''){
     
             let str = middle.value.split("")
             let result = str
@@ -182,6 +217,7 @@ option10.addEventListener('click',() => {
             }
             output.innerHTML = result.join("")
         }
+        camoMiddleRemoval()
         camoRemoval()
         
 
@@ -199,15 +235,38 @@ txt = txt.replace(/\n /,"\n"); // exclude newline with a start spacing
         return txt.match(re, '').length
      }
 
+     function camo(){
+        old.style.visibility='hidden';
+        newC.style.visibility='hidden';
+        oldLabel.style.visibility='hidden';
+        newLabel.style.visibility='hidden';
+        old.value = '';
+        newC.value = '';
+
+     }
+
+     function camoMiddle(){
+        middle.style.visibility = 'hidden';
+        middle.value = '';
+     }
+     function camoMiddleRemoval(){
+        middle.style.visibility = 'visible';
+     }
+
      function camoRemoval(){
-        old.style.visibility='visible'
-        newC.style.visibility='visible'
+        old.style.visibility='visible';
+        newC.style.visibility='visible';
+        oldLabel.style.visibility='visible';
+        newLabel.style.visibility='visible';
 
      }
      function partialCamoRemoval(){
         old.style.visibility='visible'
+        oldLabel.style.visibility='visible';
          
      }
+
+
 
      function enigma(code1,code2,txt){
 
