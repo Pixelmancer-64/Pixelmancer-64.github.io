@@ -3,12 +3,13 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let ofsetX = 10;
-let ofsetY = 10; 
+let fontSize = 2
+let ofsetX = 10/2;
+let ofsetY = 10/2; 
 let text = 'Hello World';
 let particlesArray = [];
 ctx.fillStyle= 'white';
-ctx.font = '2em Verdana';
+ctx.font = fontSize+ 'em Verdana';
 ctx.textAlign = "center"; 
 ctx.fillText(text, canvas.width/(2*ofsetX),canvas.height/(2*ofsetY)); 
 const pixelData = ctx.getImageData(0,0,canvas.width, canvas.height);
