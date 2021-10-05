@@ -25,6 +25,10 @@ body{
 	font-size: 1rem;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+hr{
+	margin: 0 1em;
+	border: .1em solid white;
+}
 button{
 	display: flex;
 	align-items: center;
@@ -85,13 +89,24 @@ aside{
 
 .icons{
 	display: flex;
+
 }
 .knowledge ul{
 	display: flex;
 	flex-wrap: wrap;
 	gap: .2rem;
 }
+.knowledge{
+	margin: 0 1em;
+}
+.work{
+	margin: 0 1em;
 
+}
+.contact{
+	margin: 0 1em;
+
+}
 .contact ul{
 	justify-content: center;
 	display: flex;

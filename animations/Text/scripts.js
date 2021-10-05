@@ -3,30 +3,20 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const gradient = ctx.createLinearGradient(0,canvas.width, 0, 0)
-gradient.addColorStop('.1', 'rgba(250,229,0)');
-gradient.addColorStop('1', '#8AFF00');
-// gradient.addColorStop('0.8', 'rgba(255,165,0)');
-// gradient.addColorStop('1', 'rgba(0,0,255)');
-
-
-
-
-
+let ofsetX = 10;
+let ofsetY = 10; 
+let text = 'Hello World';
 let particlesArray = [];
 ctx.fillStyle= 'white';
-ctx.font = '2.5em Verdana';
-ctx.textAlign = 'center';
-ctx.fillText('❤', canvas.width/40,canvas.height/21); 
-
-
-
-const pixelData = ctx.getImageData(0,0, 100, 100)
+ctx.font = '2em Verdana';
+ctx.textAlign = "center"; 
+ctx.fillText(text, canvas.width/(2*ofsetX),canvas.height/(2*ofsetY)); 
+const pixelData = ctx.getImageData(0,0,canvas.width, canvas.height);
 
 const mouse ={
     x: undefined,
     y: undefined,
-    radius: (canvas.height/110) * (canvas.width/110)
+    radius: (canvas.height/150) * (canvas.width/150)
 }
 
 window.addEventListener('mousemove', function(event){
@@ -93,11 +83,9 @@ function init(){
     particlesArray = [];
         for (let y = 0, y1 = pixelData.height; y < y1; y++){
             for (let x = 0, x1 = pixelData.width; x < x1; x++)
-                if (pixelData.data[(y * 4 * pixelData.width) + (x*4) + 3] > 180){
-                    let ofsetX = 20;
-                    let ofsetY = 20; 
-                    let size = 1 
-                    let color = gradient;
+                if (pixelData.data[(y * 4 * pixelData.width) + (x*4) + 3] > 120){
+                    let size = 3; 
+                    let color = 'rgba(132,38,191)';
                     let mass = (Math.random()*100) + 1;
                     let posx = x * ofsetX
                     let posy = y * ofsetY
@@ -112,18 +100,22 @@ function animate(){
     for(i=0; i<particlesArray.length; i++){
         particlesArray[i].update();
     }
-     connect();
+  // connect();
 }
 
+
+
 function connect(){
+    let opacityValue = 1;
     for(a=0; a<particlesArray.length; a++){
         for(b = a; b<particlesArray.length;b++){
             let dx = particlesArray[a].x - particlesArray[b].x;
             let dy = particlesArray[a].y - particlesArray[b].y;
             let distance = Math.sqrt(dx * dx + dy * dy);
-            if(distance < 42){
-                ctx.strokeStyle=gradient;
-                ctx.lineWidth = 1;
+            if(distance < (canvas.width/350) * (canvas.height/350)){
+                opacityValue = 1 - (distance/1000);
+                ctx.strokeStyle='rgba(132,38,191,' + opacityValue + ')';
+                ctx.lineWidth = 3;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -135,12 +127,14 @@ function connect(){
 
 
 //To not screw up the page if the window space change
-window.addEventListener('resize',function(){
+window.addEventListener('resize', start());
+
+function start(){
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-    mouse.radius = ((canvas.height/110) * (canvas.height/110));
-    init();
-});
+    mouse.radius = ((canvas.height/150) * (canvas.height/150));
 
-init();
-animate();
+    init();
+    animate();
+}
+start()
