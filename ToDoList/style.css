@@ -1,0 +1,60 @@
+body{
+    margin:0 5% ;
+    border: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+}
+main{
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    height: 100vh;
+}
+#subTask{
+    width: 10em;
+    height: 3em;
+    background-color: rgb(37, 199, 37);
+    border: 0;
+    outline: none;
+    border-radius: 12px;
+}
+
+#task, #filter {
+    width: 100%;
+    outline: none;
+    border: 0;
+}
+#clear{
+    width: 10em;
+    height: 3em;
+    background-color: black;
+    border: 0;
+    outline: none;
+    border-radius: 12px;
+    color: white;
+}
+.collection-item{
+    padding: 0;
+    border: 1px solid lightgrey;
+    list-style: none;
+    margin: 0;
+    padding: 1em;
+    font-size: 1.3em;
+    
+}
+ul{
+    padding: 0;
+}
+.collection{
+    gap: .5em;
+}
+.delete-item{
+    display: inline;
+    float: inline-end;
+    color: rgba(226,33,33,1);
+    font-weight: bolder;
+}
+.delete-item:hover{
+    color: rgba(226,33,33,.5);
+    cursor: pointer;
+}

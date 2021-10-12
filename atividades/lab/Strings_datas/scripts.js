@@ -126,14 +126,15 @@ option6.addEventListener('click',() => {
         if(old.type=='date' && old.style.visibility=="visible" && old.value != ''){
             aux = new Date(old.value)
             aux1 = new Date(newC.value)
-            diff = new Date(aux.getTime() - aux1.getTime());
-            day = Math.ceil(Math.abs(aux - aux1) / (1000 * 60 * 60 * 24));
+            diff = new Date(aux1.getTime() - aux.getTime());
+            const ageDate = new Date(diff);
+            day = Math.ceil(Math.abs(ageDate) / (1000 * 60 * 60 * 24));
 
-            years =  aux1.getUTCFullYear() - aux.getUTCFullYear()
-            months = aux1.getUTCMonth() - aux.getUTCMonth()
-            days = aux1.getUTCDate() - aux.getUTCDate()
+            years =  Math.abs(ageDate.getUTCFullYear() - 1970);
+            months = ageDate.getUTCMonth();
+            days = ageDate.getUTCDate();
 
-            output.innerHTML= years +` Ano(s), ` + months +` mes(es) e ` + days+ ` dia(s)  ou `+ day + ' dias no total' 
+            output.innerHTML=  years +` Ano(s), ` + months +` mes(es) e ` + days+ ` dia(s)  ou `+ day + ' dias no total' 
         }
         camoRemoval()
         });
