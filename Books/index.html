@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Books</title>
+</head>
+<body>
+    <main>
+    <h1>Books!</h1>
+    <h2>Add your book list here</h2> 
+
+    <div class='inputs'>
+    <form id="book-form">
+    <label for="title">Book title</label>
+    <input type="text" class="book-input" name="title" id= "title" placeholder="Book name">
+        <hr>
+    <label for="author">Book author</label>
+    <input type="text" class="book-input" name="author" id= "author" placeholder="Author">
+        <hr>
+    <label for="finishDate">Finished reading</label>
+    <input type="text" class="book-input" name="finishDate" id= "finishDate" placeholder="Date">
+        <hr>
+        <input type="submit" value="Add Book" id="subBook">
+    </form>
+    </div>
+        <div class="myBooks">
+                <h2>My Books</h2>
+                <div class="book-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id='book-list'></tbody>
+                    </table>
+        </div>
+</main>
+
+</body>
+<script src="./scripts.js"></script>
+</html>

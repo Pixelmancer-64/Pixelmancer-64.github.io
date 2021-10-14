@@ -1,0 +1,29 @@
+main{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color:white;
+    width: 90vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+body{
+    background-color: black;
+}
+#city{
+    width: 100%;
+    font-size: large;
+}
+label{
+    font-size: larger;
+    font-weight: bold;
+}
+.output{
+    font-size: 2rem;
+}
