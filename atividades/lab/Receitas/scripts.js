@@ -29,7 +29,7 @@ window.onload = function () {
         </div>
         </div>`;
 
-        document.querySelector('body').innerHTML = aux;
     });
+    document.querySelector('body').innerHTML = aux;
 }
 
