@@ -17,15 +17,19 @@ window.onload = function () {
         })
     
       aux += `
-        <h1>ID: ${recipe.id}</h1>
+      <div class = "receita">
+      <div class = "mainDescription">
         <h1>${recipe.nome}</h1>
         <img src ="${recipe.foto}">
         <h3>${recipe.descricao}</h3>
+        </div>
+        <div class="DIY">
+        <h2>Ingredientes: </h2> <ul>${ingredientesAux}</ul>
         <h2>Preparo: </h2> <ol>${preparoAux}</ol>
-        <h2>Ingredientes: </h2> <ul>${ingredientesAux}</ul>`;
+        </div>
+        </div>`;
+
+        document.querySelector('body').innerHTML = aux;
     });
-    document.querySelector('body').innerHTML = aux;
 }
-
-
 

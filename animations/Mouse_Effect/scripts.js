@@ -7,7 +7,6 @@ let mouse ={
     x: undefined,
     y: undefined,
 }
-console.log(particlesArray.length)
 window.addEventListener('click', function(event){
     mouse.x = event.x;
     mouse.y = event.y;
