@@ -11,13 +11,13 @@ nav{
 }
 .logo{
 	margin-left: 2rem;
+	display: inline-block
 }
-nav ul{
-	display: flex;
-	justify-content: space-evenly;
-	width: 15%;
-	
-	
+.logo img{
+	border: 1px solid white;
+}
+img{
+	max-width:100%;
 }
 body{
 	background-color: #111113;
