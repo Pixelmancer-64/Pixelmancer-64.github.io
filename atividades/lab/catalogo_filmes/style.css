@@ -35,25 +35,26 @@ body{
     top: 0; left: 0;
     width: 100%; height: 100%;
     background-color: black;
-    clip-path: circle(8em at 100% -5%);
+    clip-path: circle(8vh at 100% -5%);
     transition: 0.5s ease-in-out;
 }
 .movie:hover:before{
-    clip-path: circle(7em at 90% 10%);
+    clip-path: circle(8vh at 100% -25%);
 }
 .movie::after{
     z-index: 10;
     transition: 0.5s ease-in-out;
     content: '18';
-    position: absolute;
-    top: 1%; left: 90%;
-    font-size: 3em;
+    position: relative;
+    top: 1%; left: 92%;
+    font-size: 2em;
     color: white;
 
 }
 .movie:hover:after{
     position: absolute;
-    top: 10%; left: 82%;
+    top: -10%; left: 100%;
+    font-size: 2em;
 }
 .imageContainer{
     position: absolute;
@@ -64,45 +65,30 @@ body{
     transition: .5s;
 }
 
-.card .movie:hover .imageContainer{
+.movie:hover .imageContainer{
     top: 0%;
     transform: translateY(-200%);
     transition: 1s ;
 }
 
-.card .movie .imageContainer img{
+.imageContainer img{
     position: absolute;
     top: 0%; left: 50%;
     transform: translate(-50%, 0%);
     width: 100%;
 }
 
-.card .movie .description{
+.description{
     color: white;
     position: absolute;
-    bottom: 30em;
-    width: 100%;
-    height: 100%;
+    bottom: 50em;
     text-align: center;
     transition: 1s;
     z-index: 1;
+    padding: 2em;
 } 
 
-.card .movie:hover .description{
-    height: 1em;
-}
-
-.card .movie .description h2{
-    position: relative;
-    font-weight: bold;
-    color: white;
-}
-
-.card .movie .description .cast{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transition: .5s;
+.movie:hover .description{
+    bottom: 0;
 }
 

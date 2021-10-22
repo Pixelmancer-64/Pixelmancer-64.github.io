@@ -23,7 +23,9 @@ fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
 
             data.opinioes.forEach(opnion => {
                 const span = document.createElement("span");
+                const br = document.createElement("br");
                 span.appendChild(document.createTextNode(opnion.descricao));
+                span.appendChild(br);
                 opinioesAux += span.outerHTML;
             });
 
@@ -37,18 +39,21 @@ fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
                 <h4>${data.resumo}</h4>
                 <hr>
                 <div class="cast">
+                <h2>Elenco</h2>
                     <ul>
                         ${castAux}
                     </ul>
                 </div>
                 <hr>
                 <div class="genre">
+                <h2>Gênero</h2>
                     <ul>
                         ${generosAux}
                     </ul>
                     <hr>
                 </div>
                 <div class="reviews">
+                <h2>Reviews</h2>
                     ${opinioesAux}
                 </div>
             </div>
@@ -56,7 +61,7 @@ fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
         </div>`; 
         });
 
-document.querySelector('body').innerHTML=aux;
+document.querySelector('body').innerHTML = aux;
     })
     .catch(err => {
         console.log(`Error: ${err}`)
