@@ -12,15 +12,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    flex-direction: column;
     background: #131313;
-    overflow: hidden;
+    gap: 1em;
 }
 
 .card{
     position: relative;
 }
-.card .movie{
+.movie{
     position: relative;
     width: 50vh;
     height: 50vh;
@@ -28,7 +28,7 @@ body{
     border-radius: 5%;
     overflow: hidden;
 }
-.card .movie::before{
+.movie::before{
     z-index: 10;
     content: '';
     position: absolute;
@@ -38,10 +38,10 @@ body{
     clip-path: circle(8em at 100% -5%);
     transition: 0.5s ease-in-out;
 }
-.card .movie:hover:before{
+.movie:hover:before{
     clip-path: circle(7em at 90% 10%);
 }
-.card .movie::after{
+.movie::after{
     z-index: 10;
     transition: 0.5s ease-in-out;
     content: '18';
@@ -51,7 +51,7 @@ body{
     color: white;
 
 }
-.card .movie:hover:after{
+.movie:hover:after{
     position: absolute;
     top: 10%; left: 82%;
 }
