@@ -1,93 +1,88 @@
-/**@type {HTMLCanvasElement} */
-let canvas;
-let ctx;
-let FlowField;
-let animationRequest;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let particlesArray = []
 
-window.onload = function(){
-    canvas = document.getElementById('canvas');
-    ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    FlowField = new FlowFieldEffect(ctx, canvas.width, canvas.height)
-    //FlowField.animate(0);
-}
-const glass = document.getElementById('glass');
-let measurement = glass.getBoundingClientRect()
-let myUmbrella = {
-    x: measurement.left,
-    y: measurement.top,
-    width: measurement.width,
-    height: measurement.height,
-}
-
-console.log(measurement)
-
-class FlowFieldEffect {
-    #ctx;
-    #width;
-    #height;
-    constructor(ctx, width, height){
-        this.#ctx = ctx;
-        this.#width = width;
-        this.#height = height;
-        this.time = 0;
-        this.interval = 1000/60;
-        this.timer = 0;
-        this.cellsSize = 15;
-        this.gradient;
-        this.#gradient();
-        this.#ctx.strokeStyle = this.gradient;
-        this.#ctx.lineWidth = 1;
-        this.wild = Math.random()
-        this.radius = 0;
-        this.#ctx.beginPath();
-        // this.#ctx.arc(myUmbrella.x, myUmbrella.y, 100, 0, Math.PI * 2, false);
-        this.#ctx.arc(this.#width/2, this.#height/2, myUmbrella.width/2, 0, Math.PI*2);
-        this.#ctx.strokeStyle = 'red';
-        this.#ctx.stroke();
-    }
-    #gradient(){
-        this.gradient = this.#ctx.createLinearGradient(0, 0, this.#width, this.#height);
-        this.gradient.addColorStop("0.1","#ff5c33")
-        this.gradient.addColorStop("0.2","#ff66b3")
-        this.gradient.addColorStop("0.4","#ccf")
-        this.gradient.addColorStop("0.6","#b3ffff")
-        this.gradient.addColorStop("0.8","#80ff80")
-        this.gradient.addColorStop("0.9","#ffff33")
-
-    }
-    #draw(angle, x,y){
-        this.#ctx.beginPath();
-        this.#ctx.moveTo(x,y);
-        this.#ctx.lineTo(x + Math.cos(angle) * 30, y + Math.sin(angle) * 30);
-        this.#ctx.stroke();
-    };
-    animate(currentTime){
-        const latency = currentTime - this.timer;
-        this.timer = currentTime;
-        if(this.timer > this.interval){
-            this.#ctx.clearRect(0, 0, this.#width, this.#height);
-            this.radius += .09
-            for (let y = 0; y <  this.#height; y += this.cellsSize){
-                for (let x = 0; x <  this.#width; x += this.cellsSize){
-                    const angle = (Math.cos(x*.0009) + Math.sin(y*.0009)) * this.radius
-                    this.#draw(angle, x, y);
-                }
-            }
-            this.timer = 0;
-        }else{
-            this.timer += latency;
-        }
-        animationRequest = requestAnimationFrame(this.animate.bind(this));
-    }
-}
-
-window.addEventListener('resize', function(){
-    cancelAnimationFrame(animationRequest);
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    FlowField = new FlowFieldEffect(ctx, canvas.width, canvas.height)
-    FlowField.animate(0);
+//To not screw up the page if the window space change
+window.addEventListener('resize',function(){
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
 });
 
+class Particle{
+    constructor(x, y, directionX, directionY, size, color){
+        this.x = x;
+        this.y=y;
+        this.directionX = directionX;
+        this.directionY = directionY;
+        this.size = size;
+        this.color = color;
+        this.random = Math.random();
+    }
+    draw(){
+        ctx.beginPath();
+        ctx.arc(canvas.width/2, canvas.height/2, 310, 0, Math.PI * 2);
+        ctx.strokeStyle= 'white';
+        ctx.shadowBlur = 0;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.shadowColor = '#25E0A3';
+        ctx.shadowBlur = 25;
+        ctx.strokeStyle= '#25E0A3';
+        ctx.fillStyle = '#25E0A3';
+        ctx.stroke();
+        ctx.fill();
+    }
+    update(){
+        let dx = this.x - canvas.width/2;
+        let dy = this.y - canvas.height/2;
+        let distance = dx*dx + dy*dy;
+        if(distance > 300*300){
+            this.directionX = -this.directionX;
+            this.directionY = -this.directionY;
+        }
+        this.x += this.directionX + Math.sin(this.random);
+        this.y += this.directionY + Math.cos(this.random);
+        this.random += .08;
+        this.draw();
+    }
+}
+
+// controller
+function init(){
+    let nParticles = 20;
+    for(i=0; i < nParticles; i++){
+        let signal = Math.round(Math.random()) ? 1 : -1
+        let otherSignal = Math.round(Math.random()) ? 1 : -1
+
+        let size = 5;        
+        let x = canvas.width/2;
+        let y = canvas.height/2;
+        //speed
+        let directionX = Math.random() * 2 * signal ;
+        let directionY = Math.random() * 2 * otherSignal ;
+        
+        let hue = (Math.random()*360);
+        let color = 'hsl(' + hue + ',100%,50%)';
+        particlesArray.push(new Particle(x,y,directionX,directionY,size,color));
+    }
+}
+
+function animate(){
+    requestAnimationFrame(animate);
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+
+    for(let i=0; i<particlesArray.length; i++){
+        particlesArray[i].update();
+        if (particlesArray[i].size <= 0.3){
+            particlesArray.splice(i, 1);
+            i--;
+        }
+    }
+    
+}
+
+init();
+animate(); 

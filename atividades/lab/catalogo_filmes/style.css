@@ -1,0 +1,108 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img{
+    max-width:100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+    overflow: hidden;
+}
+
+.card{
+    position: relative;
+}
+.card .movie{
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+    background-color: #202024;
+    border-radius: 5%;
+    overflow: hidden;
+}
+.card .movie::before{
+    z-index: 10;
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: black;
+    clip-path: circle(8em at 100% -5%);
+    transition: 0.5s ease-in-out;
+}
+.card .movie:hover:before{
+    clip-path: circle(7em at 90% 10%);
+}
+.card .movie::after{
+    z-index: 10;
+    transition: 0.5s ease-in-out;
+    content: '18';
+    position: absolute;
+    top: 1%; left: 90%;
+    font-size: 3em;
+    color: white;
+
+}
+.card .movie:hover:after{
+    position: absolute;
+    top: 10%; left: 82%;
+}
+.imageContainer{
+    position: absolute;
+    top: 0%;
+    transform: translateY(0%);
+    width: 100%;
+    height: 12em;
+    transition: .5s;
+}
+
+.card .movie:hover .imageContainer{
+    top: 0%;
+    transform: translateY(-200%);
+    transition: 1s ;
+}
+
+.card .movie .imageContainer img{
+    position: absolute;
+    top: 0%; left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+}
+
+.card .movie .description{
+    color: white;
+    position: absolute;
+    bottom: 30em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+    z-index: 1;
+} 
+
+.card .movie:hover .description{
+    height: 1em;
+}
+
+.card .movie .description h2{
+    position: relative;
+    font-weight: bold;
+    color: white;
+}
+
+.card .movie .description .cast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: .5s;
+}
+
