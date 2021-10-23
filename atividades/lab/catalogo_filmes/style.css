@@ -41,13 +41,13 @@ body{
 }
 
 
-.movie.special::before{
+.movie.green::before{
     background-color: green;
 }
-.movie.special_red::before{
+.movie.red::before{
     background-color: red;
 }
-.movie.special_yellow::before{
+.movie.yellow::before{
     background-color: rgb(238, 238, 29);
 }
 
