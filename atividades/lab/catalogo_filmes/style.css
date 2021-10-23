@@ -11,9 +11,9 @@ img{
 body{
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background: #131313;
     gap: 1em;
 }
@@ -72,9 +72,10 @@ body{
     position: absolute;
     bottom: 0em;
     display: flex;
-    transition: 1s;
-    padding: 1em;
+    padding: .7em;
     gap: 2em;
+    font-size: 2vh;
+    transition: .5s ease-in-out;
 }
 .reviews span{
     flex: 1;
@@ -112,8 +113,9 @@ body{
 }
 
 .description{
+    font-size: 2vh;
     position: absolute;
-    bottom: 50em;
+    bottom: 30em;
     text-align: center;
     display: flex;
     flex-direction: column;
