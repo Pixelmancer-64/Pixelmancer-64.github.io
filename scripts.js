@@ -22,6 +22,14 @@ document.getElementById("animation").onclick = function () {
     location.href = animationsFiles[Math.floor(Math.random() * animationsFiles.length)];
 };
 
+document.getElementById("task").onclick = function () {
+    location.href = "/ToDoList";
+};
+
+document.getElementById("books").onclick = function () {
+    location.href = "/Books";
+};
+
 let i =0
 let aux = []
 document.addEventListener('keydown', (event) => {
