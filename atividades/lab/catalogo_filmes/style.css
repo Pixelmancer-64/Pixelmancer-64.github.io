@@ -9,12 +9,15 @@ img{
 }
 
 body{
+    background: #141414;
     color: white;
+
+}
+.movies{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: #131313;
     gap: 1em;
 }
 
@@ -42,13 +45,13 @@ body{
 
 
 .movie.green::before{
-    background-color: green;
+    background-color: #009C4C;
 }
 .movie.red::before{
-    background-color: red;
+    background-color: #E50914;
 }
 .movie.yellow::before{
-    background-color: rgb(238, 238, 29);
+    background-color: #F7C727;
 }
 
 
@@ -60,8 +63,10 @@ body{
     transition: 0.5s ease-in-out;
     content: attr(data-content);
     position: relative;
-    top: 1%; left: 92%;
+    top: 1%; left: 91%;
     font-size: 3vh;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 .rating{
     width: 50%;
@@ -69,6 +74,7 @@ body{
     
 }
 .reviews{
+    color: white;
     position: absolute;
     bottom: 0em;
     display: flex;
@@ -113,6 +119,7 @@ body{
 }
 
 .description{
+    color: white;
     font-size: 2vh;
     position: absolute;
     bottom: 30em;
@@ -159,4 +166,10 @@ h2{
 
 li{
     font-size: 1em;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
