@@ -9,6 +9,7 @@ img{
 }
 
 body{
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,29 +61,23 @@ body{
     content: attr(data-content);
     position: relative;
     top: 1%; left: 92%;
-    font-size: 2em;
-    color: white;
-
+    font-size: 3vh;
 }
 .rating{
     width: 50%;
     display: flex;
-    padding-right: 2em;
+    
 }
 .reviews{
-    color: white;
     position: absolute;
-    gap: 2em;
     bottom: 0em;
     display: flex;
     transition: 1s;
-    padding: 2em;
+    padding: 1em;
+    gap: 2em;
 }
-.reviews:last-child{
-    float: right;
-}
-.reviews:first-child{
-    float: left;
+.reviews span{
+    flex: 1;
 }
 
 .movie:hover .reviews{
@@ -98,7 +93,7 @@ body{
     top: 0%;
     transform: translateY(0%);
     width: 100%;
-    height: 12em;
+    height: 15em;
     transition: .5s;
     z-index: 5;
 }
@@ -117,16 +112,49 @@ body{
 }
 
 .description{
-    color: white;
     position: absolute;
     bottom: 50em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     transition: 1s;
+    padding: 1em;
     z-index: 1;
-    padding: 2em;
 } 
+.showInfo{
+    display: flex;
+    gap: 1em;
+
+}
+.showInfo div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex:1;
+}
 
 .movie:hover .description{
     bottom: 0;
 }
 
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+h4{
+    margin: .5em;
+}
+
+hr{
+    width: 100%;
+}
+h2{
+    margin: 0;
+}
+
+li{
+    font-size: 1em;
+}

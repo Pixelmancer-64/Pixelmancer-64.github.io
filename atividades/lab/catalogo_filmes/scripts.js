@@ -1,8 +1,9 @@
-fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
-    .then(function(res){
-        return res.json();
-    })
-    .then(response => {
+const http = new EasyAjax
+http.get('https://rafaelescalfoni.github.io/desenv_web/filmes.json', function(status, response){
+    if(status){
+        console.log(status);
+    } else {
+
         let aux = '';
         let ages = [];
         const star = document.createElement("img");
@@ -10,10 +11,12 @@ fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
         const starHalf = document.createElement("img");
         starHalf.setAttribute("src","/img/starHalf.svg");
         response.forEach(data => {
-            let castAux = '';
-            let generosAux = '';
+            let castAux = '<h2>Elenco</h2>';
+            let generosAux = '<h2>Gênero</h2>';
+            let similarAux = '<h2>Similares</h2>';
             let opinioesAux = '';
             let media = 0;
+
             data.elenco.forEach(cast => {
                 const li = document.createElement("li");
                 li.appendChild(document.createTextNode(cast));
@@ -37,6 +40,16 @@ fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
                 media = (media + opinion.rating)/(k+1);
                 span.appendChild(starDiv);
                 opinioesAux += span.outerHTML;
+            });
+
+            data.titulosSemelhantes.forEach((similar, k) => {
+                response.forEach(test => {
+                    if(test.id == similar) {
+                        const li = document.createElement("li");
+                        li.appendChild(document.createTextNode(test.titulo));
+                        similarAux += li.outerHTML;
+                    }
+                });
             });
             
             const showRating = document.createElement("div");
@@ -63,20 +76,27 @@ fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
                 <h1>${data.titulo}</h1>
                 ${showRating.outerHTML}
                 <h4>${data.resumo}</h4>
-                <hr>
+                
+                <hr> 
+                
+                <div class="showInfo">
+
                 <div class="cast">
-                <h2>Elenco</h2>
                     <ul>
                         ${castAux}
                     </ul>
                 </div>
-                <hr>
-                <div class="genre">
-                <h2>Gênero</h2>
+                <div clas="similar">
+                    <ul>
+                        ${similarAux}
+                    </ul>
+                </div>
+                <div class ="genrers">
                     <ul>
                         ${generosAux}
                     </ul>
                 </div>
+            </div>
             </div>
             </div>
         </div>`; 
@@ -92,7 +112,5 @@ fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json')
                 else if (ages[k] = 18) element.classList.toggle('special_red');
                 
             });
-    })
-    .catch(err => {
-        console.log(`Error: ${err}`)
-    })
+    }
+});
