@@ -82,7 +82,7 @@ function init(){
     eyes = [];
     let nParticles = (canvas.height * canvas.width)/500;
     let overlapping = false;
-    let guardian = 10000;
+    let guardian = 40000;
     let guardian_counter = 0;
 
     while(eyes.length < nParticles && guardian_counter < guardian){
