@@ -25,7 +25,7 @@ class Crawler {
         this.interval = 1000/60;
         this.timer = 0;
 
-        this.cellsSize = 15;
+        this.cellsSize = 5;
         this.save = 0;
 
         this.cols = Math.floor(this.#height/this.cellsSize);
@@ -38,7 +38,7 @@ class Crawler {
         this.size = this.cellsSize/3;
         this.width = this.size/2;
 
-        this.moveOptions = [{x: 1, y: 0},{x: -1, y: 0},{x: 0, y: 1},{x: 0, y: -1}];
+        this.moveOptions = [{x: 1, y: 0},{x: -1, y: 0}];
         this.gridArray = this.grid();
         this.path = [];
         this.isTrue = aux => aux === true;
@@ -77,7 +77,10 @@ class Crawler {
             this.moveOptions.forEach( option =>{
                 let newX = this.x + option.x;
                 let newY = this.y + option.y;
-                if(this.validGrid(newY, newX)){
+                console.log(this.x)
+                console.log(this.y)
+
+                if(this.validGrid(newX, newY)){
                     options.push(option);
                 } 
             });
@@ -101,13 +104,14 @@ class Crawler {
                 this.y += rand.y;
 
                 
-                this.gridArray[this.y][this.x] = true;
+                this.gridArray[this.x][this.y] = true;
+    
             }else {
                 this.draw()
                 this.save++;
 
                 for(let i=1; i<=this.save; i++){
-                    this.gridArray[this.path[this.path.length-i].y][this.path[this.path.length-i].x] = true;
+                    this.gridArray[this.path[this.path.length-i].x][this.path[this.path.length-i].y] = true;
                     // console.log(this.gridArray.every(this.isTrue))
                 }
 
@@ -133,10 +137,15 @@ class Crawler {
         } 
         return cells;
     };
+    validGrid(x,y){
+        console.log(x)
+        console.log(y)
 
-    validGrid(y,x){
         if(x < 0 || x >= this.rows || y < 0 || y >= this.cols) return false;
-        else return !this.gridArray[y][x];
+        else return !this.gridArray[x][y];
+    }
+    finish(){
+        
     }
 }
 
