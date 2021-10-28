@@ -76,7 +76,6 @@ class Crawler {
 
     draw(){
         this.#ctx.fillStyle = imageMap[this.y*this.cellsSize][this.y*this.cellsSize];
-        this.#ctx.strokeStyle = imageMap[this.y*this.cellsSize][this.y*this.cellsSize];
         this.hue += .5;
         this.#ctx.beginPath();
         this.#ctx.arc(this.x * this.cellsSize,this.y * this.cellsSize,this.size,0,Math.PI*2);
