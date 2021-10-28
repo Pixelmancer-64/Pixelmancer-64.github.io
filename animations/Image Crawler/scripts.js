@@ -3,44 +3,69 @@ let canvas;
 let ctx;
 let FlowField;
 let animationRequest;
+let imageMap = [];
 
-window.onload = function(){
+const myImage = new Image();
+myImage.src = '/img/mando.jpg';
+
+myImage.addEventListener('load', function(){
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    FlowField = new Crawler(ctx, canvas.width, canvas.height)
-    FlowField.animate(0);
-}
+    // canvas.width = 1920;
+    // canvas.height = 1080;
+    ctx.drawImage(myImage, 0,0, canvas.width, canvas.height)
+    const pixelData = ctx.getImageData(0,0, canvas.width, canvas.height)
+    ctx.clearRect(0,0,canvas.width, canvas.height)
+    
+    let cellsSize = 5;
+    let cols =  Math.floor(canvas.height/cellsSize);
+    let rows = Math.floor(canvas.width/cellsSize);
+
+    for (let y = 0; y < canvas.height; y++){
+        let collumn = [];
+        for (let x = 0; x < canvas.height; x++){
+            const red = pixelData.data[(y * 4 * pixelData.width) + (x*4)];
+            const green = pixelData.data[(y * 4 * pixelData.width) + (x*4 + 1)];
+            const blue = pixelData.data[(y * 4 * pixelData.width) + (x*4 + 2)];
+            const pixel = [
+                pixelColor = 'rgba('+red+','+ green +','+ blue+','+'1'+')'
+            ];
+            collumn.push(pixel);
+        }
+        imageMap.push(collumn);
+    }
+
+    FlowField = new Crawler(ctx, canvas.width, canvas.height, cols, rows, cellsSize)
+    FlowField.animate();
+});
 
 class Crawler {
     #ctx;
     #width;
     #height;
-    constructor(ctx, width, height){
+    constructor(ctx, width, height, cols, rows, cellsSize){
         this.#ctx = ctx;
         this.#width = width;
         this.#height = height;
-        this.time = 0;
-        this.interval = 1000/60;
-        this.timer = 0;
 
-        this.cellsSize = 15;
+        this.cellsSize = cellsSize;
         this.save = 0;
 
-        this.cols = Math.floor(this.#height/this.cellsSize);
-        this.rows = Math.floor(this.#width/this.cellsSize);
+        this.cols = cols;
+        this.rows = rows;
         this.x = Math.floor(this.rows/2);
         this.y = Math.floor(this.cols/2);
 
         this.hue = 0;
+        this.color = 'hsl(' + this.hue + ',100%,50%)';
         this.size = this.cellsSize/3;
         this.width = this.size/2;
 
         this.moveOptions = [{x: 1, y: 0},{x: -1, y: 0},{x: 0, y: 1},{x: 0, y: -1}];
         this.gridArray = this.grid();
         this.path = [];
-        this.isTrue = aux => aux === true;
         this.gridArray[this.y][this.x] = true;
 
 
@@ -50,10 +75,9 @@ class Crawler {
     }
 
     draw(){
-        let color = 'hsl(' + this.hue + ',100%,50%)';
-        this.#ctx.fillStyle = color;
-        this.#ctx.strokeStyle = color;
-        this.hue += .1;
+        this.#ctx.fillStyle = imageMap[this.y*this.cellsSize][this.y*this.cellsSize];
+        this.#ctx.strokeStyle = imageMap[this.y*this.cellsSize][this.y*this.cellsSize];
+        this.hue += .5;
         this.#ctx.beginPath();
         this.#ctx.arc(this.x * this.cellsSize,this.y * this.cellsSize,this.size,0,Math.PI*2);
         this.#ctx.fill();
@@ -69,12 +93,9 @@ class Crawler {
         this.#ctx.stroke();
     }
 
-    animate(currentTime){
+    animate(){
         let options = [];
-        const latency = currentTime - this.timer;
-        this.timer = currentTime;
 
-        if(this.timer > this.interval){
             this.moveOptions.forEach( option =>{
                 let newX = this.x + option.x;
                 let newY = this.y + option.y;
@@ -95,7 +116,7 @@ class Crawler {
                 this.lineX += rand.x;
                 this.lineY += rand.y;
 
-                this.drawLine();
+                // this.drawLine();
                 this.draw();
 
                 this.x += rand.x;
@@ -114,11 +135,8 @@ class Crawler {
                 this.lineY = this.path[this.path.length-this.save].y;
 
             }
-        } else {
-            this.timer += latency;
+            animationRequest = requestAnimationFrame(this.animate.bind(this));
         }
-        animationRequest = requestAnimationFrame(this.animate.bind(this));
-    };
 
     grid(){
         let cells = new Array(this.cols);
@@ -142,5 +160,5 @@ window.addEventListener('resize', function(){
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         FlowField = new Crawler(ctx, canvas.width, canvas.height)
-        FlowField.animate(0);
+        FlowField.animate();
 });
