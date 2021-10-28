@@ -6,7 +6,7 @@ let animationRequest;
 let imageMap = [];
 
 const myImage = new Image();
-myImage.src = '/img/mando.jpg';
+myImage.src = '/img/zzzzzuuul.png';
 
 myImage.addEventListener('load', function(){
     canvas = document.getElementById('canvas');
@@ -24,17 +24,17 @@ myImage.addEventListener('load', function(){
     let rows = Math.floor(canvas.width/cellsSize);
 
     for (let y = 0; y < canvas.height; y++){
-        let collumn = [];
-        for (let x = 0; x < canvas.height; x++){
+        let row = [];
+        for (let x = 0; x < canvas.width; x++){
             const red = pixelData.data[(y * 4 * pixelData.width) + (x*4)];
             const green = pixelData.data[(y * 4 * pixelData.width) + (x*4 + 1)];
             const blue = pixelData.data[(y * 4 * pixelData.width) + (x*4 + 2)];
             const pixel = [
                 pixelColor = 'rgba('+red+','+ green +','+ blue+','+'1'+')'
             ];
-            collumn.push(pixel);
+            row.push(pixel);
         }
-        imageMap.push(collumn);
+        imageMap.push(row);
     }
 
     FlowField = new Crawler(ctx, canvas.width, canvas.height, cols, rows, cellsSize)
