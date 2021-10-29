@@ -69,8 +69,6 @@ class Crawler {
         this.randIndex;
         this.lineX = Math.floor(this.rows/2);
         this.lineY = Math.floor(this.cols/2);
-        console.log(imageMap)
-        console.log(this.gridArray)
     }
 
     draw(){
@@ -80,13 +78,13 @@ class Crawler {
         this.#ctx.fill();
         this.#ctx.closePath();
 
-        this.#ctx.beginPath();
-        let color = 'hsl(' + this.hue + ',100%,50%)';
-        this.#ctx.fillStyle = color;
-        this.hue += 10;
-        this.#ctx.arc(Math.floor(this.rows/2) * this.cellsSize,Math.floor(this.cols/2)* this.cellsSize,this.size,0,Math.PI*2);
-        this.#ctx.fill();
-        this.#ctx.closePath();
+        // this.#ctx.beginPath();
+        // let color = 'hsl(' + this.hue + ',100%,50%)';
+        // this.#ctx.fillStyle = color;
+        // this.hue += 10;
+        // this.#ctx.arc(Math.floor(this.rows/2) * this.cellsSize,Math.floor(this.cols/2)* this.cellsSize,this.size,0,Math.PI*2);
+        // this.#ctx.fill();
+        // this.#ctx.closePath();
     }
 
     drawLine(){
@@ -138,6 +136,8 @@ class Crawler {
                 this.y = this.path[this.path.length-this.save].y;
                 this.lineX = this.path[this.path.length-this.save].x;
                 this.lineY = this.path[this.path.length-this.save].y;
+
+                this.path.slice(this.path.length-1,1)
 
             }
             animationRequest = requestAnimationFrame(this.animate.bind(this));

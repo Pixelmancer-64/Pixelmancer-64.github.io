@@ -114,6 +114,8 @@ class Crawler {
                 this.lineX = this.path[this.path.length-this.save].x;
                 this.lineY = this.path[this.path.length-this.save].y;
 
+                this.path.slice(this.path.length-1,1)
+
             }
         } else {
             this.timer += latency;
