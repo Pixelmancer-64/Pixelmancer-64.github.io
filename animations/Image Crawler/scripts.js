@@ -4,6 +4,7 @@ let ctx;
 let FlowField;
 let animationRequest;
 let imageMap = [];
+let cellsSize = 9;
 
 const myImage = new Image();
 myImage.src = '/img/zzzzzuuul.png';
@@ -13,13 +14,10 @@ myImage.addEventListener('load', function(){
     ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    // canvas.width = 1920;
-    // canvas.height = 1080;
     ctx.drawImage(myImage, 0,0, canvas.width, canvas.height)
     const pixelData = ctx.getImageData(0,0, canvas.width, canvas.height)
     ctx.clearRect(0,0,canvas.width, canvas.height)
     
-    let cellsSize = 5;
     let cols =  Math.floor(canvas.height/cellsSize);
     let rows = Math.floor(canvas.width/cellsSize);
 
@@ -58,8 +56,6 @@ class Crawler {
         this.x = Math.floor(this.rows/2);
         this.y = Math.floor(this.cols/2);
 
-        this.hue = 0;
-        this.color = 'hsl(' + this.hue + ',100%,50%)';
         this.size = this.cellsSize/3;
         this.width = this.size/2;
 
@@ -72,6 +68,8 @@ class Crawler {
         this.randIndex;
         this.lineX = Math.floor(this.rows/2);
         this.lineY = Math.floor(this.cols/2);
+        console.log(imageMap)
+        console.log(this.gridArray)
     }
 
     draw(){
@@ -156,8 +154,29 @@ class Crawler {
 
 window.addEventListener('resize', function(){
     cancelAnimationFrame(animationRequest);
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        FlowField = new Crawler(ctx, canvas.width, canvas.height)
-        FlowField.animate();
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.drawImage(myImage, 0,0, canvas.width, canvas.height)
+    const pixelData = ctx.getImageData(0,0, canvas.width, canvas.height)
+    ctx.clearRect(0,0,canvas.width, canvas.height)
+    
+    let cols =  Math.floor(canvas.height/cellsSize);
+    let rows = Math.floor(canvas.width/cellsSize);
+
+    for (let y = 0; y < canvas.height; y++){
+        let row = [];
+        for (let x = 0; x < canvas.width; x++){
+            const red = pixelData.data[(y * 4 * pixelData.width) + (x*4)];
+            const green = pixelData.data[(y * 4 * pixelData.width) + (x*4 + 1)];
+            const blue = pixelData.data[(y * 4 * pixelData.width) + (x*4 + 2)];
+            const pixel = [
+                pixelColor = 'rgba('+red+','+ green +','+ blue+','+'1'+')'
+            ];
+            row.push(pixel);
+        }
+        imageMap.push(row);
+    }
+
+    FlowField = new Crawler(ctx, canvas.width, canvas.height, cols, rows, cellsSize)
+    FlowField.animate();
 });
