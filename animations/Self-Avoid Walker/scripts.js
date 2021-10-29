@@ -52,7 +52,6 @@ class Crawler {
     draw(){
         let color = 'hsl(' + this.hue + ',100%,50%)';
         this.#ctx.fillStyle = color;
-        this.#ctx.strokeStyle = color;
         this.hue += .1;
         this.#ctx.beginPath();
         this.#ctx.arc(this.x * this.cellsSize,this.y * this.cellsSize,this.size,0,Math.PI*2);
@@ -88,6 +87,7 @@ class Crawler {
                     x: this.x,
                     y: this.y,
                 });
+                
                 this.save=0;
 
                 let rand = options[Math.floor(Math.random()*options.length)]
@@ -108,6 +108,7 @@ class Crawler {
                 this.draw()
                 this.save++;
 
+                
                 this.x = this.path[this.path.length-this.save].x;
                 this.y = this.path[this.path.length-this.save].y;
                 this.lineX = this.path[this.path.length-this.save].x;

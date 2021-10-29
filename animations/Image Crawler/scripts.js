@@ -58,7 +58,8 @@ class Crawler {
 
         this.size = this.cellsSize/3;
         this.width = this.size/2;
-
+        this.hue = 0;
+        
         this.moveOptions = [{x: 1, y: 0},{x: -1, y: 0},{x: 0, y: 1},{x: 0, y: -1}];
         this.gridArray = this.grid();
         this.path = [];
@@ -74,9 +75,16 @@ class Crawler {
 
     draw(){
         this.#ctx.fillStyle = imageMap[this.y*this.cellsSize][this.x*this.cellsSize];
-        this.hue += .5;
         this.#ctx.beginPath();
         this.#ctx.arc(this.x * this.cellsSize,this.y * this.cellsSize,this.size,0,Math.PI*2);
+        this.#ctx.fill();
+        this.#ctx.closePath();
+
+        this.#ctx.beginPath();
+        let color = 'hsl(' + this.hue + ',100%,50%)';
+        this.#ctx.fillStyle = color;
+        this.hue += 10;
+        this.#ctx.arc(Math.floor(this.rows/2) * this.cellsSize,Math.floor(this.cols/2)* this.cellsSize,this.size,0,Math.PI*2);
         this.#ctx.fill();
         this.#ctx.closePath();
     }
