@@ -1,4 +1,4 @@
-let animationsFiles = ["/animations/CircularMotion","/animations/CthulhuEyes","/animations/Dots","/animations/Text","/animations/Colorful","/animations/Fractal_Tree","/animations/Mouse_Effect","/animations/Matrix","/animations/Rain","/animations/Fractal_Snowflake","/animations/Mouse_Trail","/animations/Image","/animations/Ascii","/animations/Generative","/animations/Hexagons","/animations/Loading","/animations/Umbrella"];
+let animationsFiles = ["/animations/Ascii","/animations/CircularMotion","/animations/Colorful","/animations/CthulhuEyes","/animations/Dots","/animations/Fireflies","/animations/Fractal_Snowflake","/animations/Fractal_Tree","/animations/Generative","/animations/Hexagons","/animations/Image","/animations/Image Crawler","/animations/Loading","/animations/Matrix","/animations/Mouse_Effect","/animations/Mouse_Trail","/animations/Music","/animations/Pendulum","/animations/Rain","/animations/Self-Avoid Walker","/animations/Text","/animations/Umbrella","/animations/Waves","/animations/Umbrella"];
 document.getElementById("lab").onclick = function () {
     location.href = "/atividades/";
 };
