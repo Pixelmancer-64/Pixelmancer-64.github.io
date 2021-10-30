@@ -9,12 +9,12 @@ let mouse ={
     x: undefined,
     y: undefined,
 }
-console.log(particlesArray.length)
 window.addEventListener('mousemove', function(event){
     mouse.x = event.x;
     mouse.y = event.y;
     init(mouse.x, mouse.y)
 });
+
 animate(); 
 
 //To not screw up the page if the window space change

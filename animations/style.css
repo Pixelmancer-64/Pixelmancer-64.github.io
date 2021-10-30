@@ -1,0 +1,156 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img{
+    max-width:100%;
+}
+
+body{
+    background: #141414;
+    color: white;
+
+}
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.card{
+    position: relative;
+}
+.movie{
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+    background-color: #202024;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+
+.movie.green::before{
+    background-color: #009C4C;
+}
+.movie.red::before{
+    background-color: #E50914;
+}
+.movie.yellow::before{
+    background-color: #F7C727;
+}
+
+
+.movie:hover:before{
+    clip-path: circle(8vh at 100% -25%);
+}
+
+.rating{
+    width: 50%;
+    display: flex;
+    
+}
+.reviews{
+    color: white;
+    position: absolute;
+    bottom: 0em;
+    display: flex;
+    padding: .7em;
+    gap: 2em;
+    font-size: 2vh;
+    transition: .5s ease-in-out;
+}
+.reviews span{
+    flex: 1;
+}
+
+.movie:hover .reviews{
+    bottom: -30em;
+}
+.movie:hover:after{
+    position: absolute;
+    top: -10%; left: 100%;
+    font-size: 2em;
+}
+.imageContainer{
+    position: absolute;
+    top: 0%;
+    transform: translateY(0%);
+    width: 100%;
+    height: 25em;
+    transition: 1s;
+    z-index: 5;
+}
+
+.movie:hover .imageContainer{
+    top: 0%;
+    transform: translateY(-200%);
+    transition: 1s ;
+}
+
+.imageContainer img{
+    position: absolute;
+    top: 0%; left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+}
+
+.description{
+    color: white;
+    font-size: 2vh;
+    position: absolute;
+    bottom: 30em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    padding: 1em;
+    z-index: 1;
+} 
+.showInfo{
+    display: flex;
+    gap: 1em;
+
+}
+.showInfo div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex:1;
+}
+
+.movie:hover .description{
+    bottom: 0;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+h4{
+    margin: .5em;
+}
+
+hr{
+    width: 100%;
+}
+h2{
+    margin: 0;
+}
+
+li{
+    font-size: 1em;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

@@ -22,7 +22,9 @@ class Particle{
         ctx.arc(x,y,this.size, 0, Math.PI*2);
         ctx.closePath()
         */
-        ctx.fillStyle = 'rgba('+this.color+')';
+        ctx.fillStyle = this.color;
+        // ctx.shadowColor = this.color;
+        // ctx.shadowBlur = .00001;
         ctx.fill();
         
     }
@@ -40,10 +42,10 @@ function init(){
     for(i=0; i < nParticles; i++){
      
         let moveRadius = Math.random() * canvas.width;
-        let step = (Math.random()*0.002) + 0.002;
+        let step = (Math.random()*.02);
         let position = Math.random()*(Math.PI*2);
         let size = (Math.random() * 50) + 1;
-        let color = '102,252,87,1'
+        let color = '#25E0A3'
 
         particlesArray.push(new Particle(moveRadius, step, position, size,color));
 

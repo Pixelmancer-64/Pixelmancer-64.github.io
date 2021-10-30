@@ -1,4 +1,3 @@
-let animationsFiles = ["/animations/Ascii","/animations/CircularMotion","/animations/Colorful","/animations/CthulhuEyes","/animations/Dots","/animations/Fireflies","/animations/Fractal_Snowflake","/animations/Fractal_Tree","/animations/Generative","/animations/Hexagons","/animations/Image","/animations/Image Crawler","/animations/Loading","/animations/Matrix","/animations/Mouse_Effect","/animations/Mouse_Trail","/animations/Music","/animations/Pendulum","/animations/Rain","/animations/Self-Avoid Walker","/animations/Text","/animations/Umbrella","/animations/Waves","/animations/Umbrella"];
 document.getElementById("lab").onclick = function () {
     location.href = "/atividades/";
 };
@@ -19,7 +18,7 @@ document.getElementById("clock").onclick = function () {
 };
 
 document.getElementById("animation").onclick = function () {
-    location.href = animationsFiles[Math.floor(Math.random() * animationsFiles.length)];
+    location.href = "/animations";
 };
 
 document.getElementById("task").onclick = function () {

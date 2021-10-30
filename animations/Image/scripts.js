@@ -1,11 +1,11 @@
 const myImage = new Image();
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
-myImage.src = '/img/mando.jpg'
+myImage.src = '/img/a.jpg'
 
 myImage.addEventListener('load', function(){
-canvas.width = 1280;
-canvas.height = 720;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 ctx.drawImage(myImage, 0,0, canvas.width, canvas.height)
 const pixelData = ctx.getImageData(0,0, canvas.width, canvas.height)
 ctx.clearRect(0,0,canvas.width, canvas.height)
