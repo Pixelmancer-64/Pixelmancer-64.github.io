@@ -4,7 +4,7 @@ let ctx;
 let FlowField;
 let animationRequest;
 let particlesArray;
-let res = 2;
+let res = 1;
 
 window.onload = function(){ 
     canvas = document.getElementById('canvas');
@@ -40,8 +40,8 @@ class Particle {
 
     draw(){
         this.ctx.lineWidth = .1;
-        ctx.shadowColor = '#25E0A3';
-        ctx.shadowBlur = 10;
+        // ctx.shadowColor = '#25E0A3';
+        // ctx.shadowBlur = 10;
         ctx.strokeStyle= '#25E0A3';
         this.ctx.beginPath();
         this.ctx.moveTo(this.start.x,this.start.y);
