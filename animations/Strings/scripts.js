@@ -73,8 +73,8 @@ class Particle {
 
 function slider(){
     ctx.clearRect(0,0, canvas.width, canvas.height);
-    res += Math.floor(Math.random()*10);
+    res++;
     newParticle.update();
 }
 
-setInterval(slider,3000)
+setInterval(slider,10000)
