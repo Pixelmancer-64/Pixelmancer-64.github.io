@@ -5,6 +5,7 @@ let FlowField;
 let animationRequest;
 let particlesArray;
 let res = 1;
+let animation;
 
 window.onload = function(){ 
     canvas = document.getElementById('canvas');
@@ -66,14 +67,16 @@ class Particle {
             y: this.height/2 + this.height/2 * Math.sin(this.angle2)
         }
 
-        requestAnimationFrame(this.update.bind(this))
+        animation = requestAnimationFrame(this.update.bind(this))
     }
 
 }
 
 function slider(){
+    cancelAnimationFrame(animation)
     ctx.clearRect(0,0, canvas.width, canvas.height);
     res++;
+    newParticle = new Particle(ctx, canvas.width, canvas.height)
     newParticle.update();
 }
 
