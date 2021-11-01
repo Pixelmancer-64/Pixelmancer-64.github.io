@@ -6,6 +6,7 @@ let animationRequest;
 let particlesArray;
 let res = 1;
 let animation;
+let hue =0;
 
 window.onload = function(){ 
     canvas = document.getElementById('canvas');
@@ -32,7 +33,6 @@ class Particle {
         this.angle1 = 0;
         this.angle2 = 0;
 
-
         this.start = {
             x: this.width/2 + this.width/2 * Math.cos(this.angle1),
             y: this.height/2 + this.height/2 * Math.sin(this.angle1)
@@ -46,9 +46,9 @@ class Particle {
 
     draw(){
         this.ctx.lineWidth = .1;
-        ctx.shadowColor = '#25E0A3';
-        ctx.shadowBlur = 10;
-        ctx.strokeStyle= '#25E0A3';
+        ctx.shadowColor = 'hsl(' + hue + ',100%,50%)';
+        ctx.shadowBlur = 25;
+        ctx.strokeStyle= 'hsl(' + hue + ',100%,50%)';
         this.ctx.beginPath();
         this.ctx.moveTo(this.start.x,this.start.y);
         this.ctx.lineTo(this.end.x, this.end.y);
@@ -81,6 +81,7 @@ function slider(){
     cancelAnimationFrame(animation)
     ctx.clearRect(0,0, canvas.width, canvas.height);
     res++;
+    hue = Math.random()*360;
     newParticle = new Particle(ctx, canvas.width, canvas.height)
     newParticle.update();
 }
