@@ -10,9 +10,14 @@ let animation;
 window.onload = function(){ 
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    newParticle = new Particle(ctx, canvas.width, canvas.height)
+    if(window.innerWidth <= window.innerHeight){
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerWidth;
+    } else {
+        canvas.width = window.innerHeight;
+        canvas.height = window.innerHeight;
+    }
+    
     slider();
 }
 
@@ -41,8 +46,8 @@ class Particle {
 
     draw(){
         this.ctx.lineWidth = .1;
-        // ctx.shadowColor = '#25E0A3';
-        // ctx.shadowBlur = 10;
+        ctx.shadowColor = '#25E0A3';
+        ctx.shadowBlur = 10;
         ctx.strokeStyle= '#25E0A3';
         this.ctx.beginPath();
         this.ctx.moveTo(this.start.x,this.start.y);
@@ -79,5 +84,16 @@ function slider(){
     newParticle = new Particle(ctx, canvas.width, canvas.height)
     newParticle.update();
 }
+
+window.addEventListener('resize', function(){
+    if(window.innerWidth <= window.innerHeight){
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerWidth;
+    } else {
+        canvas.width = window.innerHeight;
+        canvas.height = window.innerHeight;
+    }
+    slider();
+});
 
 setInterval(slider,10000)

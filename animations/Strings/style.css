@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+}
 #canvas{
     position: absolute;
-    top:0; left: 0;
-    background: radial-gradient(black, rgb(31, 27, 27));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
