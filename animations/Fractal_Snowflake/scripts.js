@@ -23,11 +23,11 @@ class Snowflake{
         ctx.lineWidth = this.lineWidth;
         ctx.beginPath();
         ctx.moveTo(0,0);
-        ctx.lineTo(200,0);
+        ctx.lineTo(canvas.width/3,0);
         ctx.stroke();
         for (let i=0; i<this.branches + 1; i++){
             ctx.save(); //save0
-            ctx.translate(200 * i/ (this.branches + 1), 0);
+            ctx.translate(canvas.width/3 * i/ (this.branches + 1), 0);
             ctx.scale(.6,.6);
             ctx.save(); //save1
 
@@ -49,12 +49,12 @@ let refreshTimes
 
 function controller(){
     let hue = (Math.random()*360);
-    let angle = Math.PI * 2 * Math.random();
+    let angle = Math.PI * Math.random()*2;
     let color = 'hsl(' + hue + ',100%,40%)';
-    let maxLevel = (Math.random()*3)+2;
-    let branches = Math.floor(Math.random() * (5 - 1) + 1)
-    let lineW = Math.floor(Math.random() * (2 - 1) + 1)
-    let times = Math.floor(Math.random() * (25 - 5) + 5)
+    let maxLevel = 3
+    let branches = Math.floor(Math.random() * 4  + 1)
+    let lineW = Math.floor(Math.random() * 5 + 1)
+    let times = Math.floor(Math.random() * 30 + 5)
     refreshTimes = times
     newSnowflake = new Snowflake(angle, maxLevel, branches, color,lineW)
     for( i=0; i<times; i++){

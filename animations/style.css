@@ -33,49 +33,6 @@ body{
     overflow: hidden;
 }
 
-
-.movie.green::before{
-    background-color: #009C4C;
-}
-.movie.red::before{
-    background-color: #E50914;
-}
-.movie.yellow::before{
-    background-color: #F7C727;
-}
-
-
-.movie:hover:before{
-    clip-path: circle(8vh at 100% -25%);
-}
-
-.rating{
-    width: 50%;
-    display: flex;
-    
-}
-.reviews{
-    color: white;
-    position: absolute;
-    bottom: 0em;
-    display: flex;
-    padding: .7em;
-    gap: 2em;
-    font-size: 2vh;
-    transition: .5s ease-in-out;
-}
-.reviews span{
-    flex: 1;
-}
-
-.movie:hover .reviews{
-    bottom: -30em;
-}
-.movie:hover:after{
-    position: absolute;
-    top: -10%; left: 100%;
-    font-size: 2em;
-}
 .imageContainer{
     position: absolute;
     top: 0%;
@@ -101,7 +58,7 @@ body{
 
 .description{
     color: white;
-    font-size: 2vh;
+    font-size: 3vh;
     position: absolute;
     bottom: 30em;
     text-align: center;
@@ -153,4 +110,19 @@ li{
     justify-content: center;
     align-items: center;
     
+}
+
+#github, #demo{
+    width: 3em;
+    height: 3em;
+}
+
+#demo:hover{
+    filter: invert(65%) sepia(75%) saturate(480%) hue-rotate(74deg) brightness(98%) contrast(95%);
+    transition: .5s;
+}
+
+#github:hover{
+    filter: invert(100%) sepia(1%) saturate(2462%) hue-rotate(157deg) brightness(123%) contrast(95%);
+    transition: .5s;
 }

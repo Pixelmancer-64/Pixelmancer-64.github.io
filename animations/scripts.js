@@ -25,14 +25,10 @@ http.get('animations.json', function(status, response){
                 <div class="showInfo">
 
                 <div class="cast">
-                    <ul>
-                        <a href=${data.links.github}>Github</a>
-                    </ul>
+                <a href=${data.links.github}><img id="github" src="/img/github.svg"></a>
                 </div>
                 <div clas="similar">
-                    <ul>
-                    <a href=${data.links.demo}>Demo</a>
-                    </ul>
+                <a href=${data.links.demo}><img id="demo" src="/img/play.svg"></a>
                 </div>
             </div>
             </div>
