@@ -45,7 +45,7 @@ class Particle {
     }
 
     draw(){
-        this.ctx.lineWidth = .1;
+        this.ctx.lineWidth = .3;
         ctx.shadowColor = 'hsl(' + hue + ',100%,50%)';
         ctx.shadowBlur = 25;
         ctx.strokeStyle= 'hsl(' + hue + ',100%,50%)';
@@ -80,7 +80,7 @@ class Particle {
 function slider(){
     cancelAnimationFrame(animation)
     ctx.clearRect(0,0, canvas.width, canvas.height);
-    res++;
+    res+= 300;
     hue = Math.random()*360;
     newParticle = new Particle(ctx, canvas.width, canvas.height)
     newParticle.update();

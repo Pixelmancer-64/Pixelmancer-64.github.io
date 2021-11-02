@@ -228,5 +228,55 @@
               "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Waves"
            },
         "picture": "./img/23.png"
-     }
+     },
+     {
+      "id":24,
+      "title":"Terrain Generation",
+      "summary":"3d terrain generation with Perlin noise",
+      "links":{
+            "demo": "/animations/Terrain_Generation/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Terrain_Generation"
+         },
+      "picture": "./img/24.png"
+   },
+   {
+      "id":25,
+      "title":"Double Pendulum",
+      "summary":"It was supossed to be a double pendulum but I messed up with the math and this was the result...",
+      "links":{
+            "demo": "/animations/Double_Pendulum/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Double_Pendulum"
+         },
+      "picture": "./img/25.png"
+   },
+   {
+      "id":26,
+      "title":"Strings",
+      "summary":"Just lines being drawn based on radians, and cosine, and sine, whatever, math stuff",
+      "links":{
+            "demo": "/animations/Strings/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Strings"
+         },
+      "picture": "./img/26.png"
+   },
+   {
+      "id":27,
+      "title":"More Pendulums",
+      "summary":"Pendulums!",
+      "links":{
+            "demo": "/animations/Pendulums/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pendulums"
+         },
+      "picture": "./img/27.png"
+   },
+   {
+      "id":28,
+      "title":"Noise Flowfield",
+      "summary":"A Flowfield made with Perlin noise, is kinda spooky",
+      "links":{
+            "demo": "/animations/Noise_FlowField/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Noise_FlowField"
+         },
+      "picture": "./img/28.png"
+   }
 ]

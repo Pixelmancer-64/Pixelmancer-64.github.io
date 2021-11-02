@@ -2,15 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
     overflow: hidden;
-    background-image: url('./img/mando.jpg');
-}
-#canvas{
-    position: absolute;
-    top:0; left: 0;
-    background: radial-gradient(black, rgb(31, 27, 27));
-}
-img{
-    position: absolute;
-    z-index: 1;
 }

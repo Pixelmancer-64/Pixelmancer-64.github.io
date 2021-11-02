@@ -15,7 +15,6 @@ function setup() {
 	for(let i = 0; i < 1000; i++){
 		particlesArray[i] = new Particle();
 	}
-
 	background(0);
 }
 
@@ -40,7 +39,7 @@ class Particle{
 	}
 
 	show(){
-		stroke(202,36,207, 10);
+		stroke(230,0,230, 10);
 		strokeWeight(1)
 		line(this.pos.x, this.pos.y, this.previousPos.x, this.previousPos.y)
 		// point(this.pos.x, this.pos.y);
@@ -79,8 +78,7 @@ class Particle{
 		let y = floor(this.pos.y / scl);
 		let index = x + y * cols;
 		let force = flowField[index];
-		this.applyForce(force);
-		
+		this.applyForce(force);		
 	}
 
 }
@@ -115,3 +113,8 @@ function draw() {
 	}
 }
 
+window.addEventListener('resize',function() {
+	particlesArray = [];
+	setup();
+	draw();
+})

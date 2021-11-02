@@ -35,11 +35,11 @@ function draw() {
 
 
   background(0);
-  fill('#F8FB9F');
-  noStroke();
-  ellipse(0,-h/3,300,300);
+  // fill('#F8FB9F');
+  // noStroke();
+  // ellipse(0,-h/3,300,300);
   translate(0, 50);
-  rotateX(PI / 2);
+  rotateX(PI / 2.5);
   noFill()
   stroke(202,36,207);
   translate(-w / 2, -h / 2);
