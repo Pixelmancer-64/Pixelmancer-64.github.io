@@ -278,5 +278,25 @@
             "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Noise_FlowField"
          },
       "picture": "./img/28.png"
+   },
+   {
+      "id":29,
+      "title":"Maurer Rose",
+      "summary":"Maurer Rose with random values, refresh to see new ones",
+      "links":{
+            "demo": "/animations/Maurer_Rose/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Maurer_Rose"
+         },
+      "picture": "./img/29.png"
+   },
+   {
+      "id":30,
+      "title":"Collatz Conjecture",
+      "summary":"Collatz Conjecture, but rainbow",
+      "links":{
+            "demo": "/animations/Collatz_Conjecture/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collatz_Conjecture"
+         },
+      "picture": "./img/30.png"
    }
 ]
