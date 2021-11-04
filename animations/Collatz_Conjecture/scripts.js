@@ -49,7 +49,7 @@ class Particle {
         this.ctx.beginPath();
         let color = 'hsl(' + this.hue + ',100%,50%)';
         this.ctx.strokeStyle = color;
-        this.hue += .03;
+        this.hue += .01;
         // this.ctx.shadowBlur = 10;
         // this.ctx.shadowColor = '#ff6800';
         this.ctx.lineWidth = .2;
