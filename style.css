@@ -1,5 +1,206 @@
-canvas{
-  position: fixed;
-  top: 0;
-  left: 0;
+*{margin:0}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 6vh;
+	background-color: #202024;
+	margin-bottom: 1rem;
+	letter-spacing: .2rem;
+	font-size: 1.5rem;
 }
+.logo{
+	margin-left: 2rem;
+	display: inline-block
+}
+.logo img{
+	border: 1px solid white;
+}
+img{
+	max-width:100%;
+}
+
+body{
+	background-color: #111113;
+	color: #e0e5e9;
+	font-size: 1rem;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+hr{
+	margin: 0 1em;
+	border: .1em solid white;
+}
+button{
+	display: flex;
+	align-items: center;
+	line-height: 0;
+	gap: .1rem;
+
+}
+button img{
+	width: 2rem;
+	height: 2rem;
+}
+header ul{
+	display: flex;
+	gap: .8rem;
+}
+ul{
+	padding: 0;
+    list-style-type: none;
+	list-style: none;
+}
+
+.apart{
+	display: flex;
+	gap: 8rem;
+	
+}
+aside, main{
+	border-radius: 0 6.14px 0 0;
+	
+}
+
+aside{
+	flex-basis: 25%;
+	background-color: #202024;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+}
+
+
+.myPhoto{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 1rem;
+
+}
+.myPhoto img{
+	padding-bottom: .5rem;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70%;
+	border-radius: 50%;
+	
+
+}
+
+.icons{
+	display: flex;
+
+}
+.knowledge ul{
+	display: flex;
+	flex-wrap: wrap;
+	gap: .2rem;
+}
+.knowledge{
+	margin: 0 1em;
+}
+.work{
+	margin: 0 1em;
+
+}
+.contact{
+	margin: 0 1em;
+
+}
+.contact ul{
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main{
+	flex: 1;
+	padding: 1rem;
+	border-left: 2px solid #202024;
+	border-top: 2px solid #202024;
+	border-radius: 6.28px 0 0 0;
+}
+h2{
+	padding: .5rem .2rem;
+}
+.projects_1{
+	border: 1px solid white;
+	padding: 1rem;
+	margin: 1rem 0;
+	text-align: center;
+	background-image: linear-gradient(#986dbe, #60bb84);
+}
+.projects_2{
+	border: 1px solid white;
+	padding: 1rem;
+	margin: 1rem 0;
+	text-align: center;
+	background-image: url("./img/milky_way.jpg");
+}
+
+.projects {
+	border: 1px solid white;
+	padding: 1rem;
+	margin: 1rem 0;
+	text-align: center;
+
+}
+.proLogo{
+	margin-left: auto;
+	margin-right: auto;
+	margin: 1.5rem;
+}
+
+.aboutMe {
+	border: 1px solid white;
+	padding: 1rem;
+}
+
+.description{
+	font-size: 1.5rem;
+}
+.tooltip {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #111113 transparent transparent transparent;
+  }
+
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: #111113;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }
+
+  @media screen and (max-width:768px){
+	.apart{
+		gap: 2rem;
+		
+	}
+
+  }

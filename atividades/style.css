@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas1{
+    position: absolute;
+    background-color: black;
+    z-index: -1;
+}
+
+.labs{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Koh Santepheap', cursive;
+}
+ul{
+    list-style-type: none;
+    margin: 2em;
+}
+.listsList{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+h1{
+    color: #0fa;
+    text-shadow:
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+a{
+    color:#0fa;
+    text-shadow:
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}

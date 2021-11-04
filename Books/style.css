@@ -1,0 +1,65 @@
+body{
+    margin:0 5% ;
+    border: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+}
+main{
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    height: 100%;
+    
+}
+table{
+    border-collapse: collapse;
+    border: 2px solid black;
+    letter-spacing: 1px;
+    width: 100%;
+}
+td,
+th {
+    border: 1px solid black;
+}
+hr{
+    width: 100%;
+    color: lightslategray;
+}
+.book-input{
+    font-size:1.5em;
+    width: 100%;
+}
+label{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+input{
+    font-size: 1.5em;
+}
+ul{
+    padding:0;
+}
+.collection-item{
+    padding: 1em;
+    font-size: 1.3em;
+    text-align: center;
+}
+.collection{
+    gap: .5em;
+}
+.delete-item{
+    color: rgba(226,33,33,1);
+    font-weight: bolder;
+    text-align: center;
+}
+.delete-item:hover{
+    color: rgba(226,33,33,.5);
+    cursor: pointer;
+}
+.error{
+    color: white;
+    background-color: red;
+    font-weight: bolder;
+    padding: .5em;
+
+}

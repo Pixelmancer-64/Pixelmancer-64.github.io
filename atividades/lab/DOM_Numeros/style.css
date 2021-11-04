@@ -1,0 +1,26 @@
+body{
+    background: linear-gradient(to right, #283048, #859398); 
+  
+}
+.options{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    min-height: 30vh;
+    grid-template-columns: repeat(7,7rem);
+    grid-template-rows:minmax(7rem, auto) repeat(1,7rem);
+
+}
+.inputs{
+    margin-top: 10rem;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+#output{
+    margin: 0;
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+}
