@@ -35,7 +35,8 @@ class Particle {
         this.r = 0;
         this.x = 0;
         this.y = 0;
-        this.n = 0;
+        this.n = 1;
+        this.i = 1;
         this.length = this.width/120;
         this.sequence = [];
         this.ctx.translate(this.translateX, this.translateY)
@@ -48,25 +49,27 @@ class Particle {
         this.ctx.beginPath();
         let color = 'hsl(' + this.hue + ',100%,50%)';
         this.ctx.strokeStyle = color;
-        this.hue += .01;
+        this.hue += .03;
         // this.ctx.shadowBlur = 10;
         // this.ctx.shadowColor = '#ff6800';
-        this.ctx.lineWidth = .1;
+        this.ctx.lineWidth = .2;
         this.ctx.moveTo(0,0);
-        this.ctx.lineTo(this.length,0);
+        this.ctx.lineTo(this.length, 0);
         this.ctx.stroke();
-        this.ctx.translate(this.length,0);
+        this.ctx.translate(this.length, 0);
     }
 
     update(){
-        for(let i = 1; i < 10000; i++){
+
             this.sequence = [];
-            this.n = i;
+            this.n = this.i
+            this.i++
 
             while(this.n != 1){
                 this.sequence.push(this.n)
                 this.n = this.collatz(this.n)
             }
+
             this.sequence.push(1)
             this.sequence.reverse()
 
@@ -77,10 +80,9 @@ class Particle {
                 let aux = this.sequence[j]
                 if(aux % 2 == 0) this.ctx.rotate(this.angle)
                 else this.ctx.rotate(-this.angle)
-                this.draw();
+                this.draw()
             }
-        }
-
+            requestAnimationFrame(this.update.bind(this));
     }
 
 }
