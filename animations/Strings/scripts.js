@@ -56,7 +56,6 @@ class Particle {
     }
 
     update(){
-        this.draw();
         // this.angle1 = Math.random()*Math.PI*2;
         // this.angle2 = Math.random()*Math.PI*2;
         this.angle1 += res;
@@ -72,6 +71,8 @@ class Particle {
             y: this.height/2 + this.height/2 * Math.sin(this.angle2)
         }
 
+        this.draw();
+        
         animation = requestAnimationFrame(this.update.bind(this))
     }
 
@@ -80,7 +81,7 @@ class Particle {
 function slider(){
     cancelAnimationFrame(animation)
     ctx.clearRect(0,0, canvas.width, canvas.height);
-    res+= 300;
+    res+= Math.floor(Math.random()*1000);
     hue = Math.random()*360;
     newParticle = new Particle(ctx, canvas.width, canvas.height)
     newParticle.update();
