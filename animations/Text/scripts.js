@@ -3,13 +3,13 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let fontSize = 2
-let ofsetX = 10/2;
-let ofsetY = 10/2; 
+let fontSize = 2;
+let ofsetX = 6;
+let ofsetY = 6; 
 let text = 'Hello World';
 let particlesArray = [];
 ctx.fillStyle= 'white';
-ctx.font = fontSize+ 'em Verdana';
+ctx.font = fontSize+ 'vh Verdana';
 ctx.textAlign = "center"; 
 ctx.fillText(text, canvas.width/(2*ofsetX),canvas.height/(2*ofsetY)); 
 const pixelData = ctx.getImageData(0,0,canvas.width, canvas.height);
@@ -17,7 +17,7 @@ const pixelData = ctx.getImageData(0,0,canvas.width, canvas.height);
 const mouse ={
     x: undefined,
     y: undefined,
-    radius: (canvas.height/150) * (canvas.width/150)
+    radius: (canvas.width) * 2
 }
 
 window.addEventListener('mousemove', function(event){
@@ -101,31 +101,7 @@ function animate(){
     for(i=0; i<particlesArray.length; i++){
         particlesArray[i].update();
     }
-  // connect();
 }
-
-
-
-function connect(){
-    let opacityValue = 1;
-    for(a=0; a<particlesArray.length; a++){
-        for(b = a; b<particlesArray.length;b++){
-            let dx = particlesArray[a].x - particlesArray[b].x;
-            let dy = particlesArray[a].y - particlesArray[b].y;
-            let distance = Math.sqrt(dx * dx + dy * dy);
-            if(distance < (canvas.width/350) * (canvas.height/350)){
-                opacityValue = 1 - (distance/1000);
-                ctx.strokeStyle='rgba(132,38,191,' + opacityValue + ')';
-                ctx.lineWidth = 3;
-                ctx.beginPath();
-                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                ctx.stroke();
-            }
-        }
-    }
-}
-
 
 //To not screw up the page if the window space change
 window.addEventListener('resize', start());

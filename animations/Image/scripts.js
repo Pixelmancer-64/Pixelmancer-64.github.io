@@ -1,11 +1,11 @@
 const myImage = new Image();
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
-myImage.src = '/img/a.jpg'
+myImage.src = '/img/eye.jpeg'
 
 myImage.addEventListener('load', function(){
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = myImage.width;
+canvas.height = myImage.height;
 ctx.drawImage(myImage, 0,0, canvas.width, canvas.height)
 const pixelData = ctx.getImageData(0,0, canvas.width, canvas.height)
 ctx.clearRect(0,0,canvas.width, canvas.height)
@@ -38,12 +38,12 @@ function brightnessCalc(red,green,blue){
 class Particle{
     constructor(){
         this.x = Math.random() * canvas.width;
-        this.y= 0;
+        this.y=  0;
         this.speed = 0;
-        this.velocity = Math.random() *4.5;
+        this.velocity = Math.random()*2.5;
         this.size = Math.random() * 1.5 + 1;
-        this.positionX = Math.floor(this.x);
-        this.positionY = Math.floor(this.y);
+        this.positionX = this.x;
+        this.positionY = this.y;
     }
     draw(){
         ctx.beginPath();
@@ -57,7 +57,7 @@ class Particle{
         this.positionX = Math.floor(this.x);
         this.positionY = Math.floor(this.y);
         this.speed = imageMap[this.positionY][this.positionX][0];
-        let movement = (2.5 - this.speed) + this.velocity;
+        let movement = this.speed + this.velocity;
 
         this.y+= movement;
         this.x+= movement;
@@ -65,15 +65,16 @@ class Particle{
         if (this.y  >= canvas.height){
             this.y = 0;
             this.x = Math.random() * canvas.width;
-        } if (this.x  >= canvas.width){
+        } 
+        if (this.x  >= canvas.width){
             this.x = 0;
             this.y = Math.random() * canvas.height;
         }
-            }
     }
+}
 
     function init(){
-        const nParticles = 6000;
+        const nParticles = 3000;
         particlesArray = [];
             for(i = 0; i < nParticles; i++){
                 particlesArray.push(new Particle);
@@ -82,12 +83,12 @@ class Particle{
     init();
     function animate(){
         requestAnimationFrame(animate);
-        ctx.globalAlpha = 0.04;
+        ctx.globalAlpha = 0.02;
         ctx.fillStyle = 'rgb(0,0,0)';
         ctx.fillRect(0,0,canvas.width, canvas.height);
         for(i=0; i<particlesArray.length; i++){
             particlesArray[i].update();
-            ctx.globalAlpha = particlesArray[i].speed *.6;
+            ctx.globalAlpha = particlesArray[i].speed;
             particlesArray[i].draw();
         } 
     }

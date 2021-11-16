@@ -81,11 +81,11 @@
      },
      {
         "id":9,
-        "title":"Roots",
-        "summary":"A very simple one; on mouse hover, roots start to grow.",
+        "title":"Starfield",
+        "summary":"A very simple one; on mouse hover... stars! (and other shapes)",
         "links":{
-              "demo": "/animations/Generative",
-              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Generative"
+              "demo": "/animations/Starfield",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Starfield"
            },
         "picture": "./img/9.png"
      },
@@ -211,11 +211,11 @@
      },
      {
         "id":22,
-        "title":"Umbrella",
-        "summary":"Testing collision detection with elements from html",
+        "title":"Clockwise",
+        "summary":"Circles that can be pretty sometimes...",
         "links":{
-              "demo": "/animations/Umbrella",
-              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Umbrella"
+              "demo": "/animations/Clockwise",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clockwise"
            },
         "picture": "./img/22.png"
      },

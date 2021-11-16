@@ -4,18 +4,18 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let particlesArray = []
-let hue =0
 
 let mouse ={
     x: undefined,
     y: undefined,
-    random: 1,
 }
 window.addEventListener('mousemove', function(event){
     mouse.x = event.x;
     mouse.y = event.y;
-    mouse.random = Math.floor(Math.random()*10+1);
-    for (let i = 0; i < mouse.random; i++){
+    let random = Math.floor(Math.random()*10);
+    ctx.fillStyle = 'rgba(0,0,0,0.09)';
+            ctx.fillRect(0,0,innerWidth,innerHeight);
+    for (let i = 0; i < random; i++){
         const myRoot = new Root(mouse.x, mouse.y);
         myRoot.update();
     };
@@ -37,19 +37,26 @@ class Root{
     constructor(x, y){
         this.x = x;
         this.y=y;
+        this.spikes = Math.floor(Math.random()*10 + 3)
+
+        this.moveRadius = 30;
         this.directionX = Math.random() * 4 - 1;
         this.directionY = Math.random() * 4 - 1;
         this.size = Math.random()  + 2;
         this.maxSize = Math.random() * 7 + 5;
-        this.color = '#34bd59';
+        this.hue = Math.random()*360
+        this.color = 'hsl(' + this.hue + ',100%,50%)'
+        this.strokeColor = 'hsl(' + this.hue + ',100%,30%)'
+
         this.angle = Math.random () * 6.28;
     }
     draw(){
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+            // ctx.beginPath();
+            // ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+            drawStar(this.x, this.y, this.spikes, this.moveRadius, this.size)
             ctx.fillStyle = this.color;
             ctx.fill();
-            ctx.strokeStyle = 'black'
+            ctx.strokeStyle = this.strokeColor
             ctx.stroke();
     }
     update(){
@@ -59,7 +66,31 @@ class Root{
         this.angle += .1;
         if(this.size < this.maxSize){
             this.draw()
+            
             requestAnimationFrame(this.update.bind(this));
         }
     }
+}
+
+function drawStar(positionX, positionY, spikes, outerRadius, innerRadius){
+    let rotation = Math.PI/2*3;
+    let x = positionX;
+    let y = positionY;
+    let step = Math.PI / spikes;
+
+    ctx.beginPath();
+    ctx.moveTo(positionX, positionY - outerRadius);
+    for(let i = 0; i< spikes; i++){
+        x = positionX + Math.cos(rotation) * outerRadius;
+        y = positionY + Math.sin(rotation) * outerRadius;
+        ctx.lineTo(x,y);
+        rotation += step;
+
+        x = positionX + Math.cos(rotation) * innerRadius;
+        y = positionY + Math.sin(rotation) * innerRadius;
+        ctx.lineTo(x,y);
+        rotation += step;
+    }
+    ctx.lineTo(positionX, positionY - outerRadius);
+    ctx.closePath();
 }

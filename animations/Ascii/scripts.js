@@ -1,6 +1,6 @@
 const ctx = canvas.getContext('2d');
 const myImage = new Image();
-myImage.src = '/img/bb8.png';
+myImage.src = '/img/zzzzzuuul.png';
 
 resolution.addEventListener('change', slider)
 class Cell{
