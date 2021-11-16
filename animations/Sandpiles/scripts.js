@@ -20,8 +20,8 @@ window.onload = function(){
     // }
 
     
-    canvas.width = 200;
-    canvas.height = 200;
+    canvas.width = 300;
+    canvas.height = 300;
 
     slider()
 }
@@ -44,7 +44,7 @@ class Particle {
             }
         }
 
-        this.sandpiles[this.height/2][this.width/2] = 4000;        
+        this.sandpiles[this.height/2][this.width/2] = 40000;        
 
     }  
 
@@ -54,7 +54,7 @@ class Particle {
                 let color = false
                 switch (this.sandpiles[y][x]){
                     case 0:
-                        color='#E0DDD5'
+                        color = '#703529'
                         break;
                     case 1:
                         color = '#283D70'
@@ -66,7 +66,7 @@ class Particle {
                         color = '#C6934B'
                         break;
                     case 4:
-                        color = '#703529'
+                        color='#E0DDD5'
                         break;
                     default:
                         break;

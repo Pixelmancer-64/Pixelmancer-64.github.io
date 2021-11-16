@@ -4,39 +4,41 @@ http.get('animations.json', function(status, response){
         console.log(status);
     } else {
         let aux = '';
-        let ages = [];
+        let already = []
 
-        response.forEach(data => {
-
-            console.log(data.links)
-            aux += `<div class="card">
-            <div class="movie">
-                <div class="imageContainer">
-                    <img src=${data.picture}>
+        for(let i=0; i < response.length;){
+            let random = Math.floor(Math.random()*response.length)
+            if(!already.includes(random)){
+                aux += `<div class="card">
+                <div class="movie">
+                    <div class="imageContainer">
+                        <img src=${response[random].picture}>
+                    </div>
+    
+    
+                <div class="description">
+                    <h1>${response[random].title}</h1>
+                    <h4>${response[random].summary}</h4>
+                    
+                    <hr> 
+                    
+                    <div class="showInfo">
+    
+                    <div class="cast">
+                    <a href=${response[random].links.github}><img id="github" src="/img/github.svg"></a>
+                    </div>
+                    <div clas="similar">
+                    <a href=${response[random].links.demo}><img id="demo" src="/img/play.svg"></a>
+                    </div>
                 </div>
-
-
-            <div class="description">
-                <h1>${data.title}</h1>
-                <h4>${data.summary}</h4>
-                
-                <hr> 
-                
-                <div class="showInfo">
-
-                <div class="cast">
-                <a href=${data.links.github}><img id="github" src="/img/github.svg"></a>
                 </div>
-                <div clas="similar">
-                <a href=${data.links.demo}><img id="demo" src="/img/play.svg"></a>
                 </div>
-            </div>
-            </div>
-            </div>
-        </div>`; 
-
-        document.querySelector('.movies').innerHTML = aux;
-
-        });
+                </div>`; 
+    
+            document.querySelector('.movies').innerHTML = aux;
+            already.push(random)
+            i++;
+            }
+        }
     }
 });

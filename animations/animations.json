@@ -51,11 +51,11 @@
      },
      {
         "id":6,
-        "title":"Fireflies",
-        "summary":"This one is... horrible. I was just testing with neon effects. If you have some idea of how to improve this, contact me :p",
+        "title":"Cosmos",
+        "summary":"Some REALLY crazy stuff, sometimes you can see what I call 'the cosmic butterfly' ",
         "links":{
-              "demo": "/animations/Fireflies",
-              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fireflies"
+              "demo": "/animations/Cosmos",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Cosmos"
            },
         "picture": "./img/6.png"
      },
@@ -298,5 +298,55 @@
             "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collatz_Conjecture"
          },
       "picture": "./img/30.png"
+   },
+   {
+      "id":31,
+      "title":"Sandpiles",
+      "summary":"Sandpiles fractal, looks like a rug pattern",
+      "links":{
+            "demo": "/animations/Sandpiles/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Sandpiles"
+         },
+      "picture": "./img/31.png"
+   },
+   {
+      "id":32,
+      "title":"Worley Noise",
+      "summary":"Worley noise, used in textures, but this one is just black and white",
+      "links":{
+            "demo": "/animations/Worley_Noise/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Worley_Noise"
+         },
+      "picture": "./img/32.png"
+   },
+   {
+      "id":33,
+      "title":"Fibonacci spiral",
+      "summary":"A spiral using the 'golden ratio', you might seen this in a sunflower",
+      "links":{
+            "demo": "/animations/Fibomacci/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fibomacci"
+         },
+      "picture": "./img/33.png"
+   },
+   {
+      "id":34,
+      "title":"Chaos Games",
+      "summary":"Chaos game with some rules, too long to explain here",
+      "links":{
+            "demo": "/animations/Chaos_Game/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Chaos_Game"
+         },
+      "picture": "./img/34.png"
+   },
+   {
+      "id":35,
+      "title":"Barnsley fern (mutation)",
+      "summary":"A mutation of the Barnsley fern, with color! ",
+      "links":{
+            "demo": "/animations/Barnsley_Fern/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Barnsley_Fern"
+         },
+      "picture": "./img/35.png"
    }
 ]

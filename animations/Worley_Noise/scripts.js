@@ -11,13 +11,12 @@ let hue =0;
 window.onload = function(){ 
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    if(window.innerWidth <= window.innerHeight){
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerWidth;
-    } else {
-        canvas.width = window.innerHeight;
-        canvas.height = window.innerHeight;
-    }
+
+    // canvas.width = 500;
+    // canvas.height = 500;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     slider()
 }
@@ -28,63 +27,79 @@ class Particle {
         this.ctx = ctx;
         this.width = width;
         this.height = height;
+        this.res = 3
 
-        this.i
-        this.aux = 0;
-        this.phi = 3.2360679775 / 2;
-        this.radius = 0.70710678118;
+        this.dots = []
 
+        for(let i =0; i < 140; i++){
+            let rand = {x: Math.random()*this.width, y: Math.random()*this.height}
+            this.dots.push(rand)
+        }
 
-        this.ctx.scale(this.width, this.height);
+    }  
 
+    draw(){
+        for(let y = 0; y < this.height; y+=this.res){
+            for(let x = 0; x < this.width; x+=this.res){
+                let dist = []
+                for(let i = 0; i < this.dots.length; i++){
+                    let dx = x - this.dots[i].x;
+                    let dy = y - this.dots[i].y;
+                    let distance = Math.sqrt(dx*dx + dy*dy);
+                    dist.push(distance)
+                }
+                dist.sort(function(a, b){return a - b})
+
+                this.ctx.beginPath();
+                let r = this.map(dist[0], 0, 200, 0, 255)
+                let g = this.map(dist[0], 0, 200, 0, 255)
+                let b = this.map(dist[0], 0, 200, 0, 255)
+
+                let color = 'rgb(' + r + ',' + g + ',' + b +')'
+
+                this.ctx.fillStyle = color;
+                this.ctx.fillRect(x, y, this.res, this.res);
+                this.ctx.closePath();
+
+            }
+        }
     }
-    
 
-    draw(x, y, r){
-        this.ctx.beginPath();
-        let color = 'hsl(' + hue + ',100%,50%)';
-        this.ctx.fillStyle = color;
-        hue += 10;
-        this.ctx.arc(x, y, r, 0, Math.PI*2)
-        this.ctx.fill();
+    map(n, start1, stop1, start2, stop2){
+        return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
     }
 
-    update(){
-        // this.ctx.clearRect(-this.width/2, -this.height/2 , this.width, this.height);
-        // for(let i=0; i < 1050; i++){
-            this.i = this.aux;
-            const f = this.i / 100;
-            const angle = this.i * this.phi;
-            const dist = f * this.radius;
+    points(){
+        this.dots.forEach(data => {
+            this.ctx.fillStyle = '#FF0000'
+            this.ctx.beginPath();
+            this.ctx.arc(data.x, data.y, 10, 0, Math.PI*2)
+            this.ctx.fill();
+            this.ctx.closePath();
+        })
+    }
 
-            const x = 0.5 + Math.cos(angle * Math.PI * 2) * dist;
-            const y = 0.5 + Math.sin(angle * Math.PI * 2) * dist;
-            const r = f * .05;
-
-            this.draw(x, y, r);
-        // }
-        this.aux += .1
-        // this.ctx.rotate(1)
-        animationRequest = requestAnimationFrame(this.update.bind(this))        
+    animate(){
+        this.draw();
+        // this.points();
+        // animationRequest = requestAnimationFrame(this.animate.bind(this));
     }
 
 }
 
 function slider(){
-    ctx.clearRect(canvas.width/2, canvas.height/2 , canvas.width, canvas.height);
     cancelAnimationFrame(animationRequest);
-    newParticle = new Particle(ctx, canvas.width, canvas.height)
-    newParticle.update();
-    
+    newParticle = new Particle(ctx, canvas.width, canvas.height)    
+    newParticle.animate();
 }
 
-window.addEventListener('resize', function(){
-    if(window.innerWidth <= window.innerHeight){
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerWidth;
-    } else {
-        canvas.width = window.innerHeight;
-        canvas.height = window.innerHeight;
-    }
-    slider();
-});
+// window.addEventListener('resize', function(){
+//     if(window.innerWidth <= window.innerHeight){
+//         canvas.width = window.innerWidth;
+//         canvas.height = window.innerWidth;
+//     } else {
+//         canvas.width = window.innerHeight;
+//         canvas.height = window.innerHeight;
+//     }
+//     slider();
+// });
