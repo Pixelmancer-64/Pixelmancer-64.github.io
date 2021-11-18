@@ -347,6 +347,56 @@
             "demo": "/animations/Barnsley_Fern/",
             "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Barnsley_Fern"
          },
-      "picture": "./img/35.png"
+      "picture": "./img/35.png" 
+   },
+   {
+      "id":36,
+      "title":"Random Walker",
+      "summary":"A very drunk group of dots",
+      "links":{
+            "demo": "/animations/Random_Walker/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Walker"
+         },
+      "picture": "./img/36.png"
+   },
+   {
+      "id":37,
+      "title":"Clifford Atracttor",
+      "summary":"Clifford Atracttor...",
+      "links":{
+            "demo": "/animations/Clifford_Attractor/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clifford_Attractor"
+         },
+      "picture": "./img/37.png"
+   },
+   {
+      "id":38,
+      "title":"Souls",
+      "summary":"One more atracttor, I modified the Bedhead Atracttor formula and this is the result",
+      "links":{
+            "demo": "/animations/Souls/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Souls"
+         },
+      "picture": "./img/38.png"
+   },
+   {
+      "id":39,
+      "title":"Svensson Atracttor",
+      "summary":"Svensson Atracttor...",
+      "links":{
+            "demo": "/animations/Svensson_Atracttor/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Svensson_Atracttor"
+         },
+      "picture": "./img/39.png"
+   },
+   {
+      "id":40,
+      "title":"Bedhead Atracttor",
+      "summary":"Bedhead Atracttor...",
+      "links":{
+            "demo": "/animations/Bedhead_Attractor/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Bedhead_Attractor"
+         },
+      "picture": "./img/40.png"
    }
 ]
