@@ -43,7 +43,10 @@ document.addEventListener("click", (event) =>{
         let foodId = parseInt(event.target.parentNode.parentNode.id.substr(5));
         const newFood = view.save();
         if(newFood.name == "" || newFood.image == "") {
-            alert("Preencha o campo nome e Imagem antes de editar os itens")
+            if(newFood.name == "hi") {
+                alert("vc podia ter me pedido ajuda antes :/")
+            }
+            else alert("Preencha o campo nome e Imagem antes de editar os itens")
         }
         else foods.update(foodId, newFood)
     }
