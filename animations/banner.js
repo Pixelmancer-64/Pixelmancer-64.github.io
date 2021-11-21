@@ -11,7 +11,7 @@ window.onload = function(){
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     if(window.innerWidth <= window.innerHeight){
-        canvas.width = window.innerWidth - 25;
+        canvas.width = window.innerWidth;
         canvas.height = window.innerWidth;
     } else {
         canvas.width = window.innerHeight;
@@ -34,8 +34,6 @@ class Particle {
         this.d = Math.random()*360;
         // this.n = 8;
         // this.d = 160;
-        console.log('N: ' + this.n)
-        console.log('D: ' + this.d)
 
         this.k = 0;
         this.size = this.width/2;

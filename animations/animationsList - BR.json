@@ -1,0 +1,402 @@
+[
+    {
+       "id":1,
+       "title":"Ascii art",
+       "summary":"Ele pega uma imagem e transforma os pixels em caracteres ascii dependendo da sua cor",
+       "links":{
+        "demo": "/animations/Ascii",
+        "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Ascii"
+       },
+       "picture": "./img/1.png"
+    },
+    {
+        "id":2,
+        "title":"Universo, talvez?",
+        "summary":"Um monte de formas geométricas rodando, só testando como fazer outras formas além de círculos e quadrados...",
+        "links": {
+              "demo": "/animations/CircularMotion",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/CircularMotion"
+           },
+        "picture": "./img/2.png"
+     },
+     {
+        "id":3,
+        "title":"Bem colorido",
+        "summary":"Um monte de partículas que mudam de direção quando batem no limite da tela",
+        "links": {
+              "demo": "/animations/Colorful",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Colorful"
+           },
+        "picture": "./img/3.png"
+     },
+     {
+        "id":4,
+        "title":"Olhos de Cthulhu",
+        "summary":"Olhos (super) assustadores que seguem o cursor do mouse; funciona no celular também clicando na tela",
+        "links":{
+              "demo": "/animations/CthulhuEyes",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/CthulhuEyes"
+           },
+        "picture": "./img/4.png"
+     },
+     {
+        "id":5,
+        "title":"Pontinhos",
+        "summary":"Partículas que se conectam com vizinhas dependendo de sua distância, está super mal otimizado, boa sorte rodando isso :p",
+        "links":{
+              "demo": "/animations/Dots",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Dots"
+           },
+        "picture": "./img/5.png"
+     },
+     {
+        "id":6,
+        "title":"Cosmos",
+        "summary":"Projeto original meu, cria algumas coisas super legais, mas na demo está só mostrando a \"Borboleta Cósmica\" ",
+        "links":{
+              "demo": "/animations/Cosmos",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Cosmos"
+           },
+        "picture": "./img/6.png"
+     },
+     {
+        "id":7,
+        "title":"Floco de neve",
+        "summary":"\"Snowflake fractal\", clica no ícone de refresh e vai gerar um nome aleatoriamente",
+        "links":{
+              "demo": "/animations/Fractal_Snowflake",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fractal_Snowflake"
+           },
+        "picture": "./img/7.png"
+     },
+     {
+        "id":8,
+        "title":"Árvore Fractal",
+        "summary":"Outro fractal bem famoso, clica no ícone de refresh e vai gerar um novo",
+        "links":{
+              "demo": "/animations/Fractal_Tree",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fractal_Tree"
+           },
+        "picture": "./img/8.png"
+     },
+     {
+        "id":9,
+        "title":"Starfield",
+        "summary":"Bem simples, com o movimento do mouse vai surgindo alguns formatos aleatórios",
+        "links":{
+              "demo": "/animations/Starfield",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Starfield"
+           },
+        "picture": "./img/9.png"
+     },
+     {
+        "id":10,
+        "title":"Hexagons are the bestagons",
+        "summary":"Hexágonos, só isso mesmo, é de um youtuber que não me lembro o nome, é meio sem graça",
+        "links":{
+              "demo": "/animations/Hexagons",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Hexagons"
+           },
+        "picture": "./img/10.png"
+     },
+     {
+        "id":11,
+        "title":"Self-Avoid Walker",
+        "summary":"Um walker que evita casas já percorridas, a única diferença para os mais comuns na interwebs é que esse não apaga as casas quando precisa \"dar ré\"",
+        "links":{
+              "demo": "/animations/Self-Avoid_Walker",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Self-Avoid%20Walker"
+           },
+        "picture": "./img/11.png"
+     },
+     {
+        "id":12,
+        "title":"Image crawler",
+        "summary":"Mesma coisa do Walker, só que tem uma imagem ai no fundo que ele vai desenhando com o tempo",
+        "links":{
+              "demo": "/animations/Image_Crawler",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Image%20Crawler"
+           },
+        "picture": "./img/12.png"
+     },
+     {
+        "id":13,
+        "title":"Chuva? na imagem",
+        "summary":"Projeto do Franks Laboratory, dá uma olhada no canal dele :p É um efeito super legal",
+        "links":{
+              "demo": "/animations/Image",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Image"
+           },
+        "picture": "./img/13.png"
+     },
+     {
+        "id":14,
+        "title":"Loading...",
+        "summary":"Parece uma tela de carregamento, só que é em css",
+        "links":{
+              "demo": "/animations/Loading",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Loading"
+           },
+        "picture": "./img/14.png"
+     },
+     {
+        "id":15,
+        "title":"Chuva Matrix",
+        "summary":"Meio que o efeito do matrix, só que são apenas 0 e 1",
+        "links":{
+              "demo": "/animations/Matrix",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Matrix"
+           },
+        "picture": "./img/15.png"
+     },
+     {
+        "id":16,
+        "title":"Explosão",
+        "summary":"Clica na tela e... Bolinhas! Elas vão diminuindo com o tempo até serem tão pequenas que... morrem :p",
+        "links":{
+              "demo": "/animations/Mouse_Effect",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mouse_Effect"
+           },
+        "picture": "./img/16.png"
+     },
+     {
+        "id":17,
+        "title":"Mouse trail",
+        "summary":"Um rastro para o mouse. É bem bonito, mas é bem comum na interwebs, ",
+        "links":{
+              "demo": "/animations/Mouse_Trail",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mouse_Trail"
+           },
+        "picture": "./img/17.png"
+     },
+     {
+        "id":18,
+        "title":"Visualizador de música",
+        "summary":"Você pode escolher qualquer formato mp4 e as bolinhas vão reagir com a frequência do som",
+        "links":{
+              "demo": "/animations/Music",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Music"
+           },
+        "picture": "./img/18.png"
+     },
+     {
+        "id":19,
+        "title":"Pêndulos",
+        "summary":"Um pêndulo, super simples mas bem divertido de ficar olhando por muito tempo...",
+        "links":{
+              "demo": "/animations/Pendulum",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pendulum"
+           },
+        "picture": "./img/19.png"
+     },
+     {
+        "id":20,
+        "title":"Chuva",
+        "summary":"Sério, é só chuva, não tem mais absolutamente nada que acontece, sério :/",
+        "links":{
+              "demo": "/animations/Rain",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rain"
+           },
+        "picture": "./img/20.png"
+     },
+     {
+        "id":21,
+        "title":"Texto em partícula",
+        "summary":"É um hello world só que você pode interagir com ele, passa o mouse em cima e dá uma olhada",
+        "links":{
+              "demo": "/animations/Text/",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Text"
+           },
+        "picture": "./img/21.png"
+     },
+     {
+        "id":22,
+        "title":"Clockwise",
+        "summary":"Círculos e mais círculos, as vezes podem criar alguma coisa legal, vai tentando ai",
+        "links":{
+              "demo": "/animations/Clockwise",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clockwise"
+           },
+        "picture": "./img/22.png"
+     },
+     {
+        "id":23,
+        "title":"Ondas",
+        "summary":"São ondas, só que vai se tornando meio caótico com o tempo...",
+        "links":{
+              "demo": "/animations/Waves/",
+              "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Waves"
+           },
+        "picture": "./img/23.png"
+     },
+     {
+      "id":24,
+      "title":"Geração de terreno",
+      "summary":"Geração de terreno em 3d com Perlin noise, em um mundo ideal eu já tomei vergonha na cara e fiz estilo vaporwave",
+      "links":{
+            "demo": "/animations/Terrain_Generation/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Terrain_Generation"
+         },
+      "picture": "./img/24.png"
+   },
+   {
+      "id":25,
+      "title":"Pêndulo duplo",
+      "summary":"Era para ser um pêndulo duplo mas eu provavelmente errei a fórmula e criou isso ai, e até que é bonito",
+      "links":{
+            "demo": "/animations/Double_Pendulum/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Double_Pendulum"
+         },
+      "picture": "./img/25.png"
+   },
+   {
+      "id":26,
+      "title":"Cordas",
+      "summary":"Eu não sei exatamente o nome para o que eu fiz mas periodicamente você vai ver um cardioide",
+      "links":{
+            "demo": "/animations/Strings/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Strings"
+         },
+      "picture": "./img/26.png"
+   },
+   {
+      "id":27,
+      "title":"Mais pêndulos",
+      "summary":"muito mais pêndulos! só isso mesmo",
+      "links":{
+            "demo": "/animations/Pendulums/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pendulums"
+         },
+      "picture": "./img/27.png"
+   },
+   {
+      "id":28,
+      "title":"Noise Flowfield",
+      "summary":"Um flowfield com Perlin noise, é meio assustador... mas é bonito também",
+      "links":{
+            "demo": "/animations/Noise_FlowField/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Noise_FlowField"
+         },
+      "picture": "./img/28.png"
+   },
+   {
+      "id":29,
+      "title":"Maurer Rose",
+      "summary":"Maurer Rose mas com valores aleatórios que criam efeitos bem legais",
+      "links":{
+            "demo": "/animations/Maurer_Rose/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Maurer_Rose"
+         },
+      "picture": "./img/29.png"
+   },
+   {
+      "id":30,
+      "title":"Collatz Conjecture",
+      "summary":"Collatz Conjecture, só que BEM colorido, é bem leve de rodar",
+      "links":{
+            "demo": "/animations/Collatz_Conjecture/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collatz_Conjecture"
+         },
+      "picture": "./img/30.png"
+   },
+   {
+      "id":31,
+      "title":"Sandpiles",
+      "summary":"É um fractal, SUPER pesado em resoluções muito grandes, cria uns padrões que você poderia usar em tapete",
+      "links":{
+            "demo": "/animations/Sandpiles/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Sandpiles"
+         },
+      "picture": "./img/31.png"
+   },
+   {
+      "id":32,
+      "title":"Worley Noise",
+      "summary":"Worley noise, se você já trabalhou com texturas conhece bem",
+      "links":{
+            "demo": "/animations/Worley_Noise/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Worley_Noise"
+         },
+      "picture": "./img/32.png"
+   },
+   {
+      "id":33,
+      "title":"Espiral de Fibonacci",
+      "summary":"Uma espiral usando o 'golden ratio', melhor forma de distribuir pontos uniformemente em uma esfera",
+      "links":{
+            "demo": "/animations/Fibomacci/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fibomacci"
+         },
+      "picture": "./img/33.png"
+   },
+   {
+      "id":34,
+      "title":"Chaos Games",
+      "summary":"Literalmente seria \"Jogo do Caos\", dá uma pesquisada na wikipedia para ver como que funciona",
+      "links":{
+            "demo": "/animations/Chaos_Game/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Chaos_Game"
+         },
+      "picture": "./img/34.png"
+   },
+   {
+      "id":35,
+      "title":"Barnsley fern (mutação)",
+      "summary":"Uma mutação do fractal \"Barnsley fern\" e com cores! ",
+      "links":{
+            "demo": "/animations/Barnsley_Fern/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Barnsley_Fern"
+         },
+      "picture": "./img/35.png" 
+   },
+   {
+      "id":36,
+      "title":"Random Walker",
+      "summary":"Um grupo de partículas depois de uma festa...",
+      "links":{
+            "demo": "/animations/Random_Walker/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Walker"
+         },
+      "picture": "./img/36.png"
+   },
+   {
+      "id":37,
+      "title":"Clifford Atracttor",
+      "summary":"Clifford Atracttor...",
+      "links":{
+            "demo": "/animations/Clifford_Attractor/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clifford_Attractor"
+         },
+      "picture": "./img/37.png"
+   },
+   {
+      "id":38,
+      "title":"Souls",
+      "summary":"Uma modificação do Bedhead Atracttor que eu fiz e que cria uns resultados meio assustadores",
+      "links":{
+            "demo": "/animations/Souls/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Souls"
+         },
+      "picture": "./img/38.png"
+   },
+   {
+      "id":39,
+      "title":"Svensson Atracttor",
+      "summary":"Svensson Atracttor...",
+      "links":{
+            "demo": "/animations/Svensson_Attractor/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Svensson_Atracttor"
+         },
+      "picture": "./img/39.png"
+   },
+   {
+      "id":40,
+      "title":"Bedhead Atracttor",
+      "summary":"Bedhead Atracttor...",
+      "links":{
+            "demo": "/animations/Bedhead_Attractor/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Bedhead_Attractor"
+         },
+      "picture": "./img/40.png"
+   }
+]
