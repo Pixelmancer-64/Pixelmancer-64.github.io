@@ -39,7 +39,6 @@ function read (id) {
 function update (id, food){
     const foods = read();
     //determinar o indice do array com o elemento que tenha o id
-
     const index = foods.findIndex((food) => food.id === id);
     //se encontrar, altere
     if (index >= 0) {
