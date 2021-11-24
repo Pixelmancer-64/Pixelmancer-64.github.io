@@ -3,14 +3,14 @@ function request(pos){
     const apiKey = '54a06451d9da40f28c776dbf31a2c366'
     const city = 'Rio de Janeiro'
     const lang = navigator.language.toLowerCase().replace('-','_')
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=${lang}&units=metric`
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=${lang}&units=metric`
 
-    // if(pos != false){ 
-    //     const lat = pos.coords.latitude;
-    //     const lon = pos.coords.longitude;
-    //     url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=${lang}&units=metric`
+    if(pos != false){ 
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=${lang}&units=metric`
 
-    // }
+    }
     http.get(url, function(status, response){
         if(status){
             console.log(status)
