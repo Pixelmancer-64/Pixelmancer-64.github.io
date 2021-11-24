@@ -44,7 +44,6 @@ function request(pos){
 window.onload = function(){
     const options = {
         enableHighAccuracy: true,
-        timeout: 5000,
         maximumAge: 0
     };
 
