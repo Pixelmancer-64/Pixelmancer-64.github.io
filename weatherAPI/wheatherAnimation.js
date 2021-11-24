@@ -42,7 +42,6 @@ class Particle{
 		stroke(255,255,255, 10);
 		strokeWeight(1)
 		line(this.pos.x, this.pos.y, this.previousPos.x, this.previousPos.y)
-		// point(this.pos.x, this.pos.y);
 		this.updatePrev();
 	}
 
@@ -55,9 +54,7 @@ class Particle{
 		if (this.pos.x > width) {
 			this.pos.x = 0;
 			this.updatePrev();
-		}
-
-		if (this.pos.x < 0) {
+		} else if (this.pos.x < 0) {
 			this.pos.x = width;
 			this.updatePrev();
 		}
@@ -65,9 +62,7 @@ class Particle{
 		if (this.pos.y > height) {
 			this.pos.y = 0;
 			this.updatePrev();
-		}
-
-		if (this.pos.y < 0) {
+		} else if (this.pos.y < 0) {
 			this.pos.y = height;
 			this.updatePrev();
 		}
@@ -84,23 +79,17 @@ class Particle{
 }
 
 function draw() {
+    
 	let yoff = 0;
 	for (let y = 0; y < cols; y++) {
 		let xoff = 0;
     	for (let x = 0; x < rows; x++) {
     		let index = (x + y * cols);
-    		let angle = noise(xoff, yoff, zoff) * TWO_PI ;
+    		let angle = noise(xoff, yoff, zoff) * TWO_PI;
 			let v = p5.Vector.fromAngle(angle);
-			v.setMag(1);
+			v.setMag(10);
     		xoff += inc;
 			flowField[index] = v
-			// stroke(0, 50);
-			// strokeWeight(1)
-			// push();
-			// translate(x * scl, y * scl);
-			// rotate(v.heading());
-			// line(0, 0, scl, 0)
-			// pop();
 	    }
     	yoff += inc;
 		zoff += .0003;
