@@ -5,12 +5,12 @@ function request(pos){
     const lang = navigator.language.toLowerCase().replace('-','_')
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=${lang}&units=metric`
 
-    if(pos != false){ 
-        const lat = pos.coords.latitude;
-        const lon = pos.coords.longitude;
-        url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=${lang}&units=metric`
+    // if(pos != false){ 
+    //     const lat = pos.coords.latitude;
+    //     const lon = pos.coords.longitude;
+    //     url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=${lang}&units=metric`
 
-    }
+    // }
     http.get(url, function(status, response){
         if(status){
             console.log(status)
