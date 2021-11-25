@@ -95,7 +95,10 @@ aside{
 .knowledge ul{
 	display: flex;
 	flex-wrap: wrap;
-	gap: .2rem;
+	gap: 1vh;
+}
+.knowledge img{
+	min-width:5vh;
 }
 .knowledge{
 	margin: 0 1em;
@@ -116,6 +119,7 @@ aside{
 
 main{
 	flex: 1;
+	flex-wrap: wrap;
 	padding: 1rem;
 	border-left: 2px solid #202024;
 	border-top: 2px solid #202024;
@@ -136,7 +140,7 @@ h2{
 	padding: 1rem;
 	margin: 1rem 0;
 	text-align: center;
-	background-image: url("./img/milky_way.jpg");
+	background-image: url("./img/sky.svg");
 }
 
 .projects {
@@ -159,6 +163,11 @@ h2{
 
 .description{
 	font-size: 1.5rem;
+}
+
+main input:hover{
+	/* filter: invert(1); */
+	filter: hue-rotate(180deg);
 }
 .tooltip {
 	position: relative;
@@ -199,8 +208,7 @@ h2{
 
   @media screen and (max-width:768px){
 	.apart{
-		gap: 2rem;
-		
+		display: inline;
 	}
 
   }

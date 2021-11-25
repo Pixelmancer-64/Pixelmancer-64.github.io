@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">>
     <title>Calculator</title>
 </head>
 <body>
+    <canvas id="canvas1"></canvas>
     <div class="calculator"> 
-        <div class="monitor">
-            <div class="previous"></div>
-            <div class="current"></div>
-        </div>
+        <div class="monitor"></div>
+        
         <button class="fat" id="delete">DEL</button>
         <button id="clear">C</button>
         <button class="operator">/</button>
@@ -31,12 +32,18 @@
         <button class="number">3</button>
         <button class="operator">+</button>
 
-        <button class="number fat">0</button>
+        <button class="number">0</button>
         <button class="number">.</button>
-        <button id="equals">=</button>
+        <button class="fat" id="equals">=</button>
+
+        <button class="number">(</button>
+        <button class="number">)</button>
         
-        <p id=warning>NaN - clear ou del para continuar</p>
+        
+        <p id=warning></p>
     </div>
+
 </body>
+<script src="background.js"></script>
 <script src="scripts.js"></script>
 </html>

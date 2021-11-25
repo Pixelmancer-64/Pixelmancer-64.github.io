@@ -1,90 +1,41 @@
 class brains{
-    constructor(previousText, currentText){
-        this.previousText = previousText 
-        this.currentText = currentText 
-        this.cleaning()
-    }
-    cleaning(){
-        this.current = ''
-        this.previous = ''
-        this.operation=undefined
-    }
-    partialCleaner(){
-        this.current=''
-    }
-
     deleting(){
-        this.current = this.current.toString().slice(0,-1)
+        his.pop();
     }
 
-    writer(number){
-        if(number==='.' && this.current.includes('.')) return 0;
-        this.current = this.current.toString() + number.toString()
-    }
-    mathematician(operation){
-        if(this.current ==='') return 0
-        if(this.previous !=='') this.realDeal()
-        this.operation = operation;
-        this.previous = this.current;
-        this.current = ''
+    cleaning(){
+        monitor.innerHTML = '';
     }
 
-    realDeal(){
-        let result 
-        const prev = parseFloat(this.previous)
-        const cur =  parseFloat(this.current)
-        if(isNaN(this.previous) ||
-         isNaN(this.current)){
-             return 0} 
-        switch(this.operation){
-            case '/':
-                result = prev / cur
-                break
-            case '*':
-                result = prev * cur
-                break
-            case '-':
-                result = prev - cur
-                break
-            case '+':
-                result = prev + cur
-                break
-            default: return 0
-        }
-        if(isNaN(result)){
-            this.mathPolice()
-            return 
-
-        }
-        this.current = result
-        this.operation = undefined
-        this.previous = ''
+    realDeal(res){
+        if(isNaN(res)  || res === Infinity){
+            this.mathPolice(res)
+            return true
+        } else{
+            this.cleaning()
+            his = [];
+            let aux = res.toString().split('')
+            aux.forEach((e) => his.push(e))
+            return res
+        } 
     }
     
-
-    mathPolice(){
+    // need attention
+    mathPolice(num){
+        document.getElementById('warning').innerHTML = `${num} - clear ou del para continuar`
         document.getElementById('warning').style.visibility = "visible"
-      //  this.typeWriter('warning', 'testee', 10000)
-
     }
 
-    update(){
-        currentText.innerHTML = this.current
-        if(this.operation != null){
-            previousText.innerHTML = `${this.previous} ${this.operation}`
-        }else previousText.innerHTML = ''
-    }
-    /*
-    typeWriter(dummy, txt, speed){
-        let i = 0
-        if (i < txt.length) {
-            console.log(i)
-          document.getElementById(dummy).innerHTML += txt.charAt(i);
-          i++;
-          setTimeout(this.typeWriter(), speed);
+    // NEED CHANGE REMEMBER
+    update(newRes){
+        console.log(his)
+        if(newRes==undefined) {
+            this.cleaning();
+            his = [];
         }
-      }
-      */
+        else if(newRes === true) return
+        else monitor.innerHTML += newRes; 
+    }
 }
 
 const numbers = document.querySelectorAll(".number")
@@ -92,77 +43,71 @@ const operators = document.querySelectorAll(".operator")
 const equals = document.getElementById("equals")
 const clear = document.getElementById("clear")
 const del = document.getElementById("delete")
-const previousText = document.querySelector(".previous")
-const currentText = document.querySelector(".current")
-
-const calculator = new brains(previousText, currentText)
+const monitor = document.querySelector(".monitor")
+ 
+const calculator = new brains()
 
 //listiners for the numbers
 
+let his = []
 numbers.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.writer(button.innerHTML)
-        calculator.update()
-    })
-})
-document.addEventListener('keydown', (event) => {
-
-    let name= event.key;
-     if(isNaN(name)==false || name ==='.' ){
-        calculator.writer(name)
-    calculator.update()
-     }
-    
+    button.addEventListener('click', () => radio(button.innerHTML))
 })
 
 //listeners for the operators 
 operators.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.mathematician(button.innerHTML)
-        calculator.update()
-    })
+    button.addEventListener('click', () => radio(button.innerHTML))
 })
-document.addEventListener('keydown', (event) => {
 
+document.addEventListener('keydown', (event) => {
     let name= event.key;
-     if(name === '*' ||name === '/' ||name === '+' ||name === '-' ){
-        calculator.mathematician(name)
-    calculator.update()
+    if(name === 'Enter' || name === '='){
+        let aux = ''
+        his.forEach((e) => {
+            aux += e
+        }) 
+        calculator.update(calculator.realDeal(eval(aux)))
      }
-    
+    else if(name === 'Backspace') delShortcut()
+    else if(isNaN(name)==false || name ==='.' || name === '*' || name === '/' || name === '+' || name === '-' || name === '(' || name === ')') radio(name)
 })
 
 //listeners for Del, AC and Equals 
     equals.addEventListener('click', () => {
-        calculator.realDeal()
-        calculator.update()
+        let aux = ''
+        his.forEach((e) => {
+            aux += e
+        }) 
+        calculator.update(calculator.realDeal(eval(aux)))
     })
 
     clear.addEventListener('click', () => {
-            calculator.cleaning()
-        document.getElementById('warning').style.visibility = "hidden"
-        calculator.update()
-            
-    })
-
-    del.addEventListener('click', () => {
-        
-        calculator.deleting()
+        calculator.cleaning()
         document.getElementById('warning').style.visibility = "hidden"
         calculator.update()
     })
 
+    del.addEventListener('click', () => delShortcut())
 
-document.addEventListener('keydown', (event) => {
-
-    let name= event.key;
-     if(name === 'Enter'){
-        calculator.realDeal()
-        calculator.update()
-     }
-     if(name === 'Backspace'){
-        calculator.deleting()
-        document.getElementById('warning').style.visibility = "hidden"
-        calculator.update()
-     }
-})
+function delShortcut(){
+    calculator.deleting()
+    document.getElementById('warning').style.visibility = "hidden"
+    let aux = ''
+    his.forEach((e) => {
+        aux += e
+    })
+    calculator.cleaning()
+    calculator.update(aux)
+    backspace()
+}
+let started = true;
+function radio(e){
+    his.push(e)
+    calculator.update(e)
+    init(e)
+    if(started === true) {
+        console.log('hi')   
+        animate()
+        started = false
+    }
+}
