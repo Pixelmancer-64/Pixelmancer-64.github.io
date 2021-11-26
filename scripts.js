@@ -29,6 +29,10 @@ document.getElementById("books").onclick = function () {
     location.href = "/Books";
 };
 
+document.getElementById("weatherAPI").onclick = function(){
+    location.href = "/weatherAPI"
+}
+
 let i =0
 let aux = []
 document.addEventListener('keydown', (event) => {

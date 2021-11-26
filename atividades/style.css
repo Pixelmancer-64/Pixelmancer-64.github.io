@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 
-#canvas1{
-    position: absolute;
+body{
     background-color: black;
-    z-index: -1;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
 }
-
 .labs{
     text-align: center;
     font-size: 2rem;
@@ -19,6 +19,27 @@ ul{
     list-style-type: none;
     margin: 2em;
 }
+
+h1{
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+h1:hover{
+	transition: transform 250ms;
+    transform: translateX(10%);
+}
+
+li{
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+li:hover{
+	transition: transform 250ms;
+    transform: translateX(10%);
+}
+
 .listsList{
     display: flex;
     flex-direction: column;
@@ -28,7 +49,7 @@ ul{
 h1{
     color: #0fa;
     text-shadow:
-    0 0 42px #0fa,
+    0 0 10px #0fa,
     0 0 82px #0fa,
     0 0 92px #0fa,
     0 0 102px #0fa,

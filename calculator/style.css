@@ -5,6 +5,7 @@
 
 body{
     background-color:#111113;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .calculator{
@@ -15,18 +16,28 @@ body{
 
     grid-template-columns: repeat(4, 10vh);
     grid-template-rows:minmax(10vh, auto) repeat(6,10vh);
+    margin: 5vh;
+    
+    
 }
 
 .calculator button{
-    color:white;
+    font-family: 'Press Start 2P', cursive;
+    color:rgb(33, 41, 82);
     cursor: pointer;
     font-size: 3rem;
-    border: .1rem solid white;
-    background-color: #202024;
+    border: .2rem solid rgb(92, 75, 122);
+    background-color: rgb(132, 116, 159);
+    
+    will-change: transform;
+    transition: transform 150ms;
+
+    box-shadow: rgb(217, 199, 224) 0px 5px 3px 0px inset, rgba(255, 255, 255, 0.5) -3px 0px 3px 0px inset;
 }
 
 .calculator button:hover{
-    background-color: rgba( 32, 32, 36, .1 );
+    transform: translate(-10%, -10%);
+    transition: 30ms;
 }
 
 .fat{
@@ -34,11 +45,12 @@ body{
 }
 
 .monitor{
-    font-family:DotGothic16, MingLiU_HKSCS-ExtB, Arial, Helvetica, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     color: lightgreen;
     font-size: 3.5rem;
+    padding: .1em;
     grid-column: 1/-1;
-    background-color: #202024;
+    background-color: rgba(0, 136, 80, .7);
     display: flex;
     align-items:flex-end;
     justify-content: space-around;
@@ -48,6 +60,7 @@ body{
     word-break: break-all;
 }
 #warning{
+    font-family: 'Press Start 2P', cursive;
     visibility:hidden;
     font-size: 3.5rem;
     grid-column: 1/-1;

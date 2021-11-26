@@ -34,25 +34,25 @@ option2.addEventListener('click',() => {
     let result = []
     aux = middle.value.split("")
     let i = 0;
-    aux.forEach( () => {
-        console.log(aux)
-        switch(aux[i]){
-            case 'a': result[i] ="<b>a</b>"; break;
-            case 'e': result[i] ="<b>e</b>"; break;
-            case 'i': result[i] ="<b>i</b>"; break;
-            case 'o': result[i] ="<b>o</b>"; break;
-            case 'u': result[i] ="<b>u</b>"; break;
-            case 'A': result[i] ="<b>A</b>"; break;
-            case 'E': result[i] ="<b>E</b>"; break;
-            case 'I': result[i] ="<b>I</b>"; break;
-            case 'O': result[i] ="<b>O</b>"; break;
-            case 'U': result[i] ="<b>U</b>"; break;
-            default: result[i] = aux[i];
+    let me = ''
+    aux.forEach( (e) => {
+        switch(e){
+            case 'a': me +="<strong>a</strong>"; break;
+            case 'e': me +="<strong>e</strong>"; break;
+            case 'i': me +="<strong>i</strong>"; break;
+            case 'o': me +="<strong>o</strong>"; break;
+            case 'u': me +="<strong>u</strong>"; break;
+            case 'A': me +="<strong>A</strong>"; break;
+            case 'E': me +="<strong>E</strong>"; break;
+            case 'I': me +="<strong>I</strong>"; break;
+            case 'O': me +="<strong>O</strong>"; break;
+            case 'U': me +="<strong>U</strong>"; break;
+            case ' ': me += "&nbsp"; break;
+            default: me += e;
         }
-       i++
     });
-    console.log(result)
-    output.innerHTML= result.join('')
+    console.log(me)
+    output.innerHTML = me
     }
     });
 
@@ -176,23 +176,24 @@ option8.addEventListener('click',() => {
 option9.addEventListener('click',() => {
         old.type='password';
         oldLabel.innerHTML = 'Senha:'
-        const weak = /[a-z]|[A-Z]/
-        const medium = /[a-z][A-Z][0-9]/
-        const strong = /[a-z][A-Z][0-9][!@#\$%\^\&*\)\(+=._-]+$/
+        const medium = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/
+        const strong = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^\&*\)\(+=._-])/
 
         if(old.type=='password' && old.style.visibility=="visible" && old.value != ''){
             
             security = old.value
-            
-            if(weak.test(security)==true){
-                old.style.backgroundColor="red"
-            }
-            if(medium.test(security)==true){
-                old.style.backgroundColor="orange"
-            }
-            if(strong.test(security)==true){
+
+            console.log(medium.test(security))
+
+            if(strong.test(security)){
                 old.style.backgroundColor="green"
             }
+            else if(medium.test(security)){
+                old.style.backgroundColor="orange"
+            }
+            else old.style.backgroundColor="red"
+    
+            
             
         }
         camo();
