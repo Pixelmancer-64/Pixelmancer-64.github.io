@@ -13,8 +13,8 @@ main{
 }
 table{
     border-collapse: collapse;
-    border: 2px solid black;
-    letter-spacing: 1px;
+    margin: 25px 0;
+    font-size: 1.2em;
     width: 100%;
 }
 td,

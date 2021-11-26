@@ -14,23 +14,21 @@ function allEventListeners(){
     filter.addEventListener('keyup',filterTask);
 }
 
-taskList.style.backgroundcolor='red'
 function addTask(e){
     if(taskInput.value === ''){
         alert('Please add a task before submiting');
     }else {
         const li = document.createElement('li');
-    li.className = 'collection-item';
-    li.appendChild(document.createTextNode(taskInput.value));
-    const link = document.createElement('div');
-    link.className = 'delete-item';
-    link.appendChild(document.createTextNode("x"));
-    li.appendChild(link);
-    taskList.appendChild(li);
+        li.className = 'collection-item';
+        li.appendChild(document.createTextNode(taskInput.value));
+        const link = document.createElement('div');
+        link.className = 'delete-item';
+        link.appendChild(document.createTextNode("X"));
+        li.appendChild(link);
+        taskList.appendChild(li);
 
-    storeTask(taskInput.value);
-    taskInput.value='';
-
+        storeTask(taskInput.value);
+        taskInput.value='';
     }
     e.preventDefault();
 }
@@ -42,6 +40,7 @@ function removeTask(e){
         removeLocalStorage(e.target.parentElement);
     }
 }
+
 function removeAll(){
     while(taskList.firstChild){
         taskList.removeChild(taskList.firstChild);
@@ -49,6 +48,7 @@ function removeAll(){
 
     localStorage.clear();
 }
+
 function filterTask(e){
     const text = e.target.value.toLowerCase();
     document.querySelectorAll('.collection-item').forEach(function(task){

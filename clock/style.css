@@ -64,7 +64,7 @@ p{
 .clock::after{
     content: '';
     position: absolute;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.986);
     width: 2.2rem;
     height: 2.2rem;
     top: 50%;
@@ -83,7 +83,7 @@ p{
     height: 40%;
 }
 #second{
-    background-color: #ff105e;
+    background-color: #ff0055;
     width: .35rem;
     height: 40%;
 }

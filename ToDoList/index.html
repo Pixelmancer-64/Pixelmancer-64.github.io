@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+
+
     <title>To Do List</title>
 </head>
 <body>
@@ -12,9 +18,18 @@
     <div class="new-task">
         <form id="task-form">
             <label for="task">New task</label>
+            
             <input type="text" name="task" id= "task" placeholder="New Task">
             <hr>
-        <input type="submit" value="Add Task" id="subTask">
+
+        <button type="submit" value="Add Task" id="subTask" class="button-82-pushable" role="button">
+            <span class="button-82-shadow"></span>
+            <span class="button-82-edge"></span>
+            <span class="button-82-front text">
+              Add Task
+            </span>
+          </button>
+        
         </form>
     </div>
     <div class="old-task">
@@ -26,6 +41,7 @@
         
         <ul class="collection"></ul>
         <button href="#"  id="clear">Clear Tasks</button>
+        
     </div>
 </main>
 

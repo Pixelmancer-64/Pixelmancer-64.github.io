@@ -147,11 +147,6 @@ h2{
 	background-image: url("./img/sky.svg");
 }
 
-.p_3{
-	background-image: url("./img/calculatorBackground.svg");
-	background-color: rgb(236, 223, 223);
-	color: black;
-}
 .projects {
 	border: 1px solid white;
 	padding: 1rem;
