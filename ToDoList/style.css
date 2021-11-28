@@ -167,6 +167,7 @@ ul{
     float: inline-end;
     color: rgb(221, 8, 8);
     font-weight: bolder;
+    font-size: 1.2em;
 }
 .delete-item:hover{
     color: rgba(255, 0, 0, 0.5);

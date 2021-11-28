@@ -12,8 +12,9 @@ class Book{
 class UI {
     addBook(newBook) {
     const tr = document.createElement('tr');
+    const now = new Date();
     tr.className = 'collection-item';
-    tr.innerHTML = `<td>${newBook.title}</td> <td>${newBook.author}</td> <td>${newBook.date}</td> <td><div class="delete-item">X</div></td>`;
+    tr.innerHTML = `<td>${newBook.title}</td> <td><a href="${newBook.author}">${newBook.date}</a></td> <td>${now.getDate()}/${now.getMonth()}/${now.getFullYear()}</td> <td><div class="delete-item">X</div></td>`;
     list.appendChild(tr);
     this.clearInputs()
     }

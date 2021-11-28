@@ -1,13 +1,13 @@
-class brains{
-    deleting(){
+class Calculator{
+    static deleting(){
         his.pop();
     }
 
-    cleaning(){
+    static cleaning(){
         monitor.innerHTML = '';
     }
 
-    realDeal(res){
+    static realDeal(res){
         if(isNaN(res)  || res === Infinity){
             this.mathPolice(res)
             return true
@@ -20,14 +20,12 @@ class brains{
         } 
     }
     
-    // need attention
-    mathPolice(num){
+    static mathPolice(num){
         document.getElementById('warning').innerHTML = `${num} - clear ou del para continuar`
         document.getElementById('warning').style.visibility = "visible"
     }
 
-    // NEED CHANGE REMEMBER
-    update(newRes){
+    static update(newRes){
         console.log(his)
         if(newRes==undefined) {
             this.cleaning();
@@ -44,17 +42,12 @@ const equals = document.getElementById("equals")
 const clear = document.getElementById("clear")
 const del = document.getElementById("delete")
 const monitor = document.querySelector(".monitor")
- 
-const calculator = new brains()
-
-//listiners for the numbers
-
 let his = []
+
 numbers.forEach(button => {
     button.addEventListener('click', () => radio(button.innerHTML))
 })
 
-//listeners for the operators 
 operators.forEach(button => {
     button.addEventListener('click', () => radio(button.innerHTML))
 })
@@ -66,44 +59,46 @@ document.addEventListener('keydown', (event) => {
         his.forEach((e) => {
             aux += e
         }) 
-        calculator.update(calculator.realDeal(eval(aux)))
+        Calculator.update(Calculator.realDeal(eval(aux)))
      }
     else if(name === 'Backspace') delShortcut()
     else if(isNaN(name)==false || name ==='.' || name === '*' || name === '/' || name === '+' || name === '-' || name === '(' || name === ')') radio(name)
 })
 
-//listeners for Del, AC and Equals 
-    equals.addEventListener('click', () => {
-        let aux = ''
-        his.forEach((e) => {
-            aux += e
-        }) 
-        calculator.update(calculator.realDeal(eval(aux)))
-    })
-
-    clear.addEventListener('click', () => {
-        calculator.cleaning()
-        document.getElementById('warning').style.visibility = "hidden"
-        calculator.update()
-    })
-
-    del.addEventListener('click', () => delShortcut())
-
-function delShortcut(){
-    calculator.deleting()
-    document.getElementById('warning').style.visibility = "hidden"
+equals.addEventListener('click', () => {
     let aux = ''
     his.forEach((e) => {
         aux += e
+    }) 
+    Calculator.update(Calculator.realDeal(eval(aux)))
+})
+
+clear.addEventListener('click', () => {
+    Calculator.cleaning()
+    document.getElementById('warning').style.visibility = "hidden"
+    Calculator.update()
+})
+
+del.addEventListener('click', () => delShortcut())
+
+function delShortcut(){
+    Calculator.deleting()
+    document.getElementById('warning').style.visibility = "hidden"
+    let aux = ''
+
+    his.forEach((e) => {
+        aux += e
     })
-    calculator.cleaning()
-    calculator.update(aux)
+    
+    Calculator.cleaning()
+    Calculator.update(aux)
     backspace()
 }
+
 let started = true;
 function radio(e){
     his.push(e)
-    calculator.update(e)
+    Calculator.update(e)
     init(e)
     if(started === true) {
         console.log('hi')   
