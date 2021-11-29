@@ -50,7 +50,6 @@ class Particle{
         ctx.beginPath();
         ctx.fillStyle = color;
         ctx.fillRect((canvas.width - xb)/2, (canvas.height - yb)/2, this.size, this.size);
-        ctx.fill()
     }
     hopalong(){
         let x = this.x;

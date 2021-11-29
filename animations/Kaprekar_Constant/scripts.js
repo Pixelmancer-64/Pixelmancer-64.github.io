@@ -3,49 +3,82 @@ class Canvas {
     constructor(){
         let canvas = document.getElementById('canvas');
         this.ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+
+        if(window.innerWidth <= window.innerHeight){
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerWidth;
+        } else {
+            canvas.width = window.innerHeight;
+            canvas.height = window.innerHeight;
+        }
+
+        // canvas.width = window.innerWidth;
+        // canvas.height = window.innerHeight;
 
         this.width = canvas.width;
         this.height = canvas.height;
 
+        this.his = [];
+        this.size = this.width/100;
 
-        this.colors = random_color(4);
+
+        this.colors = random_color(7);
     }  
 
     animate(){
-        let i = '5875'
+        for(let i = 9999; i >= 0; i--){
+        // for(let i = 0; i <= 9999; i++){
+            let now = i
+            //fill zero
+            now = this.fill(now.toString().split('').map(Number)).join('');
+
+            for(let j = 0 ; j < 7; j++){
+                let arr = this.fill(now.toString().split('').map(Number));
+                let lowestToHighest = arr.sort((a, b) => a - b).join('');
+                let highestToLowest = arr.sort((a, b) => b-a).join('');
+                now = highestToLowest - lowestToHighest
+
+                // console.log('Rodada '+j+ '; lowest: ' + lowestToHighest + ' highest: ' + highestToLowest + ' now: ' + now)
+                if(now == 0){
+                    this.his.push(j)
+                    break;
+                }
+                else if(now == 6174){
+                    this.his.push(j)
+                    break;
+                }
+            }
+        }
+        console.log(this.his)
+    }
+
+    fill(quarentine){
+        if(quarentine.length < 4){
+            let auxArr = Array(4-quarentine.length).fill(0)
+            quarentine.forEach(e => {
+                auxArr.push(e)    
+            });
+            return auxArr
+        }
+        else return quarentine
     }
 
     draw(){
-
-    }
-
-    map(n, start1, stop1, start2, stop2){
-        return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
-    }
-
-    color(){
-        const pixelData = this.ctx.getImageData(0,0, this.width, this.height)
-
-        for (let y = 0; y < canvas.height; y++){
-            for (let x = 0; x < canvas.width; x++){
-                let aux = pixelData.data[(y * 4 * pixelData.width) + (x*4 + 3)];
-                const alpha = this.map(aux, 0, 255, 0, 1)
-                let color;
-                if(alpha > .9)      color = 'rgba(' + this.colors[0].r + ',' + this.colors[0].g + ',' + this.colors[0].b + ',' + (alpha) +')'
-                else if(alpha > .6) color = 'rgba(' + this.colors[1].r + ',' + this.colors[1].g + ',' + this.colors[1].b + ',' + alpha +')'
-                else if(alpha > .3) color = 'rgba(' + this.colors[2].r + ',' + this.colors[2].g + ',' + this.colors[2].b + ',' + alpha +')'
-                else if(alpha > 0)  color = 'rgba(' + this.colors[3].r + ',' + this.colors[3].g + ',' + this.colors[3].b + ',' + alpha +')'
-                else color = false;
-
-                if(color != false){
-                    this.ctx.fillStyle = color;
-                    this.ctx.beginPath();
-                    this.ctx.fillRect(x, y, 1, 1)
-                    this.ctx.closePath();
-                }
+        let x = 0
+        let y = 0
+        for(let i = this.his.length-1; i >= 0; i--){
+        // this.his.forEach((e) => {
+            this.ctx.beginPath();
+            this.ctx.fillStyle = 'rgba(' + this.colors[this.his[i]].r + ',' + this.colors[this.his[i]].g + ',' + this.colors[this.his[i]].b + ',' + 1 +')'
+            // this.ctx.fillStyle = 'rgba(' + this.colors[e].r + ',' + this.colors[e].g + ',' + this.colors[e].b + ',' + 1 +')'
+            this.ctx.fillRect(x, y, this.size, this.size);
+            x += this.size;
+            if(x > this.size*99) {
+                console.log('hi')
+                y += this.size;
+                x = 0
             }
+        // });
         }
     }
 }
@@ -68,5 +101,5 @@ function random_color (num){
 window.onload = function(){
     let control = new Canvas();
     control.animate();
-    // control.color();
+    control.draw();
 }
