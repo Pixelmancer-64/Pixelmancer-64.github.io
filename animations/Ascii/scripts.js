@@ -31,13 +31,13 @@ class Ascii{
     }
     #convertToAscii(aux){
         if(aux > 250) return 'X';
-        else if (aux > 240) return '@'; 
+        else if (aux > 240) return '*'; 
        // else if (aux > 230) return '0';//
         else if (aux > 220) return '#';
        // else if (aux > 210) return '%';//
         else if (aux > 200) return '&';
        // else if (aux > 190) return ')';//
-        else if (aux > 180) return '*';
+        else if (aux > 180) return '@';
        // else if (aux > 170) return ')';//
         else if (aux > 160) return '%';
        // else if (aux > 150) return 'H';//

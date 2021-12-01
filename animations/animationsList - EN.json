@@ -324,8 +324,8 @@
       "title":"Fibonacci spiral",
       "summary":"A spiral using the 'golden ratio', you might seen this in a sunflower",
       "links":{
-            "demo": "/animations/Fibomacci/",
-            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fibomacci"
+            "demo": "/animations/Fibonacci/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fibonacci"
          },
       "picture": "./img/33.png"
    },

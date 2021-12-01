@@ -61,7 +61,7 @@ body{
 
 .movie:hover .imageContainer{
     top: 0%;
-    transform: translateY(-200%);
+    transform: translateY(-65vh);
     transition: 1s ;
 }
 
@@ -113,6 +113,7 @@ h4{
 
 hr{
     width: 100%;
+    margin: 3% 0;
 }
 h2{
     margin: 0;
