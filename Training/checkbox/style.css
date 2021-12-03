@@ -1,0 +1,34 @@
+label [type="checkbox"] {
+	display: none;
+}
+
+[type="checkbox"] + span {
+	user-select: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: .2em;
+	width: 2rem;
+	height: 2rem;
+	border: .1rem solid lightblue;
+}
+
+[type="checkbox"]:checked +span {
+	background-color: black;
+	color: white;
+}
+
+[type="checkbox"] + span:hover{
+	border-color: rgb(38, 155, 194);
+	transition: 100ms;
+}
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+:root{
+	font-size: 2.5em;
+}

@@ -31,51 +31,46 @@ document.getElementById("books").onclick = function () {
 
 document.getElementById("weatherAPI").onclick = function(){
     location.href = "/weatherAPI"
-}
+};
 
-let i =0
-let aux = []
+let i =0;
+let aux = [];
 document.addEventListener('keydown', (event) => {
     
     console.log(event.key);
-    aux[i] = event.key
-    i++
+    aux[i] = event.key;
+    i++;
     if(i==7){
         i=0;
         easterEgg = aux.join('');
         console.log(easterEgg);
         if(easterEgg == 'mariana'){
             console.log('deu certo');
-        }
-    }
-    
-})
+        };
+    };
+});
 
-let gmail = document.getElementById("gmail");
-let outlook = document.getElementById("outlook");
-let outlookText = document.getElementById("outlookText");
-let gmailText = document.getElementById("gmailText");
+const gmail = document.getElementById("gmail");
+const outlook = document.getElementById("outlook");
+const outlookText = document.getElementById("outlookText");
+const gmailText = document.getElementById("gmailText");
 
 gmail.onclick = function(){
-    let address = 'hugobillemartins@gmail.com';
-    navigator.clipboard.writeText(address);
+    navigator.clipboard.writeText('hugobillemartins@gmail.com');
     gmailText.innerHTML = 'Copiado! ';
 }
 
 gmail.addEventListener('dblclick', function(){
-    let address = 'hugobillemartins@gmail.com';
-    navigator.clipboard.writeText(address);
+    navigator.clipboard.writeText('hugobillemartins@gmail.com');
     gmailText.innerHTML = 'Copiado duas vezes! ';
 })
 
 outlook.onclick = function(){
-    let address = "hugobillemartins@outlook.com";
-    navigator.clipboard.writeText(address);
+    navigator.clipboard.writeText('hugobillemartins@outlook.com');
     outlookText.innerHTML = 'Copiado!';
 }
 outlook.addEventListener('dblclick', function(){
-    let address = 'hugobillemartins@gmail.com';
-    navigator.clipboard.writeText(address);
+    navigator.clipboard.writeText('hugobillemartins@outlook.com');
     outlookText.innerHTML = 'Copiado duas vezes! ';
 })
 

@@ -6,6 +6,7 @@
 	<title>Sotíris64</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="/img/favicon.png" type="image/x-icon"/>
+    <script src="scripts.js" async defer></script>
 </head>
 <body>
 		<nav>
@@ -13,6 +14,7 @@
 				<h1>Sotíris64</h1>
 			</div>
 		</nav>
+
 <div class="apart">
 	<aside>
 		<div class="myPhoto">
@@ -24,132 +26,101 @@
 		<div class="knowledge">
 			<h2>Conhecimentos</h2>
 			<div class="icons">
-			<ul> 
-				<li><img src="./img/icons8-javascript.svg" alt="Javascript"></li>
-				<li><img src="./img/icons8-nodejs.svg" alt="NodeJs"></li>
-				<li><img src="./img/mySql.svg" alt="mySQL"></li>
-
-				
-			</ul>
-		</div>
+				<img src="./img/icons8-javascript.svg" alt="Javascript">
+				<img src="./img/icons8-nodejs.svg" alt="NodeJs">
+				<img src="./img/mySql.svg" alt="mySQL">
+			</div>
 		</div>
 		<hr>
 		<div class="knowledge">
 			<h2>Aprendendo</h2>
 			<div class="icons">
-			<ul> 
-				<li><img src="./img/icons8-c++.svg" alt="c++"></li>
-				<li><img src="./img/icons8-python.svg" alt="python"></li>
-				<li><img src="./img/icons8-logo-php.svg" alt="php"></li>
-			</ul>
-		</div>
+				<img src="./img/icons8-c++.svg" alt="c++">
+				<img src="./img/icons8-python.svg" alt="python">
+				<img src="./img/icons8-logo-php.svg" alt="php">
+				<img src="./img/react.svg" alt="php">
+			</div>
 		</div>
 		<hr>
 
 		<div class="work">
 			<h2>Trabalhos</h2>
-		<ul>
-			<li>Me contrata ai rapaz</li>
-			<li>Sério mesmo, me contrate :p</li>
-		</ul>
+			<ul>
+				<li>Me contrata ai rapaz</li>
+				<li>Sério mesmo, me contrate :p</li>
+			</ul>
 		</div>
 		<hr>
 
 		<div class="contact">
 			<h2>Como me contatar</h2>
 			<div class="icons">
-			<ul>
-				<li><input type="image" id="github" alt="github" src="./img/github.svg"></li>
+				<input type="image" id="github" alt="github" src="./img/github.svg">
 
 				<div class="tooltip">
 					<span class="tooltiptext" id="gmailText"> Copiar Email</span>
-					<li><input type="image" value="hugobillemartins@gmail.com" alt="Gmail" id="gmail" src="./img/gmail.svg"></li>
+					<input type="image" value="hugobillemartins@gmail.com" alt="Gmail" id="gmail" src="./img/gmail.svg">
 				</div>
 
-			<div class="tooltip">
-				<span class="tooltiptext" id="outlookText">Copiar Email</span>
-				<li><input type="image" value="hugobillemartins@outlook.com" alt="Outlook" id="outlook" src="./img/outlook.svg"></li>
+				<div class="tooltip">
+					<span class="tooltiptext" id="outlookText">Copiar Email</span>
+					<input type="image" value="hugobillemartins@outlook.com" alt="Outlook" id="outlook" src="./img/outlook.svg">
+				</div>
 			</div>
-			</ul>
-		</div>
 		</div>
 	</aside>
 
 	<main>
-		<div class="aboutMe">
-			<p>
-				Como a foto aí na esquerda sugere, meu nome é Hugo. Sou um estudante do ensino médio técnico de informática e, infelizmente, terei que prover 450 horas de serviço não pago (estágio) a uma empresa; se você está interessado em minha falta de talentos ou só está interessado em 450 horas de trabalho não assalariado mesmo, entre em contato :p
-			</p>
-		</div>
+			<section><p>Como a foto aí na esquerda sugere, meu nome é Hugo. Sou um estudante do ensino médio técnico de informática e, infelizmente, terei que prover 450 horas de serviço não pago (estágio) a uma empresa; se você está interessado em minha falta de talentos ou só está interessado em 450 horas de trabalho não assalariado mesmo, entre em contato :p</p></section>
 
-		<div class="projects p_1">
+		<section class="p_1">
 			<h2>Laboratórios</h2>
 			<input type="image" id="lab"class="proLogo" alt="My labs icon, it is a atom" src="./img/lab.svg">
-			<p class="description">
-				Deveres relacionados à Design Web
-			</p>
-		</div>
+			<p>Deveres relacionados à Design Web</p>
+		</section>
 
-		<div class="projects p_2">
+		<section class="p_2">
 			<h2>Sistema Solar</h2>
 			<input type="image" id="solarSystem" alt="I icon of saturn" class="proLogo" src="./img/saturno[1589].png">
-			<p class="description">
-				Uma simulação do sistema solar criada com Three.js e Vite
-			</p>
-		</div>
+			<p>Uma simulação do sistema solar criada com Three.js e Vite</p>
+		</section>
 
-		<div class="projects p_3">
+		<section class="p_3">
 			<h2>Calculadora</h2>
 			<input type="image" id="calc" alt="calculator icon" class="proLogo" src="./img/calc.svg">
-			<p class="description">
-				Uma calculadora, não tem muito o que dizer sobre
-			</p>
-		</div>
+			<p>Uma calculadora, não tem muito o que dizer sobre</p>
+		</section>
 
-		<div class="projects">
+		<section>
 			<h2>Relógio</h2>
 			<input type="image" id="clock"class="proLogo" alt="clock icon" src="./img/icons8-clock.svg">
-			<p class="description">
-				Relógio, bem legal sabe
-			</p>
-		</div>
+			<p>Relógio, bem legal sabe</p>
+		</section>
 
-		<div class="projects">
+		<section>
 			<h2>Animações</h2>
 			<input type="image" id="animation"class="proLogo" alt="creepy eye" src="./img/eye.png">
-			<p class="description">
-				Minhas animações e arte em geral, dá uma olhada ai :p.
-			</p>
-		</div>
+			<p>Minhas animações e arte em geral, dá uma olhada ai :p.</p>
+		</section>
 
-		<div class="projects">
+		<section>
 			<h2>To-Do LIST</h2>
 			<input type="image" id="task"class="proLogo" alt="task" src="./img/task.svg">
-			<p class="description">
-				Uma lista de afazeres que salva as alterações no localStorage
-			</p>
-		</div>
+			<p>Uma lista de afazeres que salva as alterações no localStorage</p>
+		</section>
 
-		<div class="projects">
-			
+		<section>
 			<h2>The Cooler ToDoList</h2>
 			<input type="image" id="books" class="proLogo" alt="" src="./img/book.svg">
-			<p class="description">
-				Muito parecido com o To-Do List, só que eu uso para guardar links de vídeos que não assisti ainda (meu firefox adorou eu ter criado isso :p)
-			</p>
-		</div>
+			<p>Muito parecido com o To-Do List, só que eu uso para guardar links de vídeos que não assisti ainda (meu firefox adorou eu ter criado isso :p)</p>
+		</section>
 
-		<div class="projects">
+		<section>
 			<h2>Weather API</h2>
 			<input type="image" id="weatherAPI" class="proLogo" alt="weatherAPI" src="./img/nuvenzinhas.png">
-			<p class="description">
-				Previsão do tempo com o OpenWeather API
-			</p>
-		</div>
+			<p>Previsão do tempo com o OpenWeather API</p>
+		</section>
 	</main> 
 </div>
-
 </body>
-<script src="/scripts.js"></script>
-
 </html>
