@@ -19,11 +19,11 @@ http.get(`animationsList - ${language}.json`, function(status, response){
     
                 <div class="description">
                     <h1>${response[random].title}</h1>
-                    <h4>${response[random].summary}</h4>
+                    <p>${response[random].summary}</p>
                     
                     <hr> 
                     
-                    <div class="showInfo">
+                    <div class="info">
     
                     <div class="cast">
                     <a href=${response[random].links.github}><img id="github" src="/img/github.svg"></a>

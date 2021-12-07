@@ -1,17 +1,19 @@
 *{
 	margin: 0;
 	padding: 0;
+	/* overflow-x: hidden; */
 }
 
 nav{
+	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	min-height: 6vh;
 	background-color: #202024;
-	margin-bottom: 1rem;
 	letter-spacing: .2rem;
 	font-size: 1.5rem;
+	width: 100%;
 }
 
 .logo{
@@ -19,6 +21,11 @@ nav{
 }
 
 /* aside */
+
+#canvas{
+	width: 100%;
+	height: 100vh;
+}
 
 .apart{
 	display: flex;
@@ -50,7 +57,7 @@ aside{
 	padding-bottom: .5rem;
 	margin-left: auto;
 	margin-right: auto;
-	width: 20vh;
+	width: 50%;
 	border-radius: 50%;
 }
 
@@ -102,11 +109,6 @@ main{
 	border-radius: 6.28px 0 0 0;
 }
 
-h2+[type="image"]{
-	height: 20%;
-	width: 20%;
-}
-
 h2{
 	padding: .5rem .2rem;
 }
@@ -114,9 +116,8 @@ h2{
 section {
 	border: 1px solid white;
 	padding: 1rem;
-	margin: 1rem 0;
 	text-align: center;
-
+	margin-bottom: 1em;
 }
 .proLogo{
 	margin-left: auto;
@@ -128,12 +129,12 @@ p{
 	font-size: 1.5rem;
 }
 
-main input{
+main img{
     will-change: transform;
     transition: transform 450ms;
 }
 
-main input:hover{
+main img:hover{
 	transition: transform 250ms;
     transform: translateY(-15%);
 }
@@ -176,13 +177,30 @@ main input:hover{
 }
 
 
-.p_1{
-	background-image: linear-gradient(#986dbe, #60bb84);
-}
-.p_2{
-	background-image: url("./img/sky.svg");
+.animations{
+	background-image: url("./img/animationBg.svg");
 }
 
+.lab{
+	background-image: linear-gradient(#986dbe, #60bb84);
+}
+.solarSystem{
+	background-image: url("./img/sky.svg");
+}
+.calc{
+	background-image: url("./img/calcBg.svg");
+}
+.clock{
+	background-image: url("./img/clockBg.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.clock img:hover{
+	transform: rotate(180deg);
+	transition: transform 450ms;
+}
 
 @media screen and (max-width:768px){
 	.apart{

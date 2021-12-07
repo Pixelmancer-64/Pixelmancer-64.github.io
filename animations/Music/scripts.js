@@ -59,8 +59,8 @@ class Particle{
         ctx.fill();
     }
     update(y){
-        this.y=canvas.height-this.size;
-        this.y -= y*this.mass
+        this.y = canvas.height-this.size;
+        this.y -= y*this.mass 
         this.draw();
     }
 }

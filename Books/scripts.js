@@ -11,12 +11,12 @@ class Book{
 
 class UI {
     addBook(newBook) {
-    const tr = document.createElement('tr');
-    const now = new Date();
-    tr.className = 'collection-item';
-    tr.innerHTML = `<td>${newBook.title}</td> <td><a href="${newBook.author}">${newBook.date}</a></td> <td>${now.getDate()}/${now.getMonth()}/${now.getFullYear()}</td> <td><div class="delete-item">X</div></td>`;
-    list.appendChild(tr);
-    this.clearInputs()
+        const tr = document.createElement('tr');
+        const now = new Date();
+        tr.className = 'collection-item';
+        tr.innerHTML = `<td>${newBook.title}</td> <td><a href="${newBook.author}">${newBook.date}</a></td> <td>${now.getDate()}/${now.getMonth()}/${now.getFullYear()}</td> <td><div class="delete-item">X</div></td>`;
+        list.appendChild(tr);
+        this.clearInputs()
     }
     clearInputs(){
         document.getElementById('title').value='';
@@ -76,8 +76,8 @@ class LocalStorage {
         });
         localStorage.setItem('books',JSON.stringify(books));    
     };
-
 }
+
 const newUI = new UI();
 
 form.addEventListener('submit',function(e){
@@ -88,9 +88,9 @@ form.addEventListener('submit',function(e){
     if(title === '' || author === '' || dateF ===''){
         newUI.errorAlert('Please fill all fields');
     }else{
-    newBook = new Book(title, author, dateF);
-    newUI.addBook(newBook);
-    LocalStorage.addBook();
+        newBook = new Book(title, author, dateF);
+        newUI.addBook(newBook);
+        LocalStorage.addBook();
     }
     e.preventDefault();
 })

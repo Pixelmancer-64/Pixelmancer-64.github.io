@@ -66,7 +66,7 @@ class Particle{
 // controller
 function init(){
     particlesArray = [];
-    let nParticles = (canvas.height * canvas.width)/6500;
+    let nParticles = 100;
     for(i=0; i < nParticles; i++){
         let size = (Math.random()*5) + 1;
         let x = (Math.random() * ((innerWidth - size * 2 )-(size * 2)) + size * 2);

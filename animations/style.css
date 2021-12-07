@@ -1,32 +1,11 @@
 *{
     padding: 0;
     margin: 0;
-    display: inline-block;
-}
-ul {
-    list-style: none;
-}
-
-.banner{
-    display: flex;
-    justify-content: center;
-}
-img{
-    max-width:100%;
 }
 
 body{
     background: #141414;
     color: white;
-    overflow-x: hidden;
-
-}
-
-.about{
-    width: 100%;
-    height: 100vh;
-    display: inline-block;
-    background-color: grey;
 }
 
 .movies{
@@ -40,10 +19,11 @@ body{
 .card{
     position: relative;
 }
+
 .movie{
     position: relative;
-    width: 50vh;
-    height: 50vh;
+    width: 40vh;
+    height: 40vh;
     background-color: #202024;
     border-radius: 5%;
     overflow: hidden;
@@ -57,7 +37,7 @@ body{
     height: 25em;
     transition: 1s;
     z-index: 5;
-}
+} 
 
 .movie:hover .imageContainer{
     top: 0%;
@@ -74,22 +54,22 @@ body{
 
 .description{
     color: white;
-    font-size: 3vh;
+    font-size: 2vh;
     position: absolute;
-    bottom: 30em;
+    bottom: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     transition: 1s;
     padding: 1em;
-    z-index: 1;
-} 
-.showInfo{
+}
+
+.info{
     display: flex;
     gap: 1em;
-
 }
-.showInfo div{
+
+.info div{
     display: flex;
     justify-content:center;
     align-items: center;
@@ -107,26 +87,9 @@ h1{
     margin: 0;
 }
 
-h4{
-    margin: .5em;
-}
-
 hr{
     width: 100%;
     margin: 3% 0;
-}
-h2{
-    margin: 0;
-}
-
-li{
-    font-size: 1em;
-}
-#title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
 }
 
 #github, #demo{

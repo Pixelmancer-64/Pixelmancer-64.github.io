@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+main{
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.pokeCard{
+    font-family: 'Press Start 2P', cursive;
+    min-width: 25vh;
+    
+    background-color: rgb(242, 242, 242);
+    border: .5em ridge red;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+p{
+    color: grey;
+}
+h2{
+    text-align: center;
+}
+
+.types{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.types h3{
+    padding: .5em;
+}
+
+.fire{
+    background-color: rgb(253, 125, 36);
+}
+
+.grass{
+    background-color: green;
+}
+
+.poison{
+    background-color: rgb(185, 127, 201);
+}
+
+.flying{
+    background-color: azure;
+}
+
+.water{
+    background-color: rgb(69, 146, 196);
+}
+
+.ice{
+    background-color: rgb(81, 196, 231);
+}
+
+.bug{
+    background-color: violet;
+}
+
+.normal{
+    background-color: lightslategray;
+}
+
+.electric{
+    background-color: yellow;
+}
+
+.ground{
+    background-color: brown;
+}
+
+.fairy{
+    background-color: pink;
+}
+
+.fighting{
+    background-color: red;
+}
+
+.psychic{
+    background-color: blueviolet;
+}
+
+.rock{
+    background-color: gray;
+}
+
+.steel{
+    background-color: rgb(158, 183, 184);
+}
+
+.ghost{
+    background-color: rgb(123, 98, 163);
+}
+
+label [type="checkbox"] {
+	display: none;
+}
+
+[type="checkbox"] + span {
+    color: white;
+	user-select: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2rem;
+	height: 2rem;
+	border: .1rem solid lightblue;
+}
+
+[type="checkbox"]:checked +span {
+	background-color: black;
+	color: white;
+}
+
+[type="checkbox"] + span:hover{
+	border-color: rgb(38, 155, 194);
+	transition: 100ms;
+}
+
+.type{
+    margin: 1em;
+    gap: 1em;
+	display: flex;
+	flex-wrap: wrap;
+    width: 10vh;
+}
