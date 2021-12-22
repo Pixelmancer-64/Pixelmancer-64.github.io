@@ -41,8 +41,8 @@ class Particle{
         console.log(this.colors)
     }
     draw(color){
-        let xb = canvas.width*this.x / 990
-        let yb = canvas.height*this.y / 990
+        let xb = Math.floor(canvas.width*this.x / 990)
+        let yb = Math.floor(canvas.height*this.y / 990)
 
         // console.log(xb)
         // console.log(yb)
@@ -62,7 +62,7 @@ class Particle{
         return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
     }
     update(){
-        for(let i =0; i < 999000; i++){
+        for(let i =0; i < 999999; i++){
             this.hopalong();
             this.draw('rgba(255,255,255,.3)');
         }

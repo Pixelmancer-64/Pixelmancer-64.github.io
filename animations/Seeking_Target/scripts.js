@@ -78,13 +78,15 @@ class Vehicle {
         // this.ctx.translate(this.pos.x, this.pos.y);
         // this.ctx.rotate(this.vel.heading());
 
-        // this.ctx.beginPath();
+        this.ctx.beginPath();
         // this.ctx.moveTo(-this.r, -this.r / 2);
         // this.ctx.lineTo(-this.r, this.r / 2);
         // this.ctx.lineTo(this.r, 0);
         // this.fill()
-        // this.ctx.closePath();
-        this.ctx.fillRect(this.pos.x, this.pos.y, 1, 1);
+        this.ctx.arc(this.pos.x, this.pos.y, 1, 0, Math.PI*2);
+        this.ctx.fill()
+        this.ctx.closePath();
+
         // this.ctx.restore()
     }
   
@@ -104,7 +106,7 @@ class Vehicle {
     animate(){
         this.ctx.beginPath();
         this.ctx.fillStyle = 'red'
-        // this.ctx.arc(this.target.x, this.target.y, 32, 0, Math.PI*2)
+        this.ctx.arc(this.target.x, this.target.y, 32, 0, Math.PI*2)
         this.ctx.fill()
         this.ctx.closePath();
 
@@ -133,7 +135,7 @@ function random_color (num){
 
 window.onload = function(){
     let vehicle = []
-    for(let i = 0; i < 100; i++) vehicle.push(new Vehicle(Math.random() * window.innerWidth, Math.random() * window.innerHeight))
+    for(let i = 0; i < 999; i++) vehicle.push(new Vehicle(Math.random() * window.innerWidth, Math.random() * window.innerHeight))
     animationFrame(vehicle)
 }
 

@@ -45,8 +45,8 @@ class Particle {
     }  
 
     draw(color, x, y){
-        let px = this.map(x, -3, 2.6558, 0, this.width);
-        let py = this.map(y, 0, 9, this.height, 0);
+        let px = Math.floor(this.map(x, -3, 2.6558, 0, this.width));
+        let py = Math.floor(this.map(y, 0, 9, this.height, 0));
         this.ctx.fillStyle = color
         this.ctx.beginPath();
         this.ctx.fillRect(px, py, 1, 1)

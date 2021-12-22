@@ -11,14 +11,6 @@ let hue =0;
 window.onload = function(){ 
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    // if(window.innerWidth <= window.innerHeight){
-    //     canvas.width = window.innerWidth;
-    //     canvas.height = window.innerWidth;
-    // } else {
-    //     canvas.width = window.innerHeight;
-    //     canvas.height = window.innerHeight;
-    // }
-
     
     canvas.width = 300;
     canvas.height = 300;
@@ -121,14 +113,3 @@ function slider(){
     newParticle = new Particle(ctx, canvas.width, canvas.height)    
     newParticle.animate();
 }
-
-// window.addEventListener('resize', function(){
-//     if(window.innerWidth <= window.innerHeight){
-//         canvas.width = window.innerWidth;
-//         canvas.height = window.innerWidth;
-//     } else {
-//         canvas.width = window.innerHeight;
-//         canvas.height = window.innerHeight;
-//     }
-//     slider();
-// });

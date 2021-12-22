@@ -44,8 +44,8 @@ class Particle{
         console.log(this.colors)
     }
     draw(color){
-        let xb = canvas.width*this.x / 4.5
-        let yb = canvas.height*this.y / 4.5
+        let xb = Math.floor(canvas.width*this.x / 4.5)
+        let yb = Math.floor(canvas.height*this.y / 4.5)
 
         // console.log(xb)
         // console.log(yb)
@@ -53,7 +53,6 @@ class Particle{
         ctx.beginPath();
         ctx.fillStyle = color;
         ctx.fillRect((canvas.width - xb)/2, (canvas.height - yb)/2, this.size, this.size);
-        ctx.fill()
     }
     bedhead(){
         let xPrev = this.x;

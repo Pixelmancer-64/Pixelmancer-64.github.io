@@ -1,5 +1,3 @@
-const faker = require('faker');
-
 const mysql = require('mysql');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -39,6 +37,6 @@ app.post('/register', function(req,res){
    });
 
 
-app.listen(6464, function(){
+app.listen(3000, function(){
     console.log('app listening')
 })
