@@ -1,28 +1,25 @@
 const fetchPokemon = (url) => {
-    let i = document.getElementById('min').value
-    let pokemons = []
-    return function next(){
-        fetch(`${url}${i}`)
-        .then(res => res.json())
-        .then(data => {
-            showPokemon(data, verifyname)
-            pokemons.push(data);
-        })
-        .then(() => {
-            if(i < document.getElementById('max').value){
-                i++;
-                next();
-            }
-        })
-        .catch(e => {
-            console.log('Error ' + e)
-        })
-    }
+    request(`${url}?limit=${document.getElementById('max').value}&offset=${document.getElementById('min').value-1}`)
+    .then(data => {
+        const result = data.results.map(async (e) => request(e.url))
+        let filter = Filters.verifyType()
+        Promise.all(result).then(aux => aux.map(e => {
+            showPokemon(e, filter, Filters.verifyName)
+        }))
+    })
+    .catch(e => {
+        console.log('Error ' + e)
+    })
 }
 
-function showPokemon(data, callback){
+async function request(e) {
+    let res = await fetch(e)
+    let data = await res.json()
+    return data
+}
 
-    if(callback(data.name)){
+function showPokemon(data, callback, callback2){
+    if(callback(data) && callback2(data)){
         const div = document.createElement('div')
         div.className = 'pokeCard'
         const img = document.createElement('img')
@@ -49,34 +46,59 @@ function showPokemon(data, callback){
         div.appendChild(h2)
         div.appendChild(innerDiv)
         document.querySelector('main').append(div)
+        div.addEventListener('click', (e) => {
+            const submit = document.getElementById('helper')
+            if(e.target.parentElement.className == 'types')submit.value = e.target.parentElement.parentElement.firstChild.innerText.slice(2)
+            else submit.value = e.target.parentElement.firstChild.innerText.slice(2)
+            document.forms[1].submit()
+        })
     }
 }
 
-document.addEventListener('keydown', (e)=>{
-    if(e.key == 'Enter') {
-        document.querySelector('main').innerHTML = ''
-        start()
-    }
-    else if(e.key == 'j') {
-        console.log('limpando')
-        document.querySelector('main').innerHTML = ''
-    }
-    else console.log(e.key)
-})
-
-function verifyId(data){
-    const gap = document.getElementById('status')
-    if(data <= gap.value && data >= gap.value - 50) return true
-}
-
-function verifyname(data){
-   if(data.indexOf(document.getElementById('name').value) != -1) return true
-}
+document.getElementById('pokemonName').addEventListener('input', () => start());
+document.getElementById('max').addEventListener('input', () => start());
+document.getElementById('min').addEventListener('input', () => start());
+document.getElementById('typeFilter').addEventListener('submit', (e) => {
+    e.preventDefault();
+    start()
+});
 
 function start(){
     document.querySelector('main').innerHTML = ''
-        const aux = fetchPokemon(`https://pokeapi.co/api/v2/pokemon/`)
-        aux()
+    fetchPokemon(`https://pokeapi.co/api/v2/pokemon`)
+}
+
+class Filters{
+    static verifyId(data){
+        return data.id == parseInt(document.getElementById('pokemonName').value)
+    }
+    
+    static verifyName(data){
+        let aux = document.getElementById('pokemonName').value
+        if(!isNaN(aux) && aux != '') return Filters.verifyId(data)
+        if(data.name.indexOf(aux) != -1) return true
+    }
+    
+    // tem que voltar aqui
+    static verifyType(){
+        let here = document.getElementById('typeFilter')
+        let typesArray = []
+        for(let i=0; i<here.length-1; i++){
+            if(here[i].checked) typesArray.push(here[i].nextElementSibling.className)
+        }
+        if(typesArray.length > 2) alert('Pokemons com mais de 2 tipos não existem colega')
+
+        return function(data){
+            const types = data.types
+            let i = 0
+            for(let type in types){
+                for(let filter in typesArray){
+                    if(types[type].type.name == typesArray[filter]) i++
+                }
+            }
+            return i == typesArray.length
+        }
+    }
 }
 
 window.onload = start;

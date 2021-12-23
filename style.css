@@ -1,11 +1,9 @@
 *{
 	margin: 0;
 	padding: 0;
-	/* overflow-x: hidden; */
 }
 
 nav{
-	/* position: fixed; */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -58,7 +56,7 @@ aside{
 	padding-bottom: .5rem;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 15vh;
 	border-radius: 50%;
 }
 
@@ -68,8 +66,8 @@ aside{
 	gap: .5em;
 }
 
-.icons img{
-	min-width: 20%;
+.icons img, input{
+	min-width: 5vh;
 }
 
 .knowledge{
@@ -131,8 +129,14 @@ p{
 }
 
 main img{
+	min-width: 10rem;
+
     will-change: transform;
     transition: transform 450ms;
+}
+
+main a{
+	outline: none;
 }
 
 main img:hover{
@@ -209,5 +213,8 @@ main img:hover{
 	}
 	aside{
 		margin-bottom: 1rem;
+	}
+	.myPhoto img{
+		width: 25vh;
 	}
 }

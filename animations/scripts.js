@@ -13,7 +13,7 @@ http.get(`animationsList - ${language}.json`, function(status, response){
                 aux += `<div class="card">
                 <div class="movie">
                     <div class="imageContainer">
-                        <img src=${response[random].picture} loading=“lazy”>
+                        <img src=${response[random].picture}>
                     </div>
     
     

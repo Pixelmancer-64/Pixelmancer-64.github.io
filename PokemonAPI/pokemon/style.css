@@ -1,0 +1,125 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+aside{
+    padding: 3vh;
+	flex-basis: 25%;
+	background-color: #202024;
+	display: flex;
+	flex-direction: column;
+    text-align: center;
+	gap: 1rem;
+}
+
+body{
+	gap: 5rem;
+	background-color: #111113;
+	color: #e0e5e9;
+	font-size: 1rem;
+	font-family: 'Press Start 2P', cursive;
+}
+
+ul{
+    list-style: none;
+}
+
+main{
+    /* padding: 3vh; */
+	flex: 1;
+	flex-wrap: wrap;
+}
+
+.apart{
+	display: flex;
+    align-items: center;
+	gap: 6rem;
+}
+
+.type{
+    margin: 1em;
+    gap: 1em;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Types */
+
+.types{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.types h3{
+    padding: .5em;
+}
+
+.fire{
+    background-color: rgb(253, 125, 36);
+}
+
+.grass{
+    background-color: green;
+}
+
+.poison{
+    background-color: rgb(185, 127, 201);
+}
+
+.flying{
+    background-color: azure;
+}
+
+.water{
+    background-color: rgb(69, 146, 196);
+}
+
+.ice{
+    background-color: rgb(81, 196, 231);
+}
+
+.bug{
+    background-color: violet;
+}
+
+.normal{
+    background-color: lightslategray;
+}
+
+.electric{
+    background-color: yellow;
+}
+
+.ground{
+    background-color: brown;
+}
+
+.fairy{
+    background-color: pink;
+}
+
+.fighting{
+    background-color: red;
+}
+
+.psychic{
+    background-color: blueviolet;
+}
+
+.rock{
+    background-color: gray;
+}
+
+.steel{
+    background-color: rgb(158, 183, 184);
+}
+
+.ghost{
+    background-color: rgb(123, 98, 163);
+}
+
+.dragon{
+    background-color: cyan;
+}

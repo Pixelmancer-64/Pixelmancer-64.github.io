@@ -12,61 +12,96 @@
 </head>
 <body>
 
-    <input type="number" id="min" value="1" min="1" max="898">
-    <p>-</p>
-    <input type="number" id="max" value="151" min="1" max="898">
-    
+    <section class="filters">
+        <label for="min">Começo</label>
+        <input type="number" id="min" value="1" min="1" max="898">
+        <label for="max">Fim</label>
+        <input type="number" id="max" value="151" min="1" max="898">
+        <label for="pokemonName">Nome ou ID</label>
+        <input type="text" id="pokemonName">
+        
+        <form id='typeFilter' method="post">
+            <div class='type'>
+                <label>
+                    <input type="checkbox">
+                    <span class="fire" value= "unchecked">Fire</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="grass" value= "unchecked">Grass</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="poison" value= "unchecked">Poison</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="flying" value= "unchecked">Flying</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="water" value= "unchecked">Water</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="ice" value= "unchecked">Ice</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="bug" value= "unchecked">Bug</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="normal" value= "unchecked">Normal</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="electric" value= "unchecked">Eletric</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="ground" value= "unchecked">Ground</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="fairy" value= "unchecked">Fairy</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="fighting" value= "unchecked">Fighting</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="psychic" value= "unchecked">Psychic</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="rock" value= "unchecked">Rock</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="steel" value= "unchecked">Steel</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="ghost" value= "unchecked">Ghost</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span class="dragon" value= "unchecked">Dragon</span>
+                </label>
+            </div>
+            <div class="aux">
+                <button type="submit" id="submitType"><img src="./img/iconmonstr-magnifier-2.svg"></button>
+            </div>
+        </form>
+    </section>
 
-    <input type="text" id="name">
-
-    <!-- <div class='type'>
-        <label>
-            <input type="checkbox">
-            <span>Bug</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>M</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>G</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>GG</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>U</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>36</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>38</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>40</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>42</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>44</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span>46</span>
-        </label>
-    </div> -->
-    <main>
-
-    </main>
+    <form action='./pokemon/'>
+        <input type="text" name="id" id='helper'>
+        <main>
+        
+        </main>
+    </form>
 </body>
 </html>
