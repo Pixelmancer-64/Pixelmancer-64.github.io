@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/word" method="POST">
+        <label for="title">Word</label>
+        <input type="text" class="book-input" name="word" id= "title" placeholder="Title" required>
+            <hr>
+        <label for="author">Language</label>
+        <input type="text" class="book-input" name="language" id= "author" placeholder="Name" required>
+            <hr>
+        <label for="surName">text</label>
+        <input type="text" class="book-input" name="text" id= "surName" placeholder="Surname" required>
+            <hr>
+        <label for="date">obscurity</label>
+        <input type="number" class="book-input" name="obscurity" id= "date" placeholder="Publish date" required>
+            <hr>
+        <label for="Category">Category</label>
+        <select class="book-input" name="category" id= "category" placeholder="Publish date" required>
+            <option value='cosmos'>cosmos</option>
+            <option value='food'>food</option>    
+            <option value='tech'>tech</option>    
+        </select>
+            <hr>
+
+        <button>Add word</button>
+    </form>
+</body>
+</html>

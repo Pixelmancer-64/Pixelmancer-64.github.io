@@ -130,18 +130,16 @@ p{
 
 main img{
 	min-width: 10rem;
-
-    will-change: transform;
-    transition: transform 450ms;
-}
-
-main a{
-	outline: none;
+	will-change: scale;
+    transition: transform 0.4s ease;
 }
 
 main img:hover{
-	transition: transform 250ms;
-    transform: translateY(-15%);
+	transform: scale(1.2);
+}
+
+a{
+	outline: none;
 }
 
 .tooltip {
