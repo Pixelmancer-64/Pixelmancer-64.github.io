@@ -15,7 +15,6 @@ http.get(`animationsList - ${language}.json`, function(status, response){
                     <div class="imageContainer">
                         <a href='${response[random].links.demo}'><img src='${response[random].picture}'></a>
                         <a href='${response[random].links.github}' class='github'> <img src='/img/github.svg'> </a>
-
                     </div>
                 </div>
                 </div>`; 
@@ -27,3 +26,11 @@ http.get(`animationsList - ${language}.json`, function(status, response){
         }
     }
 });
+
+document.getElementById('showGithub').addEventListener('change', ()=>{
+    console.log('change')
+    const aux = document.querySelectorAll('.github')
+    aux.forEach( (e) => {
+        e.style.display == 'block' ? e.style.display = 'none' : e.style.display = 'block' 
+    })
+})
