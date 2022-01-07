@@ -43,15 +43,6 @@ h2{
     text-align: center;
 }
 
-label{
-    font-weight: bold;
-    display: block;
-    float: left;
-    font-size: 1.5em;
-    color: white;
-
-}
-
 .aux{
     display: flex;
     justify-content: center;
@@ -69,7 +60,19 @@ button img{
     width: 3vh;
 }
 
-/* label:after { content: ": " } */
+label{
+    font-weight: bold;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    color: white;
+
+}
+
+.filters{
+    width: 70vh;
+    margin: 5vh auto;
+}
 
 input {
     padding: .3em;

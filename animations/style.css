@@ -38,6 +38,7 @@ main{
     top: 0%;
     filter: brightness(100%);
     transition: 50ms ease-in-out;
+
 }
 
 .imageContainer img{
@@ -50,7 +51,7 @@ main{
 /* navbar */
 
 .navbar{
-  background-color: rgb(39, 37, 37);
+  background-color: rgb(17, 17, 19);
   /* position: fixed; */
   width: 100%;
   min-height: 5vh;
