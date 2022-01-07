@@ -49,7 +49,6 @@ class Canvas {
                 }
             }
         }
-        console.log(this.his)
     }
 
     fill(quarentine){
@@ -74,7 +73,6 @@ class Canvas {
             this.ctx.fillRect(x, y, this.size, this.size);
             x += this.size;
             if(x > this.size*99) {
-                console.log('hi')
                 y += this.size;
                 x = 0
             }

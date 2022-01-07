@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="../jquery-3.6.0.min.js"></script>
+
+	<script src="./scripts.js"></script>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Cadastro de Livros</legend>
+        <label>Título</label>
+        <input type="text" id="titulo" placeholder="Digite o título do livro"/> <br />
+        <label>Descrição</label>
+        <textarea id="descricao" placeholder="Digite uma descricao para o livro"></textarea> <br />
+        <label>Autores</label>
+        <input type="text" id="autores" placeholder="Digite os autores da obra"/> <br />
+        <label>Estilo</label>
+        <input type="text" id="estilo" placeholder="Digite o estilo do livro"/>
+        <br>
+        <button id="adicionar">Adicionar</button>
+        <button id="excluir">Limpar</button>
+    </fieldset>
+    
+    <table id="acervo">
+        <tr>
+            <th>Título</th>
+            <th>Autores</th>
+            <th>Estilo</th>
+            <th>Descrição</th>
+            <th></th>
+        </tr>
+    </table>
+    
+    <button id="apagarAcervo">Apagar</button>
+    
+    <button id="enviar">Enviar</button>
+
+</body>
+</html>

@@ -31,9 +31,7 @@ option2.addEventListener('click',() => {
     camo()
     camoMiddleRemoval()
     if(middle.value != ''){
-    let result = []
     aux = middle.value.split("")
-    let i = 0;
     let me = ''
     aux.forEach( (e) => {
         switch(e){
@@ -60,14 +58,23 @@ option3.addEventListener('click',() => {
     camo()
     camoMiddleRemoval()
     if(middle.value != ''){
-        aux = middle.value.split(' ');
-        let hand = []
-        let txt = []
+        aux = middle.value.replace(/\s/g, '').toLowerCase().split('');
+        let txt = {}
         for (i=0;i<aux.length;i++) {
-            hand[i] = countOcurences(middle.value, aux[i])
-            txt[i]= aux[i]+ ': '+ hand[i] + "<br></br>"
-            output.innerHTML=txt.join("")
+            if(/[a-z0-9]/.test(aux[i])){
+                if(!txt[aux[i]]){
+                    txt[aux[i]] = 1
+                }
+                else txt[aux[i]]++
+            }
         }
+
+        let text = ''
+        for(let e in txt){
+            console.log(e)
+            text += `${e}: ${txt[e]}<br>`
+        }
+        output.innerHTML=text
     }
     });
 
@@ -226,61 +233,60 @@ option10.addEventListener('click',() => {
     });
 
 
-    function countOcurences(s, word) {
-let replace = word
-let re = new RegExp(replace,"g");
+function countOcurences(s, word) {
+    let replace = word
+    let re = new RegExp(replace,"g");
 
-txt = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
-txt = txt.replace(/[ ]{2,}/gi," ");//2 or more space to 1
-txt = txt.replace(/\n /,"\n"); // exclude newline with a start spacing
+    txt = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
+    txt = txt.replace(/[ ]{2,}/gi," ");//2 or more space to 1
+    txt = txt.replace(/\n /,"\n"); // exclude newline with a start spacing
 
-        return txt.match(re, '').length
-     }
+    return txt.match(re, '').length
+}
 
-     function camo(){
-        old.style.visibility='hidden';
-        newC.style.visibility='hidden';
-        oldLabel.style.visibility='hidden';
-        newLabel.style.visibility='hidden';
-        old.value = '';
-        newC.value = '';
+function camo(){
+    old.style.visibility='hidden';
+    newC.style.visibility='hidden';
+    oldLabel.style.visibility='hidden';
+    newLabel.style.visibility='hidden';
+    old.value = '';
+    newC.value = '';
 
-     }
+}
 
-     function camoMiddle(){
-        middle.style.visibility = 'hidden';
-        middle.value = '';
-     }
-     function camoMiddleRemoval(){
-        middle.style.visibility = 'visible';
-     }
+function camoMiddle(){
+    middle.style.visibility = 'hidden';
+    middle.value = '';
+}
+function camoMiddleRemoval(){
+    middle.style.visibility = 'visible';    
+}
 
-     function camoRemoval(){
-        old.style.visibility='visible';
-        newC.style.visibility='visible';
-        oldLabel.style.visibility='visible';
-        newLabel.style.visibility='visible';
+function camoRemoval(){
+    old.style.visibility='visible';
+    newC.style.visibility='visible';
+    oldLabel.style.visibility='visible';
+    newLabel.style.visibility='visible';
 
-     }
-     function partialCamoRemoval(){
-        old.style.visibility='visible'
-        oldLabel.style.visibility='visible';
-         
-     }
+}
+function partialCamoRemoval(){
+    old.style.visibility='visible'
+    oldLabel.style.visibility='visible';
+
+}
 
 
 
-     function enigma(code1,code2,txt){
+function enigma(code1,code2,txt){
 
-        let res=[]
-        for(i=0;i<txt.length;i++){
-
+    let res=[]
+    for(i=0;i<txt.length;i++){
         switch(txt[i]){
             case code1: res[i]=code2; break;
             case code2: res[i]=code1; break;
             default: res[i]=txt[i]; 
         }
     }
-    return(res)
+    return res
 }
-    
+
