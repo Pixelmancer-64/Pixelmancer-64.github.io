@@ -26,8 +26,8 @@ class Particle {
         this.width = width;
         this.height = height;
         this.angle = 0;
-        this.d = Math.random()*100
-        this.n = Math.random()*100
+        this.d = Math.random()*999
+        this.n = Math.random()*999
 
         this.start = {
             x: this.width/2 + this.width/2 * Math.cos(this.angle1),
@@ -38,23 +38,13 @@ class Particle {
 
     }
 
-    draw(){
-        this.ctx.lineWidth = .3;
-        ctx.shadowColor = 'hsl(' + hue + ',100%,50%)';
-        ctx.shadowBlur = 25;
-        ctx.strokeStyle= 'hsl(' + hue + ',100%,50%)';
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.start.x,this.start.y);
-        this.ctx.stroke();
-    }
-
     drawR(){
-        this.ctx.lineWidth = .3;
+        this.ctx.lineWidth = 3;
         ctx.shadowColor = 'hsl(' + hue + ',100%,50%)';
         ctx.shadowBlur = 25;
         ctx.strokeStyle= 'hsl(' + hue + ',100%,50%)';
         this.ctx.beginPath();
-        this.ctx.rect(this.start.x,this.start.y, 1, 1);
+        this.ctx.arc(this.start.x,this.start.y, 1, 0, Math.PI*2);
         this.ctx.stroke();
     }
 

@@ -458,5 +458,35 @@
             "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Kaprekar_Constant"
          },
       "picture": "./img/46.png"
+   },
+   {
+      "id":47,
+      "title":"Collision",
+      "summary":"////",
+      "links":{
+            "demo": "/animations/Collision/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collision"
+         },
+      "picture": "./img/47.png"
+   },
+   {
+      "id":48,
+      "title":"JumpTown",
+      "summary":"////",
+      "links":{
+            "demo": "/animations/fractalMaybe/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/fractalMaybe"
+         },
+      "picture": "./img/48.png"
+   },
+   {
+      "id":49,
+      "title":"hyperSpace",
+      "summary":"////",
+      "links":{
+            "demo": "/animations/hyperSpace/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/hyperSpace"
+         },
+      "picture": "./img/49.png"
    }
 ]

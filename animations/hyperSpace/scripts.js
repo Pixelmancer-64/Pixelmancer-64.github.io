@@ -11,19 +11,16 @@ class Vehicle {
         this.pos = {x: x, y: y};
         this.vel = {x: 0, y: 0};
         this.acc = {x: 0, y: 0};
-        this.maxSpeed = 4;
-        this.maxForce = 0.25;
-        this.r = 16;
-        // this.target = {x: Math.random()*this.width, y: Math.random()*this.height}
-        this.target = {x: this.width/2, y: this.height/2}
-
-
+        this.maxSpeed = 9
+        this.maxForce = 9;
+        this.r = 1;
+        this.target = {x: Math.random()*this.width, y: Math.random()*this.height}
+        // this.target = {x: this.width/2, y: this.height/2}
     }
   
     seek(target) {
         let force = {x: target.x - this.pos.x, y: target.y - this.pos.y};
         force = this.setMag(force, this.maxSpeed);
-        // force.sub(this.vel);
         force.x -= this.vel.x 
         force.y -= this.vel.y
 
@@ -33,13 +30,12 @@ class Vehicle {
         else if(force.y > this.maxForce){
             force.y = this.maxForce
         }
-        // force.limit(this.maxForce);
         this.applyForce(force);
     }
   
     setMag(force, n){
-        force.x /= 100;
-        force.y /= 100;
+        force.x /= 1500;
+        force.y /= 1000;
 
         return {x: force.x *= n, y: force.y *= n}
     }
@@ -68,26 +64,11 @@ class Vehicle {
     }
   
     draw() {
-        // stroke(255);
-        // strokeWeight(2);
-        // fill(255);
-        // push();
-        this.ctx.fillStyle = 'cyan';
-
-        // this.ctx.save();
-        // this.ctx.translate(this.pos.x, this.pos.y);
-        // this.ctx.rotate(this.vel.heading());
-
+        this.ctx.fillStyle = 'rgba(255, 0, 72, .1)';
         this.ctx.beginPath();
-        // this.ctx.moveTo(-this.r, -this.r / 2);
-        // this.ctx.lineTo(-this.r, this.r / 2);
-        // this.ctx.lineTo(this.r, 0);
-        // this.fill()
-        this.ctx.arc(this.pos.x, this.pos.y, 1, 0, Math.PI*2);
+        this.ctx.arc(this.pos.x, this.pos.y, this.r, 0, Math.PI*2);
         this.ctx.fill()
         this.ctx.closePath();
-
-        // this.ctx.restore()
     }
   
     edges() {
@@ -104,14 +85,16 @@ class Vehicle {
     }
 
     animate(){
-        this.ctx.beginPath();
-        this.ctx.fillStyle = 'red'
-        this.ctx.arc(this.target.x, this.target.y, 32, 0, Math.PI*2)
-        this.ctx.fill()
-        this.ctx.closePath();
-
+        // this.ctx.beginPath();
+        // this.ctx.fillStyle = 'red'
+        // this.ctx.arc(this.target.x, this.target.y, 5, 0, Math.PI*2)
+        // this.ctx.fill()
+        // this.ctx.closePath();
 
         this.seek(this.target);
+        // this.target.y += Math.random()
+        // this.target.x += Math.random()
+
         this.update();
         this.draw();
         requestAnimationFrame(this.animate.bind(this))
@@ -135,7 +118,7 @@ function random_color (num){
 
 window.onload = function(){
     let vehicle = []
-    for(let i = 0; i < 999; i++) vehicle.push(new Vehicle(Math.random() * window.innerWidth, Math.random() * window.innerHeight))
+    for(let i = 0; i < 999; i++) vehicle.push(new Vehicle(window.innerWidth/2, window.innerHeight/2))
     animationFrame(vehicle)
 }
 
