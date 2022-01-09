@@ -1,5 +1,5 @@
 let cols, rows;
-let scl = 30;
+let scl = 40;
 let w = window.innerWidth;
 let h = window.innerHeight;
 let bg;
@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
 
-  flying -= 0.1;
+  flying -= 0.03;
   let yoff = flying;
   for (let y = 0; y < rows; y++) {
     let xoff = 0;
@@ -51,4 +51,14 @@ function draw() {
     }
     endShape();
   }
+
+  translate(w/2, h/2, h/3);
+  push();
+  noStroke(255,255,207);
+  fill(255,255,207)
+  // rotateZ(frameCount * 0.01);
+  // rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.004);
+  sphere(w/10);
+  pop();
 }

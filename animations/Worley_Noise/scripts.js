@@ -6,6 +6,9 @@ let animationRequest;
 let particlesArray;
 let animation;
 let hue =0;
+const a = Math.random()*255
+const h = Math.random()*255
+const c = Math.random()*255
 
 
 window.onload = function(){ 
@@ -51,9 +54,9 @@ class Particle {
                 dist.sort(function(a, b){return a - b})
 
                 this.ctx.beginPath();
-                let r = this.map(dist[0], 0, 200, 0, 255)
-                let g = this.map(dist[0], 0, 200, 0, 255)
-                let b = this.map(dist[0], 0, 200, 0, 255)
+                let r = this.map(dist[0], 0, a, 0, c)
+                let g = this.map(dist[0], 0, h, 0, a)
+                let b = this.map(dist[0], 0, c, 0, h)
 
                 let color = 'rgb(' + r + ',' + g + ',' + b +')'
 
