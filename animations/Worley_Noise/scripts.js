@@ -15,9 +15,6 @@ window.onload = function(){
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
 
-    // canvas.width = 500;
-    // canvas.height = 500;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -30,7 +27,7 @@ class Particle {
         this.ctx = ctx;
         this.width = width;
         this.height = height;
-        this.res = 3
+        this.res = 2
 
         this.dots = []
 
@@ -48,15 +45,17 @@ class Particle {
                 for(let i = 0; i < this.dots.length; i++){
                     let dx = x - this.dots[i].x;
                     let dy = y - this.dots[i].y;
-                    let distance = Math.sqrt(dx*dx + dy*dy);
+
+                    let distance = dx*dx + dy*dy;
                     dist.push(distance)
                 }
                 dist.sort(function(a, b){return a - b})
 
                 this.ctx.beginPath();
-                let r = this.map(dist[0], 0, a, 0, c)
-                let g = this.map(dist[0], 0, h, 0, a)
-                let b = this.map(dist[0], 0, c, 0, h)
+                let aux = dist[0]/100;
+                let r = this.map(aux, 0, a, 0, c)
+                let g = this.map(aux, 0, h, 0, h)
+                let b = this.map(aux, 0, c, 0, a)
 
                 let color = 'rgb(' + r + ',' + g + ',' + b +')'
 

@@ -4,16 +4,6 @@ let ctx;
 let FlowField;
 let animationRequest;
 
-// let mouse ={
-//     x: undefined,
-//     y: undefined,
-// }
-
-// window.addEventListener('mousemove', function(event){
-//     mouse.x = event.x;
-//     mouse.y = event.y;
-// });
-
 window.onload = function(){
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
@@ -34,7 +24,7 @@ class FlowFieldEffect {
         this.time = 0;
         this.interval = 1000/60;
         this.timer = 0;
-        this.cellsSize = 15;
+        this.cellsSize = 25;
         this.gradient;
         this.#gradient();
         this.#ctx.strokeStyle = this.gradient;

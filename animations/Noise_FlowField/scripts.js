@@ -1,5 +1,5 @@
-let inc = 0.1;
-let scl = 10;
+let inc = Math.random();
+let scl = 20;
 let cols, rows;
 let zoff = 0;
 let particlesArray = [];
@@ -12,7 +12,7 @@ function setup() {
 
 	flowField = new Array(cols * rows);
 
-	for(let i = 0; i < 1000; i++){
+	for(let i = 0; i < 5000; i++){
 		particlesArray[i] = new Particle();
 	}
 	background(0);
@@ -24,7 +24,7 @@ class Particle{
 		this.previousPos = this.pos.copy();
 		this.vel = createVector(0,0);
 		this.acc = createVector(0,0);
-		this.terminalVel = 4;
+		this.terminalVel = 5;
 	}
 
 	update(){
@@ -57,7 +57,7 @@ class Particle{
 			this.updatePrev();
 		}
 
-		if (this.pos.x < 0) {
+		else if (this.pos.x < 0) {
 			this.pos.x = width;
 			this.updatePrev();
 		}
@@ -67,7 +67,7 @@ class Particle{
 			this.updatePrev();
 		}
 
-		if (this.pos.y < 0) {
+		else if (this.pos.y < 0) {
 			this.pos.y = height;
 			this.updatePrev();
 		}
@@ -94,16 +94,9 @@ function draw() {
 			v.setMag(1);
     		xoff += inc;
 			flowField[index] = v
-			// stroke(0, 50);
-			// strokeWeight(1)
-			// push();
-			// translate(x * scl, y * scl);
-			// rotate(v.heading());
-			// line(0, 0, scl, 0)
-			// pop();
 	    }
     	yoff += inc;
-		zoff += .0003;
+		// zoff += .0003;
   }
 	for(let i = 0; i < particlesArray.length; i++){
 		particlesArray[i].update();

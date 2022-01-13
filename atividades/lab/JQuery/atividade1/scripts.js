@@ -65,11 +65,19 @@ $(function(){
 	})
 
 	$("#enviar").click(function(){
-		let url = "https://157.230.5.17/web/livros.php";
+		// let url = "https://157.230.5.17/web/livros.php";
 		
-		// let url = "http://httpbin.org/post";
-		let dados = $("#dados").val();  
+		let url = "http://httpbin.org/post";
+		// let dados = $("#dados").val();  
+		let dados = {
+			titulo:  'titulo',
+			descricao: 'descricao',
+			genero: 'genero',
+			autor: 'autor'
+		};
 		$.post(url, dados, function(data,status){
+			console.log('hi')
+			console.log(data)
 			alert("Data: " + data + "\nStatus: " + status);
 		  }
 		);
