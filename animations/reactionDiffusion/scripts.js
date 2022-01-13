@@ -3,8 +3,8 @@ class Particle {
 		let canvas = document.getElementById('canvas');
 		this.ctx = canvas.getContext('2d');
 
-		canvas.width = window.innerWidth/2;
-		canvas.height = window.innerHeight/2;
+		canvas.width = window.innerWidth/10;
+		canvas.height = window.innerHeight/10;
 
 		this.width = canvas.width;
 		this.height = canvas.height;
