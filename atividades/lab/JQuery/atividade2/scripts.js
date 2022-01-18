@@ -46,7 +46,11 @@ $(function(){
         // adicionando na lista de cardápio
 		$("#pedidos").append(itemLista);
         console.log($("#valorTotal"))
-        $("#valorTotal").text('Total - ' + produtosEscolhidosArray.length)
+        let total = 0;
+        produtosEscolhidosArray.forEach(element => {
+            total += element.valorUnitario;
+        });
+        $("#valorTotal").text('Total R$ - ' + total +',00')
 
 	});
 });
