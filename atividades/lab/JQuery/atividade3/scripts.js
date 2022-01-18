@@ -2,38 +2,36 @@ $(function(){
     fetch('https://rafaelescalfoni.github.io/desenv_web/receitas.json')
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         let aux = ''
         data.forEach(recipe => {
-            let preparoAux = '';
-            let ingredientesAux = '';
+            const preparoAux = $("<ul>");
+            const ingredientesAux = $("<ul>");
     
             recipe.preparo.forEach((preparo) =>{
-                const li = document.createElement("li");
-                li.appendChild(document.createTextNode(preparo));
-                preparoAux += li.outerHTML;
+                const li = $("<li>");
+                li.text(preparo);
+                preparoAux.append(li);
             })
             recipe.ingredientes.forEach(function(ingrediente){
-                const li = document.createElement("li");
-                li.appendChild(document.createTextNode(ingrediente));
-                ingredientesAux += li.outerHTML;
+                const li = $("<li>");
+                li.text(ingrediente);
+                ingredientesAux.append(li);
             })
-        
-          aux += `
-          <div class = "receita">
-          <div class = "mainDescription">
-            <h1>${recipe.nome}</h1>
-            <img src ="${recipe.foto}">
-            <h3>${recipe.descricao}</h3>
-            </div>
-            <div class="DIY">
-            <h2>Ingredientes: </h2> <ul>${ingredientesAux}</ul>
-            <h2>Preparo: </h2> <ol>${preparoAux}</ol>
-            </div>
-            </div>`;
-    
-       
+
+          const aux = $('<section>');
+          aux.append(`
+          <h1>${recipe.nome}</h1>
+          <img src ="${recipe.foto}">
+          <h2>${recipe.descricao}</h2>`)
+          aux.append('<h3>Ingredientes</h3>')
+          aux.append(ingredientesAux);
+          aux.append('<h3>Preparo</h3>')
+          aux.append(preparoAux);
+
+
+;
+            
+            $('body').append(aux)
         })
-        document.querySelector('body').innerHTML = aux
     })
 })

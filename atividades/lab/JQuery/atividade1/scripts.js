@@ -1,22 +1,22 @@
-//função construtora de objetos Produto
-function Livro(id, nome, autores, estilo){
-	this.id = id;
-	this.nome = nome;
-	this.autores = autores;
-	this.estilo = estilo;
-}
+class Livro {
+	static listaLivros = [];
+	static fahrenheit451 = [];
 
-// programar a inserção dos novos livros no array listaLivros e sua adição no DOM
-function adicionarLivro(livro){
-// seu programa aqui.
-}
+	constructor(titulo, descricao, genero, autor) {
+		this.titulo = titulo;
+		this.descricao = descricao;
+		this.genero = genero;
+		this.autor = autor;
+	}
 
-// programar a remoção do livro no array listaLivros e sua remoção no DOM
-function removerLivro(livro){
-// seu programa aqui.
+	// Esse if aqui é bem feio, mas como a quantidade não vai mudar então tudo bem
+	static checkIfSame(aux) {
+		if(aux.titulo == fahrenheit451[0] && aux.descricao == fahrenheit451[1] &&
+			aux.genero == fahrenheit451[2] && aux.autor == fahrenheit451[3]) {
+				return true;
+		}
+	}
 }
-
-var listaLivros = [];
 
 function limpar(){
 	$("#titulo").val("");
@@ -26,12 +26,12 @@ function limpar(){
 }
 		
 $(function(){
-
 	$("#adicionar").click(function(){
 		var tituloLivro = $("#titulo").val();
 		var autores = $("#autores").val();
 		var estilo = $("#estilo").val();
 		var descricao = $("#descricao").val();
+
 		$("#acervo").append(
 				$("<tr>")
 					.append($("<td>").text(tituloLivro))
@@ -44,16 +44,27 @@ $(function(){
 								.text("Apagar"))
 					)
 		)
+
+		let book = new Livro(tituloLivro, autores, estilo, descricao);
+		Livro.listaLivros.push(book)
 		limpar()
 	});
 
 	$("#acervo").on("click", "a", function(){
 		$(this).parents("tr").remove();
+		Livro.fahrenheit451 = [];
+		for(let i =0; i < $(this).parents("tr").find('td').length-1; i++){
+			Livro.fahrenheit451.push($(this).parents("tr").find('td')[i].innerHTML);
+		}
+
+		let index = Livro.listaLivros.findIndex(Livro.checkIfSame)
+		Livro.listaLivros.splice(index,1)
 	})
 
 	$("#excluir").click(limpar)
 
 	$("#apagarAcervo").click(function(){
+		Livro.listaLivros = [];
 		$("#acervo").empty();
 		$("#acervo")
 			.append($("<tr>")
@@ -65,18 +76,9 @@ $(function(){
 	})
 
 	$("#enviar").click(function(){
-		// let url = "https://157.230.5.17/web/livros.php";
-		
 		let url = "http://httpbin.org/post";
-		// let dados = $("#dados").val();  
-		let dados = {
-			titulo:  'titulo',
-			descricao: 'descricao',
-			genero: 'genero',
-			autor: 'autor'
-		};
-		$.post(url, dados, function(data,status){
-			console.log('hi')
+		console.log(Livro.listaLivros)
+		$.post(url, Livro.listaLivros, function(data,status){
 			console.log(data)
 			alert("Data: " + data + "\nStatus: " + status);
 		  }
