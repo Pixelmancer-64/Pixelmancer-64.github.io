@@ -47,10 +47,10 @@ function showPokemon(data, callback, callback2){
         div.appendChild(innerDiv)
         document.querySelector('main').append(div)
         div.addEventListener('click', (e) => {
-            const submit = document.getElementById('helper')
-            if(e.target.parentElement.className == 'types')submit.value = e.target.parentElement.parentElement.firstChild.innerText.slice(2)
-            else submit.value = e.target.parentElement.firstChild.innerText.slice(2)
-            document.forms[1].submit()
+            let submit;
+            if(e.target.parentElement.className == 'types') submit = e.target.parentElement.parentElement.firstChild.innerText.slice(2)
+            else submit = e.target.parentElement.firstChild.innerText.slice(2)
+            window.location.href = `./pokemon/?id=${submit}`
         })
     }
 }

@@ -6,26 +6,46 @@
 
 body{
     background-color: black;
+    display: flex;
 }
 
 main{
     margin: 2em;
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1em;
 }
 
+aside{
+    padding: 2vh;
+    min-height: 100vh;
+	background-color: #202024;
+	display: flex;
+    flex-basis: 30%;
+	flex-direction: column;
+	gap: 1rem;
+}
+
 .pokeCard{
     font-family: 'Press Start 2P', cursive;
-    min-width: 25vh;
     background-color: rgb(242, 242, 242);
     border: .5em ridge red;
+    min-width: 20rem;
+    min-height: 20rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 1em;
     cursor: pointer;
+}
+
+.pokeCard img{
+    min-width: 20rem;
+    min-height: 20rem;
 }
 
 #helper{
@@ -39,6 +59,7 @@ main{
 p{
     color: grey;
 }
+
 h2{
     text-align: center;
 }
@@ -67,11 +88,6 @@ label{
     font-size: 1.5em;
     color: white;
 
-}
-
-.filters{
-    width: 70vh;
-    margin: 5vh auto;
 }
 
 input {
@@ -196,4 +212,19 @@ label [type="checkbox"] {
 
 .dragon{
     background-color: cyan;
+}
+
+@media screen and (max-width:850px) {
+    .pokeCard {
+        width: 10vw;
+    }
+
+    .pokeCard img{
+        width: 10vw;
+    }
+    
+    body{
+        display: block;
+    }
+
 }

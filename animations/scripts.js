@@ -24,6 +24,7 @@ http.get(`animationsList - ${language}.json`, function(status, response){
                 i++;
             }
         }
+        document.getElementById("counter").innerHTML = `<h1>${already.length} Projects</h1>`
     }
 });
 
