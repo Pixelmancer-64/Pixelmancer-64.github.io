@@ -508,5 +508,25 @@
             "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/breathing"
          },
       "picture": "./img/51.png"
+   },
+   {
+      "id":52,
+      "title":"Flocking Simulation",
+      "summary":"////",
+      "links":{
+            "demo": "/animations/Flocking_Simulation/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Flocking_Simulation"
+         },
+      "picture": "./img/52.png"
+   },
+   {
+      "id":53,
+      "title":"Brownian Snowflake",
+      "summary":"////",
+      "links":{
+            "demo": "/animations/Brownian_Snowflake/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Brownian_Snowflake"
+         },
+      "picture": "./img/53.png"
    }
 ]
