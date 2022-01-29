@@ -101,6 +101,7 @@ class Canvas {
       let pmy = Canvas.mouse.last.y - Canvas.height / 2;
 
       let color = Canvas.colors[this.i];
+      console.log(this.i)
 
       let distance = Math.sqrt(Math.pow((Canvas.mouse.x - Canvas.width / 2), 2) + Math.pow((Canvas.mouse.y - Canvas.height / 2), 2)) / Canvas.width
 

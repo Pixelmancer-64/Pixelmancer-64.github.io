@@ -22,13 +22,28 @@ class Configs {
   static mirrors = Math.ceil(Math.random() * 6);
 
   static angle = Math.PI / Configs.mirrors;
-  static lineWidth = 3;
+  static lineWidth = 10;
 }
 
 class Particle {
 
-  constructor() {
+  constructor(x, y, directionX, directionY) {
+    this.x = x;
+    this.y = y;
+    this.directionX = directionX;
+    this.directionY = directionY;
+  }
 
+  update() {
+    if (this.x > canvas.width || this.x < 0) {
+      this.directionX = -this.directionX;
+    }
+    if (this.y > canvas.height || this.y < 0) {
+      this.directionY = -this.directionY;
+    }
+
+    this.x += this.directionX;
+    this.y += this.directionY;
   }
 
 }
@@ -39,11 +54,11 @@ class Canvas {
   static height;
   static colors = random_color(7);
   static mouse = {
-    x: null,
-    y: null,
+    x: Canvas.width/2,
+    y: Canvas.height/2,
     last: {
-      x: null,
-      y: null
+      x: 0,
+      y: 0
     },
     pressed: false
   }
@@ -69,6 +84,8 @@ class Canvas {
     this.animationRequest;
     this.i = 0;
 
+    this.guide = new Particle(Canvas.width / 2, Canvas.height / 2, Math.random() * 9, Math.random() * 9);
+
     Canvas.ctx.translate(Canvas.width / 2, Canvas.height / 2)
   }
 
@@ -82,7 +99,7 @@ class Canvas {
 
     document.body.onmousedown = function () {
       Canvas.mouse.pressed = true
-      if(Canvas.mouse.x != null){
+      if (Canvas.mouse.x != null) {
         document.querySelector('h1').remove()
       }
     }
@@ -93,7 +110,15 @@ class Canvas {
   }
 
   animation() {
-    if (Canvas.mouse.pressed) {
+
+    for (let i = 0; i < 10; i++) {
+
+      Canvas.mouse.last.x = Canvas.mouse.x;
+      Canvas.mouse.last.y = Canvas.mouse.y;
+      Canvas.mouse.x = this.guide.x
+      Canvas.mouse.y = this.guide.y
+
+      this.guide.update();
 
       let mx = Canvas.mouse.x - Canvas.width / 2;
       let my = Canvas.mouse.y - Canvas.height / 2;
@@ -116,6 +141,7 @@ class Canvas {
 
 
 
+
         Canvas.ctx.save();
         Canvas.ctx.scale(1, -1);
         Canvas.ctx.moveTo(mx, my);
@@ -130,7 +156,6 @@ class Canvas {
       (this.i == Configs.colors.length - 1) ? this.i = 0: this.i++;
     }
 
-
     this.animationRequest = requestAnimationFrame(this.animation.bind(this))
   }
 
@@ -138,7 +163,7 @@ class Canvas {
 
 window.onload = function () {
   let canvas = new Canvas();
-  canvas.startEvents();
+  // canvas.startEvents();
   canvas.animation();
 
 
