@@ -541,11 +541,21 @@
    },
    {
       "id":55,
-      "title":"Random_Kaleidoscope",
+      "title":"Random Kaleidoscope",
       "summary":"////",
       "links":{
             "demo": "/animations/Random_Kaleidoscope/",
             "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Kaleidoscope"
+         },
+      "picture": "./img/55.png"
+   },
+   {
+      "id":56,
+      "title":"MaybeFractal",
+      "summary":"////",
+      "links":{
+            "demo": "/animations/MaybeFractal/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/MaybeFractal"
          },
       "picture": "./img/55.png"
    }

@@ -2,7 +2,7 @@ $(function(){
     fetch('https://rafaelescalfoni.github.io/desenv_web/receitas.json')
     .then(res => res.json())
     .then(data => {
-        let aux = ''
+
         data.forEach(recipe => {
             const preparoAux = $("<ul>");
             const ingredientesAux = $("<ul>");
@@ -27,9 +27,6 @@ $(function(){
           aux.append(ingredientesAux);
           aux.append('<h3>Preparo</h3>')
           aux.append(preparoAux);
-
-
-;
             
             $('body').append(aux)
         })
