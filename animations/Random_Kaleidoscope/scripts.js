@@ -35,10 +35,10 @@ class Particle {
   }
 
   update() {
-    if (this.x > canvas.width || this.x < 0) {
+    if (this.x > Canvas.width || this.x < 0) {
       this.directionX = -this.directionX;
     }
-    if (this.y > canvas.height || this.y < 0) {
+    if (this.y > Canvas.height || this.y < 0) {
       this.directionY = -this.directionY;
     }
 
@@ -52,7 +52,6 @@ class Canvas {
   static ctx;
   static width;
   static height;
-  static colors = random_color(7);
   static mouse = {
     x: Canvas.width/2,
     y: Canvas.height/2,
@@ -125,9 +124,9 @@ class Canvas {
       let pmx = Canvas.mouse.last.x - Canvas.width / 2;
       let pmy = Canvas.mouse.last.y - Canvas.height / 2;
 
-      let color = Canvas.colors[this.i];
+      let color = Configs.colors[this.i];
 
-      let distance = Math.sqrt(Math.pow((Canvas.mouse.x - Canvas.width / 2), 2) + Math.pow((Canvas.mouse.y - Canvas.height / 2), 2)) / Canvas.width
+      let distance = (Math.pow((Canvas.mouse.x - Canvas.width / 2), 2) + Math.pow((Canvas.mouse.y - Canvas.height / 2), 2)) / (Canvas.height*Canvas.width)
 
       for (let i = 0; i < Configs.mirrors; i++) {
         Canvas.ctx.beginPath();

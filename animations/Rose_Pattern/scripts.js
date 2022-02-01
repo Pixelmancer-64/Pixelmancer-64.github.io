@@ -30,8 +30,8 @@ class Particle {
         this.n = Math.random()*999
 
         this.start = {
-            x: this.width/2 + this.width/2 * Math.cos(this.angle1),
-            y: this.height/2 + this.height/2 * Math.sin(this.angle1)
+            x: this.width/2 + this.width/2 * Math.cos(this.angle),
+            y: this.height/2 + this.height/2 * Math.sin(this.angle)
         }
 
         this.ctx.translate(this.width/2, this.height/2)

@@ -1,30 +1,28 @@
-function isPrime(result){
-    switch(result){
-        case 1: return false;
-        case 2: return true;
-        case 3: return true;
-        case 5: return true;
-    }
-    if (result % 2 == 0 || result % 3 == 0 || result % 5 == 0){
-        return false;
-    } 
-    var sqrt = Math.sqrt(result);
-    for (var i = 7; i <= sqrt; i += 6) {
-        if (result % i == 0) return false;
-        if (result % (i + 2) == 0) return false;
-    }
-    return true;
-   }
-
-   function primeSelector(times,initialTime=0){
-   for(i=initialTime; i <= times; i++){
-       if(isPrime(i)==true){
-        console.log(i)
-       }
-   }
+isPrime = function (n) {
+    if (isNaN(n) || !isFinite(n) || n % 1 || n < 2) return false;
+    if (n == leastFactor(n)) return true;
+    return false;
 }
 
-//O primeiro valor é o padrão para a quantidade de vezes
-//que o programa irá rodar, o segundo padrão define o valor
-//inicial da busca, sendo como padrão 0
-primeSelector(6);
+leastFactor = function (n) {
+    if (isNaN(n) || !isFinite(n)) return NaN;
+    if (n == 0) return 0;
+    if (n % 1 || n * n < 2) return 1;
+    if (n % 2 == 0) return 2;
+    if (n % 3 == 0) return 3;
+    if (n % 5 == 0) return 5;
+    var m = Math.sqrt(n);
+    for (var i = 7; i <= m; i += 30) {
+        if (n % i == 0) return i;
+        if (n % (i + 4) == 0) return i + 4;
+        if (n % (i + 6) == 0) return i + 6;
+        if (n % (i + 10) == 0) return i + 10;
+        if (n % (i + 12) == 0) return i + 12;
+        if (n % (i + 16) == 0) return i + 16;
+        if (n % (i + 22) == 0) return i + 22;
+        if (n % (i + 24) == 0) return i + 24;
+    }
+    return n;
+}
+
+isPrime(6);

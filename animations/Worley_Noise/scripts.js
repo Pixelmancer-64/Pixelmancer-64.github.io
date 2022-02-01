@@ -8,6 +8,10 @@ let hue = 0;
 
 window.onload = function () {
     canvas = document.getElementById('canvas');
+    canvas.imageSmoothingEnabled = true;
+    canvas.mozImageSmoothingEnabled = true;
+    canvas.webkitImageSmoothingEnabled = true;
+    canvas.msImageSmoothingEnabled = true;
     ctx = canvas.getContext('2d');
 
     canvas.width = window.innerWidth;

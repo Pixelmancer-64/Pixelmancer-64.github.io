@@ -43,6 +43,8 @@ class Particle{
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
         ctx.fillStyle = this.color;
         ctx.fill();
+        ctx.closePath()
+
     }
     update(){
         if(this.x > canvas.width || this.x < 0){
@@ -102,6 +104,7 @@ function connect(){
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
                 ctx.stroke();
+                ctx.closePath()
             }
         }
     }

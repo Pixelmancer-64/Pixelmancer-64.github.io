@@ -558,5 +558,15 @@
             "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/MaybeFractal"
          },
       "picture": "./img/56.png"
+   },
+   {
+      "id":57,
+      "title":"Spiral",
+      "summary":"////",
+      "links":{
+            "demo": "/animations/Spiral/",
+            "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Spiral"
+         },
+      "picture": "./img/57.png"
    }
 ]
