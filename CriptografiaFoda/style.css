@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    background-color: #2A323A;
+	font-size: 3vh;
+}
+.hahaha{
+    background-color: #49535E;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10vh 20vh;
+	height: 70vh;
+
+}
+
+form, #r{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+form label{
+	color: #FFF;
+	font-size: 1.3rem;
+}
+h1, #r{
+	color: #fff;
+}
