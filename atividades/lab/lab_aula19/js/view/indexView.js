@@ -3,6 +3,7 @@
 class IndexView {
   constructor(objectSelector) {
     this.domObj = document.querySelector(objectSelector);
+    this.knownOrders = [];
   }
 
   //Cria a página principal
@@ -180,20 +181,21 @@ class IndexView {
     let itemsObj = document.getElementById("pedidoList");
 
     itemsObj.innerHTML = "";
-    let knownOrders = [];
-    console.log(knownOrders)
+    this.knownOrders = [];
+    console.log(this.knownOrders)
     listaPedido.forEach(dish => {
-        let isHere = knownOrders.indexOf(dish)
+        console.log(dish)
+        let isHere = this.knownOrders.map(function(e) { return e.code; }).indexOf(dish.code)
         if(isHere == -1){
             dish.quantity = 1;
-            knownOrders.push(dish)
+            this.knownOrders.push(dish)
         }
         else {
-            knownOrders[isHere].quantity++;
+          this.knownOrders[isHere].quantity++;
         }
     });
 
-    knownOrders.forEach(e => {
+    this.knownOrders.forEach(e => {
         itemsObj.innerHTML += `
         <div class="menu-item-tile col-md-6">
               <div class="row">
