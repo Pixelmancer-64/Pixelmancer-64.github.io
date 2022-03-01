@@ -1,5 +1,5 @@
 const random_rgb = () => {
-  let offset = 160;
+  let offset = 100;
   let mult = 255 - offset;
   let r = Math.floor(Math.random() * mult + offset);
   let g = Math.floor(Math.random() * mult + offset);
@@ -30,14 +30,11 @@ class Particle {
       y: y,
     };
 
-    this.previous = {
-      x: x,
-      y: y,
-    };
-
     this.blur = 20;
     this.radius = radius;
     this.color = color;
+    this.signal = 1
+    this.brightness = Math.random() * .1
   }
 
   draw() {
@@ -52,7 +49,8 @@ class Particle {
   }
 
   update() {
-    this.blur += .01;
+    if (this.blur < 1 || this.blur > 25) this.signal *= -1;
+    this.blur += this.signal * this.brightness
   }
 }
 
@@ -99,14 +97,14 @@ class Canvas {
 
     this.trace.forEach((shape) => {
       Canvas.ctx.lineTo(shape.pos.x, shape.pos.y);
-      Canvas.ctx.lineTo(shape.pos.x, shape.pos.y);
     });
 
     Canvas.ctx.closePath();
     Canvas.ctx.strokeStyle = "white";
-    Canvas.ctx.lineWidth = 0.3;
+    Canvas.ctx.lineWidth = 1;
+    Canvas.ctx.shadowColor = "white";
+    Canvas.ctx.shadowBlur = 10;
     Canvas.ctx.stroke();
-    Canvas.ctx.closePath()
 
     this.arcs.forEach((shape) => {
       shape.update();
@@ -117,30 +115,60 @@ class Canvas {
   }
 
   init() {
-    for (let i = 0; i < 80; i++) {
-      let color = Configs.colors[this.i];
+    let nParticles = 150;
+    let overlapping = false;
+    let guardian = 400;
+    let guardian_counter = 0;
 
-      this.arcs.push(
-        new Particle(
+    while (this.arcs.length < nParticles && guardian_counter < guardian) {
+      let eye = {
+        x:
           ((Math.random() * Canvas.width) / 2) *
-            (Math.round(Math.random()) ? 1 : -1),
+          (Math.round(Math.random()) ? 1 : -1),
+        y:
           ((Math.random() * Canvas.height) / 2) *
-            (Math.round(Math.random()) ? 1 : -1),
-          Math.random() * 9 + 1,
-          `rgba(${color.r},${color.g},${color.b}, 1)`
-        )
-      );
+          (Math.round(Math.random()) ? 1 : -1),
+        radius: (Math.random() * 11) + 3 
+      };
 
-      this.i == Configs.colors.length - 1 ? (this.i = 0) : this.i++;
+      overlapping = false;
+      for (let i = 0; i < this.arcs.length; i++) {
+        let previousEye = this.arcs[i];
+        let dx = eye.x - previousEye.pos.x;
+        let dy = eye.y - previousEye.pos.y;
+        let distance = dx * dx + dy * dy;
+        if (distance < (eye.radius + previousEye.radius) * (eye.radius + previousEye.radius)) {
+          overlapping = true;
+          break;
+        }
+      }
+
+      if (!overlapping) {
+        let color = Configs.colors[this.i];
+
+        this.arcs.push(
+          new Particle(
+            eye.x,
+            eye.y,
+            eye.radius,
+            `rgba(${color.r},${color.g},${color.b}, 1)`
+          )
+        );
+
+        this.i == Configs.colors.length - 1 ? (this.i = 0) : this.i++;
+      }
+
+      guardian_counter++;
     }
 
     this.arcs.forEach((shape) => {
-      if (Math.random() > 0.9) {
-
-        this.trace.push(shape)
-      };
+      if (Math.random() > 0.93) {
+        this.trace.push(shape);
+      }
     });
+
   }
+  
 
   events() {
     document.body.onmousedown = function () {
@@ -148,83 +176,6 @@ class Canvas {
     };
   }
 }
-
-class Point
-{
-    constructor(x, y)
-    {
-        this.x = x;
-            this.y = y;
-    }
-}
- 
-function onSegment(p, q, r)
-{
-    if (q.x <= Math.max(p.x, r.x) && q.x >= Math.min(p.x, r.x) &&
-        q.y <= Math.max(p.y, r.y) && q.y >= Math.min(p.y, r.y))
-    return true;
-   
-    return false;
-}
- 
-// To find orientation of ordered triplet (p, q, r).
-// The function returns following values
-// 0 --> p, q and r are collinear
-// 1 --> Clockwise
-// 2 --> Counterclockwise
-function orientationOfLine(p, q, r)
-{
- 
-    let val = (q.y - p.y) * (r.x - q.x) -
-            (q.x - p.x) * (r.y - q.y);
-   
-    if (val == 0) return 0; // collinear
-   
-    return (val > 0)? 1: 2; // clock or counterclock wise
-}
- 
-// The main function that returns true if line segment 'p1q1'
-// and 'p2q2' intersect.
-function doIntersect(p1, q1, p2, q2)
-{
- 
-    // Find the four orientations needed for general and
-    // special cases
-    let o1 = orientationOfLine(p1, q1, p2);
-    let o2 = orientationOfLine(p1, q1, q2);
-    let o3 = orientationOfLine(p2, q2, p1);
-    let o4 = orientationOfLine(p2, q2, q1);
-   
-    // General case
-    if (o1 != o2 && o3 != o4)
-        return true;
-   
-    // Special Cases
-    // p1, q1 and p2 are collinear and p2 lies on segment p1q1
-    if (o1 == 0 && onSegment(p1, p2, q1)) return true;
-   
-    // p1, q1 and q2 are collinear and q2 lies on segment p1q1
-    if (o2 == 0 && onSegment(p1, q2, q1)) return true;
-   
-    // p2, q2 and p1 are collinear and p1 lies on segment p2q2
-    if (o3 == 0 && onSegment(p2, p1, q2)) return true;
-   
-    // p2, q2 and q1 are collinear and q1 lies on segment p2q2
-    if (o4 == 0 && onSegment(p2, q1, q2)) return true;
-   
-    return false; // Doesn't fall in any of the above cases
-}
- 
-// Driver code
-let p1 = new Point(1, 1);
-let q1 = new Point(10, 1);
-let p2 = new Point(1, 2);
-let q2 = new Point(10, 2);
- 
-if(doIntersect(p1, q1, p2, q2))
-    document.write("Yes<br>");
-else
-    document.write("No<br>");
 
 window.onload = function () {
   let canvas = new Canvas();

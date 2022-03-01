@@ -5,12 +5,5 @@
 }
 body{
     overflow: hidden;
-    background-color: black;
-}
-
-h1{
-    color: white;
-    position: absolute;
-    text-align: center;
-    font-size: 5rem;
+    background-image: url(/img/skyButLess.svg);
 }
