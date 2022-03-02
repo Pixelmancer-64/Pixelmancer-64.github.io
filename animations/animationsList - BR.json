@@ -618,5 +618,15 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Constelation"
     },
     "picture": "./img/62.png"
+  },
+  {
+    "id": 63,
+    "title": "Maze",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Maze/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Maze"
+    },
+    "picture": "./img/63.png"
   }
 ]

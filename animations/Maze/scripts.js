@@ -20,7 +20,7 @@ function random_color(num) {
 class Configs {
     static colors = random_color(1);
     static lineWidth = 5;
-    static cellSize = 40;
+    static cellSize = 50;
     static h1 = document.createElement('h1')
     static div = document.createElement('div')
     static mouse = {
@@ -282,7 +282,7 @@ class Canvas {
             } 
 
             if(aux == 'rgba(255,0,0,1)'){
-                Configs.h1.textContent = 'Ganhou!'
+                Configs.h1.textContent = 'Parabéns!'
                 Configs.div.appendChild(Configs.h1)
                 document.querySelector('body').appendChild(Configs.div)  
                 cancel()
@@ -298,7 +298,7 @@ class Canvas {
         document.addEventListener('mouseout', mouseOut)
         
         function mouseOut(e) {
-            Configs.h1.textContent = 'Perdeu DEMAIS!'
+            Configs.h1.textContent = 'Perdeu!'
             Configs.div.appendChild(Configs.h1)
             document.querySelector('body').appendChild(Configs.div)
             cancel()

@@ -14,7 +14,10 @@
 
 #aviso{
     display: flex;
-    color: white;
-    font-size: 5vw;
+    color: lime;
+    font-family:DotGothic16,MingLiU_HKSCS-ExtB,Arial, Helvetica, sans-serif;
+    font-size: 4vw;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
