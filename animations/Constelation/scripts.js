@@ -1,5 +1,5 @@
 const random_rgb = () => {
-  let offset = 100;
+  let offset = 130;
   let mult = 255 - offset;
   let r = Math.floor(Math.random() * mult + offset);
   let g = Math.floor(Math.random() * mult + offset);
@@ -30,7 +30,7 @@ class Particle {
       y: y,
     };
 
-    this.blur = 20;
+    this.blur = Math.random() * 25;
     this.radius = radius;
     this.color = color;
     this.signal = 1
@@ -162,7 +162,7 @@ class Canvas {
     }
 
     this.arcs.forEach((shape) => {
-      if (Math.random() > 0.93) {
+      if ( shape.radius > 11 && Math.random() > .8) {
         this.trace.push(shape);
       }
     });

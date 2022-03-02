@@ -6,4 +6,5 @@
 body{
     overflow: hidden;
     background-image: url(/img/skyButLess.svg);
+    background-color: black;
 }
