@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: black; */
+    overflow: hidden;
+}
+#canvas{
+    position: absolute;
+    top:0; left: 0;
+    background: black;
+    z-index: -1;
+}
+
+#aviso{
+    display: flex;
+    color: lime;
+    font-family:DotGothic16,MingLiU_HKSCS-ExtB,Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
