@@ -49,11 +49,11 @@ class Particle {
   update(){
     if(this.y + this.r > Canvas.height){
       this.y = 0 + this.r
-    } else if(this.y + this.r < 0){
+    } else if(this.y - this.r < 0){
       this.y = Canvas.height - this.r
     }
 
-    if(this.x + this.r > Canvas.width){
+    if(this.x - this.r > Canvas.width){
       this.x = 0 + this.r
     } else if(this.x + this.r < 0){
       this.x = Canvas.width - this.r

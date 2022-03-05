@@ -648,5 +648,25 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DLA"
     },
     "picture": "./img/65.png"
+  },
+  {
+    "id": 66,
+    "title": "Random_Filling",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Random_Filling/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Filling"
+    },
+    "picture": "./img/66.png"
+  },
+  {
+    "id": 67,
+    "title": "Connect",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Connect/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Connect"
+    },
+    "picture": "./img/67.png"
   }
 ]
