@@ -668,5 +668,35 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Connect"
     },
     "picture": "./img/67.png"
+  },
+  {
+    "id": 68,
+    "title": "IFS",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/IFS/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/IFS"
+    },
+    "picture": "./img/68.png"
+  },
+  {
+    "id": 69,
+    "title": "Leaf",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Leaf/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Leaf"
+    },
+    "picture": "./img/69.png"
+  },
+  {
+    "id": 70,
+    "title": "Popcorn",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Popcorn/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Popcorn"
+    },
+    "picture": "./img/70.png"
   }
 ]
