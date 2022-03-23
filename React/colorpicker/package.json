@@ -1,5 +1,6 @@
 {
   "name": "colorpicker",
+  "homepage": "https://sotiris64.github.io/react/colorpicker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
