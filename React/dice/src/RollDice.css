@@ -1,0 +1,16 @@
+.RollDice{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.RollDice button{
+    width: 15rem;
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    margin-top: 2rem;
+}
