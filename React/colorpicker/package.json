@@ -2,7 +2,7 @@
   "name": "colorpicker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sotiris64.github.io",
+  "homepage": "https://sotiris64.github.io/react/colorpicker",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",

@@ -37,22 +37,22 @@ class App extends Component {
       <Routes>
         <Route
           exact
-          path="/"
+          path="react/colorpicker/"
           element={<PaletteList palettes={this.state.colors} />}
         />
         <Route
           exact
-          path="/new"
+          path="react/colorpicker/new"
           element={<PaletteForm palettes={this.state.colors} savePalette={this.savePalette} />}
         />
         <Route
           exact
-          path="/palette/:id"
+          path="react/colorpicker/palette/:id"
           element={<Palette getPalette={this.getPalette} />}
         />
         <Route
           exact
-          path="/palette/:paletteId/:colorId"
+          path="react/colorpicker/palette/:paletteId/:colorId"
           element={<Shades getPalette={this.getPalette} />}
         />
       </Routes>
