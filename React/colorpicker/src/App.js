@@ -3,19 +3,22 @@ import Palette from "./Palette";
 import PaletteList from "./PaletteList";
 import Shades from "./Shades";
 import PaletteForm from "./PaletteForm";
-import seedColors from "./seedColors";
 import { generatePalette } from "./colorHelpers";
 import { Route, Routes } from "react-router-dom";
+import LocalStorage from "./localStorage";
 
 class App extends Component {
   constructor(...props) {
     super(...props);
-
+    this.state = {
+      colors: LocalStorage.getData("palettes"),
+    };
     this.getPalette = this.getPalette.bind(this);
+    this.savePalette = this.savePalette.bind(this);
   }
 
   findPalette(id) {
-    return seedColors.find((e) => e.id === id);
+    return LocalStorage.getData("palettes").find((e) => e.id === id);
   }
 
   getPalette(id) {
@@ -23,14 +26,24 @@ class App extends Component {
     return found ? generatePalette(found) : false;
   }
 
+  savePalette(obj) {
+    LocalStorage.add("palettes", obj);
+    this.setState({ colors: [...this.state.colors, obj] });
+  }
+
   render() {
+    console.log('hi')
     return (
       <Routes>
-        <Route exact path="/" element={<PaletteList palettes={seedColors} />} />
+        <Route
+          exact
+          path="/"
+          element={<PaletteList palettes={this.state.colors} />}
+        />
         <Route
           exact
           path="/new"
-          element={<PaletteForm/>}
+          element={<PaletteForm palettes={this.state.colors} savePalette={this.savePalette} />}
         />
         <Route
           exact

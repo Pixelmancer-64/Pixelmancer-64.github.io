@@ -5,25 +5,25 @@ const random_rgb = () => {
   return {
     r: r,
     g: g,
-    b: b
-  }
+    b: b,
+  };
 };
 
 function random_color(num) {
-  let aux = []
+  let aux = [];
   for (let i = 0; i < num; i++) {
-    aux.push(random_rgb())
+    aux.push(random_rgb());
   }
   return aux;
-};
+}
 
 class Particle {
-
   constructor(radius, angle, r) {
     this.pos = p5.Vector.fromAngle(angle);
     this.pos.mult(radius);
     this.r = r;
-    this.color = Snowflake.colors[Math.floor(Math.random() * Snowflake.colors.length)]
+    this.color =
+      Snowflake.colors[Math.floor(Math.random() * Snowflake.colors.length)];
   }
 
   update() {
@@ -56,11 +56,11 @@ class Particle {
   }
 
   finished() {
-    return (this.pos.x < 1);
+    return this.pos.x < 1;
   }
 }
 
-class Snowflake{
+class Snowflake {
   static current;
   static list = [];
   static colors = random_color(5);
@@ -80,19 +80,19 @@ function draw() {
   rotate(PI / Snowflake.alpha);
 
   let count = 0;
-  while (!Snowflake.current.finished() && !Snowflake.current.intersects(Snowflake.list)) {
+  while (
+    !Snowflake.current.finished() &&
+    !Snowflake.current.intersects(Snowflake.list)
+  ) {
     Snowflake.current.update();
     count++;
   }
 
-  (count == 0) ? noLoop() : 
-  
-
-  Snowflake.list.push(Snowflake.current);
+  count == 0 ? noLoop() : Snowflake.list.push(Snowflake.current);
   Snowflake.current = new Particle(width / 2, 0, Snowflake.radius);
 
   for (let i = 0; i < Snowflake.alpha; i++) {
-    rotate(PI / (Snowflake.alpha/2));
+    rotate(PI / (Snowflake.alpha / 2));
     Snowflake.current.show();
     for (let p of Snowflake.list) {
       p.show();
