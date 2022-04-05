@@ -1,0 +1,13 @@
+@media (max-width: 85em) {
+    .heroContainer{
+        max-width: 120rem;
+    }
+
+    .introduction{
+        font-size: 4.4rem;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

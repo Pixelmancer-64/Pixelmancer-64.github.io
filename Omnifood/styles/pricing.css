@@ -1,0 +1,62 @@
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ps{
+    grid-column: -1/1;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.pricing h2{
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #E1701D;
+}
+
+.pricing h3{
+    text-align: center;
+    font-size: 6.2rem;
+    font-weight: 500;
+}
+
+.pricing h3::before{
+    content: '$';
+    font-size: 3.2rem;
+}
+
+.pricing ul{
+    list-style: none;
+    font-size: 2.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.pricing a{
+    margin-top: auto;
+    text-align: center;
+}
+
+.pricingPlan{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    padding: 3.2rem;
+    transform: translateY(5rem);
+    border: 2px solid #FDF2E9;
+}
+
+.pricingPlan.main{
+    box-shadow: 0 2.4rem 4.8rem rgba(253, 242, 233, 0.55);
+    background-color: #FDF2E9;
+    transform: translate(0);
+}
+
+
+.pricing .md{
+    color: #E1701D;
+    margin-right: 1.6rem;
+}

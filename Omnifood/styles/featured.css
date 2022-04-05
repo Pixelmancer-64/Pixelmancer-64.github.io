@@ -15,6 +15,6 @@
 }
 
 .featured img{
-    height: 3.2rem;
+    max-height: 3.2rem;
     filter: brightness(0) opacity(.7);
 }

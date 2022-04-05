@@ -17,7 +17,9 @@
 <body>
 
     <header>
-        <img class="logo" alt="logo" src="./img/omnifood-logo.png">
+        <a href="#">
+            <img class="logo" alt="logo" src="./img/omnifood-logo.png">
+        </a>
         <nav>
             <ul class="navbar">
                 <li><a href="#">How it works</a></li>
@@ -280,53 +282,135 @@
         <section class="pricing">
             <div class="container">
                 <div class="pricingPlan">
-                    <img src="">
                     <h2>Starter</h2>
+                    <h3 class="price">450</h3>
+
                     <ul>
-                        <li>1 meal per day</li>
-                        <li>Order times: 11am - 9pm</li>
-                        <li>3$ delivery fee</li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>1 meal per day</span>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>Order times: 11am - 9pm</span>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>3$ delivery fee</span>
+                        </li>
                     </ul>
-                    <div class="pricing">
-                    <h3 class="price">$450</h3>
                     <a href="#" class="button">Sign up</a>
                 </div>
-            </div>
 
-            <div class="pricingPlan main">
-                <img src="">
-                <span>Best choice</span>
-                <h2>Commplete</h2>
-                <ul>
-                    <li>3 meals per day</li>
-                    <li>Order times: 24/7</li>
-                    <li>No delivery fees</li>
-                    <li>Exclusive recipes</li>
-                </ul>
-                <div class="pricing">
-                <h3 class="price">$550</h3>
-                <a href="#" class="button">Sign up</a>
-            </div>
-            </div>
+                <div class="pricingPlan main">
+                    <h2>Complete</h2>
+                    <h3 class="price">625</h3>
 
-            <div class="pricingPlan">
-                <img src="">
-                <h2>Standart</h2>
-                <ul>
-                    <li>2 meals per day</li>
-                    <li>Order times: 6am - 10pm</li>
-                    <li>No delivery fees</li>
-                </ul>
-                <div class="pricing">
-                    <h3> $700</h3>
+                    <ul>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>3 meals per day</span>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>Order times: 24/7</span>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>No delivery fees</span>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>Exclusive recipes</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="button">Sign up</a>
+                </div>
+
+                <div class="pricingPlan">
+                    <h2>Standart</h2>
+                    <h3>550</h3>
+
+                    <ul>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>2 meals per day</span>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>Order times: 6am - 10pm</span>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon><span>No delivery fees</span>
+                        </li>
+                    </ul>
                     <a href="#" class="button is-featured">Sign up</a>
                 </div>
-            </div>
+                <span class="ps">*All plans include fees and local taxes. Prior notice of 1 week before
+                    cancelation</span>
 
             </div>
-
         </section>
+
+        <section class="features">
+            <figure class="feature">
+                <ion-icon name="time-outline"></ion-icon>
+                <h3>Never cook again!</h3>
+                <p>Our subscriptions cover 365 days per year, even including major holidays.
+                </p>
+            </figure>
+            <figure class="feature">
+                <ion-icon name="flower-outline"></ion-icon>
+                <h3>Local and organic</h3>
+                <p>Our cooks only use local, fresh, and organic products to prepare your meals.</p>
+            </figure>
+            <figure class="feature">
+                <ion-icon name="leaf-outline"></ion-icon>
+                <h3>No waste</h3>
+                <p>All our partners only use reusable containers to package all your meals.</p>
+            </figure>
+            <figure class="feature">
+                <ion-icon name="pause-outline"></ion-icon>
+                <h3>Pause anytime</h3>
+                <p>Going on vacation? Just pause your subscription, and we refund unused days.</p>
+            </figure>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src='img/omnifood-logo.png' alt="Omnifood logo">
+                </a>
+                <span>Copyright&copy; 2022 - present</span>
+            </div>
+            <div class="address">
+                <h4>Contact us</h4>
+                <p>623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
+                <a href="tel:123-456-7890">123-456-7890</a>
+                <a href="mailto:hugobillemartins@gmail.com">hugobillemartins@gmail.com</a>
+            </div>
+            <nav class="forYou">
+                <h4>For you</h4>
+                <ul>
+                    <li><a href="#">Create account</a></li>
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">IOS app</a></li>
+                    <li><a href="#">Android app</a></li>
+                </ul>
+            </nav>
+            <nav class="aboutUs">
+                <h4>About us</h4>
+                <ul>
+                    <li><a href="#">About Omnifood</a></li>
+                    <li><a href="#">Cooking partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Recipe directory</a></li>
+                </ul>
+            </nav>
+            <nav class="help">
+                <h4>Assistence</h4>
+                <ul>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Privacy & terms</a></li>
+                    <li><a href="#">Cancel subscription</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 
 </html>

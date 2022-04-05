@@ -1,0 +1,16 @@
+.features {
+    padding: 0 2.4rem;
+    padding-top: 2.4rem;
+    padding-bottom: 16.8rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 2.8rem;
+    grid-template-columns: repeat(4,1fr);
+    font-size: 1.8rem;
+}
+
+.features .md {
+    font-size: 4.2rem;
+    color: #E1701D;
+}

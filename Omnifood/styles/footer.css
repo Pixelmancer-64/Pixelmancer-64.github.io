@@ -1,0 +1,27 @@
+
+footer{
+    background-color: #FDF2E9;
+    color: #333;
+}
+
+footer a{
+    color: inherit;
+}
+
+footer h4{
+    font-size: 2.2rem;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 1.8rem;
+}
+
+footer span{
+    font-size: 1.2rem;
+}
+
+footer ul{
+    list-style: none;
+}
