@@ -1,0 +1,116 @@
+@import url('./navbar.css');
+@import url('./hero.css');
+@import url('./featured.css');
+@import url('./howItWorks.css');
+@import url('./meals.css');
+@import url('./testimonials.css');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+canvas {
+    height: 100vh;
+    width: 100vw;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #555;
+}
+
+.container {
+    padding: 6.4rem 2.4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing h2{
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: 600;
+}
+
+.pricing ul{
+    list-style: none;
+    font-size: 2.4rem;
+}
+
+.pricingPlan{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    padding: 3.2rem;
+    transform: translateY(5rem);
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+.pricingPlan.main{
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.55);
+    transform: translate(0);
+}

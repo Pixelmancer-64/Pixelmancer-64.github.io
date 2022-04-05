@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9;
+    height: 9.6rem;
+    padding: 0 3.2rem;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 3.2rem;
+    align-items: center;
+
+}
+
+.navbar a {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: 250ms;
+}
+
+.navbar li:hover,
+.navbar li:active {
+    color: #cf711f;
+}
+
+.navbar a:link,
+.navbar a:visited {
+    color: inherit;
+}
+
+.navbar li:last-child {
+    color: #fff;
+}
+
+.logo {
+    height: 2.2rem;
+}

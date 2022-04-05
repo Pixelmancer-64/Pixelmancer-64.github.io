@@ -77,7 +77,7 @@ class Canvas {
     Canvas.cols = Math.floor(Canvas.width / Configs.cellSize) + 2;
     Canvas.rows = Math.floor(Canvas.height / Configs.cellSize) + 2;
 
-    let inc = Math.random();
+    let inc = 1;
     let x = 0;
     for (let i = 0; i < Canvas.rows; i++) {
       x += inc;
@@ -97,6 +97,7 @@ class Canvas {
     Canvas.ctx.lineWidth = Configs.lineWidth;
   }
 
+  setup() {}
   animation() {
     // this.animationRequest = requestAnimationFrame(this.animation.bind(this));
 
@@ -149,57 +150,50 @@ class Canvas {
           Math.ceil(Canvas.grid[i][j + 1])
         );
 
-        switch (status) {
-          case 1:
-            this.drawLine(state[2], state[3]);
-            break;
-          case 2:
-            this.drawLine(state[1], state[2]);
-            break;
-          case 3:
-            this.drawLine(state[1], state[3]);
-            break;
-          case 4:
-            this.drawLine(state[0], state[1]);
-            break;
-          case 5:
+        let aux = [
+          () => this.drawLine(state[2], state[3]),
+          () => this.drawLine(state[1], state[2]),
+          () => this.drawLine(state[1], state[3]),
+          () => this.drawLine(state[0], state[1]),
+          () => {
             this.drawLine(state[0], state[3]);
             this.drawLine(state[1], state[2]);
-            break;
-          case 6:
-            this.drawLine(state[0], state[2]);
-            break;
-          case 7:
-            this.drawLine(state[0], state[3]);
-            break;
-          case 8:
-            this.drawLine(state[0], state[3]);
-            break;
-          case 9:
-            this.drawLine(state[0], state[2]);
-            break;
-          case 10:
+          },
+          () => this.drawLine(state[0], state[2]),
+          () => this.drawLine(state[0], state[3]),
+          () => this.drawLine(state[0], state[3]),
+          () => this.drawLine(state[0], state[2]),
+          () => {
             this.drawLine(state[0], state[1]);
             this.drawLine(state[2], state[3]);
-            break;
-          case 11:
-            this.drawLine(state[0], state[1]);
-            break;
-          case 12:
-            this.drawLine(state[1], state[3]);
-            break;
-          case 13:
-            this.drawLine(state[1], state[2]);
-            break;
-          case 14:
-            this.drawLine(state[2], state[3]);
-            break;
+          },
+          () => this.drawLine(state[0], state[1]),
+          () => this.drawLine(state[1], state[3]),
+          () => this.drawLine(state[1], state[2]),
+          () => this.drawLine(state[2], state[3]),
+          () => this.drawLine(state[2], state[3]),
+          () => this.drawLine(state[2], state[3]),
+        ];
+
+        if (status && status < aux.length - 1) {
+          aux[status - 1]();
         }
       }
-      Canvas.ctx.stroke();
     }
+    Canvas.ctx.stroke();
 
     // cancelAnimationFrame(this.animationRequest)
+  }
+
+  test(){
+    for (let i = 0; i < Canvas.rows - 1; i++) {
+      for (let j = 0; j < Canvas.cols - 1; j++) {
+        console.log(this.drawGrid[i][j])
+        this.drawGrid[i][j]()
+      }
+    }
+    Canvas.ctx.stroke();
+
   }
 
   drawLine(a, b) {

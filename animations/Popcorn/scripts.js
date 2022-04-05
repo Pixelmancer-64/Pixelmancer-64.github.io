@@ -39,9 +39,9 @@ class Configs {
   static cellSize = 30;
   static lineWidth = 1;
   static radius = 6;
-  static h = random(1, true);
-  static r = random(10, true);
-  static dx = Math.ceil(random(100));
+  static h = Math.random() * 0.1;
+  static r = Math.random() * 0.1;
+  static dx = 10;
 }
 
 class Particle {

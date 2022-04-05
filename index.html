@@ -7,76 +7,51 @@
 	<title>Sotíris64</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="/img/favicon.png" type="image/x-icon" />
+	<script src="/animations/Marching_Squares/noise.js" async defer></script>
 	<script src="scripts.js" async defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
-	<nav>
-		<div class="logo">
-			<h1>Sotíris64</h1>
-		</div>
-	</nav>
+	<header>
+		<div class="introduction">
+			<span>Hi,
+				<br />
+				I'm Hugo!
+				<br />
+				I code stuff</span>
+			<div> <button><span>Contact me</span></button>
+				<button><span>Contact me</span></button></div>
 
-	<aside>
-		<div class="myPhoto">
-			<img src="./img/me.jpeg" alt="A photo of Hugo">
-			<h1>Hugo Billé Martins</h1>
 		</div>
-		<hr>
+		<canvas id='canvas' aria-label="Background lighthouse animation" role="img"></canvas>
+	</header>
 
-		<div class="knowledge">
-			<h2>Conhecimentos</h2>
-			<div class="icons">
-				<img src="./img/icons8-javascript.svg" alt="Javascript">
-				<img src="./img/icons8-nodejs.svg" alt="NodeJs">
-				<img src="./img/mySql.svg" alt="mySQL">
-				<img src="./img/mongoDB.svg" alt="mySQL">
-				<img src="./img/react.svg" alt="react">
-			</div>
-		</div>
-		<hr>
-		<div class="knowledge">
-			<h2>Aprendendo</h2>
-			<div class="icons">
-				<img src="./img/c++.svg" alt="c++">
-				<img src="./img/icons8-python.svg" alt="python">
-				<img src="./img/icons8-logo-php.svg" alt="php">
-			</div>
-		</div>
-		<hr>
-
-		<div class="work">
-			<h2>Trabalhos</h2>
-			<ul>
-				<li>Me contrata ai rapaz</li>
-				<li>Sério mesmo, me contrate :p</li>
-			</ul>
-		</div>
-		<hr>
-
-		<div class="contact">
-			<h2>Como me contatar</h2>
-			<div class="icons">
-				<a href="https://github.com/Sotiris64"><img type="image" id="github" alt="github"
-						src="./img/github.svg"></a>
-
-				<div class="tooltip">
-					<span class="tooltiptext" id="gmailText"> Copiar Email</span>
-					<input type="image" value="hugobillemartins@gmail.com" alt="Gmail" id="gmail" src="./img/gmail.svg">
-				</div>
-
-				<div class="tooltip">
-					<span class="tooltiptext" id="outlookText">Copiar Email</span>
-					<input type="image" value="hugobillemartins@outlook.com" alt="Outlook" id="outlook"
-						src="./img/outlook.svg">
-				</div>
-			</div>
-		</div>
-	</aside>
 
 	<main>
+		<h1>Em obras, n repara essa bagunça doida</h1>
 
-		<section class="animations">
+		<section class="contact">
+			<h1>Como me contatar</h1>
+			<a href="https://github.com/Sotiris64"><img type="image" id="github" alt="github"
+					src="./img/github.svg"></a>
+
+			<div class="tooltip">
+				<span class="tooltiptext" id="gmailText"> Copiar Email</span>
+				<input type="image" value="hugobillemartins@gmail.com" alt="Gmail" id="gmail" src="./img/gmail.svg">
+			</div>
+
+			<div class="tooltip">
+				<span class="tooltiptext" id="outlookText">Copiar Email</span>
+				<input type="image" value="hugobillemartins@outlook.com" alt="Outlook" id="outlook"
+					src="./img/outlook.svg">
+			</div>
+		</section>
+
+		<section>
 			<h2>Animações</h2>
 			<a href="/animations">
 				<img id="animation" class="proLogo" alt="creepy eye" src="./img/eye.png">
@@ -84,7 +59,7 @@
 			<p>Minhas animações e arte em geral, dá uma olhada ai :p.</p>
 		</section>
 
-		<section class="solarSystem">
+		<section>
 			<h2>Sistema Solar</h2>
 			<a href="https://github.com/Sotiris64/solarSystem">
 				<img id="solarSystem" alt="An icon of saturn" class="proLogo" src="./img/saturno[1589].png">
@@ -92,7 +67,7 @@
 			<p>Uma simulação do sistema solar criada com Three.js</p>
 		</section>
 
-		<section class="calc">
+		<section>
 			<h2>Calculadora</h2>
 			<a href="/calculator/">
 				<img id="calc" alt="calculator icon" class="proLogo" src="./img/calc.svg">
@@ -100,7 +75,7 @@
 			<p>Uma calculadora, não tem muito o que dizer sobre</p>
 		</section>
 
-		<section class="clock">
+		<section>
 			<h2>Relógio</h2>
 			<a href="/clock/">
 				<img id="clock" class="proLogo" alt="clock icon" src="./img/clock.svg">
@@ -108,7 +83,7 @@
 			<p>Relógio, bem legal sabe</p>
 		</section>
 
-		<section class="pokemon">
+		<section>
 			<h2>Pokedex</h2>
 			<a href="/PokemonAPI/">
 				<img id="pokemon" class="proLogo" alt="pokeball" src="./img/pokemon.png">
@@ -116,7 +91,7 @@
 			<p>Pokedex usando a PokeAPI</p>
 		</section>
 
-		<section class="wordVault">
+		<section>
 			<h2>wordVault</h2>
 			<a href="https://word-vault.herokuapp.com/">
 				<img id="wordVault" alt="yggdrasil" class="proLogo" src="./img/favicon.png">
@@ -150,7 +125,7 @@
 			<p>Previsão do tempo com o OpenWeather API e com uma animação de fundo dahora</p>
 		</section>
 
-		<section class="lab">
+		<section>
 			<h2>Laboratórios</h2>
 			<a href="/atividades">
 				<img id="lab" class="proLogo" alt="My labs icon, it is a atom" src="./img/lab.svg">

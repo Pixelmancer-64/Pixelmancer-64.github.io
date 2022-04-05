@@ -1,0 +1,93 @@
+.meals .title {
+    color: #cf711f;
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+
+.meals h2 {
+    font-size: 4.4rem;
+    line-height: 1.2;
+}
+
+.meals section{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 5%;
+}
+
+.meal{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+.meal div{
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem;
+    padding-top: 0;
+    grid-area: 1rem;
+}
+
+.meal img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.meal h3{
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: 600;
+    margin: 1.6rem 0;
+}
+
+.meal ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.meal p{
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    padding: .4rem 1.2rem;
+    align-self: flex-start;
+    display: block;
+    color: #111;
+    background-color: #eee;
+    border-radius: 25px;
+}
+
+.meal li{
+    font-size: 1.8rem;
+}
+
+.meal .md{
+    color: #E1701D;
+    margin-right: 1.6rem;
+
+}
+
+.list{
+    font-size: 2.4rem;
+}
+
+.list ul{
+    list-style: none;
+}
+
+.list .md{
+    color: #E1701D;
+    margin-right: 2rem;
+}
+
+.list h3{
+    font-weight: 600;
+}
+
+.list .any{
+    color: #E1701D;
+}

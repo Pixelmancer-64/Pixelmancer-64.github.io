@@ -1,0 +1,103 @@
+
+.hero {
+    background-color: #fdf2e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.8rem 5.2rem;
+}
+
+.heroContainer {
+    max-width: 130rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9.6rem;
+    align-items: center;
+}
+
+.heroContainer .main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.button {
+    font-size: 2rem;
+    padding: 1.2rem 3.2rem;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: background-color 250ms ease-out;
+    display: inline-block;
+}
+
+.button:link,
+.button:visited {
+    background-color: #E1701D;
+    color: #fff;
+
+}
+
+.button:active,
+.button:hover {
+    background-color: #cf711f;
+}
+
+.buttonOutline:link,
+.buttonOutline:visited {
+    background-color: #fefefe;
+    color: inherit;
+}
+
+.buttonOutline:active,
+.buttonOutline:hover {
+    background-color: #fdf2e9;
+    box-shadow: inset 0 0 0 3px #fefefe;
+}
+
+.introduction {
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: #333;
+}
+
+.description {
+    font-size: 2rem;
+}
+
+.deliveries {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.deliveries p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.deliveries span {
+    color: #cf711f;
+    font-weight: 600;
+}
+
+.costumers {
+    display: flex;
+}
+
+.costumers img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    height: 6.4rem;
+    margin-left: -3.2rem;
+}
+
+.costumers img:first-child {
+    margin-left: 0;
+}
