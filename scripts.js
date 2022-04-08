@@ -1,34 +1,10 @@
-const gmail = document.getElementById("gmail");
-const outlook = document.getElementById("outlook");
-const outlookText = document.getElementById("outlookText");
-const gmailText = document.getElementById("gmailText");
-
-gmail.onclick = function () {
-  navigator.clipboard.writeText("hugobillemartins@gmail.com");
-  gmailText.innerHTML = "Copiado! ";
-};
-
-gmail.addEventListener("dblclick", function () {
-  navigator.clipboard.writeText("hugobillemartins@gmail.com");
-  gmailText.innerHTML = "Copiado duas vezes! ";
-});
-
-outlook.onclick = function () {
-  navigator.clipboard.writeText("hugobillemartins@outlook.com");
-  outlookText.innerHTML = "Copiado!";
-};
-outlook.addEventListener("dblclick", function () {
-  navigator.clipboard.writeText("hugobillemartins@outlook.com");
-  outlookText.innerHTML = "Copiado duas vezes! ";
-});
-
 function usableColor(color, alpha = 1) {
   return `rgba(${color.r},${color.g},${color.b}, ${alpha})`;
 }
 
 class Configs {
   static colors = [
-    "rgba(82,22,64,1)",
+    "rgba(143, 98, 127, 1)",
     "rgba(138,10,57,1)",
     "rgba(190,0,50,1)",
     "rgba(246,80,45,1)",
@@ -72,15 +48,7 @@ class Canvas {
 
     this.i = 0;
     this.j = 1;
-    this.startRadius = 1;
-    this.endRadius = 1;
-    this.positiveStop = 0;
-    this.negativeStop = 0;
-    this.inc = 1;
-
     this.grid = [];
-    this.init();
-    // Canvas.ctx.font = "10vh Verdana";
   }
 
   init() {
@@ -92,20 +60,21 @@ class Canvas {
 
     Canvas.cols = Math.floor(Canvas.width / Configs.cellSize) + 2;
     Canvas.rows = Math.floor(Canvas.height / Configs.cellSize) + 2;
-    const scale = Canvas.width / Canvas.height;
+    const scale = Canvas.cols / Canvas.rows;
 
-    this.startRadius = scale * 50;
-    this.endRadius = scale * 500;
-    this.inc = scale * 2;
-    this.positiveStop = scale * 999;
-    this.negativeStop = -scale * 999;
+    this.startRadius = Canvas.rows * 3;
+    this.endRadius = Canvas.rows * 18;
+    this.inc = 1;
+    this.positiveStop = scale * 500;
+    this.negativeStop = -scale * 500;
 
     this.gradient();
 
     Canvas.ctx.strokeStyle = Canvas.gradient;
     Canvas.ctx.lineWidth = Configs.lineWidth;
 
-    let inc = 10;
+    let inc = .3;
+    noise.seed(Math.random()*255)
     let x = 0;
     for (let i = 0; i < Canvas.rows; i++) {
       x += inc;
@@ -137,6 +106,9 @@ class Canvas {
           Math.ceil(Canvas.grid[i][j + 1])
         );
 
+        // this was the best aproach that I found. Due to the 2 cases where
+        //  the function is composed of 4 values I can't just store the state
+
         let aux = [
           () => this.drawLine(state[2], state[3]),
           () => this.drawLine(state[1], state[2]),
@@ -157,6 +129,7 @@ class Canvas {
           () => this.drawLine(state[0], state[1]),
           () => this.drawLine(state[1], state[3]),
           () => this.drawLine(state[1], state[2]),
+
           () => this.drawLine(state[2], state[3]),
         ];
 
@@ -181,7 +154,6 @@ class Canvas {
     }
 
     Canvas.ctx.stroke();
-    // Canvas.ctx.strokeText("Hello World", 100, 100);
 
     this.gradient();
     if (this.i >= this.positiveStop || this.i <= this.negativeStop)
@@ -189,7 +161,6 @@ class Canvas {
     this.i += this.inc * this.j;
     Canvas.ctx.strokeStyle = Canvas.gradient;
     Canvas.ctx.lineWidth = Configs.lineWidth;
-    // cancelAnimationFrame(this.animationRequest)
   }
 
   drawLine(a, b) {
@@ -211,15 +182,10 @@ class Canvas {
       this.endRadius
     );
 
-    // Canvas.gradient.addColorStop("0.1", usableColor(Configs.colors[0]))
     Canvas.gradient.addColorStop("0.2", Configs.colors[0]);
-    // Canvas.gradient.addColorStop("0.3", usableColor(Configs.colors[2]))
     Canvas.gradient.addColorStop("0.4", Configs.colors[1]);
-    // Canvas.gradient.addColorStop("0.5", usableColor(Configs.colors[4]))
     Canvas.gradient.addColorStop("0.6", Configs.colors[2]);
-    // Canvas.gradient.addColorStop("0.7", usableColor(Configs.colors[6]))
     Canvas.gradient.addColorStop("0.8", Configs.colors[3]);
-    // Canvas.gradient.addColorStop("0.9", usableColor(Configs.colors[8]))
   }
 
   resize() {

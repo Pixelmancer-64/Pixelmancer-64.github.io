@@ -15,18 +15,16 @@ body{
     text-align: center;
 
     grid-template-columns: repeat(4, 10vh);
-    grid-template-rows:minmax(10vh, auto) repeat(6,10vh);
+    grid-template-rows:minmax(10vh, auto) repeat(6,12vw);
     margin: 5vh;
-    
-    
 }
 
 .calculator button{
     font-family: 'Press Start 2P', cursive;
     color:rgb(33, 41, 82);
     cursor: pointer;
-    font-size: 3rem;
-    border: .2rem solid rgb(92, 75, 122);
+    font-size: 4vw;
+    border: 3px solid rgb(92, 75, 122);
     background-color: rgb(132, 116, 159);
     
     will-change: transform;
@@ -37,7 +35,7 @@ body{
 
 .calculator button:hover{
     transform: translate(-10%, -10%);
-    transition: 30ms;
+    transition: transform 30ms;
 }
 
 .fat{
@@ -47,22 +45,22 @@ body{
 .monitor{
     font-family: 'Press Start 2P', cursive;
     color: lightgreen;
-    font-size: 3.5rem;
-    padding: .1em;
+    font-size: 4.5vw;
+    padding: .1vw;
     grid-column: 1/-1;
     background-color: rgba(0, 136, 80, .7);
     display: flex;
     align-items:flex-end;
     justify-content: space-around;
     flex-direction: column;
-    padding-right: .3rem;
     word-wrap: break-word;
     word-break: break-all;
 }
+
 #warning{
     font-family: 'Press Start 2P', cursive;
     visibility:hidden;
-    font-size: 3.5rem;
+    font-size: 2.5vh;
     grid-column: 1/-1;
     background-color: #202024;
     display: flex;

@@ -6,6 +6,7 @@
 
 * {
 	margin: 0;
+	padding: 0;
 }
 
 html,
@@ -16,6 +17,10 @@ body {
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
 }
 
 img,
@@ -54,7 +59,12 @@ h6 {
 	isolation: isolate;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 body {
+	font-family: 'Rubik', sans-serif;
 	background-color: #141414;
 	color: #FBFBFB;
 	display: flex;
@@ -68,19 +78,18 @@ body {
 	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
+	max-width: 130rem;
+	letter-spacing: 1px;
 }
 
 .introduction span {
 	font-size: 9vw;
-	font-family: 'Press Start 2P', cursive;
-	font-weight: 500;
-	font-family: 'Roboto', sans-serif;
 }
 
-.introduction button{
+.introduction button {
 	width: 50%;
 	align-self: center;
-	background-color: #ac42e6;
+	background-color: #2875CB;
 	border: none;
 	border-radius: 12px;
 	font-weight: 500;
@@ -88,32 +97,24 @@ body {
 	color: inherit;
 	cursor: pointer;
 	outline-offset: 4px;
-
+	padding: 12px 42px;
+	font-size: 3vw;
+	color: white;
+	will-change: transform;
+	transition: transform 250ms;
 }
 
-.introduction div{
+.introduction button:hover {
+	transform: translateY(-4px);
+}
+
+.introduction button:active {
+	transform: translateY(2px);
+}
+
+.introduction div {
 	display: flex;
 	gap: 1rem;
-}
-
-.introduction button span{
-	display: block;
-    padding: 12px 42px;
-    border-radius: 12px;
-	font-size: 3vw;
-    background: #BF4EFE;
-    color: white;
-	will-change: transform;
-    transition: transform 250ms;
-    transform: translateY(-4px);
-}
-
-.introduction button:hover span{
-	transform: translateY(-6px);
-}
-
-.introduction button:active span{
-	transform: translateY(-2px);
 }
 
 main {
@@ -121,11 +122,13 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+	font-size: 3rem;
 }
 
 main section {
 	max-width: 1280px;
-	border: 1px solid white;
+	border: 3px solid white;
+	border-radius: 16px;
 	width: 80%;
 	padding: 2rem;
 	display: flex;
