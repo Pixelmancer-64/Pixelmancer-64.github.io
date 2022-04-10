@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-    <filter id="filter">
-         <feTurbulence baseFrequency="0.015" />
-</filter>
-    <rect width="200%" height="200%" filter="url(#filter)"/>
-</svg>

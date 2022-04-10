@@ -1,0 +1,45 @@
+.introduction {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	max-width: 130rem;
+	letter-spacing: 1px;
+}
+
+.introduction span {
+	font-size: 9vw;
+}
+
+.introduction a {
+	width: 50%;
+	align-self: center;
+	background-color: #bf0033;
+	border: none;
+	border-radius: 12px;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	color: inherit;
+	cursor: pointer;
+	outline-offset: 4px;
+	padding: 12px 42px;
+	font-size: 3vw;
+	color: white;
+	will-change: transform;
+	transition: transform 250ms;
+}
+
+.introduction a:hover {
+	transform: translateY(-4px);
+}
+
+.introduction a:active {
+	transform: translateY(2px);
+}
+
+.introduction div {
+	display: flex;
+	gap: 1rem;
+}
