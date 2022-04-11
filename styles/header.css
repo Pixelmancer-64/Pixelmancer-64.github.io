@@ -5,16 +5,15 @@
 	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
-	max-width: 130rem;
+	max-width: 192rem;
 	letter-spacing: 1px;
 }
 
-.introduction span {
-	font-size: 9vw;
+.introduction h1 {
+	font-size: 9.8rem;
 }
 
 .introduction a {
-	width: 50%;
 	align-self: center;
 	background-color: #bf0033;
 	border: none;
@@ -25,7 +24,8 @@
 	cursor: pointer;
 	outline-offset: 4px;
 	padding: 12px 42px;
-	font-size: 3vw;
+	font-size: 4.2rem;
+	text-align: center;
 	color: white;
 	will-change: transform;
 	transition: transform 250ms;
