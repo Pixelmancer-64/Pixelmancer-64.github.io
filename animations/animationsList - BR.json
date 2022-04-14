@@ -718,5 +718,15 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Julia_Set"
     },
     "picture": "./img/72.png"
+  },
+  {
+    "id": 73,
+    "title": "Channeling",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Channeling/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Channeling"
+    },
+    "picture": "./img/73.png"
   }
 ]

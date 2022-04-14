@@ -16,6 +16,7 @@ myImage.addEventListener('load', function(){
     canvas.height = window.innerHeight;
     ctx.drawImage(myImage, 0,0, canvas.width, canvas.height)
     const pixelData = ctx.getImageData(0,0, canvas.width, canvas.height)
+    console.log(pixelData)
     ctx.clearRect(0,0,canvas.width, canvas.height)
     
     let cols =  Math.floor(canvas.height/cellsSize);

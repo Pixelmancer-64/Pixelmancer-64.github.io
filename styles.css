@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	line-height: calc(1em + 0.725rem);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+canvas {
+	height: 100vh;
+	width: 100vw;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+:root {
+	--solarSystem: url(../img/sky.svg);
+	--weatherAPI: url(../img/islands.svg);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	color: #FBFBFB;
+	background-color: #141414;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	margin: 0 3rem;
+}
+
+/*
+
+HEADER
+
+*/
+
+.introduction {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	max-width: 192rem;
+}
+
+.introduction h1 {
+	font-size: 5.8rem;
+}
+
+.introduction a {
+	align-self: center;
+	background-color: #bf0033;
+	border: none;
+	border-radius: 12px;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	color: inherit;
+	cursor: pointer;
+	outline-offset: 4px;
+	padding: 12px 42px;
+	font-size: 2.2rem;
+	text-align: center;
+	color: white;
+	will-change: transform;
+	transition: transform 250ms;
+}
+
+.introduction a:hover {
+	transform: translateY(-4px);
+}
+
+.introduction a:active {
+	transform: translateY(2px);
+}
+
+.introduction div {
+	display: flex;
+	gap: 1rem;
+}
+
+/*
+
+ASIDE
+
+*/
+
+.icons{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.knowledge img {
+	width: 5rem;
+	height: 5rem;
+}
+
+/* 
+
+PROJECTS
+
+*/
+
+
+.projects {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.projects section {
+	border: 3px solid #BF0033;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3.2rem;
+	padding: 2rem;
+	position: relative;
+}
+
+.projects h2 {
+	font-size: 4.8rem;
+}
+
+.projects section > span {
+	padding: .3rem 1rem;
+	font-size: 1rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-weight: 400;
+	text-transform: capitalize;
+	margin: 2rem;
+	border: 3px solid #BF0033;
+	border-radius: 16px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: .8rem;
+}
+
+.container img {
+	width: 12rem;
+}
+
+.container h3 {
+	font-size: 2.6rem;
+	font-weight: 600;
+}
+
+.container p {
+	font-size: 2rem;
+}
+
+
+.buttons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 2vw;
+}
+
+.buttons a {
+	align-self: center;
+	background-color: #04AA6B;
+	border: none;
+	border-radius: 12px;
+	font-size: 1.5rem;
+	font-family: 'Roboto', sans-serif;
+	color: inherit;
+	cursor: pointer;
+	outline-offset: 4px;
+	padding: .6rem 2.6rem;
+	color: white;
+	will-change: transform;
+	transition: transform 350ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .5rem;
+}
+
+.buttons a:hover {
+	transform: scale(1.05);
+}
+
+.buttons img {
+	display: inline-block;
+	width: 3.2rem;
+}
+
+.buttons .github {
+	background-color: white;
+	color: #141414;
+}
+
+.arrow {
+	font-weight: 700;
+	will-change: transform;
+	transition: ease-in-out 250ms;
+}
+
+.goTo:hover .arrow {
+	transform: translateX(8px);
+}
+
+.buttons .github img {
+	filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(117deg) brightness(110%) contrast(101%);
+}
+
+.solarSystem {
+	background-image: var(--solarSystem);
+	background-size: 100% 100%;
+}
+
+.weatherAPI {
+	background-image: var(--weatherAPI);
+
+}
