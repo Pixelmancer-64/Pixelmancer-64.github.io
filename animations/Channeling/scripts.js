@@ -59,7 +59,7 @@ class Particle {
     this.vel = { x: 0, y: 0 };
     this.acc = { x: 0, y: 0 };
     this.speed = { x: 10, y: 10 };
-    this.maxForce = { x: .2, y: .2 };
+    this.maxForce = { x: 0.2, y: 0.2 };
     this.r = 1;
     this.noise = 100;
   }
@@ -177,8 +177,8 @@ class Canvas {
   animation() {
     this.animationRequest = requestAnimationFrame(this.animation.bind(this));
     // Canvas.ctx.clearRect(0, 0, Canvas.width, Canvas.height);
-    Canvas.ctx.fillStyle = 'rgba(0,0,0, .1)'
-    Canvas.ctx.fillRect(0,0,innerWidth,innerHeight);
+    Canvas.ctx.fillStyle = "rgba(0,0,0, .1)";
+    Canvas.ctx.fillRect(0, 0, innerWidth, innerHeight);
     for (let particles of this.particles) {
       particles.update();
     }
@@ -217,6 +217,20 @@ class Canvas {
     document.body.onmouseup = function () {
       Canvas.mouse.pressed = false;
     };
+
+    document.getElementById('canvas').addEventListener("touchstart", function (event) { 
+      Canvas.mouse.last.x = Canvas.mouse.x;
+      Canvas.mouse.last.y = Canvas.mouse.y;
+      Canvas.mouse.x = event.touches[0].clientX;
+      Canvas.mouse.y = event.touches[0].clientY;
+      Canvas.mouse.pressed = true;
+    });
+
+    document.getElementById('canvas').addEventListener("touchend", function (event) { 
+      Canvas.mouse.pressed = false;
+
+    });
+
   }
 }
 
