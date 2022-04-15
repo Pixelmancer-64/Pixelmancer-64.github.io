@@ -728,5 +728,15 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Channeling"
     },
     "picture": "./img/73.webp"
+  },
+  {
+    "id": 74,
+    "title": "Superformula",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Superformula/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Superformula"
+    },
+    "picture": "./img/74.webp"
   }
 ]

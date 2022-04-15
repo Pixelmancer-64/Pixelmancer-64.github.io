@@ -1,49 +1,3 @@
-const random_rgb = (offset = 0) => {
-  let mult = 255 - offset;
-  let r = Math.floor(Math.random() * mult + offset);
-  let g = Math.floor(Math.random() * mult + offset);
-  let b = Math.floor(Math.random() * mult + offset);
-  return {
-    r: r,
-    g: g,
-    b: b,
-  };
-};
-
-function random_color(num) {
-  let aux = [];
-  for (let i = 0; i < num; i++) {
-    aux.push(random_rgb());
-  }
-  return aux;
-}
-
-function gradientColors(color, num) {
-  let aux = [];
-  for (let i = 0; i < num; i++) {
-    aux.push({
-      r: color.r + i,
-      g: color.g + i,
-      b: color.b + i,
-    });
-  }
-  return aux;
-}
-
-function random(r, hasNegativeRange = false) {
-  if (hasNegativeRange) {
-    return Math.random() * r * (Math.round(Math.random()) ? 1 : -1);
-  } else return Math.random() * r;
-}
-
-function usableColor(color, alpha = 1) {
-  return `rgba(${color.r},${color.g},${color.b}, ${alpha})`;
-}
-
-function map(n, start1, stop1, start2, stop2) {
-  return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
-}
-
 class Configs {
   static colors = gradientColors(random_rgb(100), 101);
   static gradient = random_color(9);
@@ -126,8 +80,8 @@ class Canvas {
   static gradient;
   static grid = [];
   static mouse = {
-    x: 0,
-    y: 0,
+    x: null,
+    y: null,
     last: {
       x: null,
       y: null,
@@ -213,24 +167,29 @@ class Canvas {
 
     document.body.onmousedown = function () {
       Canvas.mouse.pressed = true;
+      if (Canvas.mouse.x != null && document.querySelector("h1")){
+        document.querySelector("h1").remove();
+      }
     };
     document.body.onmouseup = function () {
       Canvas.mouse.pressed = false;
     };
 
-    document.getElementById('canvas').addEventListener("touchstart", function (event) { 
-      Canvas.mouse.last.x = Canvas.mouse.x;
-      Canvas.mouse.last.y = Canvas.mouse.y;
-      Canvas.mouse.x = event.touches[0].clientX;
-      Canvas.mouse.y = event.touches[0].clientY;
-      Canvas.mouse.pressed = true;
-    });
+    document
+      .getElementById("canvas")
+      .addEventListener("touchstart", function (event) {
+        Canvas.mouse.last.x = Canvas.mouse.x;
+        Canvas.mouse.last.y = Canvas.mouse.y;
+        Canvas.mouse.x = event.touches[0].clientX;
+        Canvas.mouse.y = event.touches[0].clientY;
+        Canvas.mouse.pressed = true;
+      });
 
-    document.getElementById('canvas').addEventListener("touchend", function (event) { 
-      Canvas.mouse.pressed = false;
-
-    });
-
+    document
+      .getElementById("canvas")
+      .addEventListener("touchend", function (event) {
+        Canvas.mouse.pressed = false;
+      });
   }
 }
 
