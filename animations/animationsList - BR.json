@@ -7,7 +7,7 @@
       "demo": "/animations/Ascii",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Ascii"
     },
-    "picture": "./img/1.png"
+    "picture": "./img/1.webp"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
       "demo": "/animations/CircularMotion",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/CircularMotion"
     },
-    "picture": "./img/2.png"
+    "picture": "./img/2.webp"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
       "demo": "/animations/Colorful",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Colorful"
     },
-    "picture": "./img/3.png"
+    "picture": "./img/3.webp"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
       "demo": "/animations/CthulhuEyes",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/CthulhuEyes"
     },
-    "picture": "./img/4.png"
+    "picture": "./img/4.webp"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
       "demo": "/animations/Dots",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Dots"
     },
-    "picture": "./img/5.png"
+    "picture": "./img/5.webp"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
       "demo": "/animations/Cosmos",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Cosmos"
     },
-    "picture": "./img/6.png"
+    "picture": "./img/6.webp"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
       "demo": "/animations/Fractal_Snowflake",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fractal_Snowflake"
     },
-    "picture": "./img/7.png"
+    "picture": "./img/7.webp"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
       "demo": "/animations/Fractal_Tree",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fractal_Tree"
     },
-    "picture": "./img/8.png"
+    "picture": "./img/8.webp"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
       "demo": "/animations/Starfield",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Starfield"
     },
-    "picture": "./img/9.png"
+    "picture": "./img/9.webp"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
       "demo": "/animations/Hexagons",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Hexagons"
     },
-    "picture": "./img/10.png"
+    "picture": "./img/10.webp"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
       "demo": "/animations/Self-Avoid_Walker",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Self-Avoid%20Walker"
     },
-    "picture": "./img/11.png"
+    "picture": "./img/11.webp"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
       "demo": "/animations/Image_Crawler",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Image%20Crawler"
     },
-    "picture": "./img/12.png"
+    "picture": "./img/12.webp"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
       "demo": "/animations/Image",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Image"
     },
-    "picture": "./img/13.png"
+    "picture": "./img/13.webp"
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
       "demo": "/animations/Loading",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Loading"
     },
-    "picture": "./img/14.png"
+    "picture": "./img/14.webp"
   },
   {
     "id": 15,
@@ -147,7 +147,7 @@
       "demo": "/animations/Matrix",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Matrix"
     },
-    "picture": "./img/15.png"
+    "picture": "./img/15.webp"
   },
   {
     "id": 16,
@@ -157,7 +157,7 @@
       "demo": "/animations/Mouse_Effect",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mouse_Effect"
     },
-    "picture": "./img/16.png"
+    "picture": "./img/16.webp"
   },
   {
     "id": 17,
@@ -167,7 +167,7 @@
       "demo": "/animations/Mouse_Trail",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mouse_Trail"
     },
-    "picture": "./img/17.png"
+    "picture": "./img/17.webp"
   },
   {
     "id": 18,
@@ -177,7 +177,7 @@
       "demo": "/animations/Music",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Music"
     },
-    "picture": "./img/18.png"
+    "picture": "./img/18.webp"
   },
   {
     "id": 19,
@@ -187,7 +187,7 @@
       "demo": "/animations/Pendulum",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pendulum"
     },
-    "picture": "./img/19.png"
+    "picture": "./img/19.webp"
   },
   {
     "id": 20,
@@ -197,7 +197,7 @@
       "demo": "/animations/Rain",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rain"
     },
-    "picture": "./img/20.png"
+    "picture": "./img/20.webp"
   },
   {
     "id": 21,
@@ -207,7 +207,7 @@
       "demo": "/animations/Text/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Text"
     },
-    "picture": "./img/21.png"
+    "picture": "./img/21.webp"
   },
   {
     "id": 22,
@@ -217,7 +217,7 @@
       "demo": "/animations/Clockwise",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clockwise"
     },
-    "picture": "./img/22.png"
+    "picture": "./img/22.webp"
   },
   {
     "id": 23,
@@ -227,7 +227,7 @@
       "demo": "/animations/Waves/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Waves"
     },
-    "picture": "./img/23.png"
+    "picture": "./img/23.webp"
   },
   {
     "id": 24,
@@ -237,7 +237,7 @@
       "demo": "/animations/Terrain_Generation/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Terrain_Generation"
     },
-    "picture": "./img/24.png"
+    "picture": "./img/24.webp"
   },
   {
     "id": 25,
@@ -247,7 +247,7 @@
       "demo": "/animations/Double_Pendulum/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Double_Pendulum"
     },
-    "picture": "./img/25.png"
+    "picture": "./img/25.webp"
   },
   {
     "id": 26,
@@ -257,7 +257,7 @@
       "demo": "/animations/Strings/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Strings"
     },
-    "picture": "./img/26.png"
+    "picture": "./img/26.webp"
   },
   {
     "id": 27,
@@ -267,7 +267,7 @@
       "demo": "/animations/Pendulums/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pendulums"
     },
-    "picture": "./img/27.png"
+    "picture": "./img/27.webp"
   },
   {
     "id": 28,
@@ -277,7 +277,7 @@
       "demo": "/animations/Noise_FlowField/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Noise_FlowField"
     },
-    "picture": "./img/28.png"
+    "picture": "./img/28.webp"
   },
   {
     "id": 29,
@@ -287,7 +287,7 @@
       "demo": "/animations/Maurer_Rose/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Maurer_Rose"
     },
-    "picture": "./img/29.png"
+    "picture": "./img/29.webp"
   },
   {
     "id": 30,
@@ -297,7 +297,7 @@
       "demo": "/animations/Collatz_Conjecture/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collatz_Conjecture"
     },
-    "picture": "./img/30.png"
+    "picture": "./img/30.webp"
   },
   {
     "id": 31,
@@ -307,7 +307,7 @@
       "demo": "/animations/Sandpiles/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Sandpiles"
     },
-    "picture": "./img/31.png"
+    "picture": "./img/31.webp"
   },
   {
     "id": 32,
@@ -317,7 +317,7 @@
       "demo": "/animations/Worley_Noise/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Worley_Noise"
     },
-    "picture": "./img/32.png"
+    "picture": "./img/32.webp"
   },
   {
     "id": 33,
@@ -327,7 +327,7 @@
       "demo": "/animations/Fibonacci/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fibonacci"
     },
-    "picture": "./img/33.png"
+    "picture": "./img/33.webp"
   },
   {
     "id": 34,
@@ -337,7 +337,7 @@
       "demo": "/animations/Chaos_Game/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Chaos_Game"
     },
-    "picture": "./img/34.png"
+    "picture": "./img/34.webp"
   },
   {
     "id": 35,
@@ -347,7 +347,7 @@
       "demo": "/animations/Barnsley_Fern/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Barnsley_Fern"
     },
-    "picture": "./img/35.png"
+    "picture": "./img/35.webp"
   },
   {
     "id": 36,
@@ -357,7 +357,7 @@
       "demo": "/animations/Random_Walker/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Walker"
     },
-    "picture": "./img/36.png"
+    "picture": "./img/36.webp"
   },
   {
     "id": 37,
@@ -367,7 +367,7 @@
       "demo": "/animations/Clifford_Attractor/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clifford_Attractor"
     },
-    "picture": "./img/37.png"
+    "picture": "./img/37.webp"
   },
   {
     "id": 38,
@@ -377,7 +377,7 @@
       "demo": "/animations/Souls/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Souls"
     },
-    "picture": "./img/38.png"
+    "picture": "./img/38.webp"
   },
   {
     "id": 39,
@@ -387,7 +387,7 @@
       "demo": "/animations/Svensson_Attractor/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Svensson_Atracttor"
     },
-    "picture": "./img/39.png"
+    "picture": "./img/39.webp"
   },
   {
     "id": 40,
@@ -397,7 +397,7 @@
       "demo": "/animations/Bedhead_Attractor/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Bedhead_Attractor"
     },
-    "picture": "./img/40.png"
+    "picture": "./img/40.webp"
   },
   {
     "id": 41,
@@ -407,7 +407,7 @@
       "demo": "/animations/Rose_Pattern/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rose_Pattern"
     },
-    "picture": "./img/41.png"
+    "picture": "./img/41.webp"
   },
   {
     "id": 42,
@@ -417,7 +417,7 @@
       "demo": "/animations/L-System_Fractal/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/L-System_Fractal"
     },
-    "picture": "./img/42.png"
+    "picture": "./img/42.webp"
   },
   {
     "id": 43,
@@ -427,7 +427,7 @@
       "demo": "/animations/Hilbert_Curve/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Hilbert_Curve"
     },
-    "picture": "./img/43.png"
+    "picture": "./img/43.webp"
   },
   {
     "id": 44,
@@ -437,7 +437,7 @@
       "demo": "/animations/Peano_Curve/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Peano_Curve"
     },
-    "picture": "./img/44.png"
+    "picture": "./img/44.webp"
   },
   {
     "id": 45,
@@ -447,7 +447,7 @@
       "demo": "/animations/Rect_Fractal/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rect_Fractal"
     },
-    "picture": "./img/45.png"
+    "picture": "./img/45.webp"
   },
   {
     "id": 46,
@@ -457,7 +457,7 @@
       "demo": "/animations/Kaprekar_Constant/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Kaprekar_Constant"
     },
-    "picture": "./img/46.png"
+    "picture": "./img/46.webp"
   },
   {
     "id": 47,
@@ -467,7 +467,7 @@
       "demo": "/animations/Collision/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collision"
     },
-    "picture": "./img/47.png"
+    "picture": "./img/47.webp"
   },
   {
     "id": 48,
@@ -477,7 +477,7 @@
       "demo": "/animations/fractalMaybe/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/fractalMaybe"
     },
-    "picture": "./img/48.png"
+    "picture": "./img/48.webp"
   },
   {
     "id": 49,
@@ -487,7 +487,7 @@
       "demo": "/animations/hyperSpace/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/hyperSpace"
     },
-    "picture": "./img/49.png"
+    "picture": "./img/49.webp"
   },
   {
     "id": 50,
@@ -497,7 +497,7 @@
       "demo": "/animations/reactionDiffusion/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/reactionDiffusion"
     },
-    "picture": "./img/50.png"
+    "picture": "./img/50.webp"
   },
   {
     "id": 51,
@@ -507,7 +507,7 @@
       "demo": "/animations/breathing/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/breathing"
     },
-    "picture": "./img/51.png"
+    "picture": "./img/51.webp"
   },
   {
     "id": 52,
@@ -517,7 +517,7 @@
       "demo": "/animations/Flocking_Simulation/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Flocking_Simulation"
     },
-    "picture": "./img/52.png"
+    "picture": "./img/52.webp"
   },
   {
     "id": 53,
@@ -527,7 +527,7 @@
       "demo": "/animations/Brownian_Snowflake/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Brownian_Snowflake"
     },
-    "picture": "./img/53.png"
+    "picture": "./img/53.webp"
   },
   {
     "id": 54,
@@ -537,7 +537,7 @@
       "demo": "/animations/Kaleidoscope/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Kaleidoscope"
     },
-    "picture": "./img/54.png"
+    "picture": "./img/54.webp"
   },
   {
     "id": 55,
@@ -547,7 +547,7 @@
       "demo": "/animations/Random_Kaleidoscope/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Kaleidoscope"
     },
-    "picture": "./img/55.png"
+    "picture": "./img/55.webp"
   },
   {
     "id": 56,
@@ -557,7 +557,7 @@
       "demo": "/animations/MaybeFractal/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/MaybeFractal"
     },
-    "picture": "./img/56.png"
+    "picture": "./img/56.webp"
   },
   {
     "id": 57,
@@ -567,7 +567,7 @@
       "demo": "/animations/Spiral/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Spiral"
     },
-    "picture": "./img/57.png"
+    "picture": "./img/57.webp"
   },
   {
     "id": 58,
@@ -577,7 +577,7 @@
       "demo": "/animations/FractalMight/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/FractalMight"
     },
-    "picture": "./img/58.png"
+    "picture": "./img/58.webp"
   },
   {
     "id": 59,
@@ -587,7 +587,7 @@
       "demo": "/animations/Heart/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Heart"
     },
-    "picture": "./img/59.png"
+    "picture": "./img/59.webp"
   },
   {
     "id": 60,
@@ -597,7 +597,7 @@
       "demo": "/animations/lulucthulhu/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/lulucthulhu"
     },
-    "picture": "./img/60.png"
+    "picture": "./img/60.webp"
   },
   {
     "id": 61,
@@ -607,7 +607,7 @@
       "demo": "/animations/Flowfield/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Flowfield"
     },
-    "picture": "./img/61.png"
+    "picture": "./img/61.webp"
   },
   {
     "id": 62,
@@ -617,7 +617,7 @@
       "demo": "/animations/Constelation/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Constelation"
     },
-    "picture": "./img/62.png"
+    "picture": "./img/62.webp"
   },
   {
     "id": 63,
@@ -627,7 +627,7 @@
       "demo": "/animations/Maze/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Maze"
     },
-    "picture": "./img/63.png"
+    "picture": "./img/63.webp"
   },
   {
     "id": 64,
@@ -637,7 +637,7 @@
       "demo": "/animations/Marching_Squares/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Marching_Squares"
     },
-    "picture": "./img/64.png"
+    "picture": "./img/64.webp"
   },
   {
     "id": 65,
@@ -647,7 +647,7 @@
       "demo": "/animations/DLA/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DLA"
     },
-    "picture": "./img/65.png"
+    "picture": "./img/65.webp"
   },
   {
     "id": 66,
@@ -657,7 +657,7 @@
       "demo": "/animations/Random_Filling/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Filling"
     },
-    "picture": "./img/66.png"
+    "picture": "./img/66.webp"
   },
   {
     "id": 67,
@@ -667,7 +667,7 @@
       "demo": "/animations/Connect/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Connect"
     },
-    "picture": "./img/67.png"
+    "picture": "./img/67.webp"
   },
   {
     "id": 68,
@@ -677,7 +677,7 @@
       "demo": "/animations/IFS/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/IFS"
     },
-    "picture": "./img/68.png"
+    "picture": "./img/68.webp"
   },
   {
     "id": 69,
@@ -687,7 +687,7 @@
       "demo": "/animations/Leaf/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Leaf"
     },
-    "picture": "./img/69.png"
+    "picture": "./img/69.webp"
   },
   {
     "id": 70,
@@ -697,7 +697,7 @@
       "demo": "/animations/Popcorn/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Popcorn"
     },
-    "picture": "./img/70.png"
+    "picture": "./img/70.webp"
   },
   {
     "id": 71,
@@ -707,7 +707,7 @@
       "demo": "/animations/Mandelbrot/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mandelbrot"
     },
-    "picture": "./img/71.png"
+    "picture": "./img/71.webp"
   },
   {
     "id": 72,
@@ -717,7 +717,7 @@
       "demo": "/animations/Julia_Set/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Julia_Set"
     },
-    "picture": "./img/72.png"
+    "picture": "./img/72.webp"
   },
   {
     "id": 73,
@@ -727,6 +727,6 @@
       "demo": "/animations/Channeling/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Channeling"
     },
-    "picture": "./img/73.png"
+    "picture": "./img/73.webp"
   }
 ]
