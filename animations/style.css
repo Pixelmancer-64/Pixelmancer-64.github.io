@@ -63,9 +63,7 @@ main {
 
 header {
   background-color: rgb(17, 17, 19);
-  /* position: fixed; */
   min-height: 5vh;
-  z-index: 10;
   display: flex;
   align-items: center;
   padding: .5rem 1rem;
