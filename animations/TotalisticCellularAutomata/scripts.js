@@ -5,7 +5,7 @@ class Canvas {
   static cols;
   static rows;
   static gradient;
-  static cellSize = 10;
+  static cellSize = 2;
   static grid = [];
   static mouse = {
     x: null,
@@ -42,14 +42,43 @@ class Canvas {
     this.inc = 0;
     this.i = 0;
 
+    this.interval = randomInt(2) + 1;
+    // [ 1, 0, 1, 0, 0, 0, 0, 1 ]
+    // this.rule = new Array(this.interval * 2 + 1).fill(0);
+    // this.rule = this.rule.map(() => {
+    //   return randomInt(1);
+    // });
+
+    this.rule = [];
+
+    for (let i = 0; i < this.interval * 2 + 1; i++) {
+      this.rule[i] = randomInt(1);
+    }
+    console.log(this.rule);
+    // this.rule = [
+    //   randomInt(1),
+    //   randomInt(1),
+    //   randomInt(1),
+    //   randomInt(1),
+    //   randomInt(1),
+    //   randomInt(1),
+    // ];
+    // this.rule = [1,0, 2, 0, 2, 1, 0, 0]
+    // this.rule = [1, 1, 0, 1, 0, 1];
+
+    this.colors = {
+      0: "black",
+      1: "white",
+    };
+
     this.generation = new Array(Canvas.cols).fill(0);
     this.generation[Math.ceil(Canvas.cols / 2)] = 1;
-    this.nextGeneration = new Array(Canvas.cols).fill(0);
+    this.nextGeneration = [];
     // Canvas.ctx.translate(Canvas.width / 2, Canvas.height / 2);
   }
 
   animation() {
-    // this.animationRequest = requestAnimationFrame(this.animation.bind(this));
+    this.animationRequest = requestAnimationFrame(this.animation.bind(this));
 
     // Canvas.ctx.clearRect(
     //   0,
@@ -58,24 +87,38 @@ class Canvas {
     //   Canvas.height,
     // );
 
-    for (let i = 0; i < 3; i++) {
-      this.generation.forEach((e, index) => {
-        const size = Canvas.cellSize;
+    this.generation.forEach((e, index) => {
+      const size = Canvas.cellSize;
 
-        new Square(size, size, (e) ? 'white' : 'black', {
-          x: index * size,
-          y: this.i * size,
-        }).fill();
-      });
+      new Square(size, size, this.colors[e], {
+        x: index * size,
+        y: this.i * size,
+      }).fill();
+    });
 
-      this.generation.forEach((e, index) => {
-        console.log(this.generation[index + 1], e, this.generation[index - 1])
-        if(this.generation[index + 1] || e || this.generation[index - 1]) this.nextGeneration[index] = 1
-      });
+    this.generation.forEach((e, index) => {
+      this.nextGeneration.push(this.getRule(index));
+    });
 
-      this.generation = this.nextGeneration;
-      this.i++;
+    this.generation = [...this.nextGeneration];
+    this.nextGeneration = [];
+    this.i++;
+    if (this.i >= Canvas.height / Canvas.cellSize)
+      cancelAnimationFrame(this.animationRequest);
+  }
+
+  getRule(index) {
+    let nums = [this.generation[index]];
+
+    for (let i = 0; i < this.interval; i++) {
+      nums.push(this.generation[index - 1], this.generation[index + 1]);
     }
+
+    nums.forEach((e, index) => {
+      nums[index] = e ? 1 : 0;
+    });
+
+    return this.rule[nums.reduce((acc, cur) => acc + cur, 0)];
   }
 
   startEvents() {

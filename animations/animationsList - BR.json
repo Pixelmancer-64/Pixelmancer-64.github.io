@@ -738,5 +738,35 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Superformula"
     },
     "picture": "./img/74.webp"
+  },
+  {
+    "id": 75,
+    "title": "ElementaryCellularAutomata",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/ElementaryCellularAutomata/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ElementaryCellularAutomata"
+    },
+    "picture": "./img/75.png"
+  },
+  {
+    "id": 76,
+    "title": "TotalisticCellularAutomata",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/TotalisticCellularAutomata/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/TotalisticCellularAutomata"
+    },
+    "picture": "./img/76.png"
+  },
+  {
+    "id": 77,
+    "title": "LangtonsAnt",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/LangtonsAnt/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/LangtonsAnt"
+    },
+    "picture": "./img/77.png"
   }
 ]

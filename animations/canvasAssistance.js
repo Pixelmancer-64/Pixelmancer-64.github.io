@@ -18,6 +18,10 @@ function random_color(num) {
   return aux;
 }
 
+function randomColor() {
+  return usableColor(random_rgb());
+}
+
 function gradientColors(color, num) {
   let aux = [];
   for (let i = 0; i < num; i++) {
@@ -34,6 +38,13 @@ function random(r, hasNegativeRange = false) {
   if (hasNegativeRange) {
     return Math.random() * r * (Math.round(Math.random()) ? 1 : -1);
   } else return Math.random() * r;
+}
+
+function randomInt(r, hasNegativeRange = false) {
+  r = Math.floor(r + 1);
+  if (hasNegativeRange) {
+    return Math.floor(Math.random() * r * (Math.round(Math.random()) ? 1 : -1));
+  } else return Math.floor(Math.random() * r);
 }
 
 function usableColor(color, alpha = 1) {
@@ -109,50 +120,50 @@ class Particle {
   }
 }
 
-class Point extends Particle{
-  constructor(radius, color,...particles){
-    super(...particles)
+class Point extends Particle {
+  constructor(radius, color, ...particles) {
+    super(...particles);
     this.radius = radius;
     this.color = color;
   }
 
-  fill(){
-    const {x, y} = this.pos;
+  fill() {
+    const { x, y } = this.pos;
     this.ctx.beginPath();
     this.ctx.fillStyle = this.color;
-    this.ctx.arc(x, y, this.radius, 0, Math.PI * 2)
-    this.ctx.fill()
+    this.ctx.arc(x, y, this.radius, 0, Math.PI * 2);
+    this.ctx.fill();
   }
 
-  stroke(){
-    const {x, y} = this.pos;
+  stroke() {
+    const { x, y } = this.pos;
     this.ctx.beginPath();
     this.ctx.strokeStyle = this.color;
-    this.ctx.arc(x, y, this.radius, 0, Math.PI * 2)
-    this.ctx.stroke()
+    this.ctx.arc(x, y, this.radius, 0, Math.PI * 2);
+    this.ctx.stroke();
   }
 }
 
-class Square extends Particle{
-  constructor(width, height, color,...particles){
-    super(...particles)
+class Square extends Particle {
+  constructor(width, height, color, ...particles) {
+    super(...particles);
     this.width = width;
     this.height = height;
     this.color = color;
   }
 
-  fill(){
-    const {x, y} = this.pos;
+  fill(cellSize = 1) {
+    const { x, y } = this.pos;
     this.ctx.beginPath();
     this.ctx.fillStyle = this.color;
-    this.ctx.fillRect(x, y, this.width, this.height)
+    this.ctx.fillRect(x * cellSize, y * cellSize, this.width, this.height);
   }
 
-  stroke(){
-    const {x, y} = this.pos;
+  stroke() {
+    const { x, y } = this.pos;
     this.ctx.beginPath();
     this.ctx.strokeStyle = this.color;
-    this.ctx.rectect(x, y, this.width, this.height)
-    this.ctx.stroke()
+    this.ctx.rect(x, y, this.width, this.height);
+    this.ctx.stroke();
   }
 }
