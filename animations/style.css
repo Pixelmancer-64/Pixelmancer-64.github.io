@@ -1,6 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.725rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+canvas {
+  height: 100vh;
+  width: 100vw;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
 }
 
 body {
@@ -8,17 +65,18 @@ body {
 }
 
 main {
-  margin-top: 1rem;
+  margin: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1vh;
 }
 
 .card {
   position: relative;
-  width: 25rem;
-  height: 25rem;
+  width: 25em;
+  height: 25em;
+  max-width: 100%;
   border-radius: 5%;
   overflow: hidden;
 }
@@ -38,7 +96,7 @@ main {
 }
 
 .github:hover {
-  filter:sepia(1);
+  filter: sepia(1);
   transition: 50ms ease-in-out;
 
 }
@@ -74,7 +132,7 @@ header {
   font-family: DotGothic16, MingLiU_HKSCS-ExtB, Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: inherit;
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
 
 .switch {
@@ -159,9 +217,39 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-@media screen and (max-width:850px) {
-  .movie {
-    width: 15rem;
-    height: 15rem;
+@media (max-width: 59em) {
+  .card {
+    width: 15em;
+    height: 15em;
   }
+}
+
+@media (max-width: 44em) {
+  .card {
+    width: 10em;
+    height: 10em;
+  }
+
+  @media (max-width: 34em) {
+
+  }
+
+  .slider, .switch, header img{
+    display: none;
+  }
+
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1{
+    font-size: .8em;
+  }
+
+  nav h1::after{
+    content: " made with ❤ by Hugo";
+  }
+
 }
