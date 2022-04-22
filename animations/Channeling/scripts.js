@@ -1,10 +1,14 @@
 class Configs {
-  static colors = gradientColors(random_rgb(100), 101);
-  static gradient = random_color(9);
   static cellSize = 1;
   static lineWidth = 1;
   static ca = 0.285;
   static cb = 0.01;
+}
+
+function random(r, hasNegativeRange = false) {
+  if (hasNegativeRange) {
+    return Math.random() * r * (Math.round(Math.random()) ? 1 : -1);
+  } else return Math.random() * r;
 }
 
 class Particle {
@@ -115,7 +119,6 @@ class Canvas {
     this.particles = [];
 
     //   this.i < Configs.colors.length - 1 ? this.i++ : (this.i = 0);
-    this.gradient();
     Canvas.ctx.strokeStyle = Canvas.gradient;
     Canvas.ctx.fillStyle = Canvas.gradient;
     Canvas.ctx.lineWidth = Configs.lineWidth;
@@ -123,7 +126,7 @@ class Canvas {
     // this.i < Configs.colors.length - 1 ? this.i++ : (this.i = 0);
     for (let i = 0; i < 1000; i++) {
       this.particles.push(
-        new Particle(random(Canvas.width), random(Canvas.height))
+        new Particle(Math.random() * Canvas.width, Math.random() * Canvas.height)
       );
     }
   }
@@ -136,25 +139,6 @@ class Canvas {
     for (let particles of this.particles) {
       particles.update();
     }
-  }
-
-  gradient() {
-    Canvas.gradient = Canvas.ctx.createLinearGradient(
-      0,
-      0,
-      Canvas.width,
-      Canvas.height
-    );
-
-    Canvas.gradient.addColorStop(0, usableColor(Configs.gradient[0]));
-    // Canvas.gradient.addColorStop("0.2", usableColor(Configs.gradient[1]));
-    Canvas.gradient.addColorStop(0.3, usableColor(Configs.gradient[2]));
-    // Canvas.gradient.addColorStop("0.4", usableColor(Configs.gradient[3]));
-    // Canvas.gradient.addColorStop(.5, usableColor(Configs.gradient[4]));
-    // Canvas.gradient.addColorStop("0.6", usableColor(Configs.gradient[5]));
-    Canvas.gradient.addColorStop(0.7, usableColor(Configs.gradient[6]));
-    // Canvas.gradient.addColorStop("0.8", usableColor(Configs.gradient[7]));
-    Canvas.gradient.addColorStop(1, usableColor(Configs.gradient[8]));
   }
 
   startEvents() {
