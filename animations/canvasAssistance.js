@@ -1,8 +1,8 @@
 function random_rgb(offset = 0) {
   let mult = 255 - offset;
-  let r = Math.floor(Math.random() * mult + offset);
-  let g = Math.floor(Math.random() * mult + offset);
-  let b = Math.floor(Math.random() * mult + offset);
+  let r = Math.floor(random(mult) + offset);
+  let g = Math.floor(random(mult) + offset);
+  let b = Math.floor(random(mult) + offset);
   return {
     r: r,
     g: g,
@@ -35,24 +35,23 @@ function gradientColors(color, num) {
 }
 
 function random(r, hasNegativeRange = false) {
-  if (hasNegativeRange) {
+  if (hasNegativeRange)
     return Math.random() * r * (Math.round(Math.random()) ? 1 : -1);
-  } else return Math.random() * r;
+  return Math.random() * r;
 }
 
 function randomInt(r, hasNegativeRange = false) {
   r = Math.floor(r + 1);
-  if (hasNegativeRange) {
-    return Math.floor(Math.random() * r * (Math.round(Math.random()) ? 1 : -1));
-  } else return Math.floor(Math.random() * r);
+  if (hasNegativeRange) return Math.floor(random(r) * random(1, true));
+  return Math.floor(Math.random() * r);
 }
 
 function usableColor(color, alpha = 1) {
-  return `rgba(${color.r},${color.g},${color.b}, ${alpha})`;
+  return `rgba( ${color.r}, ${color.g}, ${color.b}, ${alpha})`;
 }
 
-function map(n, start1, stop1, start2, stop2) {
-  return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+function map(n, start, stop, start2, stop2) {
+  return ((n - start) / (stop - start)) * (stop2 - start2) + start2;
 }
 
 class Particle {
@@ -127,19 +126,19 @@ class Point extends Particle {
     this.color = color;
   }
 
-  fill() {
+  fill(cellSize = 1) {
     const { x, y } = this.pos;
     this.ctx.beginPath();
     this.ctx.fillStyle = this.color;
-    this.ctx.arc(x, y, this.radius, 0, Math.PI * 2);
+    this.ctx.arc(x * cellSize, y * cellSize, this.radius, 0, Math.PI * 2);
     this.ctx.fill();
   }
 
-  stroke() {
+  stroke(cellSize = 1) {
     const { x, y } = this.pos;
     this.ctx.beginPath();
     this.ctx.strokeStyle = this.color;
-    this.ctx.arc(x, y, this.radius, 0, Math.PI * 2);
+    this.ctx.arc(x * cellSize, y * cellSize, this.radius, 0, Math.PI * 2);
     this.ctx.stroke();
   }
 }
@@ -159,11 +158,11 @@ class Square extends Particle {
     this.ctx.fillRect(x * cellSize, y * cellSize, this.width, this.height);
   }
 
-  stroke() {
+  stroke(cellSize = 1) {
     const { x, y } = this.pos;
     this.ctx.beginPath();
     this.ctx.strokeStyle = this.color;
-    this.ctx.rect(x, y, this.width, this.height);
+    this.ctx.rect(x * cellSize, y * cellSize, this.width, this.height);
     this.ctx.stroke();
   }
 }

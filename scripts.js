@@ -9,7 +9,7 @@ class Configs {
     "rgba(190,0,50,1)",
     "rgba(246,80,45,1)",
   ];
-  static cellSize = 50;
+  static cellSize = 70;
   static lineWidth = 2;
   static moves = [
     {

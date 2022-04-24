@@ -70,8 +70,8 @@ html {
 }
 
 body {
-	font-family: 'Rubik', sans-serif;
-	color: #FBFBFB;
+	font-family: "Rubik", sans-serif;
+	color: #fbfbfb;
 	background-color: #141414;
 	display: flex;
 	flex-direction: column;
@@ -80,8 +80,8 @@ body {
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 3rem;
-	margin: 0 3rem;
+	gap: 3vh;
+	margin: 0 2rem;
 }
 
 /*
@@ -101,20 +101,20 @@ HEADER
 }
 
 .introduction h1 {
-	font-size: 5.8rem;
+	font-size: 5rem;
 }
 
 .introduction a {
 	align-self: center;
 	background-color: #bf0033;
 	border: none;
-	border-radius: 12px;
+	border-radius: 16px;
 	font-weight: 500;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	color: inherit;
 	cursor: pointer;
 	outline-offset: 4px;
-	padding: 12px 42px;
+	padding: 1rem 2rem;
 	font-size: 2.2rem;
 	text-align: center;
 	color: white;
@@ -132,7 +132,7 @@ HEADER
 
 .introduction div {
 	display: flex;
-	gap: 1rem;
+	gap: 1vw;
 }
 
 /*
@@ -141,11 +141,11 @@ ASIDE
 
 */
 
-.icons{
+.icons {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: 1vw;
 }
 
 .knowledge img {
@@ -159,20 +159,19 @@ PROJECTS
 
 */
 
-
 .projects {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 2vh;
 }
 
 .projects section {
-	border: 3px solid #BF0033;
-	border-radius: 16px;
+	border: 3px solid #bf0033;
+	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 3.2rem;
+	gap: 3vh;
 	padding: 2rem;
 	position: relative;
 }
@@ -181,8 +180,8 @@ PROJECTS
 	font-size: 4.8rem;
 }
 
-.projects section > span {
-	padding: .3rem 1rem;
+.projects section>span {
+	padding: 0.3rem 1rem;
 	font-size: 1rem;
 	position: absolute;
 	top: 0;
@@ -190,7 +189,7 @@ PROJECTS
 	font-weight: 400;
 	text-transform: capitalize;
 	margin: 2rem;
-	border: 3px solid #BF0033;
+	border: 3px solid #bf0033;
 	border-radius: 16px;
 }
 
@@ -198,11 +197,12 @@ PROJECTS
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: .8rem;
+	gap: 1vh;
 }
 
 .container img {
 	width: 12rem;
+	height: 12rem;
 }
 
 .container h3 {
@@ -212,8 +212,8 @@ PROJECTS
 
 .container p {
 	font-size: 2rem;
+  max-width: 70vw;
 }
-
 
 .buttons {
 	width: 100%;
@@ -224,22 +224,22 @@ PROJECTS
 
 .buttons a {
 	align-self: center;
-	background-color: #04AA6B;
+	background-color: #04aa6b;
 	border: none;
 	border-radius: 12px;
 	font-size: 1.5rem;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	color: inherit;
 	cursor: pointer;
 	outline-offset: 4px;
-	padding: .6rem 2.6rem;
+	padding: 0.6rem 2.6rem;
 	color: white;
 	will-change: transform;
 	transition: transform 350ms;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: .5rem;
+	gap: 1vw;
 }
 
 .buttons a:hover {
@@ -277,5 +277,5 @@ PROJECTS
 
 .weatherAPI {
 	background-image: var(--weatherAPI);
-
+	background-size: 100% 100%;
 }
