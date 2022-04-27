@@ -162,7 +162,7 @@ PROJECTS
 .projects {
 	display: flex;
 	flex-direction: column;
-	gap: 2vh;
+	gap: 5vh;
 }
 
 .projects section {
