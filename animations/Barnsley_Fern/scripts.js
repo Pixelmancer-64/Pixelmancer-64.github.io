@@ -31,17 +31,11 @@ class Particle {
             y: 0,
         }
         this.histogram = []
+        this.options = []
 
-        this.option1 = random_hex()
-        this.option2 = random_hex()
-        this.option3 = random_hex()
-        this.option4 = random_hex()
-        this.option5 = random_hex()
-        this.option6 = random_hex()
-        this.option7 = random_hex()
-        this.option8 = random_hex()
-        this.option9 = random_hex()
-
+        for(let i =0; i < 9; i++){
+            this.options.push(random_hex())
+        }
     }  
 
     draw(color, x, y){
@@ -77,8 +71,6 @@ class Particle {
           this.point.x = nextX;
           this.point.y = nextY;
           this.histogram.push({x: nextX, y: nextY})
-          this.off = .005
-          this.counter = []
     }
 
     animate(){
@@ -103,15 +95,15 @@ class Particle {
                 };
 
                 let color;
-                if(pixel.pixelBrightness > .9)      color = this.option1; // tips
-                else if(pixel.pixelBrightness > .8) color = this.option2; // tips
-                else if(pixel.pixelBrightness > .6) color = this.option3; // bit of extremes
-                else if(pixel.pixelBrightness > .5) color = this.option4; // not much
-                else if(pixel.pixelBrightness > .4) color = this.option5; // not much
-                else if(pixel.pixelBrightness > .3) color = this.option6; // not much
-                else if(pixel.pixelBrightness > .2) color = this.option7; // not much
-                else if(pixel.pixelBrightness > .1) color = this.option8; // not much
-                else if(pixel.pixelBrightness > 0)  color = this.option9; // majority middle 
+                if(pixel.pixelBrightness > .9)      color = this.options[8]; // tips
+                else if(pixel.pixelBrightness > .8) color = this.options[7]; // tips
+                else if(pixel.pixelBrightness > .6) color = this.options[6]; // bit of extremes
+                else if(pixel.pixelBrightness > .5) color = this.options[5]; // not much
+                else if(pixel.pixelBrightness > .4) color = this.options[4]; // not much
+                else if(pixel.pixelBrightness > .3) color = this.options[3]; // not much
+                else if(pixel.pixelBrightness > .2) color = this.options[2]; // not much
+                else if(pixel.pixelBrightness > .1) color = this.options[1]; // not much
+                else if(pixel.pixelBrightness > 0)  color = this.options[0]; // majority middle 
                 else color = false;
 
                 if(color != false){

@@ -161,6 +161,7 @@ class Square extends Particle {
   }
 }
 
+/*
 class Canvas {
   static ctx;
   static width;
@@ -182,7 +183,7 @@ class Canvas {
     y: 0
   }
 
-  constructor(cellSize, isSquare = false) {
+  constructor(cellSize=1, isSquare = false) {
     this.cellSize = cellSize;
     this.isSquare = isSquare
     let canvas = document.getElementById("canvas");
@@ -211,7 +212,6 @@ class Canvas {
     Canvas.middle.y = Math.ceil(Canvas.rows / 2);
 
     this.animationRequest;
-    this.iterationsPerFrame = 99;
 
     const size = this.cellsize;
     for (let i = 0; i < Canvas.rows; i++) {
@@ -224,12 +224,10 @@ class Canvas {
 
   }
 
-  animation(callback) {
-    this.animationRequest = requestAnimationFrame(this.animation.bind(this));
+  animation(times, callback) {
+    this.animationRequest = requestAnimationFrame(this.animation.bind(this, callback));
 
-    for(let i =0; i<this.iterationsPerFrame; i++){
-      callback()
-    }
+    callback()
     // Canvas.ctx.clearRect(
     //   0,
     //   0,
@@ -294,4 +292,4 @@ class Canvas {
       }
     })
   }
-}
+}*/
