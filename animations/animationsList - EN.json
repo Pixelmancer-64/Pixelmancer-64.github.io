@@ -650,16 +650,6 @@
     "picture": "./img/65.png"
   },
   {
-    "id": 65,
-    "title": "DLA",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/DLA/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DLA"
-    },
-    "picture": "./img/65.png"
-  },
-  {
     "id": 66,
     "title": "Random_Filling",
     "summary": "////",

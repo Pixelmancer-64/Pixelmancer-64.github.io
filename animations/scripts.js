@@ -1,6 +1,5 @@
 const http = new EasyAjax
-let language = 'EN'
-if(navigator.language == "pt-BR") language = 'BR'
+let language = 'BR'
 http.get(`animationsList - ${language}.json`, function(status, response){
     if(status){
     } else {
