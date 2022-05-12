@@ -55,6 +55,22 @@ function map(n, start, stop, start2, stop2) {
   return ((n - start) / (stop - start)) * (stop2 - start2) + start2;
 }
 
+function easyLoop(times, callback) {
+  for (let i = 0; i < times; i++) callback(i);
+}
+
+function intersects(a,b,c,d, p,q,r,s) {
+  var det, gamma, lambda;
+  det = (c - a) * (s - q) - (r - p) * (d - b);
+  if (det === 0) {
+    return false;
+  } else {
+    lambda = ((s - q) * (r - a) + (p - r) * (s - b)) / det;
+    gamma = ((b - d) * (r - a) + (c - a) * (s - b)) / det;
+    return (0 < lambda && lambda < 1) && (0 < gamma && gamma < 1);
+  }
+};
+
 class Particle {
   constructor(
     pos = { x: 0, y: 0 },
@@ -145,6 +161,34 @@ class Square extends Particle {
     this.color = color;
   }
 
+  pacman() {
+    if (this.pos.y + this.height > Canvas.height) {
+      this.pos.y = 0 + this.height;
+    } else if (this.pos.y - this.height < 0) {
+      this.pos.y = Canvas.height - this.height;
+    }
+
+    if (this.pos.x - this.width > Canvas.width) {
+      this.pos.x = 0 + this.width;
+    } else if (this.pos.x + this.width < 0) {
+      this.pos.x = Canvas.width - this.width;
+    }
+  }
+
+  bounce() {
+    if (this.pos.y + this.height > Canvas.height) {
+      this.vel.y = -this.vel.y;
+    } else if (this.pos.y - this.height < 0) {
+      this.vel.y = -this.vel.y;
+    }
+
+    if (this.pos.x - this.width > Canvas.width) {
+      this.vel.x = -this.vel.x;
+    } else if (this.pos.x + this.width < 0) {
+      this.vel.x = -this.vel.x;
+    }
+  }
+
   fill(cellSize = 1) {
     const { x, y } = this.pos;
     this.ctx.beginPath();
@@ -160,136 +204,3 @@ class Square extends Particle {
     this.ctx.stroke();
   }
 }
-
-/*
-class Canvas {
-  static ctx;
-  static width;
-  static height;
-  static cols;
-  static rows;
-  static grid = [];
-  static mouse = {
-    x: null,
-    y: null,
-    last: {
-      x: null,
-      y: null,
-    },
-    pressed: false,
-  };
-  static middle = {
-    x: 0,
-    y: 0
-  }
-
-  constructor(cellSize=1, isSquare = false) {
-    this.cellSize = cellSize;
-    this.isSquare = isSquare
-    let canvas = document.getElementById("canvas");
-    Canvas.ctx = canvas.getContext("2d");
-
-    if (isSquare) {
-      if (window.innerWidth <= window.innerHeight) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerWidth;
-      } else {
-        canvas.width = window.innerHeight;
-        canvas.height = window.innerHeight;
-      }
-    } else {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    Canvas.width = canvas.width;
-    Canvas.height = canvas.height;
-
-    Canvas.cols = Math.floor(Canvas.width / this.cellsize);
-    Canvas.rows = Math.floor(Canvas.height / this.cellsize);
-
-    Canvas.middle.x = Math.ceil(Canvas.cols / 2);
-    Canvas.middle.y = Math.ceil(Canvas.rows / 2);
-
-    this.animationRequest;
-
-    const size = this.cellsize;
-    for (let i = 0; i < Canvas.rows; i++) {
-      Canvas.grid[i] = [];
-
-      for (let j = 0; j < Canvas.cols; j++) {
-        Canvas.grid[i][j] = false;
-      }
-    }
-
-  }
-
-  animation(times, callback) {
-    this.animationRequest = requestAnimationFrame(this.animation.bind(this, callback));
-
-    callback()
-    // Canvas.ctx.clearRect(
-    //   0,
-    //   0,
-    //   Canvas.width,
-    //   Canvas.height,
-    // );
-
-    // cancelAnimationFrame(this.animationRequest);
-  }
-
-  startEvents() {
-    window.addEventListener("mousemove", function (event) {
-      Canvas.mouse.last.x = Canvas.mouse.x;
-      Canvas.mouse.last.y = Canvas.mouse.y;
-      Canvas.mouse.x = event.x;
-      Canvas.mouse.y = event.y;
-    });
-
-    document.body.onmousedown = function () {
-      Canvas.mouse.pressed = true;
-      if (Canvas.mouse.x != null && document.querySelector("h1")) {
-        document.querySelector("h1").remove();
-      }
-    };
-    document.body.onmouseup = function () {
-      Canvas.mouse.pressed = false;
-    };
-
-    document
-      .getElementById("canvas")
-      .addEventListener("touchstart", function (event) {
-        Canvas.mouse.last.x = Canvas.mouse.x;
-        Canvas.mouse.last.y = Canvas.mouse.y;
-        Canvas.mouse.x = event.touches[0].clientX;
-        Canvas.mouse.y = event.touches[0].clientY;
-        Canvas.mouse.pressed = true;
-      });
-
-    document
-      .getElementById("canvas")
-      .addEventListener("touchend", function (event) {
-        Canvas.mouse.pressed = false;
-      });
-
-    document.addEventListener("click", (e) => {
-      cancelAnimationFrame(this.animationRequest);
-      console.log("cancelou");
-    });
-
-    document.addEventListener("resize", ()=> {
-      if (this.isSquare) {
-        if (window.innerWidth <= window.innerHeight) {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerWidth;
-        } else {
-          canvas.width = window.innerHeight;
-          canvas.height = window.innerHeight;
-        }
-      } else {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-    })
-  }
-}*/

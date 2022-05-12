@@ -139,7 +139,7 @@ class Particle {
 
     animate() {
         this.draw();
-        this.points();
+        // this.points();
 
         // animationRequest = requestAnimationFrame(this.animate.bind(this));
     }

@@ -70,7 +70,7 @@ class Particle{
         return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
     }
     update(){
-        for(let i =0; i < 2000000; i++){
+        for(let i =0; i < 99999; i++){
             this.clifford();
             this.draw('rgba(255,255,255,.3)');
         }
