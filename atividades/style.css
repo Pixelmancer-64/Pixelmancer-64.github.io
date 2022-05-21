@@ -20,12 +20,12 @@ ul{
     margin: 2em;
 }
 
-h1{
+h2{
     will-change: transform;
     transition: transform 450ms;
 }
 
-h1:hover{
+h2:hover{
 	transition: transform 250ms;
     transform: translateX(10%);
 }
@@ -46,7 +46,7 @@ li:hover{
     flex-wrap: wrap;
     text-align: center;
 }
-h1{
+h2{
     color: #0fa;
     text-shadow:
     0 0 10px #0fa,

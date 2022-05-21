@@ -101,7 +101,7 @@ HEADER
 }
 
 .introduction h1 {
-	font-size: 5rem;
+	font-size: 6rem;
 }
 
 .introduction a {
@@ -212,7 +212,7 @@ PROJECTS
 
 .container p {
 	font-size: 2rem;
-  max-width: 70vw;
+	max-width: 70vw;
 }
 
 .buttons {
@@ -278,4 +278,61 @@ PROJECTS
 .weatherAPI {
 	background-image: var(--weatherAPI);
 	background-size: 100% 100%;
+}
+
+.weatherAPI #weatherAPI{
+	width: 12rem;
+	height: 9rem;
+}
+
+@media (max-width: 85em) {}
+
+@media(max-width: 75em) {
+
+
+	.introduction h1 {
+		font-size: 5rem;
+	}
+}
+
+@media (max-width: 59em) {
+
+	.introduction h1 {
+		font-size: 4rem;
+	}
+
+	.introduction a {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 44em) {
+	.projects section>span {
+		display: none;
+	}
+
+	.buttons a{
+		font-size: 1rem;
+	}
+
+	.introduction h1 {
+		font-size: 3.0rem;
+	}
+
+	.introduction a {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 34em) {
+
+
+	.introduction h1 {
+		font-size: 2rem;
+	}
+
+	.introduction a {
+		font-size: 1.5rem;
+		padding: .7rem;
+	}
 }

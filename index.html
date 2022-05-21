@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sotíris64</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
-    <script src="/animations/Marching_Squares/noise.js" async defer></script>
-    <script src="scripts.js" async defer></script>
-  </head>
 
-  <body>
-    <header>
-      <div class="introduction">
-        <h1>
-          Hi,
-          <br />
-          I'm Hugo!
-          <br />
-          I code stuff
-        </h1>
-        <div>
-          <a href="#projects">My projects</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sotíris64</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
+  <script src="/animations/Marching_Squares/noise.js" async defer></script>
+  <script src="scripts.js" async defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="introduction">
+      <h1>
+        Hi,
+        <br />
+        I'm Hugo!
+        <br />
+        I code stuff
+      </h1>
+      <div>
+        <a href="#projects">My projects</a>
       </div>
-      <canvas
-        id="canvas"
-        aria-label="Background lighthouse animation"
-        role="img"
-      ></canvas>
-    </header>
+    </div>
+    <canvas id="canvas" aria-label="Background lighthouse animation" role="img"></canvas>
+  </header>
 
-    <main>
-      <!-- <aside>
+  <main>
+    <!-- <aside>
 			<section class="knowledge">
 				<h3>What I know</h3>
 				<div class="icons">
@@ -63,294 +57,235 @@
 			</section>
 		</aside> -->
 
-      <div class="projects">
-        <h2 id="projects">My projects</h2>
-        <section>
-          <span>2021 - now</span>
-          <div class="container">
-            <h3>Animations</h3>
-            <a href="/animations">
-              <img
-                id="animation"
-                class="proLogo"
-                alt="creepy eye"
-                src="./img/eye.png"
-              />
-            </a>
-            <p>Animations and "art". All using vanilla JS or P5JS</p>
-          </div>
-          <div class="buttons">
-            <a
-              class="github"
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a class="goTo" href="/animations">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+    <div class="projects">
+      <h2 id="projects">My projects</h2>
+      <section>
+        <span>2021 - now</span>
+        <div class="container">
+          <h3>Animations</h3>
+          <a href="/animations">
+            <img id="animation" class="proLogo" alt="creepy eye" src="./img/eye.png" />
+          </a>
+          <p>Animations and "art". All using vanilla JS or P5JS</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations"><span>Visit
+              repository</span><img src="/img/github.svg" /></a>
+          <a class="goTo" href="/animations">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section>
-          <span>2021</span>
-          <div class="container">
-            <h3>ColorTools</h3>
-            <a href="https://master--dapper-cobbler-d6096e.netlify.app/">
-              <img
-                id="colorTools"
-                alt="yggdrasil"
-                class="proLogo"
-                src="./img/iconmonstr-paintbrush-7.svg"
-              />
-            </a>
-            <p>Colorpicker and palette creator. Made with react</p>
-          </div>
-          <div class="buttons">
-            <a class="github" href="https://github.com/Sotiris64/colorpicker"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a
-              class="goTo"
-              href="https://master--dapper-cobbler-d6096e.netlify.app/"
-            >
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section>
+        <span>2021</span>
+        <div class="container">
+          <h3>ColorTools</h3>
+          <a href="https://master--dapper-cobbler-d6096e.netlify.app/">
+            <img id="colorTools" alt="yggdrasil" class="proLogo" src="./img/iconmonstr-paintbrush-7.svg" />
+          </a>
+          <p>Colorpicker and palette creator. Made with react</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/colorpicker"><span>Visit repository</span><img
+              src="/img/github.svg" /></a>
+          <a class="goTo" href="https://master--dapper-cobbler-d6096e.netlify.app/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section>
-          <span>2021</span>
-          <div class="container">
-            <h3>WordVault</h3>
-            <a href="https://word-vault.herokuapp.com/">
-              <img
-                id="wordVault"
-                alt="yggdrasil"
-                class="proLogo"
-                src="./img/favicon.png"
-              />
-            </a>
-            <p>
-              WordVault is a project that I made for storing links and notes. It
-              uses MongoDB and Express, deployed in heroku
-            </p>
-          </div>
-          <div class="buttons">
-            <a class="goTo" href="https://word-vault.herokuapp.com/">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section>
+        <span>2021</span>
+        <div class="container">
+          <h3>WordVault</h3>
+          <a href="https://word-vault.herokuapp.com/">
+            <img id="wordVault" alt="yggdrasil" class="proLogo" src="./img/favicon.png" />
+          </a>
+          <p>
+            WordVault is a project that I made for storing links and notes. It
+            uses MongoDB and Express, deployed in heroku
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="goTo" href="https://word-vault.herokuapp.com/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section class="solarSystem">
-          <span>2020</span>
-          <div class="container">
-            <h3>Solar system</h3>
-            <a href="https://github.com/Sotiris64/solarSystem">
-              <img
-                id="solarSystem"
-                alt="An icon of saturn"
-                class="proLogo"
-                src="./img/saturno[1589].png"
-              />
-            </a>
-            <p>Solar system simulation made in Three.js</p>
-          </div>
-          <div class="buttons">
-            <a class="github" href="https://github.com/Sotiris64/solarSystem"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-          </div>
-        </section>
+      <section class="solarSystem">
+        <span>2020</span>
+        <div class="container">
+          <h3>Solar system</h3>
+          <a href="https://github.com/Sotiris64/solarSystem">
+            <img id="solarSystem" alt="An icon of saturn" class="proLogo" src="./img/saturno[1589].png" />
+          </a>
+          <p>Solar system simulation made in Three.js</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/solarSystem"><span>Visit repository</span><img
+              src="/img/github.svg" /></a>
+        </div>
+      </section>
 
-        <section>
-          <span>2021</span>
-          <div class="container">
-            <h3>Calculator</h3>
-            <a href="/calculator">
-              <img
-                id="calc"
-                alt="calculator icon"
-                class="proLogo"
-                src="./img/calc.svg"
-              />
-            </a>
-            <p>Just a calculator, nothing special</p>
-          </div>
-          <div class="buttons">
-            <a
-              class="github"
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/calculator"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a class="goTo" href="/calculator/">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section class="pythonIFS">
+        <span>2022</span>
+        <div class="container">
+          <h3>Python IFS</h3>
+          <a href="https://github.com/Sotiris64/solarSystem">
+            <img id="pythonIFS" alt="An icon of a souls IFS" class="proLogo" src="./img/pythonIFS2.png" />
+          </a>
+          <p>IFS generator made in python</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/PythonIFS"><span>Visit repository</span><img
+              src="/img/github.svg" /></a>
+        </div>
+      </section>
 
-        <section>
-          <span>2020</span>
-          <div class="container">
-            <h3>Clock</h3>
-            <a href="/clock/">
-              <img
-                id="clock"
-                class="proLogo"
-                alt="clock icon"
-                src="./img/clock.svg"
-              />
-            </a>
-            <p>A clock...</p>
-          </div>
-          <div class="buttons">
-            <a
-              class="github"
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/clock"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a class="goTo" href="/clock/">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section>
+        <span>2021</span>
+        <div class="container">
+          <h3>Calculator</h3>
+          <a href="/calculator">
+            <img id="calc" alt="calculator icon" class="proLogo" src="./img/calc.svg" />
+          </a>
+          <p>Just a calculator, nothing special</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/calculator"><span>Visit
+              repository</span><img src="/img/github.svg" /></a>
+          <a class="goTo" href="/calculator/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section>
-          <span>2021</span>
-          <div class="container">
-            <h3>Pokedex</h3>
-            <a href="/PokemonAPI/">
-              <img
-                id="pokemon"
-                class="proLogo"
-                alt="pokeball"
-                src="./img/pokemon.png"
-              />
-            </a>
-            <p>Pokedex using the pokeAPI</p>
-          </div>
-          <div class="buttons">
-            <a
-              class="github"
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/PokemonAPI"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a class="goTo" href="/PokemonAPI/">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section>
+        <span>2020</span>
+        <div class="container">
+          <h3>Clock</h3>
+          <a href="/clock/">
+            <img id="clock" class="proLogo" alt="clock icon" src="./img/clock.svg" />
+          </a>
+          <p>A clock...</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/clock"><span>Visit
+              repository</span><img src="/img/github.svg" /></a>
+          <a class="goTo" href="/clock/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section>
-          <span>2020</span>
-          <div class="container">
-            <h3>To-do List</h3>
-            <a class="goTo" href="/ToDoList/">
-              <img id="task" class="proLogo" alt="task" src="./img/task.svg" />
-            </a>
-            <p>Just learning how to use localStorage</p>
-          </div>
-          <div class="buttons">
-            <a class="github" href="/ToDoList/"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/ToDoList"
-            >
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section>
+        <span>2021</span>
+        <div class="container">
+          <h3>Pokedex</h3>
+          <a href="/PokemonAPI/">
+            <img id="pokemon" class="proLogo" alt="pokeball" src="./img/pokemon.png" />
+          </a>
+          <p>Pokedex using the pokeAPI</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/PokemonAPI"><span>Visit
+              repository</span><img src="/img/github.svg" /></a>
+          <a class="goTo" href="/PokemonAPI/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section>
-          <span>2021</span>
-          <div class="container">
-            <h3>The cooler ToDoList</h3>
-            <a class="goTo" href="/Books/">
-              <img id="books" class="proLogo" alt="book" src="./img/book.svg" />
-            </a>
-            <p>Same as the other one, but using classes</p>
-          </div>
-          <div class="buttons">
-            <a
-              class="github"
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/Books"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a href="/Books/">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section>
+        <span>2020</span>
+        <div class="container">
+          <h3>To-do List</h3>
+          <a class="goTo" href="/ToDoList/">
+            <img id="task" class="proLogo" alt="task" src="./img/task.svg" />
+          </a>
+          <p>Just learning how to use localStorage</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="/ToDoList/"><span>Visit repository</span><img src="/img/github.svg" /></a>
+          <a href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/ToDoList">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section class="weatherAPI">
-          <span>2021</span>
-          <div class="container">
-            <h3>Weather API</h3>
-            <a href="/weatherAPI/">
-              <img
-                id="weatherAPI"
-                class="proLogo"
-                alt="weatherAPI"
-                src="./img/nuvenzinhas.png"
-              />
-            </a>
-            <p>
-              Weather report using OpenWeather API, unfortunately it is quite
-              inacurate
-            </p>
-          </div>
-          <div class="buttons">
-            <a
-              class="github"
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/weatherAPI"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a class="goTo" href="/weatherAPI/">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
+      <section>
+        <span>2021</span>
+        <div class="container">
+          <h3>The cooler ToDoList</h3>
+          <a class="goTo" href="/Books/">
+            <img id="books" class="proLogo" alt="book" src="./img/book.svg" />
+          </a>
+          <p>Same as the other one, but using classes</p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/Books"><span>Visit
+              repository</span><img src="/img/github.svg" /></a>
+          <a href="/Books/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <section>
-          <span>2020-2021</span>
-          <div class="container">
-            <h3>High school activities</h3>
-            <a href="/atividades">
-              <img
-                id="lab"
-                class="proLogo"
-                alt="My labs icon, it is a atom"
-                src="./img/lab.svg"
-              />
-            </a>
-            <p>
-              My high school projects, some are very bad and others are quite
-              decent
-            </p>
-          </div>
-          <div class="buttons">
-            <a
-              class="github"
-              href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/atividades"
-              ><span>Visit repository</span><img src="/img/github.svg"
-            /></a>
-            <a class="goTo" href="/atividades/">
-              <p>Go to website</p>
-              <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-        </section>
-      </div>
-    </main>
-  </body>
+      <section class="weatherAPI">
+        <span>2021</span>
+        <div class="container">
+          <h3>Weather API</h3>
+          <a href="/weatherAPI/">
+            <img id="weatherAPI" class="proLogo" alt="weatherAPI" src="./img/nuvenzinhas.png" />
+          </a>
+          <p>
+            Weather report using OpenWeather API, unfortunately it is quite
+            inacurate
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/weatherAPI"><span>Visit
+              repository</span><img src="/img/github.svg" /></a>
+          <a class="goTo" href="/weatherAPI/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <span>2020-2022</span>
+        <div class="container">
+          <h3>High school</h3>
+          <a href="/atividades">
+            <img id="lab" class="proLogo" alt="My labs icon, it is a atom" src="./img/lab.svg" />
+          </a>
+          <p>
+            My high school projects, some are very bad and others are quite
+            decent
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="github" href="https://github.com/Sotiris64/Sotiris64.github.io/tree/master/atividades"><span>Visit
+              repository</span><img src="/img/github.svg" /></a>
+          <a class="goTo" href="/atividades/">
+            <p>Go to website</p>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
 </html>
