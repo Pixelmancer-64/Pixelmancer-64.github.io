@@ -1,32 +1,16 @@
-const random_rgb = () => {
-  let offset = 50;
-  let mult = 255 - offset;
-  let r = Math.floor(Math.random() * mult + offset);
-  let g = Math.floor(Math.random() * mult + offset);
-  let b = Math.floor(Math.random() * mult + offset);
-  return {
-    r: r,
-    g: g,
-    b: b,
-  };
-};
-
-function random_color(num) {
-  let aux = [];
-  for (let i = 0; i < num; i++) {
-    aux.push(random_rgb());
-  }
-  return aux;
-}
-
 function usableColor(color, alpha = 1) {
   return `rgba(${color.r},${color.g},${color.b}, ${alpha})`;
 }
 
 class Configs {
-  static colors = random_color(9);
-  static cellSize = 15;
-  static lineWidth = 1;
+  static colors = [
+    "rgba(143, 98, 127, 1)",
+    "rgba(138,10,57,1)",
+    "rgba(190,0,50,1)",
+    "rgba(246,80,45,1)",
+  ];
+  static cellSize = 70;
+  static lineWidth = 2;
   static moves = [
     {
       x: Configs.cellSize / 2,
@@ -55,29 +39,42 @@ class Canvas {
   static rows;
   static gradient;
   static grid = [];
+  static canvas = document.getElementById("canvas");
 
   constructor() {
-    let canvas = document.getElementById("canvas");
-    Canvas.ctx = canvas.getContext("2d");
+    Canvas.ctx = Canvas.canvas.getContext("2d");
 
-    // if (window.innerWidth <= window.innerHeight) {
-    //   canvas.width = window.innerWidth;
-    //   canvas.height = window.innerWidth;
-    // } else {
-    //   canvas.width = window.innerHeight;
-    //   canvas.height = window.innerHeight;
-    // }
+    this.animationRequest;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    this.i = 0;
+    this.j = 1;
+    this.grid = [];
+  }
+
+  init() {
+    Canvas.canvas.width = window.innerWidth;
+    Canvas.canvas.height = window.innerHeight;
 
     Canvas.width = canvas.width;
     Canvas.height = canvas.height;
 
     Canvas.cols = Math.floor(Canvas.width / Configs.cellSize) + 2;
     Canvas.rows = Math.floor(Canvas.height / Configs.cellSize) + 2;
+    const scale = Canvas.cols / Canvas.rows;
 
-    let inc = 1;
+    this.startRadius = Canvas.rows * 3;
+    this.endRadius = Canvas.rows * 18;
+    this.inc = 1;
+    this.positiveStop = scale * 500;
+    this.negativeStop = -scale * 500;
+
+    this.gradient();
+
+    Canvas.ctx.strokeStyle = Canvas.gradient;
+    Canvas.ctx.lineWidth = Configs.lineWidth;
+
+    let inc = 0.3;
+    noise.seed(Math.random() * 255);
     let x = 0;
     for (let i = 0; i < Canvas.rows; i++) {
       x += inc;
@@ -89,57 +86,16 @@ class Canvas {
       }
     }
 
-    this.animationRequest;
-
-    this.gradient();
-
-    Canvas.ctx.strokeStyle = Canvas.gradient;
-    Canvas.ctx.lineWidth = Configs.lineWidth;
-  }
-
-  setup() {}
-  animation() {
-    // this.animationRequest = requestAnimationFrame(this.animation.bind(this));
-
-    // Canvas.ctx.clearRect(
-    //     0,
-    //     0,
-    //     Canvas.width,
-    //     Canvas.height
-    // );
-
-    for (let i = 0; i < Canvas.rows; i++) {
-      for (let j = 0; j < Canvas.cols; j++) {
-        Canvas.ctx.beginPath();
-        Canvas.ctx.arc(
-          j * Configs.cellSize,
-          i * Configs.cellSize,
-          Configs.cellSize / 5,
-          0,
-          Math.PI * 2
-        );
-        let grayScale = Canvas.grid[i][j] * 255;
-        Canvas.ctx.fillStyle = usableColor(
-          {
-            r: grayScale,
-            g: grayScale,
-            b: grayScale,
-          },
-          Canvas.grid[i][j]
-        );
-        Canvas.ctx.fill();
-      }
-    }
-
     for (let i = 0; i < Canvas.rows - 1; i++) {
+      this.grid[i] = [];
       for (let j = 0; j < Canvas.cols - 1; j++) {
-        const x = i * Configs.cellSize;
-        const y = j * Configs.cellSize;
+        const y = i * Configs.cellSize;
+        const x = j * Configs.cellSize;
         let state = [];
         Configs.moves.forEach((e) =>
           state.push({
-            x: y + e.y,
-            y: x + e.x,
+            x: x + e.y,
+            y: y + e.x,
           })
         );
 
@@ -149,6 +105,9 @@ class Canvas {
           Math.ceil(Canvas.grid[i + 1][j + 1]),
           Math.ceil(Canvas.grid[i][j + 1])
         );
+
+        // this was the best aproach that I found. Due to the 2 cases where
+        //  the function is composed of 4 values I can't just store the state
 
         let aux = [
           () => this.drawLine(state[2], state[3]),
@@ -170,30 +129,38 @@ class Canvas {
           () => this.drawLine(state[0], state[1]),
           () => this.drawLine(state[1], state[3]),
           () => this.drawLine(state[1], state[2]),
-          () => this.drawLine(state[2], state[3]),
-          () => this.drawLine(state[2], state[3]),
+
           () => this.drawLine(state[2], state[3]),
         ];
 
-        if (status && status < aux.length - 1) {
-          aux[status - 1]();
-        }
+        this.grid[i][j] = aux[status - 1];
       }
     }
-    Canvas.ctx.stroke();
 
-    // cancelAnimationFrame(this.animationRequest)
+    this.animation();
   }
 
-  test(){
+  animation() {
+    this.animationRequest = requestAnimationFrame(this.animation.bind(this));
+
+    Canvas.ctx.clearRect(0, 0, Canvas.width, Canvas.height);
+
+    Canvas.ctx.beginPath();
+
     for (let i = 0; i < Canvas.rows - 1; i++) {
       for (let j = 0; j < Canvas.cols - 1; j++) {
-        console.log(this.drawGrid[i][j])
-        this.drawGrid[i][j]()
+        if (this.grid[i][j]) this.grid[i][j]();
       }
     }
+
     Canvas.ctx.stroke();
 
+    this.gradient();
+    if (this.i >= this.positiveStop || this.i <= this.negativeStop)
+      this.j = this.j * -1;
+    this.i += this.inc * this.j;
+    Canvas.ctx.strokeStyle = Canvas.gradient;
+    Canvas.ctx.lineWidth = Configs.lineWidth;
   }
 
   drawLine(a, b) {
@@ -207,27 +174,30 @@ class Canvas {
 
   gradient() {
     Canvas.gradient = Canvas.ctx.createRadialGradient(
-      Canvas.width / 2,
-      Canvas.height / 2,
-      Canvas.width / 5,
       Canvas.width,
       Canvas.height,
-      Canvas.width / 30
+      this.startRadius,
+      this.i,
+      0,
+      this.endRadius
     );
 
-    // Canvas.gradient.addColorStop("0.1", usableColor(Configs.colors[0]))
-    Canvas.gradient.addColorStop("0.2", usableColor(Configs.colors[1]));
-    // Canvas.gradient.addColorStop("0.3", usableColor(Configs.colors[2]))
-    Canvas.gradient.addColorStop("0.4", usableColor(Configs.colors[3]));
-    // Canvas.gradient.addColorStop("0.5", usableColor(Configs.colors[4]))
-    Canvas.gradient.addColorStop("0.6", usableColor(Configs.colors[5]));
-    // Canvas.gradient.addColorStop("0.7", usableColor(Configs.colors[6]))
-    Canvas.gradient.addColorStop("0.8", usableColor(Configs.colors[7]));
-    // Canvas.gradient.addColorStop("0.9", usableColor(Configs.colors[8]))
+    Canvas.gradient.addColorStop("0.2", Configs.colors[0]);
+    Canvas.gradient.addColorStop("0.4", Configs.colors[1]);
+    Canvas.gradient.addColorStop("0.6", Configs.colors[2]);
+    Canvas.gradient.addColorStop("0.8", Configs.colors[3]);
+  }
+
+  resize() {
+    cancelAnimationFrame(this.animationRequest);
+    this.init();
   }
 }
 
 window.onload = function () {
   let canvas = new Canvas();
-  canvas.animation();
+  canvas.init();
+  window.addEventListener("resize", function () {
+    canvas.resize();
+  });
 };
