@@ -1,11 +1,17 @@
-import Canvas from "./Canvas";
+function map(n, start, stop, start2, stop2) {
+  return ((n - start) / (stop - start)) * (stop2 - start2) + start2;
+}
 
-export class Colors {
+function easyLoop(times, callback) {
+  for (let i = 0; i < times; i++) callback(i);
+}
+
+class Colors {
   static random_rgb(offset = 0) {
     const mult = 255 - offset;
-    let r = Math.floor(random(mult) + offset);
-    let g = Math.floor(random(mult) + offset);
-    let b = Math.floor(random(mult) + offset);
+    let r = Math.floor(Random.randomInt(mult) + offset);
+    let g = Math.floor(Random.randomInt(mult) + offset);
+    let b = Math.floor(Random.randomInt(mult) + offset);
     return {
       r,
       g,
@@ -14,49 +20,39 @@ export class Colors {
   }
 
   static randomColor() {
-    return Assistant.usableColor(Assistant.random_rgb());
+    return this.usableColor(this.random_rgb());
   }
-
-  
 
   static usableColor(color, alpha = 1) {
     return `rgba( ${color.r}, ${color.g}, ${color.b}, ${alpha})`;
   }
 
-  static map(n, start, stop, start2, stop2) {
-    return ((n - start) / (stop - start)) * (stop2 - start2) + start2;
-  }
-
-  static easyLoop(times, callback) {
-    for (let i = 0; i < times; i++) callback(i);
-  }
-
-//   static intersects(a, b, c, d, p, q, r, s) {
-//     var det, gamma, lambda;
-//     det = (c - a) * (s - q) - (r - p) * (d - b);
-//     if (det === 0) {
-//       return false;
-//     } else {
-//       lambda = ((s - q) * (r - a) + (p - r) * (s - b)) / det;
-//       gamma = ((b - d) * (r - a) + (c - a) * (s - b)) / det;
-//       return 0 < lambda && lambda < 1 && 0 < gamma && gamma < 1;
-//     }
-//   }
+  //   static intersects(a, b, c, d, p, q, r, s) {
+  //     var det, gamma, lambda;
+  //     det = (c - a) * (s - q) - (r - p) * (d - b);
+  //     if (det === 0) {
+  //       return false;
+  //     } else {
+  //       lambda = ((s - q) * (r - a) + (p - r) * (s - b)) / det;
+  //       gamma = ((b - d) * (r - a) + (c - a) * (s - b)) / det;
+  //       return 0 < lambda && lambda < 1 && 0 < gamma && gamma < 1;
+  //     }
+  //   }
 }
 
-class Random{
-    static randomFloat(r, hasNegativeRange = false) {
-        if (hasNegativeRange)
-          return Math.random() * r * (Math.round(Math.random()) ? 1 : -1);
-        return Math.random() * r;
-      }
-    
-      static randomInt(r, hasNegativeRange = false) {
-        r = Math.floor(r + 1);
-        if (hasNegativeRange)
-          return Math.floor(random(r) * (Math.round(Math.random()) ? 1 : -1));
-        return Math.floor(Math.random() * r);
-      }
+class Random {
+  static randomFloat(r, hasNegativeRange = false) {
+    if (hasNegativeRange)
+      return Math.random() * r * (Math.round(Math.random()) ? 1 : -1);
+    return Math.random() * r;
+  }
+
+  static randomInt(r, hasNegativeRange = false) {
+    r = Math.floor(r + 1);
+    if (hasNegativeRange)
+      return Math.floor(random(r) * (Math.round(Math.random()) ? 1 : -1));
+    return Math.floor(Math.random() * r);
+  }
 }
 
 class Particle {

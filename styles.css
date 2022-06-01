@@ -165,6 +165,13 @@ PROJECTS
 	gap: 5vh;
 }
 
+.projects > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5vh;
+}
+
 .projects section {
 	border: 3px solid #bf0033;
 	border-radius: 8px;
@@ -174,6 +181,8 @@ PROJECTS
 	gap: 3vh;
 	padding: 2rem;
 	position: relative;
+	width: 100%;
+	max-width: 64em;
 }
 
 .projects h2 {

@@ -768,5 +768,15 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/LangtonsAnt"
     },
     "picture": "./img/77.png"
+  },
+  {
+    "id": 78,
+    "title": "Enso",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Enso/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Enso"
+    },
+    "picture": "./img/78.png"
   }
 ]

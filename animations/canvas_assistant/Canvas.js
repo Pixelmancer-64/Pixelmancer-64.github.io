@@ -1,4 +1,4 @@
-export default class Canvas {
+class Canvas {
     static ctx;
     static width;
     static height;
@@ -62,6 +62,11 @@ export default class Canvas {
     animation() {
       this.animationRequest = requestAnimationFrame(this.animation.bind(this));
       easyLoop(this.nIterationsPerSecond, ()=> this.animationCallback())
+      // cancelAnimationFrame(this.animationRequest);
+    }
+
+    draw() {
+      easyLoop(this.nIterationsPerSecond, ()=> this.drawCallback())
       // cancelAnimationFrame(this.animationRequest);
     }
   

@@ -10,7 +10,7 @@ class Particle {
 		this.height = canvas.height;
 
 		this.grid = []
-		this.nextGrid = []
+		this.grid = []
 		this.da = 1
 		this.db = .5
 		this.f = .055
@@ -23,7 +23,7 @@ class Particle {
 
 		for (let i = 0; i < this.height; i++) {
 			this.grid[i] = [];
-			this.nextGrid[i] = [];
+			this.grid[i] = [];
 
 			for (let j = 0; j < this.width; j++) {
 
@@ -31,7 +31,7 @@ class Particle {
 					a: 1,
 					b: 0
 				};
-				this.nextGrid[i][j] = {
+				this.grid[i][j] = {
 					a: 1,
 					b: 0
 				};
@@ -41,13 +41,13 @@ class Particle {
 		// const hr = Math.floor(this.height/2)
 		// const wr = Math.floor(this.width/2)
 
-		// this.grid[hr][wr].b = 4
+		this.grid[Math.floor(this.height / 2)][Math.floor(this.width / 2)].b = 40
 
-		for (let i = Math.floor(this.height / 2); i < Math.floor(this.height / 2)+2; i++) {
-			for (let j = Math.floor(this.width / 2); j < Math.floor(this.width / 2)+2; j++) {
-				this.grid[i][j].b = 1
-			}
-		}
+		// for (let i = Math.floor(this.height / 2); i < Math.floor(this.height / 2)+2; i++) {
+		// 	for (let j = Math.floor(this.width / 2); j < Math.floor(this.width / 2)+2; j++) {
+		// 		this.grid[i][j].b = 1
+		// 	}
+		// }
 	}
 
 	animate() {
@@ -63,20 +63,19 @@ class Particle {
 				else if (newA > 1) newA = 1
 				if (newB < 0) newB = 0
 				else if (newB > 1) newB = 1
+				this.grid[i][j].a = newA
+				this.grid[i][j].b = newB
 
-				this.nextGrid[i][j].a = newA
-				this.nextGrid[i][j].b = newB
-
-				let color = (this.nextGrid[i][j].a - this.nextGrid[i][j].b)
+				let color = (this.grid[i][j].a - this.grid[i][j].b)
 
 				this.ctx.fillStyle = `rgba(${color * this.color}, ${color * this.color1}, ${color * this.color2}, 1)`;
 				this.ctx.fillRect(j, i, 1, 1)
 			}
 		}
 
-		const aux = this.grid
-		this.grid = this.nextGrid
-		this.nextGrid = aux
+		// const aux = this.grid
+		// this.grid = this.grid
+		// this.grid = aux
 
 		requestAnimationFrame(this.animate.bind(this));
 
