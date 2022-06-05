@@ -39,7 +39,7 @@ class Snowflake{
             ctx.rotate(-this.angle);
             this.draw(level+1);
             ctx.restore(); // return to save 2
-            ctx.restore(); // return to save 1
+            ctx.restore(); // return to save 0
         }
 
     }
