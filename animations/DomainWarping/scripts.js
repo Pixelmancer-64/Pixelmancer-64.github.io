@@ -3,13 +3,19 @@ class myCanvas extends Canvas {
     super(...args);
     const seed = Random.randomFloat(9999);
     noise.seed(seed);
-    console.log(seed);
 
-    this.scale = 60;
-    this.octaves = 3;
-    this.lacunarity = 2;
-    this.gain = 0.5;
+    this.scale = 40;
+    this.octaves = Random.randomInt(3);
+    this.lacunarity = Random.randomInt(2);
+    this.gain = .5;
     this.offset = 80;
+    
+    this.colorOffset = {
+      r: Random.randomInt(255),
+      g: Random.randomInt(255),
+      b: Random.randomInt(255),
+      
+    }
   }
 
   sinNoise(x, y){
@@ -22,9 +28,9 @@ class myCanvas extends Canvas {
         let v = ((this.pattern(j, i) + 1) * 128) / 255;
 
         const color = {
-          r: map(v, 0, 1, 0, 25),
-          g: map(v, 0, 1, 0, 205),
-          b: map(v, 0, 1, 0, 255),
+          r: map(v, 0, 1, 50, this.colorOffset.r),
+          g: map(v, 0, 1, 50, this.colorOffset.g),
+          b: map(v, 0, 1, 50, this.colorOffset.b),
 
         }
         new Square(this.cellSize, this.cellSize, `rgba( ${color.r}, ${color.g}, ${color.b}, ${1})`, {
