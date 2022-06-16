@@ -788,5 +788,15 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DomainWarping"
     },
     "picture": "./img/79.png"
+  },
+  {
+    "id": 80,
+    "title": "ColorScape",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/ColorScape/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ColorScape"
+    },
+    "picture": "./img/80.png"
   }
 ]
