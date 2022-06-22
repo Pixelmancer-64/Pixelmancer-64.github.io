@@ -4,7 +4,6 @@ const mouse = {
   pressed: false,
 };
 
-let radius = 500;
 
 function init() {
   const [canvas, ctx] = start(
@@ -16,22 +15,29 @@ function init() {
     }
   );
 
-  const n = 999;
-  const angleIncrease = (Math.PI * 2) / n;
+  const n = 99;
+  let angleIncrease = (Math.PI * 2) / n;
+  const r = 1;
+  let radius = canvas.width/2 - (r + 50);
+  let origin = canvas.width / 2
 
   function draw() {
     requestAnimationFrame(draw);
-    if (mouse.pressed) radius++;
-    else radius--;
+    if (mouse.pressed) {
+      radius--
+      angleIncrease += .001
+      // origin++
+    }
+    else radius++;
     // clear(ctx, canvas);
     for (let i = 0; i < Math.PI * 2; i += angleIncrease) {
       ctx.strokeStyle = "red";
       point(
         ctx,
-        canvas.width / 2 + radius * Math.cos(i),
-        canvas.height / 2 + (radius) * Math.tan(i),
-        1,
-        "black"
+        origin + radius * Math.sin(i),
+        origin + radius * Math.cos(i),
+        r,
+        "white"
       );
       // ctx.lineTo(mouse.x, mouse.y);
       // ctx.stroke();
