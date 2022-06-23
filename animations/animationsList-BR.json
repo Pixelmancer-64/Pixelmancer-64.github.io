@@ -798,5 +798,25 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ColorScape"
     },
     "picture": "./img/80.png"
+  },
+  {
+    "id": 81,
+    "title": "Origin",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Origin/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Origin"
+    },
+    "picture": "./img/81.png"
+  },
+  {
+    "id": 82,
+    "title": "Rug",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Rug/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rug"
+    },
+    "picture": "./img/82.png"
   }
 ]

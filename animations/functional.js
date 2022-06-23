@@ -21,13 +21,8 @@ function point(ctx, x, y, radius, color = "black", mode = "fill") {
 
 function clear(ctx, canvas) {
   ctx.save();
-  ctx.translate(canvas.width / 2, canvas.height / 2);
-  ctx.clearRect(
-    -canvas.width / 2,
-    -canvas.height / 2,
-    canvas.width,
-    canvas.height
-  );
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.restore();
 }
 
