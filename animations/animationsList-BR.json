@@ -818,5 +818,25 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rug"
     },
     "picture": "./img/82.png"
+  },
+  {
+    "id": 83,
+    "title": "sineWave",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/sineWave/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/sineWave"
+    },
+    "picture": "./img/83.png"
+  },
+  {
+    "id": 84,
+    "title": "moreSineWaves",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/moreSineWaves/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/moreSineWaves"
+    },
+    "picture": "./img/84.png"
   }
 ]

@@ -10,7 +10,7 @@ function init() {
     }
   );
 
-  ctx.translate(0, canvas.height / 2);
+  ctx.translate(canvas.width/2, canvas.height / 2);
 
   let hue = 0;
   let angle = 0;
@@ -27,7 +27,7 @@ function init() {
     loop(n, () => {
       point(
         ctx,
-        x,
+        x * Math.cos(angle) / 2,
         (Math.sin(angle) * (canvas.height - r)) / 2,
         r,
         "hsl(" + hue + ",100%,50%)"
