@@ -302,6 +302,7 @@ PROJECTS
 	.introduction h1 {
 		font-size: 5rem;
 	}
+	
 }
 
 @media (max-width: 59em) {
@@ -313,6 +314,8 @@ PROJECTS
 	.introduction a {
 		font-size: 1.8rem;
 	}
+	
+
 }
 
 @media (max-width: 44em) {
@@ -331,6 +334,7 @@ PROJECTS
 	.introduction a {
 		font-size: 1.8rem;
 	}
+	
 }
 
 @media (max-width: 34em) {
@@ -343,5 +347,11 @@ PROJECTS
 	.introduction a {
 		font-size: 1.5rem;
 		padding: .7rem;
+	}
+	.buttons{
+		flex-direction: column;
+	}
+	#projects{
+		font-size: 4rem;
 	}
 }
