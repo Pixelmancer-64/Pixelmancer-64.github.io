@@ -747,7 +747,7 @@
       "demo": "/animations/ElementaryCellularAutomata/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ElementaryCellularAutomata"
     },
-    "picture": "./img/75.png"
+    "picture": "./img/75.webp"
   },
   {
     "id": 76,
@@ -757,7 +757,7 @@
       "demo": "/animations/TotalisticCellularAutomata/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/TotalisticCellularAutomata"
     },
-    "picture": "./img/76.png"
+    "picture": "./img/76.webp"
   },
   {
     "id": 77,
@@ -767,7 +767,7 @@
       "demo": "/animations/LangtonsAnt/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/LangtonsAnt"
     },
-    "picture": "./img/77.png"
+    "picture": "./img/77.webp"
   },
   {
     "id": 78,
@@ -777,7 +777,7 @@
       "demo": "/animations/Enso/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Enso"
     },
-    "picture": "./img/78.png"
+    "picture": "./img/78.webp"
   },
   {
     "id": 79,
@@ -787,7 +787,7 @@
       "demo": "/animations/DomainWarping/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DomainWarping"
     },
-    "picture": "./img/79.png"
+    "picture": "./img/79.webp"
   },
   {
     "id": 80,
@@ -797,7 +797,7 @@
       "demo": "/animations/ColorScape/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ColorScape"
     },
-    "picture": "./img/80.png"
+    "picture": "./img/80.webp"
   },
   {
     "id": 81,
@@ -807,7 +807,7 @@
       "demo": "/animations/Origin/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Origin"
     },
-    "picture": "./img/81.png"
+    "picture": "./img/81.webp"
   },
   {
     "id": 82,
@@ -817,7 +817,7 @@
       "demo": "/animations/Rug/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rug"
     },
-    "picture": "./img/82.png"
+    "picture": "./img/82.webp"
   },
   {
     "id": 83,
@@ -827,7 +827,7 @@
       "demo": "/animations/sineWave/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/sineWave"
     },
-    "picture": "./img/83.png"
+    "picture": "./img/83.webp"
   },
   {
     "id": 84,
@@ -837,7 +837,7 @@
       "demo": "/animations/moreSineWaves/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/moreSineWaves"
     },
-    "picture": "./img/84.png"
+    "picture": "./img/84.webp"
   },
   {
     "id": 85,
@@ -847,6 +847,6 @@
       "demo": "/animations/Triangles/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Triangles"
     },
-    "picture": "./img/85.png"
+    "picture": "./img/85.webp"
   }
 ]
