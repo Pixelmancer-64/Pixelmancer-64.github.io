@@ -58,11 +58,6 @@ class Particle {
     this.draw(y - 1, x);
     this.draw(y, x + 1);
     this.draw(y, x - 1);
-
-    // this.draw(y + 1, x + 1);
-    // this.draw(y - 1, x - 1);
-    // this.draw(y - 1, x + 1);
-    // this.draw(y + 1, x - 1);
   }
 
   changeNeighbors(y, x, aux) {
@@ -70,11 +65,6 @@ class Particle {
     this.sandpiles[y - 1][x] += aux;
     this.sandpiles[y][x + 1] += aux;
     this.sandpiles[y][x - 1] += aux;
-
-    // this.sandpiles[y + 1][x + 1] += aux;
-    // this.sandpiles[y - 1][x - 1] += aux;
-    // this.sandpiles[y - 1][x + 1] += aux;
-    // this.sandpiles[y + 1][x - 1] += aux;
   }
 
   topple() {
