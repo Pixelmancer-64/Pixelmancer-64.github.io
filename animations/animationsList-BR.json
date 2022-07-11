@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Ascii art",
+    "title": "Ascii",
     "summary": "Ele pega uma imagem e transforma os pixels em caracteres ascii dependendo da sua cor",
     "links": {
       "demo": "/animations/Ascii",
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "title": "Universo, talvez?",
+    "title": "CircularMotion",
     "summary": "Um monte de formas geométricas rodando, só testando como fazer outras formas além de círculos e quadrados...",
     "links": {
       "demo": "/animations/CircularMotion",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "title": "Bem colorido",
+    "title": "Colorful",
     "summary": "Um monte de partículas que mudam de direção quando batem no limite da tela",
     "links": {
       "demo": "/animations/Colorful",
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "title": "Olhos de Cthulhu",
+    "title": "CthulhuEyes",
     "summary": "Olhos (super) assustadores que seguem o cursor do mouse; funciona no celular também clicando na tela",
     "links": {
       "demo": "/animations/CthulhuEyes",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "title": "Pontinhos",
+    "title": "Dots",
     "summary": "Partículas que se conectam com vizinhas dependendo de sua distância, está super mal otimizado, boa sorte rodando isso :p",
     "links": {
       "demo": "/animations/Dots",
@@ -61,7 +61,7 @@
   },
   {
     "id": 7,
-    "title": "Floco de neve",
+    "title": "Fractal Snowflake",
     "summary": "\"Snowflake fractal\", clica no ícone de refresh e vai gerar um nome aleatoriamente",
     "links": {
       "demo": "/animations/Fractal_Snowflake",
@@ -71,7 +71,7 @@
   },
   {
     "id": 8,
-    "title": "Árvore Fractal",
+    "title": "Fractal Tree",
     "summary": "Outro fractal bem famoso, clica no ícone de refresh e vai gerar um novo",
     "links": {
       "demo": "/animations/Fractal_Tree",
@@ -91,7 +91,7 @@
   },
   {
     "id": 10,
-    "title": "Hexagons are the bestagons",
+    "title": "Hexagons",
     "summary": "Hexágonos, só isso mesmo, é de um youtuber que não me lembro o nome, é meio sem graça",
     "links": {
       "demo": "/animations/Hexagons",
@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "title": "Image crawler",
+    "title": "Image Crawler",
     "summary": "Mesma coisa do Walker, só que tem uma imagem ai no fundo que ele vai desenhando com o tempo",
     "links": {
       "demo": "/animations/Image_Crawler",
@@ -121,7 +121,7 @@
   },
   {
     "id": 13,
-    "title": "Chuva? na imagem",
+    "title": "Image Rain",
     "summary": "Projeto do Franks Laboratory, dá uma olhada no canal dele :p É um efeito super legal",
     "links": {
       "demo": "/animations/Image",
@@ -131,7 +131,7 @@
   },
   {
     "id": 14,
-    "title": "Loading...",
+    "title": "Loading",
     "summary": "Parece uma tela de carregamento, só que é em css",
     "links": {
       "demo": "/animations/Loading",
@@ -141,7 +141,7 @@
   },
   {
     "id": 15,
-    "title": "Chuva Matrix",
+    "title": "Matrix Rain",
     "summary": "Meio que o efeito do matrix, só que são apenas 0 e 1",
     "links": {
       "demo": "/animations/Matrix",
@@ -151,7 +151,7 @@
   },
   {
     "id": 16,
-    "title": "Explosão",
+    "title": "Mouse Effect",
     "summary": "Clica na tela e... Bolinhas! Elas vão diminuindo com o tempo até serem tão pequenas que... morrem :p",
     "links": {
       "demo": "/animations/Mouse_Effect",
@@ -161,7 +161,7 @@
   },
   {
     "id": 17,
-    "title": "Mouse trail",
+    "title": "Mouse Trail",
     "summary": "Um rastro para o mouse. É bem bonito, mas é bem comum na interwebs, ",
     "links": {
       "demo": "/animations/Mouse_Trail",
@@ -171,7 +171,7 @@
   },
   {
     "id": 18,
-    "title": "Visualizador de música",
+    "title": "Music Visualizer",
     "summary": "Você pode escolher qualquer formato mp4 e as bolinhas vão reagir com a frequência do som",
     "links": {
       "demo": "/animations/Music",
@@ -181,7 +181,7 @@
   },
   {
     "id": 19,
-    "title": "Pêndulos",
+    "title": "Pendulum",
     "summary": "Um pêndulo, super simples mas bem divertido de ficar olhando por muito tempo...",
     "links": {
       "demo": "/animations/Pendulum",
@@ -191,7 +191,7 @@
   },
   {
     "id": 20,
-    "title": "Chuva",
+    "title": "Rain",
     "summary": "Sério, é só chuva, não tem mais absolutamente nada que acontece, sério :/",
     "links": {
       "demo": "/animations/Rain",
@@ -201,7 +201,7 @@
   },
   {
     "id": 21,
-    "title": "Texto em partícula",
+    "title": "Text",
     "summary": "É um hello world só que você pode interagir com ele, passa o mouse em cima e dá uma olhada",
     "links": {
       "demo": "/animations/Text/",
@@ -221,7 +221,7 @@
   },
   {
     "id": 23,
-    "title": "Ondas",
+    "title": "Waves",
     "summary": "São ondas, só que vai se tornando meio caótico com o tempo...",
     "links": {
       "demo": "/animations/Waves/",
@@ -231,7 +231,7 @@
   },
   {
     "id": 24,
-    "title": "Geração de terreno",
+    "title": "Terrain Generation",
     "summary": "Geração de terreno em 3d com Perlin noise, em um mundo ideal eu já tomei vergonha na cara e fiz estilo vaporwave",
     "links": {
       "demo": "/animations/Terrain_Generation/",
@@ -241,7 +241,7 @@
   },
   {
     "id": 25,
-    "title": "Pêndulo duplo",
+    "title": "Double Pendulum",
     "summary": "Era para ser um pêndulo duplo mas eu provavelmente errei a fórmula e criou isso ai, e até que é bonito",
     "links": {
       "demo": "/animations/Double_Pendulum/",
@@ -251,7 +251,7 @@
   },
   {
     "id": 26,
-    "title": "Cordas",
+    "title": "Strings",
     "summary": "Eu não sei exatamente o nome para o que eu fiz mas periodicamente você vai ver um cardioide",
     "links": {
       "demo": "/animations/Strings/",
@@ -261,7 +261,7 @@
   },
   {
     "id": 27,
-    "title": "Mais pêndulos",
+    "title": "Pendulums",
     "summary": "muito mais pêndulos! só isso mesmo",
     "links": {
       "demo": "/animations/Pendulums/",
@@ -321,7 +321,7 @@
   },
   {
     "id": 33,
-    "title": "Espiral de Fibonacci",
+    "title": "Fibonacci",
     "summary": "Uma espiral usando o 'golden ratio', melhor forma de distribuir pontos uniformemente em uma esfera",
     "links": {
       "demo": "/animations/Fibonacci/",
@@ -341,7 +341,7 @@
   },
   {
     "id": 35,
-    "title": "Barnsley fern (mutação)",
+    "title": "Barnsley fern",
     "summary": "Uma mutação do fractal \"Barnsley fern\" e com cores! ",
     "links": {
       "demo": "/animations/Barnsley_Fern/",
@@ -401,7 +401,7 @@
   },
   {
     "id": 41,
-    "title": "Rosa Polar",
+    "title": "Rose Pattern",
     "summary": "Bem simples de fazer, só usar coordenadas polares",
     "links": {
       "demo": "/animations/Rose_Pattern/",
@@ -411,7 +411,7 @@
   },
   {
     "id": 42,
-    "title": "L-System Árvore Fractal",
+    "title": "L-System Fractal Tree",
     "summary": "Não gosto muito dessa, mas eu usei L-Systems em outros projetos e essa é uma das mais simples de fazer",
     "links": {
       "demo": "/animations/L-System_Fractal/",
@@ -441,7 +441,7 @@
   },
   {
     "id": 45,
-    "title": "Retângulos and Triângulos",
+    "title": "Rectangle Fractal",
     "summary": "É um L-System Fractal, mas eu não sei se esse tem um nome específico",
     "links": {
       "demo": "/animations/Rect_Fractal/",
@@ -481,7 +481,7 @@
   },
   {
     "id": 49,
-    "title": "hyperSpace",
+    "title": "HyperSpace",
     "summary": "////",
     "links": {
       "demo": "/animations/hyperSpace/",
@@ -501,7 +501,7 @@
   },
   {
     "id": 51,
-    "title": "breathing",
+    "title": "Breathing",
     "summary": "////",
     "links": {
       "demo": "/animations/breathing/",
@@ -591,7 +591,7 @@
   },
   {
     "id": 60,
-    "title": "lulucthulhu",
+    "title": "Lulucthulhu",
     "summary": "////",
     "links": {
       "demo": "/animations/lulucthulhu/",
@@ -631,7 +631,7 @@
   },
   {
     "id": 64,
-    "title": "Marching_Squares",
+    "title": "Marching Squares",
     "summary": "////",
     "links": {
       "demo": "/animations/Marching_Squares/",
@@ -651,7 +651,7 @@
   },
   {
     "id": 66,
-    "title": "Random_Filling",
+    "title": "Random Filling",
     "summary": "////",
     "links": {
       "demo": "/animations/Random_Filling/",
@@ -711,7 +711,7 @@
   },
   {
     "id": 72,
-    "title": "Julia_Set",
+    "title": "Julia Set",
     "summary": "////",
     "links": {
       "demo": "/animations/Julia_Set/",
@@ -741,33 +741,33 @@
   },
   {
     "id": 75,
-    "title": "ElementaryCellularAutomata",
+    "title": "Elementary Cellular Automata",
     "summary": "////",
     "links": {
       "demo": "/animations/ElementaryCellularAutomata/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ElementaryCellularAutomata"
     },
-    "picture": "./img/75.png"
+    "picture": "./img/75.webp"
   },
   {
     "id": 76,
-    "title": "TotalisticCellularAutomata",
+    "title": "Totalistic Cellular Automata",
     "summary": "////",
     "links": {
       "demo": "/animations/TotalisticCellularAutomata/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/TotalisticCellularAutomata"
     },
-    "picture": "./img/76.png"
+    "picture": "./img/76.webp"
   },
   {
     "id": 77,
-    "title": "LangtonsAnt",
+    "title": "Langton's Ant",
     "summary": "////",
     "links": {
       "demo": "/animations/LangtonsAnt/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/LangtonsAnt"
     },
-    "picture": "./img/77.png"
+    "picture": "./img/77.webp"
   },
   {
     "id": 78,
@@ -777,17 +777,17 @@
       "demo": "/animations/Enso/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Enso"
     },
-    "picture": "./img/78.png"
+    "picture": "./img/78.webp"
   },
   {
     "id": 79,
-    "title": "DomainWarping",
+    "title": "Domain Warping",
     "summary": "////",
     "links": {
       "demo": "/animations/DomainWarping/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DomainWarping"
     },
-    "picture": "./img/79.png"
+    "picture": "./img/79.webp"
   },
   {
     "id": 80,
@@ -797,7 +797,7 @@
       "demo": "/animations/ColorScape/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ColorScape"
     },
-    "picture": "./img/80.png"
+    "picture": "./img/80.webp"
   },
   {
     "id": 81,
@@ -807,7 +807,7 @@
       "demo": "/animations/Origin/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Origin"
     },
-    "picture": "./img/81.png"
+    "picture": "./img/81.webp"
   },
   {
     "id": 82,
@@ -817,7 +817,7 @@
       "demo": "/animations/Rug/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rug"
     },
-    "picture": "./img/82.png"
+    "picture": "./img/82.webp"
   },
   {
     "id": 83,
@@ -827,7 +827,7 @@
       "demo": "/animations/sineWave/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/sineWave"
     },
-    "picture": "./img/83.png"
+    "picture": "./img/83.webp"
   },
   {
     "id": 84,
@@ -837,7 +837,7 @@
       "demo": "/animations/moreSineWaves/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/moreSineWaves"
     },
-    "picture": "./img/84.png"
+    "picture": "./img/84.webp"
   },
   {
     "id": 85,
@@ -847,6 +847,6 @@
       "demo": "/animations/Triangles/",
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Triangles"
     },
-    "picture": "./img/85.png"
+    "picture": "./img/85.webp"
   }
 ]

@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -73,6 +77,7 @@ main {
 }
 
 .card {
+  transition: scale 200ms ease-out;
   position: relative;
   width: 25em;
   height: 25em;
@@ -249,7 +254,19 @@ input:checked+.slider:before {
   }
 
   nav h1::after{
-    content: " made with ❤ by Hugo";
+    content: "Made with ❤ by Hugo";
   }
+
+}
+
+#search{
+  margin: auto;
+}
+
+.ativou{
+  scale: 1.1;
+}
+.ativou .imageContainer{
+  filter: brightness(110%);
 
 }
