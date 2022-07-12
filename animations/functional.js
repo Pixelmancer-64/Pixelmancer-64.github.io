@@ -121,9 +121,22 @@ function save(canvas, link) {
 }
 
 function loop2D(canvas, cellSize = 1, callback) {
+  let array = [];
+  console.log(array);
+
   for (let y = 0; y < canvas.height; y += cellSize) {
+    array[y] = [];
     for (let x = 0; x < canvas.width; x += cellSize) {
-      callback(x, y);
+      callback(x, y, array);
+    }
+  }
+  return array;
+}
+
+function visualizeHistogram(ctx, canvas, array) {
+  for (let y = 0, rows = array.lenght; y < rows; y += cellSize) {
+    for (let x = 0, cols = array[0].lenght; x < cols; x += cellSize) {
+      rect(ctx, x, y, rows, cols, "white");
     }
   }
 }

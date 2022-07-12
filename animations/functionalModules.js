@@ -5,7 +5,16 @@ export function rect(ctx, x, y, width, height, color = "black", mode = "fill") {
   ctx.fill();
 }
 
-export function arc(ctx, x, y, radius, start, end, color = "black", mode = "fill") {
+export function arc(
+  ctx,
+  x,
+  y,
+  radius,
+  start,
+  end,
+  color = "black",
+  mode = "fill"
+) {
   ctx.beginPath();
   ctx.arc(x, y, radius, start, end);
   ctx.fillStyle = color;
@@ -120,10 +129,41 @@ export function save(canvas, link) {
   document.body.removeChild(a);
 }
 
-export function loop2D(canvas, cellSize = 1, callback) {
-  for (let y = 0; y < canvas.height; y += cellSize) {
-    for (let x = 0; x < canvas.width; x += cellSize) {
-      callback(x, y);
+export function loop2D(canvas, cellSize, increment = { x: 0, y: 0 }, callback) {
+  let array = [];
+  let opcionalX = 0;
+
+  for (
+    let y = 0, height = Math.floor(canvas.height / cellSize);
+    y < height;
+    y++
+  ) {
+    opcionalX += increment.x;
+    let opcionalY = 0;
+    array[y] = [];
+
+    for (
+      let x = 0, width = Math.floor(canvas.width / cellSize);
+      x < width;
+      x++
+    ) {
+      opcionalY += increment.y;
+      callback(x, y, { x: opcionalX, y: opcionalY }, array);
+    }
+  }
+  return array;
+}
+
+export function visualizeHistogram(ctx, cellSize, array) {
+  for (let y = 0, rows = array.length; y < rows; y += 1) {
+    for (let x = 0, cols = array[0].length; x < cols; x += 1) {
+      point(
+        ctx,
+        x * cellSize,
+        y * cellSize,
+        cellSize,
+        map_color(array[y][x], 0, 1, 0, 255)
+      );
     }
   }
 }
