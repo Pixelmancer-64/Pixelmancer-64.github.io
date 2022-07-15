@@ -93,47 +93,29 @@ class Canvas {
 
     this.i = 0;
 
-    // for (let i = 0; i < Canvas.rows; i++) {
-    //   for (let j = 0; j < Canvas.cols; j++) {
-    //     this.popcorn(
-    //       random(j, true),
-    //       random(i, true),
-    //       Configs.h,
-    //       1000
-    //     );
-  
-    //     this.i < Configs.colors.length - 1 ? this.i++ : (this.i = 0);
-    //   }
-    // }
-
     this.animationRequest;
 
-    this.gradient();
-    this.seed = new Particle(1, 0, 'white')
+    this.seed = new Particle(0, 1, 'white')
 
     Canvas.ctx.strokeStyle = Canvas.gradient;
     Canvas.ctx.fillStyle = Canvas.gradient;
     Canvas.ctx.lineWidth = Configs.lineWidth;
 
 
-    for (let i = 0; i < 3000; i++) {
+    for (let i = 0; i < 2000; i++) {
       this.popcorn(
         random(this.seed.x, true),
         random(this.seed.y, true),
-        // random(Configs.r, true),
-        // random(Configs.r, true),
         Configs.h,
-        1000
+        9999
       );
 
       this.i < Configs.colors.length - 1 ? this.i++ : (this.i = 0);
     }
 
-    // console.log(Canvas.grid.sort((a, b) => a.x - b.x))
   }
 
   popcorn(x, y, h, iters) {
-    // let color = usableColor(Configs.colors[Math.floor(Math.random() * Configs.colors.length)]);
     let color = usableColor(Configs.colors[this.i]);
 
     for (let i = 0; i < iters; i++) {
@@ -144,38 +126,12 @@ class Canvas {
         y = y - h * Math.sin(aux + Math.tan(3 * aux));
 
         let particle = new Particle(x, y, color);
-        // Canvas.grid.push(particle);
         particle.draw();
         this.seed.x = x;
         this.seed.y = y;
 
       }
     }
-  }
-
-  animation() {
-    // this.animationRequest = requestAnimationFrame(this.animation.bind(this));
-    // Canvas.ctx.clearRect(0, 0, Canvas.width, Canvas.height);
-    // cancelAnimationFrame(this.animationRequest)
-  }
-
-  gradient() {
-    Canvas.gradient = Canvas.ctx.createLinearGradient(
-      0,
-      0,
-      Canvas.width,
-      Canvas.height
-    );
-
-    Canvas.gradient.addColorStop(0, usableColor(Configs.gradient[0]));
-    // Canvas.gradient.addColorStop("0.2", usableColor(Configs.gradient[1]));
-    Canvas.gradient.addColorStop(0.3, usableColor(Configs.gradient[2]));
-    // Canvas.gradient.addColorStop("0.4", usableColor(Configs.gradient[3]));
-    // Canvas.gradient.addColorStop(.5, usableColor(Configs.gradient[4]));
-    // Canvas.gradient.addColorStop("0.6", usableColor(Configs.gradient[5]));
-    Canvas.gradient.addColorStop(0.7, usableColor(Configs.gradient[6]));
-    // Canvas.gradient.addColorStop("0.8", usableColor(Configs.gradient[7]));
-    Canvas.gradient.addColorStop(1, usableColor(Configs.gradient[8]));
   }
 }
 

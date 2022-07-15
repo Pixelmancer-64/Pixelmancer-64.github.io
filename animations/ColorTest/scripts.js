@@ -1,35 +1,49 @@
 import {
   start,
-  loop2D,
   visualizeHistogram,
   random,
+  point,
+  map_color,
 } from "../functionalModules.js";
 
 function init() {
   const [canvas, ctx] = start(
     document.querySelector("canvas"),
-    window.innerWidth,
-    window.innerHeight,
+    200,
+    200,
     {
       antialias: false,
     }
   );
 
-  const cellSize = 3;
-  const frequency = 0.02;
+  const cellSize = 1;
+    let yoff = 0
 
-  noise.seed(random(0, 100));
+  noise.seed(10);
 
-  let array = loop2D(
-    canvas,
-    cellSize,
-    { x: 1, y: 1 },
-    function (x, y, noiseInc, arr) {
-      arr[y][x] = noise.simplex2(x * frequency, y * frequency);
+  let array = [];
+  for (
+    let y = 0, height = Math.floor(canvas.height / cellSize);
+    y < height;
+    y++
+  ) {
+
+    array[y] = [];
+    let xoff = 0
+
+    for (
+      let x = 0, width = Math.floor(canvas.width / cellSize);
+      x < width;
+      x++
+    ) {
+
+      
+      point(ctx, x, y, 1, map_color(noise.perlin2(xoff, yoff),0,1,0,255))
+      xoff += 0.01;
     }
-  );
-
-  visualizeHistogram(ctx, cellSize, array);
+    yoff += 0.01
+  }
+  // visualizeHistogram(ctx, 1, array)
 
   function draw() {
     // clear(ctx, canvas);

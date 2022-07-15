@@ -129,17 +129,14 @@ export function save(canvas, link) {
   document.body.removeChild(a);
 }
 
-export function loop2D(canvas, cellSize, increment = { x: 0, y: 0 }, callback) {
+export function loop2D(canvas, cellSize, callback) {
   let array = [];
-  let opcionalX = 0;
 
   for (
     let y = 0, height = Math.floor(canvas.height / cellSize);
     y < height;
     y++
   ) {
-    opcionalX += increment.x;
-    let opcionalY = 0;
     array[y] = [];
 
     for (
@@ -147,8 +144,7 @@ export function loop2D(canvas, cellSize, increment = { x: 0, y: 0 }, callback) {
       x < width;
       x++
     ) {
-      opcionalY += increment.y;
-      callback(x, y, { x: opcionalX, y: opcionalY }, array);
+      callback(x, y, array);
     }
   }
   return array;
