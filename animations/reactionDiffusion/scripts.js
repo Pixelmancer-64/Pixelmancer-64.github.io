@@ -10,7 +10,6 @@ class Particle {
 		this.height = canvas.height;
 
 		this.grid = []
-		this.grid = []
 		this.da = 1
 		this.db = .5
 		this.f = .055
