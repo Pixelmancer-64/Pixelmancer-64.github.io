@@ -3,10 +3,10 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let fontSize = 2;
+let fontSize = 3;
 let ofsetX = 6;
 let ofsetY = 6; 
-let text = 'Hello World';
+let text = 'I <3 You';
 let particlesArray = [];
 ctx.fillStyle= 'white';
 ctx.font = fontSize+ 'vh Verdana';
@@ -33,13 +33,14 @@ window.addEventListener('mouseout', function(){
 
 class Particle{
     constructor(x, y, mass, size, color){
-        this.x = x;
-        this.y=y;
+        this.x = Math.random()*canvas.width;
+        this.y= Math.random()*canvas.height;
         this.size = size;
         this.color = color;
-        this.originX = this.x;
-        this.originY = this.y;
+        this.originX = x;
+        this.originY = y;
         this.mass = mass;
+        this.vel = Math.random() * 20 + 10
     }
     draw(){
         ctx.beginPath();
@@ -68,11 +69,11 @@ class Particle{
         }else {
                 if(this.x !== this.originX){
                 let dx = this.x - this.originX;
-                this.x -= dx/9;
+                this.x -= dx/this.vel;
                 }
                 if(this.y !== this.originY){
                     let dy = this.y - this.originY;
-                    this.y -= dy/9;
+                    this.y -= dy/this.vel;
                     }
             }
         this.draw();
