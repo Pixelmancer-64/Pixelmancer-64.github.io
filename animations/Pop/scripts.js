@@ -1,4 +1,10 @@
-import { point, start, clear } from "../functionalModules.js";
+import {
+  point,
+  start,
+  clear,
+  random_color,
+  objColorToString,
+} from "../functionalModules.js";
 const { sin, cos, sqrt } = Math;
 
 function init() {
@@ -12,15 +18,19 @@ function init() {
   );
 
   const min = 3;
-  const max = 10;
+  const max = 6;
   const nParticles = 9999;
   const guardian = 999;
   let points = [];
+  let foundPoints = [];
+  let color = random_color();
 
   function draw() {
-    // requestAnimationFrame(draw);
     clear(ctx, canvas);
     for (let dot of points) {
+      dot.found ? dot.drawSpecial() : dot.draw();
+    }
+    for (let dot of foundPoints) {
       dot.found ? dot.drawSpecial() : dot.draw();
     }
   }
@@ -32,9 +42,11 @@ function init() {
     function animation() {
       animationRequest = requestAnimationFrame(animation);
       aux = findClosest(aux);
+
       i++;
       if (i > 100) {
         cancelAnimationFrame(animationRequest);
+        color = random_color();
       }
     }
     animation();
@@ -46,13 +58,14 @@ function init() {
       this.y = y;
       this.radius = radius;
       this.found = false;
+      this.color;
     }
 
     draw() {
       point(ctx, this.x, this.y, this.radius, "white", "FILL");
     }
     drawSpecial() {
-      point(ctx, this.x, this.y, this.radius, "purple", "FILL");
+      point(ctx, this.x, this.y, this.radius, this.color, "FILL");
     }
   }
 
@@ -78,7 +91,7 @@ function init() {
       while (isValid(point)) {
         point.radius += 1;
       }
-      points.push(new Dot(point.x, point.y, point.radius));
+      points.push(new Dot(point.x, point.y, point.radius - .5));
     }
   }
 
@@ -127,8 +140,8 @@ function init() {
       let cx = e.x - closest.x;
       let cy = e.y - closest.y;
 
-      let distance = dx * dx + dy * dy;
-      let closestDistante = cx * cx + cy * cy;
+      let distance = sqrt(dx * dx + dy * dy);
+      let closestDistante = sqrt(cx * cx + cy * cy);
       if (
         distance + point.radius < closestDistante + closest.radius ||
         closestDistante == 0
@@ -140,7 +153,10 @@ function init() {
 
     closest.found = true;
     points.splice(closestIndex, 1);
-    draw()
+    closest.color = color;
+
+    foundPoints.push(closest);
+    draw();
     return closest;
   }
 }
