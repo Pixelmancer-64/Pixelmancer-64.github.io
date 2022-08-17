@@ -848,5 +848,15 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Triangles"
     },
     "picture": "./img/85.webp"
+  },
+  {
+    "id": 86,
+    "title": "Pop",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Pop/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pop"
+    },
+    "picture": "./img/86.png"
   }
 ]

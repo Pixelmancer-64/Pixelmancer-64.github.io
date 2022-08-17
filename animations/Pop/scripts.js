@@ -3,9 +3,8 @@ import {
   start,
   clear,
   random_color,
-  objColorToString,
 } from "../functionalModules.js";
-const { sin, cos, sqrt } = Math;
+const { sqrt } = Math;
 
 function init() {
   const [canvas, ctx] = start(
@@ -17,8 +16,8 @@ function init() {
     }
   );
 
-  const min = 3;
-  const max = 6;
+  const min = 4;
+  const max = 10;
   const nParticles = 9999;
   const guardian = 999;
   let points = [];
