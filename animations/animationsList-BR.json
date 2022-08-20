@@ -858,5 +858,35 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pop"
     },
     "picture": "./img/86.png"
+  },
+  {
+    "id": 87,
+    "title": "Away",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Away/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Away"
+    },
+    "picture": "./img/87.png"
+  },
+  {
+    "id": 88,
+    "title": "Ascension",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Ascension/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Ascension"
+    },
+    "picture": "./img/88.png"
+  },
+  {
+    "id": 89,
+    "title": "Pixels",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Pixels/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pixels"
+    },
+    "picture": "./img/89.png"
   }
 ]

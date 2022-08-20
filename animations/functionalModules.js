@@ -63,6 +63,11 @@ export function random_hsla(alpha = 1, offset = 0) {
   return `hsla(${random(offset, 360)}, 100%, 50%, ${alpha})`;
 }
 
+export function hsla(alpha = 1, offset = 0) {
+  return `hsla(${offset}, 100%, 50%, ${alpha})`;
+}
+
+
 export function map_color(val, s, e, s1, e1) {
   const mapped = map(val, s, e, s1, e1);
   return `rgba(${mapped}, ${mapped}, ${mapped}, ${1})`;

@@ -58,7 +58,7 @@ function init() {
   }
 
   let pixels = [];
-  const n = 1000;
+  const n = 500;
 
   loop(n, (i) => {
     pixels.push(new Pixel(0, 0, random(5, 100)));
