@@ -46,7 +46,7 @@ export function map(n, start, stop, start2, stop2) {
 export function loop(i, callback) {
   function wraper(...args) {
     for (let j = 0; j < i; j++) {
-      callback(i, ...args);
+      callback(j, ...args);
     }
   }
   return wraper;
@@ -57,6 +57,10 @@ export function random_color(alpha = 1, offset = 0) {
     offset,
     255
   )}, ${alpha})`;
+}
+
+export function random_hsla(alpha = 1, offset = 0) {
+  return `hsla(${random(offset, 360)}, 100%, 50%, ${alpha})`;
 }
 
 export function map_color(val, s, e, s1, e1) {
