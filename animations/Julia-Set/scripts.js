@@ -110,8 +110,6 @@ class Canvas {
     Canvas.ctx.lineWidth = Configs.lineWidth;
 
     // this.i < Configs.colors.length - 1 ? this.i++ : (this.i = 0);
-  console.log(Configs.colors)
-
   }
 
   animation() {

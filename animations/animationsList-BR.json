@@ -2,901 +2,451 @@
   {
     "id": 1,
     "title": "Ascii",
-    "summary": "Ele pega uma imagem e transforma os pixels em caracteres ascii dependendo da sua cor",
-    "links": {
-      "demo": "/animations/Ascii",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Ascii"
-    },
-    "picture": "./img/1.webp"
+    "format": "webp"
   },
   {
     "id": 2,
-    "title": "CircularMotion",
-    "summary": "Um monte de formas geométricas rodando, só testando como fazer outras formas além de círculos e quadrados...",
-    "links": {
-      "demo": "/animations/CircularMotion",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/CircularMotion"
-    },
-    "picture": "./img/2.webp"
+    "title": "Circular-Motion",
+    "format": "webp"
   },
   {
     "id": 3,
     "title": "Colorful",
-    "summary": "Um monte de partículas que mudam de direção quando batem no limite da tela",
-    "links": {
-      "demo": "/animations/Colorful",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Colorful"
-    },
-    "picture": "./img/3.webp"
+    "format": "webp"
   },
   {
     "id": 4,
-    "title": "CthulhuEyes",
-    "summary": "Olhos (super) assustadores que seguem o cursor do mouse; funciona no celular também clicando na tela",
-    "links": {
-      "demo": "/animations/CthulhuEyes",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/CthulhuEyes"
-    },
-    "picture": "./img/4.webp"
+    "title": "Cthulhu-Eyes",
+    "format": "webp"
   },
   {
     "id": 5,
     "title": "Dots",
-    "summary": "Partículas que se conectam com vizinhas dependendo de sua distância, está super mal otimizado, boa sorte rodando isso :p",
-    "links": {
-      "demo": "/animations/Dots",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Dots"
-    },
-    "picture": "./img/5.webp"
+    "format": "webp"
   },
   {
     "id": 6,
     "title": "Cosmos",
-    "summary": "Projeto original meu, cria algumas coisas super legais, mas na demo está só mostrando a \"Borboleta Cósmica\" ",
-    "links": {
-      "demo": "/animations/Cosmos",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Cosmos"
-    },
-    "picture": "./img/6.webp"
+    "format": "webp"
   },
   {
     "id": 7,
-    "title": "Fractal Snowflake",
-    "summary": "\"Snowflake fractal\", clica no ícone de refresh e vai gerar um nome aleatoriamente",
-    "links": {
-      "demo": "/animations/Fractal_Snowflake",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fractal_Snowflake"
-    },
-    "picture": "./img/7.webp"
+    "title": "Fractal-Snowflake",
+    "format": "webp"
   },
   {
     "id": 8,
-    "title": "Fractal Tree",
-    "summary": "Outro fractal bem famoso, clica no ícone de refresh e vai gerar um novo",
-    "links": {
-      "demo": "/animations/Fractal_Tree",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fractal_Tree"
-    },
-    "picture": "./img/8.webp"
+    "title": "Fractal-Tree",
+    "format": "webp"
   },
   {
     "id": 9,
     "title": "Starfield",
-    "summary": "Bem simples, com o movimento do mouse vai surgindo alguns formatos aleatórios",
-    "links": {
-      "demo": "/animations/Starfield",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Starfield"
-    },
-    "picture": "./img/9.webp"
+    "format": "webp"
   },
   {
     "id": 10,
     "title": "Hexagons",
-    "summary": "Hexágonos, só isso mesmo, é de um youtuber que não me lembro o nome, é meio sem graça",
-    "links": {
-      "demo": "/animations/Hexagons",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Hexagons"
-    },
-    "picture": "./img/10.webp"
+    "format": "webp"
   },
   {
     "id": 11,
-    "title": "Self-Avoid Walker",
-    "summary": "Um walker que evita casas já percorridas, a única diferença para os mais comuns na interwebs é que esse não apaga as casas quando precisa \"dar ré\"",
-    "links": {
-      "demo": "/animations/Self-Avoid_Walker",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Self-Avoid%20Walker"
-    },
-    "picture": "./img/11.webp"
+    "title": "Self-Avoid-Walker",
+    "format": "webp"
   },
   {
     "id": 12,
-    "title": "Image Crawler",
-    "summary": "Mesma coisa do Walker, só que tem uma imagem ai no fundo que ele vai desenhando com o tempo",
-    "links": {
-      "demo": "/animations/Image_Crawler",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Image%20Crawler"
-    },
-    "picture": "./img/12.webp"
+    "title": "Image-Crawler",
+    "format": "webp"
   },
   {
     "id": 13,
-    "title": "Image Rain",
-    "summary": "Projeto do Franks Laboratory, dá uma olhada no canal dele :p É um efeito super legal",
-    "links": {
-      "demo": "/animations/Image",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Image"
-    },
-    "picture": "./img/13.webp"
+    "title": "Image-Rain",
+    "format": "webp"
   },
   {
     "id": 14,
     "title": "Loading",
-    "summary": "Parece uma tela de carregamento, só que é em css",
-    "links": {
-      "demo": "/animations/Loading",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Loading"
-    },
-    "picture": "./img/14.webp"
+    "format": "webp"
   },
   {
     "id": 15,
-    "title": "Matrix Rain",
-    "summary": "Meio que o efeito do matrix, só que são apenas 0 e 1",
-    "links": {
-      "demo": "/animations/Matrix",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Matrix"
-    },
-    "picture": "./img/15.webp"
+    "title": "Matrix",
+    "format": "webp"
   },
   {
     "id": 16,
-    "title": "Mouse Effect",
-    "summary": "Clica na tela e... Bolinhas! Elas vão diminuindo com o tempo até serem tão pequenas que... morrem :p",
-    "links": {
-      "demo": "/animations/Mouse_Effect",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mouse_Effect"
-    },
-    "picture": "./img/16.webp"
+    "title": "Mouse-Effect",
+    "format": "webp"
   },
   {
     "id": 17,
-    "title": "Mouse Trail",
-    "summary": "Um rastro para o mouse. É bem bonito, mas é bem comum na interwebs, ",
-    "links": {
-      "demo": "/animations/Mouse_Trail",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mouse_Trail"
-    },
-    "picture": "./img/17.webp"
+    "title": "Mouse-Trail",
+    "format": "webp"
   },
   {
     "id": 18,
-    "title": "Music Visualizer",
-    "summary": "Você pode escolher qualquer formato mp4 e as bolinhas vão reagir com a frequência do som",
-    "links": {
-      "demo": "/animations/Music",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Music"
-    },
-    "picture": "./img/18.webp"
+    "title": "Music",
+    "format": "webp"
   },
   {
     "id": 19,
     "title": "Pendulum",
-    "summary": "Um pêndulo, super simples mas bem divertido de ficar olhando por muito tempo...",
-    "links": {
-      "demo": "/animations/Pendulum",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pendulum"
-    },
-    "picture": "./img/19.webp"
+    "format": "webp"
   },
   {
     "id": 20,
     "title": "Rain",
-    "summary": "Sério, é só chuva, não tem mais absolutamente nada que acontece, sério :/",
-    "links": {
-      "demo": "/animations/Rain",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rain"
-    },
-    "picture": "./img/20.webp"
+    "format": "webp"
   },
   {
     "id": 21,
     "title": "Text",
-    "summary": "É um hello world só que você pode interagir com ele, passa o mouse em cima e dá uma olhada",
-    "links": {
-      "demo": "/animations/Text/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Text"
-    },
-    "picture": "./img/21.webp"
+    "format": "webp"
   },
   {
     "id": 22,
     "title": "Clockwise",
-    "summary": "Círculos e mais círculos, as vezes podem criar alguma coisa legal, vai tentando ai",
-    "links": {
-      "demo": "/animations/Clockwise",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clockwise"
-    },
-    "picture": "./img/22.webp"
+    "format": "webp"
   },
   {
     "id": 23,
     "title": "Waves",
-    "summary": "São ondas, só que vai se tornando meio caótico com o tempo...",
-    "links": {
-      "demo": "/animations/Waves/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Waves"
-    },
-    "picture": "./img/23.webp"
+    "format": "webp"
   },
   {
     "id": 24,
-    "title": "Terrain Generation",
-    "summary": "Geração de terreno em 3d com Perlin noise, em um mundo ideal eu já tomei vergonha na cara e fiz estilo vaporwave",
-    "links": {
-      "demo": "/animations/Terrain_Generation/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Terrain_Generation"
-    },
-    "picture": "./img/24.webp"
+    "title": "Terrain-Generation",
+    "format": "webp"
   },
   {
     "id": 25,
-    "title": "Double Pendulum",
-    "summary": "Era para ser um pêndulo duplo mas eu provavelmente errei a fórmula e criou isso ai, e até que é bonito",
-    "links": {
-      "demo": "/animations/Double_Pendulum/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Double_Pendulum"
-    },
-    "picture": "./img/25.webp"
+    "title": "Double-Pendulum",
+    "format": "webp"
   },
   {
     "id": 26,
     "title": "Strings",
-    "summary": "Eu não sei exatamente o nome para o que eu fiz mas periodicamente você vai ver um cardioide",
-    "links": {
-      "demo": "/animations/Strings/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Strings"
-    },
-    "picture": "./img/26.webp"
+    "format": "webp"
   },
   {
     "id": 27,
     "title": "Pendulums",
-    "summary": "muito mais pêndulos! só isso mesmo",
-    "links": {
-      "demo": "/animations/Pendulums/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pendulums"
-    },
-    "picture": "./img/27.webp"
+    "format": "webp"
   },
   {
     "id": 28,
-    "title": "Noise Flowfield",
-    "summary": "Um flowfield com Perlin noise, é meio assustador... mas é bonito também",
-    "links": {
-      "demo": "/animations/Noise_FlowField/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Noise_FlowField"
-    },
-    "picture": "./img/28.webp"
+    "title": "Noise-Flowfield",
+    "format": "webp"
   },
   {
     "id": 29,
-    "title": "Maurer Rose",
-    "summary": "Maurer Rose mas com valores aleatórios que criam efeitos bem legais",
-    "links": {
-      "demo": "/animations/Maurer_Rose/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Maurer_Rose"
-    },
-    "picture": "./img/29.webp"
+    "title": "Maurer-Rose",
+    "format": "webp"
   },
   {
     "id": 30,
-    "title": "Collatz Conjecture",
-    "summary": "Collatz Conjecture, só que BEM colorido, é bem leve de rodar",
-    "links": {
-      "demo": "/animations/Collatz_Conjecture/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collatz_Conjecture"
-    },
-    "picture": "./img/30.webp"
+    "title": "Collatz-Conjecture",
+    "format": "webp"
   },
   {
     "id": 31,
     "title": "Sandpiles",
-    "summary": "É um fractal, SUPER pesado em resoluções muito grandes, cria uns padrões que você poderia usar em tapete",
-    "links": {
-      "demo": "/animations/Sandpiles/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Sandpiles"
-    },
-    "picture": "./img/31.webp"
+    "format": "webp"
   },
   {
     "id": 32,
-    "title": "Worley Noise",
-    "summary": "Worley noise, se você já trabalhou com texturas conhece bem",
-    "links": {
-      "demo": "/animations/Worley_Noise/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Worley_Noise"
-    },
-    "picture": "./img/32.webp"
+    "title": "Worley-Noise",
+    "format": "webp"
   },
   {
     "id": 33,
     "title": "Fibonacci",
-    "summary": "Uma espiral usando o 'golden ratio', melhor forma de distribuir pontos uniformemente em uma esfera",
-    "links": {
-      "demo": "/animations/Fibonacci/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Fibonacci"
-    },
-    "picture": "./img/33.webp"
+    "format": "webp"
   },
   {
     "id": 34,
-    "title": "Chaos Games",
-    "summary": "Literalmente seria \"Jogo do Caos\", dá uma pesquisada na wikipedia para ver como que funciona",
-    "links": {
-      "demo": "/animations/Chaos_Game/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Chaos_Game"
-    },
-    "picture": "./img/34.webp"
+    "title": "Chaos-Game",
+    "format": "webp"
   },
   {
     "id": 35,
-    "title": "Barnsley fern",
-    "summary": "Uma mutação do fractal \"Barnsley fern\" e com cores! ",
-    "links": {
-      "demo": "/animations/Barnsley_Fern/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Barnsley_Fern"
-    },
-    "picture": "./img/35.webp"
+    "title": "Barnsley-Fern",
+    "format": "webp"
   },
   {
     "id": 36,
-    "title": "Random Walker",
-    "summary": "Um grupo de partículas depois de uma festa...",
-    "links": {
-      "demo": "/animations/Random_Walker/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Walker"
-    },
-    "picture": "./img/36.webp"
+    "title": "Random-Walker",
+    "format": "webp"
   },
   {
     "id": 37,
-    "title": "Clifford Atracttor",
-    "summary": "Clifford Atracttor...",
-    "links": {
-      "demo": "/animations/Clifford_Attractor/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Clifford_Attractor"
-    },
-    "picture": "./img/37.webp"
+    "title": "Clifford-Attractor",
+    "format": "webp"
   },
   {
     "id": 38,
     "title": "Souls",
-    "summary": "Uma modificação do Bedhead Atracttor que eu fiz e que cria uns resultados meio assustadores",
-    "links": {
-      "demo": "/animations/Souls/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Souls"
-    },
-    "picture": "./img/38.webp"
+    "format": "webp"
   },
   {
     "id": 39,
-    "title": "Svensson Atracttor",
-    "summary": "Svensson Atracttor...",
-    "links": {
-      "demo": "/animations/Svensson_Attractor/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Svensson_Atracttor"
-    },
-    "picture": "./img/39.webp"
+    "title": "Svensson-Attractor",
+    "format": "webp"
   },
   {
     "id": 40,
-    "title": "Bedhead Atracttor",
-    "summary": "Bedhead Atracttor...",
-    "links": {
-      "demo": "/animations/Bedhead_Attractor/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Bedhead_Attractor"
-    },
-    "picture": "./img/40.webp"
+    "title": "Bedhead-Attractor",
+    "format": "webp"
   },
   {
     "id": 41,
-    "title": "Rose Pattern",
-    "summary": "Bem simples de fazer, só usar coordenadas polares",
-    "links": {
-      "demo": "/animations/Rose_Pattern/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rose_Pattern"
-    },
-    "picture": "./img/41.webp"
+    "title": "Rose-Pattern",
+    "format": "webp"
   },
   {
     "id": 42,
-    "title": "L-System Fractal Tree",
-    "summary": "Não gosto muito dessa, mas eu usei L-Systems em outros projetos e essa é uma das mais simples de fazer",
-    "links": {
-      "demo": "/animations/L-System_Fractal/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/L-System_Fractal"
-    },
-    "picture": "./img/42.webp"
+    "title": "L-System-Fractal",
+    "format": "webp"
   },
   {
     "id": 43,
-    "title": "Hilbert Curve",
-    "summary": "Sim, são ângulos de 90° graus mas são curvas. Esse é bem mais legal que o Peano Curve em minha opinião",
-    "links": {
-      "demo": "/animations/Hilbert_Curve/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Hilbert_Curve"
-    },
-    "picture": "./img/43.webp"
+    "title": "Hilbert-Curve",
+    "format": "webp"
   },
   {
     "id": 44,
-    "title": "Peano Curve",
-    "summary": "Curvinha para preencher espaços infinitamente, e a construção é animada",
-    "links": {
-      "demo": "/animations/Peano_Curve/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Peano_Curve"
-    },
-    "picture": "./img/44.webp"
+    "title": "Peano-Curve",
+    "format": "webp"
   },
   {
     "id": 45,
-    "title": "Rectangle Fractal",
-    "summary": "É um L-System Fractal, mas eu não sei se esse tem um nome específico",
-    "links": {
-      "demo": "/animations/Rect_Fractal/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rect_Fractal"
-    },
-    "picture": "./img/45.webp"
+    "title": "Rectangle-Fractal",
+    "format": "webp"
   },
   {
     "id": 46,
-    "title": "6174",
-    "summary": "Visualização da constante de Kaprekar, também é conhecido pelo \"número perfeito\" 6174",
-    "links": {
-      "demo": "/animations/Kaprekar_Constant/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Kaprekar_Constant"
-    },
-    "picture": "./img/46.webp"
+    "title": "Kaprekar-Constant",
+    "format": "webp"
   },
   {
     "id": 47,
     "title": "Collision",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Collision/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Collision"
-    },
-    "picture": "./img/47.webp"
+    "format": "webp"
   },
   {
     "id": 48,
     "title": "JumpTown",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/fractalMaybe/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/fractalMaybe"
-    },
-    "picture": "./img/48.webp"
+    "format": "webp"
   },
   {
     "id": 49,
     "title": "HyperSpace",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/hyperSpace/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/hyperSpace"
-    },
-    "picture": "./img/49.webp"
+    "format": "webp"
   },
   {
     "id": 50,
-    "title": "Reaction Diffusion",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/reactionDiffusion/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/reactionDiffusion"
-    },
-    "picture": "./img/50.webp"
+    "title": "Reaction-Diffusion",
+    "format": "webp"
   },
   {
     "id": 51,
     "title": "Breathing",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/breathing/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/breathing"
-    },
-    "picture": "./img/51.webp"
+    "format": "webp"
   },
   {
     "id": 52,
-    "title": "Flocking Simulation",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Flocking_Simulation/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Flocking_Simulation"
-    },
-    "picture": "./img/52.webp"
+    "title": "Flocking-Simulation",
+    "format": "webp"
   },
   {
     "id": 53,
-    "title": "Brownian Snowflake",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Brownian_Snowflake/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Brownian_Snowflake"
-    },
-    "picture": "./img/53.webp"
+    "title": "Brownian-Snowflake",
+    "format": "webp"
   },
   {
     "id": 54,
     "title": "Kaleidoscope",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Kaleidoscope/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Kaleidoscope"
-    },
-    "picture": "./img/54.webp"
+    "format": "webp"
   },
   {
     "id": 55,
-    "title": "Random Kaleidoscope",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Random_Kaleidoscope/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Kaleidoscope"
-    },
-    "picture": "./img/55.webp"
+    "title": "Random-Kaleidoscope",
+    "format": "webp"
   },
   {
     "id": 56,
-    "title": "MaybeFractal",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/MaybeFractal/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/MaybeFractal"
-    },
-    "picture": "./img/56.webp"
+    "title": "Maybe-Fractal",
+    "format": "webp"
   },
   {
     "id": 57,
     "title": "Spiral",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Spiral/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Spiral"
-    },
-    "picture": "./img/57.webp"
+    "format": "webp"
   },
   {
     "id": 58,
-    "title": "FractalMight",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/FractalMight/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/FractalMight"
-    },
-    "picture": "./img/58.webp"
+    "title": "Nova",
+    "format": "webp"
   },
   {
     "id": 59,
     "title": "Heart",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Heart/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Heart"
-    },
-    "picture": "./img/59.webp"
+    "format": "webp"
   },
   {
     "id": 60,
     "title": "Lulucthulhu",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/lulucthulhu/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/lulucthulhu"
-    },
-    "picture": "./img/60.webp"
+    "format": "webp"
   },
   {
     "id": 61,
     "title": "Flowfield",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Flowfield/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Flowfield"
-    },
-    "picture": "./img/61.webp"
+    "format": "webp"
   },
   {
     "id": 62,
     "title": "Constelation",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Constelation/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Constelation"
-    },
-    "picture": "./img/62.webp"
+    "format": "webp"
   },
   {
     "id": 63,
     "title": "Maze",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Maze/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Maze"
-    },
-    "picture": "./img/63.webp"
+    "format": "webp"
   },
   {
     "id": 64,
-    "title": "Marching Squares",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Marching_Squares/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Marching_Squares"
-    },
-    "picture": "./img/64.webp"
+    "title": "Marching-Squares",
+    "format": "webp"
   },
   {
     "id": 65,
     "title": "DLA",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/DLA/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DLA"
-    },
-    "picture": "./img/65.webp"
+    "format": "webp"
   },
   {
     "id": 66,
-    "title": "Random Filling",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Random_Filling/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Random_Filling"
-    },
-    "picture": "./img/66.webp"
+    "title": "Random-Filling",
+    "format": "webp"
   },
   {
     "id": 67,
     "title": "Connect",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Connect/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Connect"
-    },
-    "picture": "./img/67.webp"
+    "format": "webp"
   },
   {
     "id": 68,
     "title": "IFS",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/IFS/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/IFS"
-    },
-    "picture": "./img/68.webp"
+    "format": "webp"
   },
   {
     "id": 69,
     "title": "Leaf",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Leaf/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Leaf"
-    },
-    "picture": "./img/69.webp"
+    "format": "webp"
   },
   {
     "id": 70,
     "title": "Popcorn",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Popcorn/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Popcorn"
-    },
-    "picture": "./img/70.webp"
+    "format": "webp"
   },
   {
     "id": 71,
     "title": "Mandelbrot",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Mandelbrot/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Mandelbrot"
-    },
-    "picture": "./img/71.webp"
+    "format": "webp"
   },
   {
     "id": 72,
-    "title": "Julia Set",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Julia_Set/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Julia_Set"
-    },
-    "picture": "./img/72.webp"
+    "title": "Julia-Set",
+    "format": "webp"
   },
   {
     "id": 73,
     "title": "Channeling",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Channeling/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Channeling"
-    },
-    "picture": "./img/73.webp"
+    "format": "webp"
   },
   {
     "id": 74,
     "title": "Superformula",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Superformula/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Superformula"
-    },
-    "picture": "./img/74.webp"
+    "format": "webp"
   },
   {
     "id": 75,
-    "title": "Elementary Cellular Automata",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/ElementaryCellularAutomata/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ElementaryCellularAutomata"
-    },
-    "picture": "./img/75.webp"
+    "title": "Elementary-Cellular-Automata",
+    "format": "webp"
   },
   {
     "id": 76,
-    "title": "Totalistic Cellular Automata",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/TotalisticCellularAutomata/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/TotalisticCellularAutomata"
-    },
-    "picture": "./img/76.webp"
+    "title": "Totalistic-Cellular-Automata",
+    "format": "webp"
   },
   {
     "id": 77,
-    "title": "Langton's Ant",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/LangtonsAnt/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/LangtonsAnt"
-    },
-    "picture": "./img/77.webp"
+    "title": "Langtons-Ant",
+    "format": "webp"
   },
   {
     "id": 78,
     "title": "Enso",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Enso/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Enso"
-    },
-    "picture": "./img/78.webp"
+    "format": "webp"
   },
   {
     "id": 79,
-    "title": "Domain Warping",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/DomainWarping/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/DomainWarping"
-    },
-    "picture": "./img/79.webp"
+    "title": "Domain-Warping",
+    "format": "webp"
   },
   {
     "id": 80,
     "title": "ColorScape",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/ColorScape/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/ColorScape"
-    },
-    "picture": "./img/80.webp"
+    "format": "webp"
   },
   {
     "id": 81,
     "title": "Origin",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Origin/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Origin"
-    },
-    "picture": "./img/81.webp"
+    "format": "webp"
   },
   {
     "id": 82,
     "title": "Rug",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Rug/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Rug"
-    },
-    "picture": "./img/82.webp"
+    "format": "webp"
   },
   {
     "id": 83,
-    "title": "sineWave",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/sineWave/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/sineWave"
-    },
-    "picture": "./img/83.webp"
+    "title": "Sine-Wave",
+    "format": "webp"
   },
   {
     "id": 84,
-    "title": "moreSineWaves",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/moreSineWaves/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/moreSineWaves"
-    },
-    "picture": "./img/84.webp"
+    "title": "More-Sine-Waves",
+    "format": "webp"
   },
   {
     "id": 85,
     "title": "Triangles",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Triangles/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Triangles"
-    },
-    "picture": "./img/85.webp"
+    "format": "webp"
   },
   {
     "id": 86,
     "title": "Pop",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Pop/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pop"
-    },
-    "picture": "./img/86.png"
+    "format": "png"
   },
   {
     "id": 87,
     "title": "Away",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Away/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Away"
-    },
-    "picture": "./img/87.png"
+    "format": "png"
   },
   {
     "id": 88,
     "title": "Ascension",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Ascension/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Ascension"
-    },
-    "picture": "./img/88.png"
+    "format": "png"
   },
   {
     "id": 89,
     "title": "Pixels",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Pixels/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pixels"
-    },
-    "picture": "./img/89.png"
+    "format": "png"
   },
   {
     "id": 90,
     "title": "Lissajous",
-    "summary": "////",
-    "links": {
-      "demo": "/animations/Lissajous/",
-      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Lissajous"
-    },
-    "picture": "./img/90.png"
+    "format": "png"
   }
 ]
