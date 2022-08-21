@@ -888,5 +888,15 @@
       "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Pixels"
     },
     "picture": "./img/89.png"
+  },
+  {
+    "id": 90,
+    "title": "Lissajous",
+    "summary": "////",
+    "links": {
+      "demo": "/animations/Lissajous/",
+      "github": "https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/Lissajous"
+    },
+    "picture": "./img/90.png"
   }
 ]

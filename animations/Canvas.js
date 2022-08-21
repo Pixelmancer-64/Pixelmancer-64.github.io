@@ -5,6 +5,7 @@ class Canvas {
   static cols;
   static rows;
   static grid = [];
+  static canvas;
   static mouse = {
     x: null,
     y: null,
@@ -19,11 +20,11 @@ class Canvas {
     y: 0,
   };
 
-  constructor(cellSize = 1, isSquare = false, nIterationsPerSecond=1) {
+  constructor(cellSize = 1, isSquare = false, nIterationsPerSecond = 1) {
     this.cellSize = cellSize;
     this.isSquare = isSquare;
     this.nIterationsPerSecond = nIterationsPerSecond;
-    let canvas = document.getElementById("canvas");
+    Canvas.canvas = document.getElementById("canvas");
     Canvas.ctx = canvas.getContext("2d");
 
     if (isSquare) {
@@ -61,17 +62,12 @@ class Canvas {
 
   animation() {
     this.animationRequest = requestAnimationFrame(this.animation.bind(this));
-    easyLoop(this.nIterationsPerSecond, ()=> this.animationCallback())
+    easyLoop(this.nIterationsPerSecond, () => this.animationCallback());
     // cancelAnimationFrame(this.animationRequest);
   }
 
-  static clear(){
-    Canvas.ctx.clearRect(
-      0,
-      0,
-      Canvas.width,
-      Canvas.height,
-    );
+  static clear() {
+    Canvas.ctx.clearRect(0, 0, Canvas.width, Canvas.height);
   }
 
   startEvents() {

@@ -67,7 +67,6 @@ export function hsla(alpha = 1, offset = 0) {
   return `hsla(${offset}, 100%, 50%, ${alpha})`;
 }
 
-
 export function map_color(val, s, e, s1, e1) {
   const mapped = map(val, s, e, s1, e1);
   return `rgba(${mapped}, ${mapped}, ${mapped}, ${1})`;
@@ -77,6 +76,25 @@ export function objColorToString(color) {
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.alpha})`;
 }
 
+export function RGA_Score(level = 0) {
+  let color = {
+    r: Math.floor(random(0, 255)),
+    g: Math.floor(random(0, 255)),
+    b: Math.floor(random(0, 255)),
+    alpha: 1,
+  };
+
+  while (true) {
+    let score = color.r + color.g + color.b;
+    if (score > level) return color;
+    color = {
+      r: Math.floor(random(0, 255)),
+      g: Math.floor(random(0, 255)),
+      b: Math.floor(random(0, 255)),
+      alpha: 1,
+    };
+  }
+}
 export function swap(arr, id1, id2) {
   [arr[id1], arr[id2]] = [arr[id2], arr[id1]];
 }
