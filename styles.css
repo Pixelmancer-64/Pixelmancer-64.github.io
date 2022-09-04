@@ -1,27 +1,27 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	line-height: calc(1em + 0.725rem);
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.725rem);
 }
 
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img,
@@ -29,20 +29,20 @@ picture,
 video,
 canvas,
 svg {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 canvas {
-	height: 100vh;
-	width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 p,
@@ -52,36 +52,36 @@ h3,
 h4,
 h5,
 h6 {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #root,
 #__next {
-	isolation: isolate;
+  isolation: isolate;
 }
 
 :root {
-	--solarSystem: url(../img/sky.svg);
-	--weatherAPI: url(../img/islands.svg);
+  --solarSystem: url(../img/sky.svg);
+  --weatherAPI: url(../img/islands.svg);
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-family: "Rubik", sans-serif;
-	color: #fbfbfb;
-	background-color: #141414;
-	display: flex;
-	flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  color: #fbfbfb;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	gap: 3vh;
-	margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  margin: 0 2rem;
 }
 
 /*
@@ -91,48 +91,54 @@ HEADER
 */
 
 .introduction {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	display: flex;
-	flex-direction: column;
-	max-width: 192rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  max-width: 192rem;
 }
 
 .introduction h1 {
-	font-size: 6rem;
+  font-size: 6rem;
 }
 
 .introduction a {
-	align-self: center;
-	background-color: #bf0033;
-	border: none;
-	border-radius: 16px;
-	font-weight: 500;
-	font-family: "Roboto", sans-serif;
-	color: inherit;
-	cursor: pointer;
-	outline-offset: 4px;
-	padding: 1rem 2rem;
-	font-size: 2.2rem;
-	text-align: center;
-	color: white;
-	will-change: transform;
-	transition: transform 250ms;
+  align-self: center;
+  background-color: #bf0033;
+  border: none;
+  border-radius: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: inherit;
+  cursor: pointer;
+  outline-offset: 4px;
+  padding: 1rem 2rem;
+  font-size: 2.2rem;
+  text-align: center;
+  color: white;
+  will-change: transform;
+  transition: transform 250ms;
+}
+
+#blog-button {
+  background-color: #141414;
+  border: 3px solid #bf0033;
+  color: #bf0033
 }
 
 .introduction a:hover {
-	transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .introduction a:active {
-	transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .introduction div {
-	display: flex;
-	gap: 1vw;
+  display: flex;
+  gap: 1vw;
 }
 
 /*
@@ -142,15 +148,15 @@ ASIDE
 */
 
 .icons {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 1vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vw;
 }
 
 .knowledge img {
-	width: 5rem;
-	height: 5rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 /* 
@@ -160,198 +166,191 @@ PROJECTS
 */
 
 .projects {
-	display: flex;
-	flex-direction: column;
-	gap: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
 }
 
 .projects > div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
 }
 
 .projects section {
-	border: 3px solid #bf0033;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 3vh;
-	padding: 2rem;
-	position: relative;
-	width: 100%;
-	max-width: 64em;
+  border: 3px solid #bf0033;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 64em;
 }
 
 .projects h2 {
-	font-size: 4.8rem;
+  font-size: 4.8rem;
 }
 
-.projects section>span {
-	padding: 0.3rem 1rem;
-	font-size: 1rem;
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-weight: 400;
-	text-transform: capitalize;
-	margin: 2rem;
-	border: 3px solid #bf0033;
-	border-radius: 16px;
+.projects section > span {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 2rem;
+  border: 3px solid #bf0033;
+  border-radius: 16px;
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
 }
 
 .container img {
-	width: 12rem;
-	height: 12rem;
+  width: 12rem;
+  height: 12rem;
 }
 
 .container h3 {
-	font-size: 2.6rem;
-	font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: 600;
 }
 
 .container p {
-	font-size: 2rem;
-	max-width: 70vw;
+  font-size: 2rem;
+  max-width: 70vw;
 }
 
 .buttons {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 2vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
 }
 
 .buttons a {
-	align-self: center;
-	background-color: #04aa6b;
-	border: none;
-	border-radius: 12px;
-	font-size: 1.5rem;
-	font-family: "Roboto", sans-serif;
-	color: inherit;
-	cursor: pointer;
-	outline-offset: 4px;
-	padding: 0.6rem 2.6rem;
-	color: white;
-	will-change: transform;
-	transition: transform 350ms;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1vw;
+  align-self: center;
+  background-color: #04aa6b;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  color: inherit;
+  cursor: pointer;
+  outline-offset: 4px;
+  padding: 0.6rem 2.6rem;
+  color: white;
+  will-change: transform;
+  transition: transform 350ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
 }
 
 .buttons a:hover {
-	transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .buttons img {
-	display: inline-block;
-	width: 2rem;
+  display: inline-block;
+  width: 2rem;
 }
 
 .buttons .github {
-	background-color: white;
-	color: #141414;
+  background-color: white;
+  color: #141414;
 }
 
 .arrow {
-	font-weight: 700;
-	will-change: transform;
-	transition: ease-in-out 250ms;
+  font-weight: 700;
+  will-change: transform;
+  transition: ease-in-out 250ms;
 }
 
 .goTo:hover .arrow {
-	transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 .buttons .github img {
-	filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(117deg) brightness(110%) contrast(101%);
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(117deg)
+    brightness(110%) contrast(101%);
 }
 
 .solarSystem {
-	background-image: var(--solarSystem);
-	background-size: 100% 100%;
+  background-image: var(--solarSystem);
+  background-size: 100% 100%;
 }
 
 .weatherAPI {
-	background-image: var(--weatherAPI);
-	background-size: 100% 100%;
+  background-image: var(--weatherAPI);
+  background-size: 100% 100%;
 }
 
-.weatherAPI #weatherAPI{
-	width: 12rem;
-	height: 9rem;
+.weatherAPI #weatherAPI {
+  width: 12rem;
+  height: 9rem;
 }
 
-@media (max-width: 85em) {}
+@media (max-width: 85em) {
+}
 
-@media(max-width: 75em) {
-
-
-	.introduction h1 {
-		font-size: 5rem;
-	}
-	
+@media (max-width: 75em) {
+  .introduction h1 {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 59em) {
+  .introduction h1 {
+    font-size: 4rem;
+  }
 
-	.introduction h1 {
-		font-size: 4rem;
-	}
-
-	.introduction a {
-		font-size: 1.8rem;
-	}
-	
-
+  .introduction a {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 44em) {
-	.projects section>span {
-		display: none;
-	}
+  .projects section > span {
+    display: none;
+  }
 
-	.buttons a{
-		font-size: 1rem;
-	}
+  .buttons a {
+    font-size: 1rem;
+  }
 
-	.introduction h1 {
-		font-size: 3.0rem;
-	}
+  .introduction h1 {
+    font-size: 3rem;
+  }
 
-	.introduction a {
-		font-size: 1.8rem;
-	}
-	
+  .introduction a {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 34em) {
+  .introduction h1 {
+    font-size: 2rem;
+  }
 
-
-	.introduction h1 {
-		font-size: 2rem;
-	}
-
-	.introduction a {
-		font-size: 1.5rem;
-		padding: .7rem;
-	}
-	.buttons{
-		flex-direction: column;
-	}
-	#projects{
-		font-size: 4rem;
-	}
+  .introduction a {
+    font-size: 1.5rem;
+    padding: 0.7rem;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  #projects {
+    font-size: 4rem;
+  }
 }
