@@ -104,6 +104,11 @@ HEADER
   font-size: 6rem;
 }
 
+.introduction div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .introduction a {
   align-self: center;
   background-color: #bf0033;
@@ -118,6 +123,7 @@ HEADER
   font-size: 2.2rem;
   text-align: center;
   color: white;
+  width: 100%;
   will-change: transform;
   transition: transform 250ms;
 }
@@ -129,11 +135,11 @@ HEADER
 }
 
 .introduction a:hover {
-  transform: translateY(-4px);
+  transform: translateX(8px);
 }
 
 .introduction a:active {
-  transform: translateY(2px);
+  transform: translateX(2px);
 }
 
 .introduction div {
