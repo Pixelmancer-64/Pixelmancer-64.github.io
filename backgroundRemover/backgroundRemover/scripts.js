@@ -27,9 +27,9 @@ function draw() {
 
       imageDataLoop(pixelData, (pixel, x, y) => {
         if (brightnessCalc(pixel.r, pixel.g, pixel.b) < slider.value) {
-          arr.data[y * 4 * arr.width + x * 4] = 0;
-          arr.data[y * 4 * arr.width + (x * 4 + 1)] = 0;
-          arr.data[y * 4 * arr.width + (x * 4 + 2)] = 0;
+          arr.data[y * 4 * arr.width + x * 4] = pixel.r;
+          arr.data[y * 4 * arr.width + (x * 4 + 1)] = pixel.g;
+          arr.data[y * 4 * arr.width + (x * 4 + 2)] = pixel.b;
           arr.data[y * 4 * arr.width + (x * 4 + 3)] = map(
             pixel.alpha,
             0,
