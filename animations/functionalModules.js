@@ -101,9 +101,9 @@ export function swap(arr, id1, id2) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export function start(canvas, width, height, options = {}) {
-  canvas.width = width;
-  canvas.height = height;
+export function start(canvas, width, height, dpr = 1, options = {}) {
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
   return [canvas, canvas.getContext("2d", options)];
 }
 

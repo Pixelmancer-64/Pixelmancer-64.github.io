@@ -17,6 +17,7 @@ window.addEventListener("load", function () {
 });
 
 file.addEventListener("input", function () {
+  console.log(this.files[0])
   audioPlayer.src = URL.createObjectURL(this.files[0]);
   isPaused = !isPaused;
   audioPlayer.load();
@@ -79,6 +80,7 @@ function init() {
     particlesArray.push(new Particle(x, y, mass, size, color));
   }
 }
+
 function animate() {
   const bufferL = analyser.frequencyBinCount;
   const data = new Uint8Array(bufferL);
