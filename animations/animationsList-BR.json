@@ -458,5 +458,10 @@
     "id": 92,
     "title": "Circles",
     "format": "png"
+  },
+  {
+    "id": 93,
+    "title": "Random_Rainbow_Smoke",
+    "format": "png"
   }
 ]
