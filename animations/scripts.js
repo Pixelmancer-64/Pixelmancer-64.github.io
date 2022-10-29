@@ -10,7 +10,7 @@ window.onload = async function init() {
       aux.className = "card";
       aux.innerHTML = `<div class="imageContainer">
       <a href='/animations/${response[random].title}'><img src='./img/${response[random].id}.${response[random].format}'></a>
-      <a href='https://github.com/Sotiris64/Sotiris64.github.io/tree/master/animations/${response[random].title}' class='github'> <img src='/img/github.svg'> </a>
+      <a href='https://github.com/pixelmancer-64/pixelmancer-64.github.io/tree/master/animations/${response[random].title}' class='github'> <img src='/img/github.svg'> </a>
       </div>`;
       aux.id = "card-" + response[random].id;
       document.querySelector("main").appendChild(aux);
