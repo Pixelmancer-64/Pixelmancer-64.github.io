@@ -298,13 +298,13 @@ PROJECTS
 }
 
 .weatherAPI {
-  background-image: var(--weatherAPI);
-  background-size: 100% 100%;
+  /* background-image: var(--weatherAPI); */
+  /* background-size: 100% 100%; */
 }
 
 .weatherAPI #weatherAPI {
-  width: 12rem;
-  height: 9rem;
+  /* width: 9rem; */
+  /* height: 9rem; */
 }
 
 @media (max-width: 85em) {
