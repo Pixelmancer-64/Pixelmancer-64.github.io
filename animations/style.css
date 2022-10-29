@@ -254,7 +254,11 @@ input:checked+.slider:before {
   }
 
   nav h1::after{
-    content: "Made with ❤ by Hugo";
+    content: " Made with ❤ by Hugo";
+  }
+
+  #search{
+    display: none;
   }
 
 }
