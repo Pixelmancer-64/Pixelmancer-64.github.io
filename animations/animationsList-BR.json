@@ -448,9 +448,15 @@
     "id": 90,
     "title": "Lissajous",
     "format": "png"
-  },{
+  },
+  {
     "id": 91,
     "title": "Noise-Hills",
+    "format": "png"
+  },
+  {
+    "id": 92,
+    "title": "Circles",
     "format": "png"
   }
 ]

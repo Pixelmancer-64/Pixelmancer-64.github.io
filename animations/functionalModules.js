@@ -35,7 +35,7 @@ export function clear(ctx, canvas) {
   ctx.restore();
 }
 
-export function random(start, end) {
+export function random(start, end = 0) {
   return Math.random() * (end - start) + start;
 }
 
