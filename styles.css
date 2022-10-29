@@ -297,16 +297,6 @@ PROJECTS
   background-size: 100% 100%;
 }
 
-.weatherAPI {
-  /* background-image: var(--weatherAPI); */
-  /* background-size: 100% 100%; */
-}
-
-.weatherAPI #weatherAPI {
-  /* width: 9rem; */
-  /* height: 9rem; */
-}
-
 @media (max-width: 85em) {
 }
 
