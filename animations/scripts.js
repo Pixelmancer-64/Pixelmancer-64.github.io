@@ -9,7 +9,7 @@ window.onload = async function init() {
       const aux = document.createElement("div");
       aux.className = "card";
       aux.innerHTML = `<div class="imageContainer">
-      <a href='/animations/${response[random].title}'><img src='./img/${response[random].id}.${response[random].format}'></a>
+      <a href="/animations/${response[random].title}" aria-label="${response[random].title} generative art homepage"><img src="./img/${response[random].id}.${response[random].format}" alt="${response[random].title}"></a>
       <a href='https://github.com/pixelmancer-64/pixelmancer-64.github.io/tree/master/animations/${response[random].title}' class='github'> <img src='/img/github.svg'> </a>
       </div>`;
       aux.id = "card-" + response[random].id;

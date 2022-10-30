@@ -427,41 +427,41 @@
   {
     "id": 86,
     "title": "Pop",
-    "format": "png"
+    "format": "webp"
   },
   {
     "id": 87,
     "title": "Away",
-    "format": "png"
+    "format": "webp"
   },
   {
     "id": 88,
     "title": "Ascension",
-    "format": "png"
+    "format": "webp"
   },
   {
     "id": 89,
     "title": "Pixels",
-    "format": "png"
+    "format": "webp"
   },
   {
     "id": 90,
     "title": "Lissajous",
-    "format": "png"
+    "format": "webp"
   },
   {
     "id": 91,
     "title": "Noise-Hills",
-    "format": "png"
+    "format": "webp"
   },
   {
     "id": 92,
     "title": "Circles",
-    "format": "png"
+    "format": "webp"
   },
   {
     "id": 93,
     "title": "Random_Rainbow_Smoke",
-    "format": "png"
+    "format": "webp"
   }
 ]
