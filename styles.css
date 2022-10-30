@@ -345,6 +345,7 @@ PROJECTS
   }
   .buttons {
     flex-direction: column;
+    gap: 16px;
   }
   #projects {
     font-size: 4rem;
