@@ -1,6 +1,8 @@
 window.onload = async function init() {
   let already = [];
-  const response = await fetch("animationsList-BR.json").then((res) =>
+  const response = await fetch("animationsList-BR.json", {headers: {
+    "cache": "force-cache"
+  }}).then((res) =>
     res.json()
   );
   for (let i = 0; i < response.length; ) {
