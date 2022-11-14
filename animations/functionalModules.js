@@ -39,6 +39,10 @@ export function random(start, end = 0) {
   return Math.random() * (end - start) + start;
 }
 
+export function positive_or_negative(){
+  return random(1) > 0.5 ? 1 : -1
+}
+
 export function map(n, start, stop, start2, stop2) {
   return ((n - start) / (stop - start)) * (stop2 - start2) + start2;
 }
