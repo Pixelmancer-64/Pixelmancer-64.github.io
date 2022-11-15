@@ -1,28 +1,13 @@
 window.onload = async function init() {
-  let already = [];
-  const response = await fetch("animationsList-BR.json", {headers: {
-    "cache": "force-cache"
-  }}).then((res) =>
-    res.json()
-  );
-  for (let i = 0; i < response.length; ) {
-    let random = Math.floor(Math.random() * response.length);
-    if (!already.includes(random)) {
-      const aux = document.createElement("div");
-      aux.className = "card";
-      aux.innerHTML = `<div class="imageContainer">
-      <a href="/animations/${response[random].title}" aria-label="${response[random].title} generative art homepage"><img src="./img/${response[random].id}.${response[random].format}" alt="${response[random].title}"></a>
-      <a href='https://github.com/pixelmancer-64/pixelmancer-64.github.io/tree/master/animations/${response[random].title}' class='github'> <img src='/img/github.svg'> </a>
-      </div>`;
-      aux.id = "card-" + response[random].id;
-      document.querySelector("main").appendChild(aux);
-      already.push(random);
-      i++;
-    }
-  }
+  const response = await fetch("animationsList-BR.json", {
+    headers: {
+      cache: "force-cache",
+    },
+  }).then((res) => res.json());
+
   document.getElementById(
     "counter"
-  ).innerHTML = `<h1>${already.length} Projects</h1>`;
+  ).innerHTML = `<h1>${response.length} Projects</h1>`;
 
   for (const i in response) {
     let linha = response[i];
@@ -30,6 +15,19 @@ window.onload = async function init() {
     $opt.value = "card-" + linha.id;
     $opt.textContent = linha.title;
     document.querySelector("#search").appendChild($opt);
+  }
+
+  while (response.length) {
+    let random = Math.floor(Math.random() * (response.length - 1));
+    const aux = document.createElement("div");
+    aux.className = "card";
+    aux.innerHTML = `<div class="imageContainer">
+      <a href="/animations/${response[random].title}" aria-label="${response[random].title} generative art homepage"><img src="./img/${response[random].id}.${response[random].format}" alt="Banner of the ${response[random].title} generative art page" loading="lazy"></a>
+      <a href='https://github.com/pixelmancer-64/pixelmancer-64.github.io/tree/master/animations/${response[random].title}' class='github'> <img src='/img/github.svg'> </a>
+      </div>`;
+    aux.id = "card-" + response[random].id;
+    document.querySelector("main").appendChild(aux);
+    response.splice(random, 1);
   }
 };
 
