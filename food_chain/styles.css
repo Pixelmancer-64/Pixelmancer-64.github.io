@@ -1,0 +1,45 @@
+body {
+  background-color: #111;
+}
+
+.controls{
+  position: absolute;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+}
+.selected {
+  background-color: greenyellow;
+}
+.card {
+  border: 1px solid #368abb;
+  background-color: #43a4dc;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+}
+.card:hover {
+  cursor: grab;
+}
+
+.being_dragged:hover {
+  cursor: grabbing;
+}
+
+.line {
+  position: absolute;
+  width: 5px;
+  margin-top: -1px;
+  background-color: white;
+}
+
+.line:hover{
+  background-color: red;
+}
+
+.highlight {
+  background-color: aquamarine;
+}
