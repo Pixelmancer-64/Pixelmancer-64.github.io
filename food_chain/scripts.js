@@ -10,8 +10,17 @@ let animals = [
   {name: "Veado-campeiro", description: "O veado-campeiro é um mamífero ruminante da família dos cervídeos e único representante do gênero Ozotoceros. Semelhante fisicamente ao cervo-do-pantanal, é geneticamente próximo ao cervo-andino-do-norte"},
   {name: "Tucanos", description: "Os tucanos são membros da família Neotropical de aves passeriformes Ramphastidae. Os Ramphastidae estão mais intimamente relacionados com os barbets americanos. Eles são brilhantemente marcados com seus longos bicos"},
   {name: "Seriema", description: "As seriemas são os únicos membros vivos da pequena família de aves Cariamidae, que também é a única linhagem sobrevivente da ordem Cariamiformes. Uma vez que se acredita estar relacionado com guindastes, eles foram colocados perto dos falcões, papagaios e passeriformes, bem como o extinto Phorusrhacidae."},
-  {name: "Produtores"}
+  {name: "Produtores", description: "São os seres autótrofos, ou seja, que são capazes de produzir seu próprio alimento. Eles representam sempre o primeiro nível trófico de uma cadeia ou teia alimentar"},
+  {name: "Decompositores", description: "Os decompositores são microrganismos, bactérias e fungos que, juntamente com pequenos animais, como as minhocas, o minhocuçu e os gôngolos, formam um batalhão de bichinhos que vivem no solo e são responsáveis pelo trabalho de reciclagem de detritos e de resíduos depositados em sua superfície."},
+
+  {name: "Fitoplâncton", description: "É um tipo de plâncton que flutua na água doce e em ambiente marinho. Esse tipo de plâncton destaca-se por ser capaz de realizar fotossíntese, sendo a base da cadeia alimentar dos ambientes aquáticos"},
+  {name: "Tubarão-baleia", description: "É uma espécie de Tubarão filtrador dos orectolobiformes e a maior espécie de peixe existente conhecida. Eles possuem bocas muito grandes, são filtradores e distribuem-se em regiões tropicais e temperados"},
+  {name: "Zooplâncton", description: "Chama-se Zooplâncton ao conjunto dos organismos microscópicos aquáticos que não têm capacidade fotossintética e que vivem dispersos na água. Possuí importância de conduzir o fluxo de energia para os níveis trópicos superiores."},
+  {name: "Tilápia", description: "É o nome comum dado á várias espécies de peixes ciclídeos de água doce pertencentes à subfamília Pseudocrodolita. São nativos da África, mas foram introduzidas em muitos lugares nas águas abertas na América do Sul"},
+  {name: "Raia Jamanta", description: "É uma espécie de peixes cartilagíneos pelágicos, oceânico da família Myliobathidae e é a maior espécie de raia atualmente. Encontra-se nas regiões tropicais e subtropicais de todos os oceanos, tipicamente de recifes de coral"},
+  {name: "Orca", description: `Também conhecido como "baleia assassina", é um membro da família dos golfinhos. Comunicam-se através de sons e costumam viajar em grupo. Além de serem um dos predadores mais eficientes da natureza, não são predadas por praticamente nenhum animal conhecido`},
 ]
+
 function adjust_line(from, to) {
   let line = document.querySelector(`#${from.id}_${to.id}`);
   if (!line) {
