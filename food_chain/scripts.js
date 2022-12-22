@@ -24,7 +24,7 @@ let animals = [
     name: "Preá",
     image_name: "prea",
     description:
-      "Cavia aperea, também chamado de preá, pereá, piriá ou bengo,[1] é um roedor de ampla distribuição na América do Sul, do gênero Cavia, família dos caviídeos. Mede cerca de 25 cm de comprimento. Possuem pelagem cinzenta, corpo robusto, patas e orelhas curtas, incisivos brancos e cauda ausente. É aparentado com o porquinho-da-índia (Cavia porcellus). Em algumas regiões do Brasil é criado e usado como alimento. Possuem comportamento social, hábitos matutinos e noturnos.",
+      "Cavia aperea, também chamado de preá, pereá, piriá ou bengo, é um roedor de ampla distribuição na América do Sul, do gênero Cavia, família dos caviídeos. Mede cerca de 25 cm de comprimento. Possuem pelagem cinzenta, corpo robusto, patas e orelhas curtas, incisivos brancos e cauda ausente. É aparentado com o porquinho-da-índia (Cavia porcellus). Em algumas regiões do Brasil é criado e usado como alimento. Possuem comportamento social, hábitos matutinos e noturnos.",
   },
   {
     name: "Surucucu-do-pantanal",
@@ -40,7 +40,7 @@ let animals = [
   },
   {
     name: "Tucano",
-    naimage_nameme: "tucano",
+    image_nameme: "tucano",
     description:
       "Os tucanos são membros da família Neotropical de aves passeriformes Ramphastidae. Os Ramphastidae estão mais intimamente relacionados com os barbets americanos. Eles são brilhantemente marcados com seus longos bicos",
   },
@@ -95,7 +95,7 @@ let animals = [
   },
   {
     name: "Orca",
-    image_name: 'orca',
+    image_name: "orca",
     description: `Também conhecido como "baleia assassina", é um membro da família dos golfinhos. Comunicam-se através de sons e costumam viajar em grupo. Além de serem um dos predadores mais eficientes da natureza, não são predadas por praticamente nenhum animal conhecido`,
   },
 ];
@@ -204,11 +204,25 @@ document.querySelector(".controls").addEventListener("click", (e) => {
   }
 });
 
+// let scale = 1;
+// document.addEventListener("wheel", (event) => {
+//   event.preventDefault();
+
+//   scale += event.deltaY * -0.001;
+
+//   // Restrict scale
+//   scale = Math.min(Math.max(0.125, scale), 4);
+
+//   // Apply scale transform
+//   console.log(document.querySelector(".white_board"))
+//   document.querySelector(".white_board").style.transform = `scale(${scale})`;
+// });
+
 document.addEventListener("click", (event) => {
   mouse.x = event.x;
   mouse.y = event.y;
 
-  if (!event.target.classList.contains("card") && highlighted.length) {
+  if (!event.target.closest("section") && highlighted.length) {
     highlighted[0].classList.remove("highlight");
     highlighted = [];
   }
@@ -251,9 +265,11 @@ function delete_line(event) {
 }
 
 function create_line(event) {
-  if (event.target.classList.contains("card")) {
-    event.target.classList.add("highlight");
-    highlighted.push(event.target);
+  const section = event.target.closest("section");
+
+  if (section) {
+    section.classList.add("highlight");
+    highlighted.push(section);
   }
 
   if (highlighted.length != 2) return;
@@ -265,7 +281,7 @@ function create_line(event) {
   content.appendChild(element_1);
   content.appendChild(element_2);
 
-  document.querySelector("body").appendChild(content);
+  document.querySelector(".white_board").appendChild(content);
 
   adjust_line(element_1, element_2);
 
@@ -277,8 +293,12 @@ function drag_block(event) {
   mouse.x = event.x;
   mouse.y = event.y;
 
-  if (!selected_element && event.target.classList.contains("card")) {
-    selected_element = event.target;
+  if (
+    !selected_element &&
+    event.target.tagName != "HTML" &&
+    event.target.closest("section")
+  ) {
+    selected_element = event.target.closest("section");
   }
   if (is_pressed && selected_element) {
     selected_element.classList.add("being_dragged");
@@ -294,9 +314,9 @@ function drag_block(event) {
 }
 
 function delete_block(event) {
-  if (!event.target.classList.contains("card")) return;
+  if (!event.target.closest("section")) return;
+  const id = event.target.closest("section").id;
 
-  const id = event.target.id;
   if (relations[id]) {
     relations[id].forEach((e) => {
       // problem in relations after delete
@@ -318,11 +338,12 @@ function delete_block(event) {
 function create_block(event) {
   if (event.target.tagName == "HTML") {
     let random = Math.floor(Math.random() * (animals.length - 1));
-    let animal = animals[random]
+    let animal = animals[random];
 
-    const card = document.createElement("div");
+    const card = document.createElement("section");
     const divTop = document.createElement("div");
     const divBottom = document.createElement("div");
+    const divImage = document.createElement("div");
     const image = document.createElement("img");
     const topText = document.createElement("h1");
     const bottomText = document.createElement("p");
@@ -334,7 +355,9 @@ function create_block(event) {
     card.className = "card";
     divTop.className = "top";
     divBottom.className = "bottom";
+    divImage.className = "divImage";
     image.className = "image";
+    image.draggable = false;
     topText.className = "topText";
     bottomText.className = "bottomText";
 
@@ -344,15 +367,14 @@ function create_block(event) {
 
     this.relations = [];
     this.element = card;
-
+    divImage.appendChild(image);
     divTop.appendChild(topText);
     divBottom.appendChild(bottomText);
     card.appendChild(divTop);
-    card.appendChild(image);
+    card.appendChild(divImage);
     card.appendChild(divBottom);
-    document.querySelector("body").appendChild(card);
+    document.querySelector(".white_board").appendChild(card);
 
     animals.splice(random, 1);
-
   }
 }
