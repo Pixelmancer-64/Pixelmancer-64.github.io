@@ -2,24 +2,103 @@
 // Create a update_line, because we can already know if a line exists or not in the div
 // Discover a better solution for storing the relationships, the way I am storing duplicates is really inefficient
 let animals = [
-  {name: "Onça pintada", description: "A onça-pintada é o maior felino das Américas. Espécie emblemática das matas brasileiras, a onça é importante para as ações de conservação. Por estar no topo da cadeia alimentar e necessitar de grandes áreas preservadas para sobreviver, esse animal o mesmo tempo temido e admirado que habita o imaginário das pessoas é um indicador de qualidade ambiental. "},
-  {name: "Capivara", description: "A capivara ou capincho é uma espécie de mamífero roedor. Está incluída no mesmo grupo de roedores ao qual se classificam as pacas, cutias, os preás e o porquinho-da-índia. Ocorre por toda a América do Sul ao leste dos Andes em habitats associados a rios, lagos e pântanos, do nível do mar até 1 300 m de altitude."},
-  {name: "Jacaré-do-pantanal", description: "O jacaré-do-pantanal ou jacaré-do-paraguai é um jacaré que habita a parte central da América do Sul, incluindo o norte da Argentina, sul da Bolívia e Centro-Oeste do Brasil, especialmente no Pantanal e rios do Paraguai."},
-  {name: "Preá", description: "Cavia aperea, também chamado de preá, pereá, piriá ou bengo,[1] é um roedor de ampla distribuição na América do Sul, do gênero Cavia, família dos caviídeos. Mede cerca de 25 cm de comprimento. Possuem pelagem cinzenta, corpo robusto, patas e orelhas curtas, incisivos brancos e cauda ausente. É aparentado com o porquinho-da-índia (Cavia porcellus). Em algumas regiões do Brasil é criado e usado como alimento. Possuem comportamento social, hábitos matutinos e noturnos."},
-  {name: "Surucucu-do-pantanal", description: "A surucucu-do-pantanal é uma serpente grande e opistóglifa do Novo Mundo, endêmica à América do Sul. Também é conhecida como boipevaçu, jaracussu, mboi-peba, ñcaniná, víbora-ladradora e yacanina. Apesar de compartilhar um nome com à, tem pouco em comum com a surucucu, não sendo peçonhenta nem parte da família Viperidae. Isto pode ser devido ao comportamento agressivo que a serpente pode apresentar."},
-  {name: "Veado-campeiro", description: "O veado-campeiro é um mamífero ruminante da família dos cervídeos e único representante do gênero Ozotoceros. Semelhante fisicamente ao cervo-do-pantanal, é geneticamente próximo ao cervo-andino-do-norte"},
-  {name: "Tucanos", description: "Os tucanos são membros da família Neotropical de aves passeriformes Ramphastidae. Os Ramphastidae estão mais intimamente relacionados com os barbets americanos. Eles são brilhantemente marcados com seus longos bicos"},
-  {name: "Seriema", description: "As seriemas são os únicos membros vivos da pequena família de aves Cariamidae, que também é a única linhagem sobrevivente da ordem Cariamiformes. Uma vez que se acredita estar relacionado com guindastes, eles foram colocados perto dos falcões, papagaios e passeriformes, bem como o extinto Phorusrhacidae."},
-  {name: "Produtores", description: "São os seres autótrofos, ou seja, que são capazes de produzir seu próprio alimento. Eles representam sempre o primeiro nível trófico de uma cadeia ou teia alimentar"},
-  {name: "Decompositores", description: "Os decompositores são microrganismos, bactérias e fungos que, juntamente com pequenos animais, como as minhocas, o minhocuçu e os gôngolos, formam um batalhão de bichinhos que vivem no solo e são responsáveis pelo trabalho de reciclagem de detritos e de resíduos depositados em sua superfície."},
+  {
+    name: "Onça pintada",
+    image_name: "onca_pintada",
+    description:
+      "A onça-pintada é o maior felino das Américas. Espécie emblemática das matas brasileiras, a onça é importante para as ações de conservação. Por estar no topo da cadeia alimentar e necessitar de grandes áreas preservadas para sobreviver, esse animal o mesmo tempo temido e admirado que habita o imaginário das pessoas é um indicador de qualidade ambiental. ",
+  },
+  {
+    name: "Capivara",
+    image_name: "capivara",
+    description:
+      "A capivara ou capincho é uma espécie de mamífero roedor. Está incluída no mesmo grupo de roedores ao qual se classificam as pacas, cutias, os preás e o porquinho-da-índia. Ocorre por toda a América do Sul ao leste dos Andes em habitats associados a rios, lagos e pântanos, do nível do mar até 1 300 m de altitude.",
+  },
+  {
+    name: "Jacaré-do-pantanal",
+    image_name: "jacare_do_pantanal",
+    description:
+      "O jacaré-do-pantanal ou jacaré-do-paraguai é um jacaré que habita a parte central da América do Sul, incluindo o norte da Argentina, sul da Bolívia e Centro-Oeste do Brasil, especialmente no Pantanal e rios do Paraguai.",
+  },
+  {
+    name: "Preá",
+    image_name: "prea",
+    description:
+      "Cavia aperea, também chamado de preá, pereá, piriá ou bengo,[1] é um roedor de ampla distribuição na América do Sul, do gênero Cavia, família dos caviídeos. Mede cerca de 25 cm de comprimento. Possuem pelagem cinzenta, corpo robusto, patas e orelhas curtas, incisivos brancos e cauda ausente. É aparentado com o porquinho-da-índia (Cavia porcellus). Em algumas regiões do Brasil é criado e usado como alimento. Possuem comportamento social, hábitos matutinos e noturnos.",
+  },
+  {
+    name: "Surucucu-do-pantanal",
+    image_name: "surucucu_do_pantanal",
+    description:
+      "A surucucu-do-pantanal é uma serpente grande e opistóglifa do Novo Mundo, endêmica à América do Sul. Também é conhecida como boipevaçu, jaracussu, mboi-peba, ñcaniná, víbora-ladradora e yacanina. Apesar de compartilhar um nome com à, tem pouco em comum com a surucucu, não sendo peçonhenta nem parte da família Viperidae. Isto pode ser devido ao comportamento agressivo que a serpente pode apresentar.",
+  },
+  {
+    name: "Veado-campeiro",
+    image_name: "veado_campeiro",
+    description:
+      "O veado-campeiro é um mamífero ruminante da família dos cervídeos e único representante do gênero Ozotoceros. Semelhante fisicamente ao cervo-do-pantanal, é geneticamente próximo ao cervo-andino-do-norte",
+  },
+  {
+    name: "Tucano",
+    naimage_nameme: "tucano",
+    description:
+      "Os tucanos são membros da família Neotropical de aves passeriformes Ramphastidae. Os Ramphastidae estão mais intimamente relacionados com os barbets americanos. Eles são brilhantemente marcados com seus longos bicos",
+  },
+  {
+    name: "Seriema",
+    image_name: "seriema",
+    description:
+      "As seriemas são os únicos membros vivos da pequena família de aves Cariamidae, que também é a única linhagem sobrevivente da ordem Cariamiformes. Uma vez que se acredita estar relacionado com guindastes, eles foram colocados perto dos falcões, papagaios e passeriformes, bem como o extinto Phorusrhacidae.",
+  },
+  {
+    name: "Produtores",
+    image_name: "produtores",
+    description:
+      "São os seres autótrofos, ou seja, que são capazes de produzir seu próprio alimento. Eles representam sempre o primeiro nível trófico de uma cadeia ou teia alimentar",
+  },
+  {
+    name: "Decompositores",
+    image_name: "decompositores",
+    description:
+      "Os decompositores são microrganismos, bactérias e fungos que, juntamente com pequenos animais, como as minhocas, o minhocuçu e os gôngolos, formam um batalhão de bichinhos que vivem no solo e são responsáveis pelo trabalho de reciclagem de detritos e de resíduos depositados em sua superfície.",
+  },
 
-  {name: "Fitoplâncton", description: "É um tipo de plâncton que flutua na água doce e em ambiente marinho. Esse tipo de plâncton destaca-se por ser capaz de realizar fotossíntese, sendo a base da cadeia alimentar dos ambientes aquáticos"},
-  {name: "Tubarão-baleia", description: "É uma espécie de Tubarão filtrador dos orectolobiformes e a maior espécie de peixe existente conhecida. Eles possuem bocas muito grandes, são filtradores e distribuem-se em regiões tropicais e temperados"},
-  {name: "Zooplâncton", description: "Chama-se Zooplâncton ao conjunto dos organismos microscópicos aquáticos que não têm capacidade fotossintética e que vivem dispersos na água. Possuí importância de conduzir o fluxo de energia para os níveis trópicos superiores."},
-  {name: "Tilápia", description: "É o nome comum dado á várias espécies de peixes ciclídeos de água doce pertencentes à subfamília Pseudocrodolita. São nativos da África, mas foram introduzidas em muitos lugares nas águas abertas na América do Sul"},
-  {name: "Raia Jamanta", description: "É uma espécie de peixes cartilagíneos pelágicos, oceânico da família Myliobathidae e é a maior espécie de raia atualmente. Encontra-se nas regiões tropicais e subtropicais de todos os oceanos, tipicamente de recifes de coral"},
-  {name: "Orca", description: `Também conhecido como "baleia assassina", é um membro da família dos golfinhos. Comunicam-se através de sons e costumam viajar em grupo. Além de serem um dos predadores mais eficientes da natureza, não são predadas por praticamente nenhum animal conhecido`},
-]
+  {
+    name: "Fitoplâncton",
+    image_name: "fitoplancton",
+    description:
+      "É um tipo de plâncton que flutua na água doce e em ambiente marinho. Esse tipo de plâncton destaca-se por ser capaz de realizar fotossíntese, sendo a base da cadeia alimentar dos ambientes aquáticos",
+  },
+  {
+    name: "Tubarão-baleia",
+    image_name: "tubarao_baleia",
+    description:
+      "É uma espécie de Tubarão filtrador dos orectolobiformes e a maior espécie de peixe existente conhecida. Eles possuem bocas muito grandes, são filtradores e distribuem-se em regiões tropicais e temperados",
+  },
+  {
+    name: "Zooplâncton",
+    image_name: "zooplancton",
+    description:
+      "Chama-se Zooplâncton ao conjunto dos organismos microscópicos aquáticos que não têm capacidade fotossintética e que vivem dispersos na água. Possuí importância de conduzir o fluxo de energia para os níveis trópicos superiores.",
+  },
+  {
+    name: "Tilápia",
+    image_name: "tilapia",
+    description:
+      "É o nome comum dado á várias espécies de peixes ciclídeos de água doce pertencentes à subfamília Pseudocrodolita. São nativos da África, mas foram introduzidas em muitos lugares nas águas abertas na América do Sul",
+  },
+  {
+    name: "Raia Jamanta",
+    image_name: "raia_jamanta",
+    description:
+      "É uma espécie de peixes cartilagíneos pelágicos, oceânico da família Myliobathidae e é a maior espécie de raia atualmente. Encontra-se nas regiões tropicais e subtropicais de todos os oceanos, tipicamente de recifes de coral",
+  },
+  {
+    name: "Orca",
+    image_name: 'orca',
+    description: `Também conhecido como "baleia assassina", é um membro da família dos golfinhos. Comunicam-se através de sons e costumam viajar em grupo. Além de serem um dos predadores mais eficientes da natureza, não são predadas por praticamente nenhum animal conhecido`,
+  },
+];
 
 function adjust_line(from, to) {
   let line = document.querySelector(`#${from.id}_${to.id}`);
@@ -198,7 +277,7 @@ function drag_block(event) {
   mouse.x = event.x;
   mouse.y = event.y;
 
-  if (!selected_element && event.target.classList.contains('card')) {
+  if (!selected_element && event.target.classList.contains("card")) {
     selected_element = event.target;
   }
   if (is_pressed && selected_element) {
@@ -238,11 +317,42 @@ function delete_block(event) {
 
 function create_block(event) {
   if (event.target.tagName == "HTML") {
+    let random = Math.floor(Math.random() * (animals.length - 1));
+    let animal = animals[random]
+
     const card = document.createElement("div");
+    const divTop = document.createElement("div");
+    const divBottom = document.createElement("div");
+    const image = document.createElement("img");
+    const topText = document.createElement("h1");
+    const bottomText = document.createElement("p");
+
+    image.src = `./imgs/${animal.image_name}.jpg`;
+    topText.innerText = animal.name;
+    bottomText.innerText = animal.description;
+
     card.className = "card";
+    divTop.className = "top";
+    divBottom.className = "bottom";
+    image.className = "image";
+    topText.className = "topText";
+    bottomText.className = "bottomText";
+
     card.id = `card-${event.x}-${event.y}`;
     card.style.top = event.clientY - 25 + "px";
     card.style.left = event.clientX - 25 + "px";
+
+    this.relations = [];
+    this.element = card;
+
+    divTop.appendChild(topText);
+    divBottom.appendChild(bottomText);
+    card.appendChild(divTop);
+    card.appendChild(image);
+    card.appendChild(divBottom);
     document.querySelector("body").appendChild(card);
+
+    animals.splice(random, 1);
+
   }
 }
