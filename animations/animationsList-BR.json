@@ -468,5 +468,35 @@
     "id": 94,
     "title": "RIW",
     "format": "png"
+  },
+  {
+    "id": 95,
+    "title": "Lorenz-Attractor",
+    "format": "png"
+  },
+  {
+    "id": 96,
+    "title": "Dots-but-better",
+    "format": "png"
+  },
+  {
+    "id": 97,
+    "title": "Explosion",
+    "format": "png"
+  },
+  {
+    "id": 98,
+    "title": "Rorschach",
+    "format": "png"
+  },
+  {
+    "id": 99,
+    "title": "Perlin-but-Square",
+    "format": "png"
+  },
+  {
+    "id": 100,
+    "title": "Random-IFS",
+    "format": "png"
   }
 ]
