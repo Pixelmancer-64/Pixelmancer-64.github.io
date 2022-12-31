@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tralha</title>
+  </head>
+  <body>
+    <main></main>
+  </body>
+
+  <script>
+    async function fetch_data() {
+        console.log('hi')
+      const response = await fetch("./words.json");
+      const data = await response.json();
+
+      show_data(data);
+    }
+
+    function show_data(data) {
+      const container = document.querySelector("main");
+
+      // Loop through the entries
+      for (let i = 0; i < data.length; i++) {
+        // Get the current entry
+        const entry = data[i];
+
+        // Create a div element to hold the entry
+        const entryDiv = document.createElement("div");
+
+        // Create a heading element to display the title
+        const titleHeading = document.createElement("h2");
+        titleHeading.innerHTML = entry.title;
+
+        // Create a paragraph element to display the text
+        const textParagraph = document.createElement("p");
+        textParagraph.innerHTML = entry.text;
+
+        // Append the heading and paragraph to the entry div
+        entryDiv.appendChild(titleHeading);
+        entryDiv.appendChild(textParagraph);
+
+        // Append the entry div to the container
+        container.appendChild(entryDiv);
+      }
+    }
+
+    fetch_data()
+  </script>
+</html>

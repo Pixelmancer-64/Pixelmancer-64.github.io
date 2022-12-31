@@ -1,0 +1,763 @@
+[{
+  "title": "Praia",
+  "text": "Volto logo",
+  "category": [
+    "random"
+  ]
+},{
+  "title": "nao sei oq escrever",
+  "text": "bom dia!!! 08:46 agora",
+  "category": [
+    "random"
+  ]
+},{
+  "title": "Vou para praia mas não queria",
+  "text": "mano vou para praia dia 11 mas não tava nem um pouco afim, queria ficar jogando joguinho de pirata com meu amigo hugo",
+  "category": [
+    "random"
+  ]
+},{
+  "title": "Título",
+  "text": "Texto",
+  "category": [
+    "random"
+  ]
+},{
+  "title": "a",
+  "text": "a",
+  "category": [
+    "random"
+  ]
+},{
+  "title": "nao sei oq escrever",
+  "text": "lalala meu",
+  "category": [
+    "random"
+  ]
+},{
+  "title": "Cellular Automata",
+  "text": "https://natureofcode.com/book/chapter-7-cellular-automata/",
+  "category": [
+    "Coding train"
+  ]
+},{
+  "title": "Fractals",
+  "text": "https://natureofcode.com/book/chapter-8-fractals/",
+  "category": [
+    "Coding train"
+  ]
+},{
+  "title": "Cellular Automata",
+  "text": "https://www.whitman.edu/Documents/Academics/Mathematics/andrewgw.pdf",
+  "category": [
+    "PDF"
+  ]
+},{
+  "title": "The 256 rules",
+  "text": "https://plato.stanford.edu/entries/cellular-automata/supplement.html",
+  "category": [
+    "Cellular Automata"
+  ]
+},{
+  "title": "Wolfram Mathworld",
+  "text": "https://mathworld.wolfram.com/CellularAutomaton.html",
+  "category": [
+    "Cellular Automata"
+  ]
+},{
+  "title": "Nem lembro de abrir esse",
+  "text": "https://github.com/igr/gart/tree/main/arts/joydiv",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Tutorial daquele que eu n lembro de ter aberto",
+  "text": "https://generativeartistry.com/tutorials/joy-division/",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "SQL in CSS",
+  "text": "https://www.leemeichin.com/posts/yes-i-can-connect-to-a-db-in-css.html",
+  "category": [
+    "Retardado"
+  ]
+},{
+  "title": "Basics of R",
+  "text": "https://www.youtube.com/watch?v=_V8eKsto3Ug",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "CSS Reset Reset",
+  "text": "https://meyerweb.com/eric/tools/css/reset/",
+  "category": [
+    "CSS"
+  ]
+},{
+  "title": "Rainbow Smoke",
+  "text": "https://www.youtube.com/watch?v=dVQDYne8Bkc&t=313s",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Shaders in OpenGl",
+  "text": "https://www.youtube.com/watch?v=yrFo1_Izlk0",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Carinha dos SVG",
+  "text": "https://www.youtube.com/c/finnhvman/videos",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Rainbow Smoke",
+  "text": "http://rainbowsmoke.hu/links",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Primo de Mersene",
+  "text": "Não sei se tem potencial para algo\r\nhttps://pt.wikipedia.org/wiki/Primo_de_Mersenne\r\n",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Shadow in Canvas",
+  "text": "https://www.html5rocks.com/en/tutorials/canvas/texteffects/#toc-text-shadows",
+  "category": [
+    "CSS"
+  ]
+},{
+  "title": "lorenz Attractor",
+  "text": "https://mathworld.wolfram.com/LorenzAttractor.html",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Voronoi Animated",
+  "text": "https://www.ronja-tutorials.com/post/028-voronoi-noise/",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Rorschach Algorithm",
+  "text": "https://www.google.com/search?client=firefox-b-d&q=Rorschach+Algorithm",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "quebra de linha",
+  "text": "cara o seguinte, vamos ver se aqui\r\nquebrou a linha e se aqui\r\n\r\nquebrou duas vezes, tomara que sim e aqui\r\nvou ver dnv, se ainda ajudou na hora de exibir no html, tomara que de certo",
+  "category": [
+    "teste"
+  ]
+},{
+  "title": "WebGL",
+  "text": "Bem grande, mas parece ser bem completo\r\nhttps://xem.github.io/articles/webgl-guide.html",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Pyhton",
+  "text": "Mesmo cara do tutorial de java\r\nhttps://www.youtube.com/watch?v=_uQrJ0TkZlc",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "SVG",
+  "text": "Cara do tutorial dos svg\r\nhttps://www.youtube.com/channel/UC3rlwtXdKKfGFvZObsKCvhg",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "I programmed some creatures. They Evolved.",
+  "text": "https://www.youtube.com/watch?v=N3tRFayqVtk",
+  "category": [
+    "Video dahora"
+  ]
+},{
+  "title": "Perlin noise but circle",
+  "text": "https://www.youtube.com/watch?v=ZI1dmHv3MeM",
+  "category": [
+    "Coding train"
+  ]
+},{
+  "title": "Collision Simulation",
+  "text": "Simulação de colisão, provavelmente é muito complicado de fazer e a melhor saída seria usar quadtree\r\nhttps://www.youtube.com/watch?v=eED4bSkYCB8",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Fourier transform",
+  "text": "Potencial para um visualizador de áudio melhorzinho\r\nhttps://www.youtube.com/watch?v=spUNpyF58BY",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Tower of Hanoi",
+  "text": "Poderia fazer tanto um algoritmo para resolver e exibir cada passo do processo ou fazer interativo interativo\r\nhttps://www.youtube.com/watch?v=MbonokcLbNo",
+  "category": [
+    "Math"
+  ]
+},{
+  "title": "Different infinity sizes",
+  "text": "https://www.youtube.com/watch?v=XyfeCKfCnO8",
+  "category": [
+    "Math"
+  ]
+},{
+  "title": "Fern",
+  "text": "Para lembrar de fazer o maldito histograma cara, é facinho de fazer, toma coragem logo e faz\r\nhttps://freddyox.github.io/blog/fractal-fern/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Book of textures",
+  "text": "https://thebookofshaders.com/11/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "C++ but pixels",
+  "text": "https://www.youtube.com/watch?v=NjPYUzBJ1gA",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Paul Bourke IFS",
+  "text": "http://paulbourke.net/fractals/ifs/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Reddit guy expirience with flowfields",
+  "text": "https://damoonrashidi.me/articles/flow-field-methods",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "9.99 = 10",
+  "text": "https://www.youtube.com/watch?v=SDtFBSjNmm0",
+  "category": [
+    "Math"
+  ]
+},{
+  "title": "Spirals",
+  "text": "Parece um pouco com os que aparecem no maurer rose\r\nhttps://www.youtube.com/watch?v=n-e9C8g5x68",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Peterson's worms",
+  "text": "https://en.wikipedia.org/wiki/Paterson%27s_worms",
+  "category": [
+    "Wikipedia"
+  ]
+},{
+  "title": "Mathtown",
+  "text": "Blogzinho de fractais\r\nhttps://www.maths.town/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Turmite",
+  "text": "https://en.wikipedia.org/wiki/Turmite",
+  "category": [
+    "Wikipedia"
+  ]
+},{
+  "title": "OpenGl in c++",
+  "text": "https://www.youtube.com/watch?v=45MIykWJ-C4",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Domain warping",
+  "text": "http://www.nolithius.com/articles/world-generation/world-generation-techniques-domain-warping",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Ant and Slime simulations",
+  "text": "Vídeo do Sebastian Lague\r\nhttps://www.youtube.com/watch?v=X-iSQQgOd1A",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "WebGl vanilla playlist? idk",
+  "text": "https://www.youtube.com/playlist?list=PLjcVFFANLS5zH_PeKC6I8p0Pt1hzph_rt",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Radu, o parça do Frank's Laboratory",
+  "text": "https://www.youtube.com/watch?v=lr8r7F7y4OI&list=PLB0Tybl0UNfb3hTHPfEIg1SPw_-Ca9iIw&index=20",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Buddhabrot",
+  "text": "https://en.wikipedia.org/wiki/Buddhabrot",
+  "category": [
+    "Wikipedia"
+  ]
+},{
+  "title": "Physarum Transport Networks",
+  "text": "Hugo do presente nem se lembrava desse aqui, vamos ver se o hugo do futuro lembrará\r\nhttps://github.com/fogleman/physarum\r\nhttps://cargocollective.com/sagejenson/physarum",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "ThreeJs",
+  "text": "https://www.youtube.com/watch?v=YK1Sw_hnm58",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Hitomezashi Stitch Patterns",
+  "text": "https://www.youtube.com/watch?v=JbfhzlMk2eY",
+  "category": [
+    "Math"
+  ]
+},{
+  "title": "Hitomezashi Stitch Patterns",
+  "text": "N lembrava sobre hitomezashi stich? provavelmente parou aqui né hugo do futuro\r\nhttps://www.reddit.com/r/generative/comments/rshyza/hitomezashi_stitch_gmic_code/",
+  "category": [
+    "Reddit"
+  ]
+},{
+  "title": "Differencial growth",
+  "text": "https://medium.com/@jason.webb/2d-differential-growth-in-js-1843fd51b0ce",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": ".Net 10 hours course",
+  "text": "https://www.youtube.com/watch?v=DgVjEo3OGBI",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Reaction-Diffusion",
+  "text": "Sitezinho que os cara usaram para fazer, que eu acho super duvidoso terem conseguido fazer com a performance tão boa! provavelmente usaram quadtree...\r\nhttp://karlsims.com/rd.html",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Toric variety",
+  "text": "https://en.wikipedia.org/wiki/Toric_variety",
+  "category": [
+    "Math"
+  ]
+},{
+  "title": "DLA but SVG",
+  "text": "Jason Webb, já vi alguma outra parada desse cara mas não me recordo agora\r\nhttps://medium.com/@jason.webb/simulating-dla-in-js-f1914eb04b1d",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Quadtree",
+  "text": "https://www.youtube.com/watch?v=OJxEcs0w_kE",
+  "category": [
+    "Coding train"
+  ]
+},{
+  "title": "Tantan Rust OpenGl",
+  "text": "https://github.com/glium/glium",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "GPU ray tracing in unity",
+  "text": "https://github.com/glium/glium",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Vectors 🤔",
+  "text": "https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&index=9",
+  "category": [
+    "Math"
+  ]
+},{
+  "title": "Freya shaders part 1",
+  "text": "https://www.youtube.com/watch?v=kfM-yu0iQBk",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "3d Perlin Noise for Terrain Generation",
+  "text": "https://www.youtube.com/watch?v=TZFv493D7jo",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Blender but Donut",
+  "text": "https://www.youtube.com/watch?v=TPrnSACiTJ4",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Hdhsj🌺🍫💋☮️🕯️😞❤️😞☮️🕯️😞❤️🍐🍫😞wkbdhxuj ",
+  "text": "Shejisnchuwhbdbsjjsbdbjsijsbdjdhjd",
+  "category": [
+    "Bdbnshwx"
+  ]
+},{
+  "title": "OpenGl in c++",
+  "text": "https://www.youtube.com/watch?v=Q-acgfB8YY0",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Drrrawing with purrr",
+  "text": "Acho que dá para fazer tranquilo esse, o js tem uma função para acumular valores que é o reduce, mas também é só fazer na mão que vai dar certo\r\nhttps://fronkonstin.com/2019/03/27/drrrawing-with-purrr/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "ThreJs VaporWave",
+  "text": "Lembra o que vc tava querendo fazer? então, o cara fez só que direito :p\r\nhttps://blog.maximeheckel.com/posts/vaporwave-3d-scene-with-threejs/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "95 dol pelo tutorial :/",
+  "text": "https://threejs-journey.com/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Random Map Generator",
+  "text": "Parece legal, distribuição aleatória de objetos no mapa\r\nhttps://www.youtube.com/watch?v=qHxS8ixvis0",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Voronoi but it moves",
+  "text": "https://www.ronja-tutorials.com/post/028-voronoi-noise/",
+  "category": [
+    "Tutorial"
+  ]
+},{
+  "title": "Ensō",
+  "text": "Hugo do futuro, se em algum momento se interessar em fazer um gerador de \"Ensō\", faça um conjunto arcs que começam em um ponto 0 com um pequeno offset e faça que eles tenham um tamanho mínimo, a partir dai eles podem aumentar em certo rate aleatório",
+  "category": [
+    "Anotação"
+  ]
+},{
+  "title": "Espiral de Ulam",
+  "text": "https://pt.wikipedia.org/wiki/Espiral_de_Ulam",
+  "category": [
+    "Wikipedia"
+  ]
+},{
+  "title": "sonder",
+  "text": "A realização que cada pessoa na rua está vivendo uma vida tão complexa quanto a sua",
+  "category": [
+    "Termo dahora"
+  ]
+},{
+  "title": "trocou seis por meia dúzia",
+  "text": "Trocar algo pela mesma coisa ou algo MUITO semelhante. Resumindo, mudou nada :/",
+  "category": [
+    "Termo dahora"
+  ]
+},{
+  "title": "شسسيباهممممنعاغنوتتتةا,؟اااالرللا",
+  "text": "شسسيباهممممنعاغنوتتتةا,؟اااالرللاشسسيباهممممنعاغنوتتتةا,؟اااالرللاشسسيباهممممنعاغنوتتتةا,؟اااالرللا",
+  "category": [
+    "adasdasdasd"
+  ]
+},{
+  "title": "Procedural landmass Generation 13",
+  "text": "hugo faz o favor de terminar essa merda logo, já tá parado no final das abas faz uns 3 meses já\r\nhttps://www.youtube.com/watch?v=kM6yRUOnrI8",
+  "category": [
+    "c#"
+  ]
+},{
+  "title": "De Jong IFS",
+  "text": "https://www.youtube.com/watch?v=8EiIQFlI9lY",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Map generation",
+  "text": "https://www.youtube.com/watch?v=mhneoRadHv8",
+  "category": [
+    "c#"
+  ]
+},{
+  "title": "Popcorn fractal but BONITO DEMAIS",
+  "text": "https://www.iquilezles.org/www/articles/popcorns/popcorns.htm",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Tantan cellular automata",
+  "text": "https://github.com/TanTanDev/3d_celluar_automata",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Vintage generative art",
+  "text": "https://www.youtube.com/watch?v=LaarVR1AOvs",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Cellular Automata paper",
+  "text": "https://softologyblog.wordpress.com/2019/12/28/3d-cellular-automata-3/",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Backer's map",
+  "text": "https://www.youtube.com/watch?v=eBEY2c4vwpw",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "lorenz Attractor paper",
+  "text": "https://www.stsci.edu/~lbradley/seminar/attractors.html",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "ThreeJs miniworld",
+  "text": "https://blog.bitsrc.io/developing-a-small-world-in-three-js-c870b93c6afc",
+  "category": [
+    "Threejs"
+  ]
+},{
+  "title": "Moon creator",
+  "text": "Starting drawing arcs of increasing + random sizes, eventually creating a good enough arc",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Circle packing with physics",
+  "text": "https://www.reddit.com/r/generative/comments/uiucm6/312/",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Another flowfield",
+  "text": "https://www.reddit.com/r/generative/comments/uxtgoe/effervescence/",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Linear Algebra - 11 hours",
+  "text": "https://www.youtube.com/watch?v=JnTa9XtvmfI",
+  "category": [
+    "FreeCodeCamp"
+  ]
+},{
+  "title": "reaction diffusion python",
+  "text": "pesquisa ai no  google\r\nhttp://www.karlsims.com/rd.html\r\n",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "reaction diffusion python",
+  "text": "https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Book%3A_Introduction_to_the_Modeling_and_Analysis_of_Complex_Systems_(Sayama)/13%3A_Continuous_Field_Models_I__Modeling/13.06%3A_Reaction-Diffusion_Systems",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Noise Generative art",
+  "text": "https://www.youtube.com/watch?v=CHZtK-keEvU",
+  "category": [
+    "Domain warping"
+  ]
+},{
+  "title": "Domain Warping, again",
+  "text": "http://www.nolithius.com/articles/world-generation/world-generation-techniques-domain-warping",
+  "category": [
+    "Domain warping"
+  ]
+},{
+  "title": "The best domain warping",
+  "text": "https://iquilezles.org/articles/warp/",
+  "category": [
+    "Domain warping"
+  ]
+},{
+  "title": "Colorting perlin noise",
+  "text": "Pesquisa na google\r\né uma boa aprender sobre isso, várias situações que vc pode aplicar, principalmente no domain warping",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Writing a Physics Engine from scratch",
+  "text": "https://www.youtube.com/watch?v=lS_qeBy3aQI",
+  "category": [
+    "Devlog"
+  ]
+},{
+  "title": "Recursion squares - python",
+  "text": "https://www.youtube.com/watch?v=XruRIaB01Ls",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Moon orbits",
+  "text": "https://www.youtube.com/watch?v=t99CmgJAXbg",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Turtle - python",
+  "text": "https://www.youtube.com/watch?v=SAkcrlACKn8",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "c++ - 31 hours",
+  "text": "https://www.youtube.com/watch?v=8jLOx1hD3_o",
+  "category": [
+    "FreeCodeCamp"
+  ]
+},{
+  "title": "Dynamic Programming",
+  "text": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+  "category": [
+    "FreeCodeCamp"
+  ]
+},{
+  "title": "sla oq é isso kkkkkkk",
+  "text": "https://www.youtube.com/watch?v=Z9NLxrkMWM4",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "RAINBOW SMOKE",
+  "text": "https://stackoverflow.com/questions/10787103/2d-hsv-color-space-in-matplotlib\r\nhttps://allrgb.com/\r\nhttps://codegolf.stackexchange.com/questions/22144/images-with-all-colors\r\n",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "OTHER RAINBOW SMOKE",
+  "text": "https://possiblywrong.wordpress.com/2014/04/18/allrgb-hilbert-curves-and-random-spanning-trees/",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Aprende rust ai irmão",
+  "text": "https://github.com/rust-lang/rustlings/\r\nhttps://github.com/sidwellr/schotter\r\nhttps://dev.to/deciduously/creative-coding-in-rust-with-nannou-1lbl\r\nhttps://doc.rust-lang.org/book/ch04-01-what-is-ownership.html\r\nhttps://www.youtube.com/watch?v=6erSNPToziw",
+  "category": [
+    "Rust"
+  ]
+},{
+  "title": "Uns talk da vida",
+  "text": "https://www.youtube.com/watch?v=vLlbEZt-3j0\r\nhttps://www.youtube.com/watch?v=kZNTozzsNqk\r\nhttps://www.youtube.com/watch?v=LWeLQdtT35Y\r\n",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "DATABASES",
+  "text": "https://www.youtube.com/watch?v=4cWkVbC2bNE",
+  "category": [
+    "FreeCodeCamp"
+  ]
+},{
+  "title": "Mais um de python",
+  "text": "https://www.youtube.com/watch?v=Cm_SzDlQ2cM",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "React - 11 hours",
+  "text": "https://www.youtube.com/watch?v=4UZrsTqkcW4",
+  "category": [
+    "FreeCodeCamp"
+  ]
+},{
+  "title": "Turtle - again - python",
+  "text": "https://www.youtube.com/watch?v=Z_FEJ_JrJJE",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Why rust?",
+  "text": "https://www.youtube.com/watch?v=IYLf8lUqR40",
+  "category": [
+    "Rust"
+  ]
+},{
+  "title": "Youtube",
+  "text": "youtube.com",
+  "category": [
+    "Videos"
+  ]
+},{
+  "title": "Rust - breakout tutorial",
+  "text": "https://www.youtube.com/watch?v=xQ9YTY7ZgsI",
+  "category": [
+    "Rust"
+  ]
+},{
+  "title": "Rust Macros (Noq Ep.02)",
+  "text": "https://www.youtube.com/watch?v=LYIn_Ewpq-E",
+  "category": [
+    "Rust"
+  ]
+},{
+  "title": "Vulkan in rust",
+  "text": "https://www.youtube.com/watch?v=8iEN64bj3X4",
+  "category": [
+    "Rust"
+  ]
+},{
+  "title": "Raytracing voxel engine",
+  "text": "https://www.youtube.com/watch?v=SbJZmLrPLtA",
+  "category": [
+    "Rust"
+  ]
+},{
+  "title": "Water voxel engine",
+  "text": "https://www.youtube.com/watch?v=ZHZYm670mKA",
+  "category": [
+    "voxel"
+  ]
+},{
+  "title": "Canon thurston maps",
+  "text": "lembre-se hugo....",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Cohomology fractals",
+  "text": "https://github.com/henryseg/cohomology_fractals",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Honeycombs",
+  "text": "https://github.com/roice3/Honeycombs",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Artificial Life (Simulation & Code)",
+  "text": "https://www.youtube.com/watch?v=0Kx4Y9TVMGg\r\nhttps://github.com/hunar4321/life_code",
+  "category": [
+    "Generative"
+  ]
+},{
+  "title": "Uns quadrado loucos ai",
+  "text": "https://www.youtube.com/watch?v=NO1_-qptr6c",
+  "category": [
+    "Math"
+  ]
+},{
+  "title": "Pixel simulation",
+  "text": "https://www.youtube.com/watch?v=dZ8QEvXNe84",
+  "category": [
+    "voxel"
+  ]
+}]
