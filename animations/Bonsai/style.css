@@ -7,23 +7,14 @@
 
 canvas {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+    top:0; left: 0;
+    background-color: black;
 }
 
-#file {
+input {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
-}
-
-form {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin: 2rem 0 ;
 }
