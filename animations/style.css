@@ -1,45 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.725rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+canvas {
+  height: 100vh;
+  width: 100vw;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
 body {
   background: #0c0c0c;
 }
 
 main {
-  margin: 16px;
-  gap: 16px;
+  margin: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vh;
 }
 
-.track_wrapper {
+.card {
+  transition: scale 200ms ease-out;
   position: relative;
-  flex-shrink: 0;
-  flex-grow: 1;
-  flex-basis: 1;
-  display: flex;
-  height: 40vmin;
+  width: 25em;
+  height: 25em;
+  max-width: 100%;
+  border-radius: 5%;
   overflow: hidden;
 }
 
-.track {
-  gap: 16px;
-  height: 100%;
-  display: flex;
-  user-select: none;
-  position: absolute;
+.imageContainer {
+  filter: brightness(80%);
+  will-change: filter;
+  transition: filter 450ms;
 }
-
-.card{
-  width: 40vmin;
-}
-
-.image{
-  object-fit: cover;
-  height: 100%;
-}
-
 
 .github {
-  margin: 8px;
-  width: 60px;
+  display: none;
+  position: relative;
+  width: 7vh;
   will-change: filter;
   transition: filter 450ms;
 }
@@ -47,9 +103,24 @@ main {
 .github:hover {
   filter: sepia(1);
   transition: 50ms ease-in-out;
+
 }
 
+.card:hover .imageContainer {
+  cursor: pointer;
+  top: 0%;
+  filter: brightness(100%);
+  transition: 50ms ease-in-out;
 
+}
+
+.imageContainer img {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
 
 /* navbar */
 
@@ -58,8 +129,8 @@ header {
   min-height: 5vh;
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
-  color: white;
+  padding: .5rem 1rem;
+  color: white
 }
 
 #counter {
@@ -87,6 +158,7 @@ nav img {
   width: 4rem;
 }
 
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -111,8 +183,8 @@ nav img {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .slider:before {
@@ -123,19 +195,19 @@ nav img {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
+input:checked+.slider {
+  background-color: #2196F3;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -164,71 +236,41 @@ input:checked + .slider:before {
   }
 
   @media (max-width: 34em) {
+
   }
 
-  .slider,
-  .switch,
-  header img {
+  .slider, .switch, header img{
     display: none;
   }
 
-  header {
+  header{
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  h1 {
-    font-size: 0.8em;
+  h1{
+    font-size: .8em;
   }
 
-  nav h1::after {
+  nav h1::after{
     content: " Made with ❤ by Hugo";
   }
 
-  #search {
+  #search{
     display: none;
   }
+
 }
 
-#search {
+#search{
   margin: auto;
 }
 
-.active {
+.ativou{
   scale: 1.1;
 }
-.gray {
-  filter: grayscale(1);
-}
-.active .imageContainer {
+.ativou .imageContainer{
   filter: brightness(110%);
-}
-.top {
-  position: fixed;
-  top: 100%;
-  left: 100%;
-  transform: translate(-120%, -120%);
-  width: 60px;
-  height: 60px;
-  padding: 10px;
-  z-index: 99;
-  border-radius: 50%;
-  background-color: #1a1919;
-}
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.top:hover img {
-  animation: pulse 1.3s ease-in-out alternate;
 }
