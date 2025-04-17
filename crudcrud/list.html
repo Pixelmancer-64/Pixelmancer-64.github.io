@@ -1,0 +1,106 @@
+<!-- list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listar livros</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 2em;
+      background: #fdfdfd;
+      color: #111;
+    }
+    header {
+      border: 4px solid black;
+      padding: 1em;
+      background: #fff;
+      margin-bottom: 2em;
+    }
+    h1 {
+      font-size: 1.75em;
+      margin-bottom: 0.5em;
+    }
+    nav a {
+      margin-right: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      border: 2px solid black;
+      padding: 0.25em 0.5em;
+      background-color: yellow;
+    }
+    nav a:hover {
+      background-color: #ffbb00;
+    }
+    section {
+      border: 4px solid black;
+      padding: 2em;
+      background-color: white;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      border: 3px solid black;
+      padding: 1em;
+      margin-bottom: 1em;
+      background-color: #f0f0f0;
+    }
+    .icon::before {
+      content: "📘";
+      margin-right: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span class="icon"></span>Listar livros</h1>
+    <nav>
+      <a href="index.html">Introdução</a>
+      <a href="form.html">Adicionar livro</a>
+      <a href="list.html">Listar livros</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Livros cadastrados</h2>
+    <ul id="bookList">
+      <li>Nenhum livro cadastrado ainda!</li>
+    </ul>
+  </section>
+
+  <script>
+    const bookList = document.getElementById('bookList');
+    const apiKey = localStorage.getItem('crudcrud_api_key');
+
+    if (!apiKey) {
+      bookList.innerHTML = '<li>Retorne para a página inicial e insira uma API KEY válida</li>';
+    } else {
+      fetch(`https://crudcrud.com/api/${apiKey}/books`)
+        .then(res => {
+          if (!res.ok) throw new Error('Erro ao resgatar os livros');
+          return res.json();
+        })
+        .then(data => {
+          if (data.length === 0) {
+            bookList.innerHTML = '<li>Nenhum livro cadastrado ainda!</li>';
+          } else {
+            bookList.innerHTML = '';
+            data.forEach(book => {
+              const item = document.createElement('li');
+              item.innerHTML = `<strong>${book.title}</strong>, escrito por <strong>${book.author}</strong><br>Lançamento: ${book.releaseDate} | Total de páginas: ${book.pages}`;
+              bookList.appendChild(item);
+            });
+          }
+        })
+        .catch(err => {
+          bookList.innerHTML = `<li>Erro: ${err.message}</li>`;
+        });
+    }
+  </script>
+</body>
+</html>

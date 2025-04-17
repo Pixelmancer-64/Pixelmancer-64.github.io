@@ -1,0 +1,109 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrudCrud</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 2em;
+      background: #fdfdfd;
+      color: #111;
+    }
+    header {
+      border: 4px solid black;
+      padding: 1em;
+      background: #fff;
+      margin-bottom: 2em;
+    }
+    h1 {
+      font-size: 1.75em;
+      margin-bottom: 0.5em;
+    }
+    nav a {
+      margin-right: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      border: 2px solid black;
+      padding: 0.25em 0.5em;
+      background-color: yellow;
+    }
+    nav a:hover {
+      background-color: #ffbb00;
+    }
+    section {
+      border: 4px solid black;
+      padding: 2em;
+      background-color: white;
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 0.75em;
+      margin-top: 0.5em;
+      font-size: 1em;
+      border: 3px solid black;
+      background-color: #f0f0f0;
+    }
+    button {
+      background: #ffd500;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffbb00;
+    }
+    .icon::before {
+      content: "📚";
+      margin-right: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span class="icon"></span>CrudCrud API</h1>
+    <nav>
+      <a href="index.html">Introdução</a>
+      <a href="form.html">Adicionar livro</a>
+      <a href="list.html">Listar livros</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Introdução</h2>
+    <p>Essa aplicação é uma simples implementação que utiliza a API <a href="https://crudcrud.com/" target="_blank">CrudCrud</a> para o cadastro de livros. O interessante dessa API é a possibilidade de armazenar temporariamente qualquer tipo de dado no formato JSON sem qualquer tipo de cadastro prévio, e tudo isso através de uma arquitetura RESTful.</p>
+    <ul>
+      <li><strong>URL Base:</strong> https://crudcrud.com/api/&rtAPI_KEY&lt</li>
+      <li><strong>Rota utilizada para acesso aos recursos:</strong> /books</li>
+      <li>A API é RESTful, mas nessa implementação serão utitlizados apenas os métodos <code>GET</code> e <code>POST</code></li>
+      <li>Os dados armazenados pela API são <b>temporários</b>, a cada 24 horas é necessário gerar uma nova chave para utilizar o serviço</li>
+    </ul>
+    <p><strong>Não é necessário realizar nenhum cadastro para utilizar essa aplicação!</strong></p>
+    <p><strong>Instruções de uso:</strong>Entre no site <a href="https://crudcrud.com/" target="_blank">CrudCrud</a> e resgate uma nova chave para acessar a API. Retorne para essa página, insira a chave no campo abaixo e clique no botão "Salvar chave", e você já poderá começar a cadastrar livros!</p>
+
+    <label for="apiKey">API KEY do CrudCrud:</label>
+    <input type="text" id="apiKey" placeholder="Insira a chave aqui" />
+    <button onclick="saveApiKey()">Salvar chave</button>
+  </section>
+
+  <script>
+    const apiKeyInput = document.getElementById('apiKey');
+    apiKeyInput.value = localStorage.getItem('crudcrud_api_key') || '';
+
+    function saveApiKey() {
+      const key = apiKeyInput.value.trim();
+      if (key) {
+        localStorage.setItem('crudcrud_api_key', key);
+        alert('Chave salva!');
+      } else {
+        alert('Chave inválida');
+      }
+    }
+  </script>
+</body>
+</html>
